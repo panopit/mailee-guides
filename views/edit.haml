@@ -1,0 +1,18 @@
+%h3
+  Editando
+  %strong= @first_part
+  \.textile
+%table{:style => "width:100%;height:600px"}
+  %tr
+    %td{:valign => :top, :width => '40%'}
+      %form{:method => :post, :target => :preview}
+        %textarea{:name => :file_content, :style => 'width:100%;height:600px'}= @file
+        %button{:style => 'font-size:2em'}
+          Salvar
+    %td{:valign => :top, :width => '60%'}
+      %iframe{ :name => :preview, :src => "#{@first_part}.html", :style => 'width:100%;height:600px'}
+
+- for file in @files
+  %a{:href => "/#{file}"}
+    = file
+  %br
