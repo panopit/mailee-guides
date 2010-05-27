@@ -1,22 +1,39 @@
-h2. Como integrar com o Spree
+h2. Como importar contatos de uma planilha
 
-!images/integration_spree/spree.jpg(Spree)!
+O Mailee possui um sistema para importação de contatos de planilha muito poderoso e completo. Com ele você pode importar dados dos contatos e também colunas novas, adequando o Mailee à sua base de dados real.
 
-O "Spree":http://www.spreecommerce.com é um projeto de comércio eletrônico de código aberto feito em "Ruby on Rails":http://www.rubyonrails.com que evoluiu muito nos últimos anos. Já possui tradução para português, integração com os correios e uma série de formas de pagamento. Além disso, o Spree possui uma "comunidade vibrante":http://ext.spreecommerce.com, o que garante qualidade no código e plugins novos a todo momento para todas as necessidades de um e-commerce, como fórum, blog, sitemaps, pesquisas de opinião, vídeos, conexão com Facebook, promoções e fornecedores só para citar alguns.
+Em vez de criarmos uma importação apenas de arquivos MS Excel, nós fizemos uma importação intermediária, na qual você precisa fazer um "copy" e "paste" da sua planilha, assim você pode importar, além do MS Excel, planilhas do Open Office, Google Docs ou Numbers do iWork. Vamos ver:
 
-Mas um bom e-commerce pressupõe manter a base atualizada e constância na comunicação com seus clientes por e-mail, enviando novidades e promoções. Por isso criamos uma extensão para que você possa ter a sua loja online já integrada ao Mailee. Esta extensão utiliza a API do Mailee, que permite que qualquer aplicação possa conversar com o ele pela internet. Se você quiser saber mais sobre como integrar sua aplicação mesmo não usando Spree, fale conosco!
-
-A seguir veremos como usar o Spree com a integração do Mailee, passo a passo. Recomendo que você coloque agora um café para passar, pois teremos um intervalo no meio. Tópicos que serão vistos:
-
-* Como instalar o Spree.
-* Como iniciar nossa loja.
-* Como instalar a extensão MaileeSpree na loja.
-* Como sincronizar os contatos manualmente.
-* Como sincronizar os contatos automaticamente.
+* Como formatar a planilha.
+* Como colocar a planilha no Mailee.
+* Como configurar a importação.
+* Como funciona o filtro do Mailee.
 
 endprologue.
 
-h3. Requisitos
+h3. Formatando a planilha
+
+h4. Cabeçalhos
+
+A importação do Mailee aceita apenas planilhas com cabeçalho. O cabeçalho contém o nome dos campos que você está importando e é sempre a primeira linha da planilha.
+
+No exemplo abaixo, você pode ver uma planilha do Google Docs com três colunas. A primeira linha com os campos "Nome", "Email" e "Escola" é o cabeçalho.
+
+!images/import_spreadsheet/headers.png(Cabeçalho da planilha)!
+
+h4. Conteúdo
+
+O conteúdo dos campos é arbitrário. O único uso que o Mailee faz deles é inferir automaticamente campos como <samp>email</samp> e <samp>nome</samp>. Ou seja, se você colocar uma coluna com um nome "Email" e ela não contiver e-mails, o Mailee não irá associá-la por padrão com o e-mail dos contatos, preferindo uma coluna cujos dados batam com o formato correto.
+
+h3. Colocando a planilha no Mailee
+
+Na tela de contatos, localize no menu à direita o item "Importar".
+
+!images/import_spreadsheet/contact_index_import.png(Importar)!
+
+Em seguida, escolha a opção "Planilha".
+
+!images/import_spreadsheet/import_button.png(Importar)!
 
 First things first. Para poder seguir este tutorial você precisará de algumas coisas instaladas em sua máquina. Basicamente você precisa do Ruby, do Rails e do Rubygems 1.3.6 instalado. Para quem usa Linux, isso é fácil, basta entrar no Synaptic e instalar. Se você usa o MacOS o Ruby já vem instalado por padrão, você precisa apenas instalar ou atualizar o Rails e o Rubygems. Já no windows são outros 500. Existe um instalador "aqui":http://rubyforge.org/frs/?group_id=167 , mas não sei se ele tem o Rubygems correto. Se alguém fizer o tutorial neste ambiente com sucesso, por favor, comente sobre como proceder.
 
