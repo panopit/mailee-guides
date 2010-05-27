@@ -1,5 +1,6 @@
 h2. Spree
 
+!images/integration_spree/spree.jpg(Spree)!
 
 O "Spree":http://www.spreecommerce.com é um projeto de comércio eletrônico de código aberto feito em "Ruby on Rails":http://www.rubyonrails.com que evoluiu muito nos últimos anos. Já possui tradução para português, integração com os correios e uma série de formas de pagamento. Além disso, o Spree possui uma "comunidade vibrante":http://ext.spreecommerce.com, o que garante qualidade no código e plugins novos a todo momento para todas as necessidades de um e-commerce, como fórum, blog, sitemaps, pesquisas de opinião, vídeos, conexão com Facebook, promoções e fornecedores só para citar alguns.
 
@@ -182,7 +183,7 @@ Se você ainda não tem uma conta no Mailee, acesse ele no <samp>http://mailee.m
 
 h4. Pegue a chave da API
 
-Para usar a API o Mailee gera uma chave secreta para cada cliente. Tome muito cuidade com esta chave, ela é tão ou mais importante que a sua senha. Com ela, alguém mal intencionado poderá ter acesso à seus clientes. Para pegar esta chave, vá em configuração, depois em integração e por fim em rest.
+Para usar a API o Mailee gera uma chave secreta para cada cliente. Tome muito cuidade com esta chave, ela é tão ou mais importante que a sua senha. Com ela, alguém mal intencionado poderá ter acesso aos seus clientes. Para pegar esta chave, vá em configuração, depois em integração e por fim em rest.
 
 !images/integration_spree/mailee_integrar.png(Integrar)!
 
@@ -240,13 +241,22 @@ Você deve estar se perguntando: Onde estão os 501 contatos? Só vejo X (onde X
 
 h4. Verificando a sincronização
 
-Neste ponto você já deve estar um pouco mais acordado com o café. E já tem seus clientes antigos no Mailee. Bons momentos. Mas e os contatos novos? Bom, a extensão já pensou nisso. Sempre que um usuário se cadastrar em sua loja, ele estará automaticamente cadastro no Mailee. Vamos então criar um usuário novo no Spree e ver se não estou mentindo. Mas <strong>não esqueça de reiniciar o server</strong> se você não tiver feito isso após instalar a extensão.
+Neste ponto você já deve estar um pouco mais acordado com o café. E já tem seus clientes antigos no Mailee. Bons momentos. Mas e os contatos novos? Bom, a extensão já pensou nisso. Sempre que um usuário se cadastrar em sua loja, ele estará automaticamente cadastrado no Mailee. Vamos então criar um usuário novo no Spree e ver se não estou mentindo. Mas <strong>não esqueça de reiniciar o server e executar as migrações</strong> se você não tiver feito isso após instalar a extensão.
 
-!images/integration_spree/spree_new_user.png(Cadastro de usuário)!
+<shell>
+$ rake db:migrate
+$ script/server
+</shell>
 
-!images/integration_spree/spree_user_created.png(Usuário criado com sucesso)!
+Ao acessar o formulário você verá esta tela:
 
-Uma vez preenchido o form e enviado, você poderá dar uma olhadinha no seu console (o que está rodando o servidor). Você verá algo assim:       
+!images/integration_spree/novo_usuario.png(Cadastro de usuário)!
+
+O Spree não possui por padrão um campo para que o usuário aceite receber mensagens (e.g. "Deseja receber notícias em seu email?"). A extensão criará na migração o campo "news" do tipo <samp>boolean</samp> na tabela de usuários e utilizará este campo para saber quais usuários enviar ou não para o Mailee. Se um usuário for cadastrado sem marcar, ele não será enviado para o Mailee, mas se, no futuro, ele marcar o campo, será adicionado corretamente. Da mesma forma, se um usuário estiver cadastrado e desmarcar este campo no futuro, ele será descadastrado do Mailee.
+
+O campo já é apresentado corretamente com traduções para en-US (inglês) e pt-BR (português).
+
+Uma vez preenchido o formulário e enviado, você poderá dar uma olhadinha no seu console (o que está rodando o servidor). Você verá algo assim:       
 
 <shell>
 Processing UsersController#create (for 127.0.0.1 at 2010-05-14 16:59:59) [POST]
@@ -277,7 +287,6 @@ Agora vamos ao Mailee ver se de fato o contato está lá.
 
 !images/integration_spree/mailee_contact_found_index.png(Visualização do contato no Mailee)!
 
-
 INFO. Como você pode ver nesta segunda tela, o contato tem um "identificador". Este é o campo em que o Mailee armazena o "id" do contado na sua loja. É por este campo que a integração sabe o que é novo e o que deve ser atualizado, por isso tome cuidado para não alterar o valor dele. Este campo também é útil caso você queira no futuro bater os dados do Mailee com sua base.
 
 h3. Colhendo os louros da vitória - por enquanto
@@ -285,3 +294,5 @@ h3. Colhendo os louros da vitória - por enquanto
 Até aqui estamos bem. Criamos a loja e temos ela integrada com o Mailee. Agora você precisa publicar sua loja no mundo real e começar a fazer suas campanhas. Uma dica importante aqui é trabalhar bem com os dados do contatos. O Mailee possui um sistema poderoso de segmentação, para que você possa enviar exatamente o que o seu cliente quer receber.
 
 Se ainda sobrou algum café, é uma boa hora para acabar com ele.
+
+!images/integration_spree/coffee-shaking.jpg(Café demais faz mal)!
