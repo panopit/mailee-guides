@@ -2,6 +2,11 @@ require 'rubygems'
 require 'sinatra'
 require 'haml'
 
+$KCODE = 'u' if RUBY_VERSION < '1.9'
+before do
+  content_type :html, 'charset' => 'utf-8'
+end
+
 set :public, File.dirname(__FILE__) + '/output'
 
 
