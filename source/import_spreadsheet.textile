@@ -35,9 +35,48 @@ Em seguida, escolha a opção "Planilha".
 
 !images/import_spreadsheet/import_button.png(Importar)!
 
-First things first. Para poder seguir este tutorial você precisará de algumas coisas instaladas em sua máquina. Basicamente você precisa do Ruby, do Rails e do Rubygems 1.3.6 instalado. Para quem usa Linux, isso é fácil, basta entrar no Synaptic e instalar. Se você usa o MacOS o Ruby já vem instalado por padrão, você precisa apenas instalar ou atualizar o Rails e o Rubygems. Já no windows são outros 500. Existe um instalador "aqui":http://rubyforge.org/frs/?group_id=167 , mas não sei se ele tem o Rubygems correto. Se alguém fizer o tutorial neste ambiente com sucesso, por favor, comente sobre como proceder.
+Chegamos lá. A tela abaixo é a tela de importação via planilha:
 
-h3. Instalando o Spree
+!images/import_spreadsheet/import_textarea.png(Importar)!
+
+Agora você vai até a sua planilha, seleciona todos os elementos (geralmente o atalho Crtl a funciona), copia (Ctrl c) e cola (Ctrl v) no campo do Mailee.
+
+!images/import_spreadsheet/select_all.png(Importar)!
+
+!images/import_spreadsheet/import_textarea_filled.png(Importar)!
+
+Se é a primeira vez que você está importando, você não verá a opção que aparece na imagem "Usar a configuração utilizada na última importação". Se você realiza importações periodicamente e o formato dos dados é o mesmo (as mesmas colunas) você poderá marcar esta opção. Fazendo isto, você não precisará configurar a importação (que veremos como fazer adiante) e o sistema irá diretamente para a tela de progresso.
+
+WARNING. Se você marcar a opção "Usar a configuração utilizada na última importação" e os campos do arquivo importado forem diferentes da última importação você provavelmente receberá um erro de importação na tela seguinte. Mas nem tudo está perdido: simplesmente a importação não será feita, não gerando nenhum erro em seus contatos. Você poderá refazer a importação, desta vez não marcando a opção.
+
+h3. Configurando a importação
+
+Após enviar os dados, se você não tiver escolhido a opção de utilizar a últimca importação, você será encaminhado para a tela de configuração da importação. Nesta tela serão apresentados todos os campos do seu arquivo em uma lista horizontal.
+
+!images/import_spreadsheet/navigate.png(Importar)!
+
+Você pode navegar entre os campos utilizando os dois botões de navegação abaixo da lista. Para cada coluna você tem três opções:
+
+* *Associar a coluna com um campo do Mailee*
+** A importação irá inserir ou atualizar os valores dessa coluna no campo do Mailee
+* *Criar uma nova coluna*
+** A importação irá criar um "campo dinâmico":http://todo, e inserir os valores dessa coluna neste campo
+* *Não importar*
+** A importação irá ignorar esta coluna
+
+!images/import_spreadsheet/column_options.png(Opções de importação para cada coluna)!
+
+INFO. É obrigatório que ao menos um campo seja associado à coluna <samp>email</samp>.
+
+Defina a ação correta para *todas* as colunas, marque as listas nas quais você deseja inserir os contatos e clique no botão de continuar. Em seguida você será enviado para a tela que apresenta a barra de progresso da importação:
+
+!images/import_spreadsheet/progress_bar.png(Barra de progresso)!
+
+INFO. Você não precisa ficar nesta tela para que a importação seja realizada. Você pode continuar trabalhado no Mailee, ler algum artigo para aprender mais sobre o sistema ou então aproveitar para tomar um café.
+
+Todas as importações em andamento e finalizadas nas últimas horas ficam visíveis no <samp>dashboard</samp> e também na tela inicial de importação.
+
+!images/import_spreadsheet/import_dashboard.png(Barra de progresso)!
 
 h4. Instalando a gem
 
