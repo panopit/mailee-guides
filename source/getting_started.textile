@@ -1,0 +1,92 @@
+h2. Iniciando com o Mailee
+
+O Mailee é uma aplicação web de email marketing. Com ele, você pode manter uma relação próxima com as pessoas para quem você é importante.
+
+Neste guia, iremos ver:
+
+* Em que casos é bom usar o Mailee.
+* Para quem o Mailee é melhor.
+* O que o Mailee tem de diferente.
+* Como começar agora mesmo.
+
+endprologue.
+
+h3. Formatando a planilha
+
+h4. Cabeçalhos
+
+A importação do Mailee aceita apenas planilhas com cabeçalho. O cabeçalho contém o nome dos campos que você está importando e é sempre a primeira linha da planilha.
+
+No exemplo abaixo, você pode ver uma planilha do Google Docs com três colunas. A primeira linha, com os campos "Nome", "Email" e "Escola", é o cabeçalho.
+
+!images/import_spreadsheet/headers.png(Cabeçalho da planilha)!
+
+h4. Conteúdo
+
+O conteúdo dos campos pode ser o que você quiser. O único uso que o Mailee faz deles é para encontrar automaticamente campos como <samp>email</samp> e <samp>nome</samp>. Fique atento, então, pois se você colocar uma coluna com nome "Email" e ela não contiver emails, o Mailee não irá associá-la por padrão ao email dos contatos, preferindo uma coluna cujos dados batam com o formato correto.
+
+h3. Colocando a planilha no Mailee
+
+Na tela de contatos, localize no menu à direita o item "Importar".
+
+!images/import_spreadsheet/contact_index_import.png(Importar)!
+
+Em seguida, escolha a opção "Planilha".
+
+!images/import_spreadsheet/import_button.png(Importar)!
+
+Chegamos lá. A tela abaixo é a tela de importação via planilha:
+
+!images/import_spreadsheet/import_textarea.png(Importar)!
+
+Agora você vai até a sua planilha, seleciona todos os elementos (geralmente o atalho Crtl+A funciona), copia (Ctrl+C) e cola (Ctrl+V) no campo do Mailee.
+
+!images/import_spreadsheet/select_all.png(Importar)!
+
+!images/import_spreadsheet/import_textarea_filled.png(Importar)!
+
+Se é a primeira vez que você está importando, você não verá a opção "Usar a configuração utilizada na última importação", que aparece na imagem. Se você realiza importações periodicamente e o formato dos dados é o mesmo (as mesmas colunas), você poderá marcar esta opção. Fazendo isto, você não precisará configurar a importação (que veremos como fazer adiante) e o sistema irá diretamente para a tela de progresso.
+
+WARNING. Se você marcar a opção "Usar a configuração utilizada na última importação" e os campos do arquivo importado forem diferentes da última importação, você provavelmente receberá um erro de importação na tela seguinte. Mas nem tudo está perdido: simplesmente a importação não será feita, não gerando nenhum erro em seus contatos. Você poderá refazer a importação, desta vez não marcando a opção.
+
+h3. Configurando a importação
+
+Após enviar os dados, se você não tiver escolhido a opção de utilizar a última importação, você será encaminhado para a tela de configuração da importação. Nesta tela serão apresentados todos os campos do seu arquivo em uma lista horizontal.
+
+!images/import_spreadsheet/navigate.png(Importar)!
+
+Você pode navegar entre os campos utilizando os dois botões de navegação abaixo da lista. Para cada coluna você tem três opções:
+
+* *Associar a coluna com um campo do Mailee*
+** A importação irá inserir ou atualizar os valores dessa coluna no campo do Mailee
+* *Criar uma nova coluna*
+** A importação irá criar um "campo dinâmico":http://todo, e inserir os valores dessa coluna neste campo
+* *Não importar*
+** A importação irá ignorar esta coluna
+
+!images/import_spreadsheet/column_options.png(Opções de importação para cada coluna)!
+
+INFO. É obrigatório que ao menos um campo seja associado à coluna <samp>email</samp>.
+
+Defina a ação correta para *todas* as colunas, marque as listas nas quais você deseja inserir os contatos e clique no botão de continuar. Em seguida você será enviado para a tela que apresenta a barra de progresso da importação:
+
+!images/import_spreadsheet/progress_bar.png(Barra de progresso)!
+
+INFO. Você não precisa ficar nesta tela para que a importação seja realizada. Você pode continuar trabalhado no Mailee, ler algum artigo para aprender mais sobre o sistema ou então aproveitar para tomar um café.
+
+Todas as importações em andamento e finalizadas nas últimas horas ficam visíveis no <samp>Dashboard</samp> e também na tela inicial de importação.
+
+!images/import_spreadsheet/import_dashboard.png(Barra de progresso)!
+
+h3. O filtro do Mailee
+
+Após a importação, você poderá ver seus contatos listados. Por padrão, o Mailee define os contatos com o status "Em análise". Estes contatos passarão pelo filtro do Mailee. Este filtro irá invalidar automaticamente os contatos cujo domínio não exista, ou não esteja corretamente configurado para receber emails, cujo usuário (a parte inicial do email) não exista, ou que sigam algum padrão suspeito.
+
+Estas verificações são úteis para três propósitos:
+
+* Primeiro, elas já limpam a sua base, reduzindo seus custos.
+* Segundo, elas melhoram a entregabilidade geral da sua base, pois você enviará um número menor de mensagens erradas.
+* Terceiro, é por meio deste filtro que podemos identificar clientes que porventura estejam tendo práticas não respeitosas de email marketing (também conhecidas como SPAM).
+
+Ao identificarmos um usuário do Mailee com importações suspeitas, realizamos uma análise do histórico deste, e caso a suspeita se confirme o usuário é notificado e removido. Assim, todos os outros clientes ganham, pois podem ficar tranquilos que estão utilizando um produto que segue não apenas as melhores práticas de mercado, mas está constantemente melhorando as ferramentas de análise para identificação se SPAM.
+
