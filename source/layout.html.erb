@@ -1,13 +1,13 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-  "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title><%= yield(:page_title) || 'Manual do Mailee' %></title>
-    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:bold' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="files/stylesheets/style.css">
-    <link rel="stylesheet" type="text/css" href="files/stylesheets/syntax.css">
-    <link rel="stylesheet" type="text/css" href="files/stylesheets/print.css" media="print">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><%= 'Mailee.me Help - ' + yield(:page_title) || 'Mailee.me Help' %></title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:bold' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/style.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/print.css" media="print" />
     <script type="text/javascript" src="files/javascripts/guides.js"></script>
     <script type="text/javascript" src="files/javascripts/code_highlighter.js"></script>
     <script type="text/javascript" src="files/javascripts/highlighters.js"></script>
@@ -25,16 +25,16 @@
     <div id="header">
       <div class="header_wrapper">
         <div class="wrapper clearfix">
-          <h1><a href="index.html" title="Guides">Mailee Help</a></h1>
+          <h1><a href="index.html" title="Guides">Mailee.me Help</a></h1>
           <p class="hide"><a href="#mainCol">Skip navigation</a>.</p>
           <ul class="nav">
             <li><a href="index.html">Home</a></li>
             <li class="index"><a href="index.html" onclick="guideMenu(); return false;" id="guidesMenu">Índice</a>
               <div id="guides" class="clearfix" style="display: none;">
-                <hr>
+                <hr />
                 <dl class="L">
                   <dt>Começe aqui</dt>
-                  <dd><a href="iniciando.html">Iniciando com o Mailee</a></dd>
+                  <dd><a href="iniciando.html">Iniciando com o Mailee.me</a></dd>
                 </dl>
                 <dl class="R">
                   <dt>Importação</dt>
@@ -61,9 +61,7 @@
     </div>
     <div id="container">
       <div class="wrapper">
-        <div id="mainCol">
-          <%= yield %>
-        </div>
+        <div id="mainCol"><%= yield %></div>
       </div>
     </div>
     <hr class="hide">
