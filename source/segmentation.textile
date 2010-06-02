@@ -10,8 +10,31 @@ endprologue.
 
 h3. Criando um segmento
 
-Para criar um segmento, vá até a tela de contatos e clique em "Pesquisa avançada", logo abaixo do campo de busca.
+div{float:right;margin-left:20px}. !images/segmentation/link_busca_avancada.png(Busca avançada)!
 
+Para criar um segmento, vá até a tela de contatos e clique em "Pesquisa avançada", logo abaixo do campo de busca. Ao clicar neste link, abrirá o _box_ de pesquisa avançada, com todas as "opções":#filtros.
+
+!images/segmentation/pesquisa_avancada_geral.png(Busca avançada)!
+
+Após selecionar o filtro que você deseja e adicioná-lo, aparecerá uma lista com todos os filtros escolhidos
+
+!images/segmentation/segment_list.png(Lista dos filtros do segmento)!
+
+div{float:right;margin-left:20px}. !images/segmentation/segment_contacts_found.png(Total de contatos encontrados)!
+
+No canto superior à direta, será informado o total de contatos atuais (ver filtros temporais abaixo) encontrados pelo filtro.
+
+div{clear:both}. &nbsp;
+
+Continue adicionando filtros enquanto necessário e clique no botão "criar segmento". Informe o nome do segmento e dê o _ok_. 
+
+div{float:left;margin-right:20px}. !images/segmentation/segment_create.png(Criar segmento)!
+
+div{clear:both}. &nbsp;
+
+O filtro será salvo e poderá ser visto na listagem e aplicado sempre que necessário.
+
+!images/segmentation/segment_box.png(Lista dos segmentos)!
 
 
 h3. Filtros
@@ -49,7 +72,7 @@ div{float:right;margin-left:20px;width:240px}. !images/segmentation/por_status.p
 * *Confirmado*
 ** O contato já recebeu e acessou mensagens e não teve retornos.
 
-div{clear:both}. &nbsp;
+div{clear:both}.  
 
 h4. Por sexo
 
@@ -57,7 +80,7 @@ div{float:left;margin-right:20px;width:240px}. !images/segmentation/por_sexo.png
 
 O filtro por sexo permite segmentar sua base em masculino ou feminino. Para importar os contatos com esta coluna corretamente utilize os valores "M" e "F".
 
-div{clear:both}. &nbsp;
+div{clear:both}.  
 
 h4. Por domínio
 
@@ -67,7 +90,7 @@ O filtro por domínio permite segmentar sua pelos domínios dos e-mails de seus 
 
 Esta segmentação é interessante quando você quer comparar resultados entre domínios, quer fazer uma promoção especial para uma empresa específica (<samp>dominiodaempresa.com.br</samp>) ou quer mandar uma mensagem diferente para um certo domínio que possua alguma restrição em relação ao formato da mensagem.
 
-div{clear:both}. &nbsp;
+div{clear:both}.  
 
 h4. Por email
 
@@ -75,7 +98,7 @@ div{float:left;margin-right:20px;width:240px}. !images/segmentation/por_email.pn
 
 O filtro por email permite buscar contatos cujo email seja igual, diferente, que contenha ou que não contenha uma certa sequência de caracteres. O filtro "contendo" é realizado sem levar em consideração caracteres maiúsculos e minúsculos. Por exemplo, um filtro por _witt_ deve encontrar contatos cujo email seja _wittgenstein@tractatus.org_ ou _JOHN.HEWITT@GMAIL.COM_.
 
-div{clear:both}. &nbsp;
+div{clear:both}.  
 
 h4. Por idade
 
@@ -83,7 +106,7 @@ div{float:right;margin-left:20px;width:240px}. !images/segmentation/por_idade.pn
 
 O filtro por idade permite segmentar seus contatos por faixas de idade. Os valores vão de 0 a 125. O valor padrão é 20-40 mas você pode modificá-lo arrastando as pontas do <i>slider</i>.
 
-div{clear:both}. &nbsp;
+div{clear:both}.  
 
 h4. Por aniversário
 
@@ -100,7 +123,7 @@ div{float:right;margin-left:20px;width:340px}. !images/segmentation/por_aniversa
 
 INFO. A data de aplicação de um filtro temporal *não é a data de criação* do filtro, mas sim qualquer data em que o filtro está sendo utilizado. Isto quer dizer que, se você entrar no Mailee no dia 17 de dezembro, e for visualizar os contatos de um segmento que filtra contatos cujos aniversários sejam "neste mês", você verá todos os que nasceram em dezembro. Este detalhe é importante, pois se você criar uma mensagem utilizando este segmento em novembro, e programar para esta ser enviada em dezembro, *a data de aplicação será a data de envio*, ou seja, a mensagem irá para os aniversariantes de dezembro.
 
-div{clear:both}. &nbsp;
+div{clear:both}.  
 
 h4. Por tag
 
@@ -110,7 +133,7 @@ O filtro por tag permite segmentar seus contatos pelas tags associadas à seus c
 
 Esta segmentação é interessante para enviar mensagens focadas de acordo com as preferências do usuário. Imagine que você possui uma loja de material esportivo em geral, e vai fazer uma campanha para vender produtos associados ao Corinthians. Enviar isto para toda sua base certamente será um tiro no pé, e você terá muitos descadastros dos palmeirenses. Um filtro pela tag "corinthians" seria muito apropriado.
 
-div{clear:both}. &nbsp;
+div{clear:both}.  
 
 INFO. O Mailee é capaz de buscar automaticamente tags de seus contatos em algumas redes sociais, como o Last.fm (de música) e o Delicious (de <i>bookmarks</i>). Tente manter os dados de redes sociais de seus contatos atualizados, pois isto é uma ferramenta muito poderosa de segmentação.
 
@@ -119,15 +142,21 @@ h4. Por localização
 
 div{float:right;margin-left:20px;width:340px}. !images/segmentation/por_localizacao.png(Filtro por localização)!
 
-O filtro por localização é uma poderosa ferramenta para segmentar contatos de acordo com sua localização geográfica _presumida_. 
+O filtro por localização é uma poderosa ferramenta para segmentar contatos de acordo com sua localização geográfica _presumida_.
 
 INFO. A localização é estabilecida utilizando o IP fornecido pelo servidor usado pelo seu contato no último acesso que este fez à alguma mensagem sua. A localização é aproximada, não refletindo exatamente o local do acesso. Normalmente a localização inferida é baseada na cidade do acesso (todos acessos na cidade de São Paulo terão a mesma posição). Nos casos de acesso via _proxy_ a posição inferida não será confiável.
 
-div{clear:both}. &nbsp;
+div{clear:both}.  
 
-h4. Por klout
+h4. Por Klout
 
-!images/segmentation/por_klout.png(Filtro por klout)!
+div{float:left;margin-right:20px;width:240px}. !images/segmentation/por_klout.png(Filtro por klout)!
+
+O "Klout":http://klout.com/ é um serviço online que calcula a influência de usuários no Twitter. Sempre que você colocar o usuário do Twitter de algum contato no Mailee, o sistema irá buscar o número Klout do contato.
+
+O filtro por Klout permite que você crie mensagens com foco em contatos influentes no Twitter, caso queira fazer campanhas para esta mídia.
+
+div{clear:both}.
 
 h4. Por seguidores no Twitter
 
@@ -175,33 +204,4 @@ WARNING. Se você marcar a opção "Usar a configuração utilizada na última i
 
 h3. Configurando a importação
 
-Após enviar os dados, se você não tiver escolhido a opção de utilizar a últimca importação, você será encaminhado para a tela de configuração da importação. Nesta tela serão apresentados todos os campos do seu arquivo em uma lista horizontal.
-
-!images/import_spreadsheet/navigate.png(Importar)!
-
-Você pode navegar entre os campos utilizando os dois botões de navegação abaixo da lista. Para cada coluna você tem três opções:
-
-* *Associar a coluna com um campo do Mailee*
-** A importação irá inserir ou atualizar os valores dessa coluna no campo do Mailee
-* *Criar uma nova coluna*
-** A importação irá criar um "campo dinâmico":http://todo, e inserir os valores dessa coluna neste campo
-* *Não importar*
-** A importação irá ignorar esta coluna
-
-!images/import_spreadsheet/column_options.png(Opções de importação para cada coluna)!
-
-INFO. É obrigatório que ao menos um campo seja associado à coluna <samp>email</samp>.
-
-Defina a ação correta para *todas* as colunas, marque as listas nas quais você deseja inserir os contatos e clique no botão de continuar. Em seguida você será enviado para a tela que apresenta a barra de progresso da importação:
-
-!images/import_spreadsheet/progress_bar.png(Barra de progresso)!
-
-INFO. Você não precisa ficar nesta tela para que a importação seja realizada. Você pode continuar trabalhado no Mailee, ler algum artigo para aprender mais sobre o sistema ou então aproveitar para tomar um café.
-
-Todas as importações em andamento e finalizadas nas últimas horas ficam visíveis no <samp>dashboard</samp> e também na tela inicial de importação.
-
-!images/import_spreadsheet/import_dashboard.png(Barra de progresso)!
-
-h3. O filtro do Mailee
-
-Após a importação, você poderá ver seus contatos listados. Por padrão, o Mailee define os contatos com o status "Em análise". Estes contatos passarão pelo filtro do Mailee. Este filtro irá invalidar automaticamente os contatos: cujo domínio não exista, ou não esteja corretamente configurado para receber emails; cujo usuário (a parte inicial do email) não exista; que sigam algum padrão suspeito. Estas verificações são úteis para três propósitos. Primeiro, ela já limpa a sua base, reduzindo seus custos. Segundo, ela melhora a entregabilidade geral da sua base, pois enviará um número menor de mensagens erradas. Terceiro, é por meio deste filtro que podemos identificar clientes que porventura estejam tendo práticas não respeitosas de email marketing (a.k.a. SPAM). Ao identificarmos um usuário do Mailee com importações suspeitas, realizamos uma análise do histórico deste, e caso a suspeita se confirme o usuário é notificado e removido. Assim, todos os outros clientes ganham, pois podem ficar tranquilos que estão utilizando um produto que segue não apenas as melhores práticas de mercado mas está constantemente melhorando as ferramentas de análise para identificação se SPAM.
+Após enviar os dados, se você não tiver escolhido a opção de utilizar a últimca importação, você será encaminhado
