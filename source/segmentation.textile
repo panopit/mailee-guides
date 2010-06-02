@@ -1,0 +1,207 @@
+h2. Segmentação
+
+Enviar mensagens pertinentes e focadas é muito importante para ter o melhor retorno para suas ações de email marketing. O Mailee permite segmentar seus contatos de forma fácil e, ao mesmo tempo, muito completa.
+
+* Como criar segmentos.
+* Quais os filtros existentes e como funcionam.
+* Como enviar uma mensagem para um segmento.
+
+endprologue.
+
+h3. Criando um segmento
+
+Para criar um segmento, vá até a tela de contatos e clique em "Pesquisa avançada", logo abaixo do campo de busca.
+
+
+
+h3. Filtros
+
+h4. Por nome
+
+div{float:left;margin-right:20px}. !images/segmentation/por_nome.png(Filtro por nome)!
+
+O filtro por nome permite buscar contatos cujo nome seja igual, diferente, que contenha ou que não contenha uma certa sequência de caracteres. O filtro "contendo" é realizado sem levar em consideração caracteres maiúsculos e minúsculos. Por exemplo, um filtro por _witt_ deve encontrar contatos cujo nome seja _Wittgenstein_ ou _Hewitt_.
+
+div{clear:both}. &nbsp;
+
+h4. Por status
+
+O filtro por status é útil em diversos cenários. Você pode utilizá-lo para valorizar os contatos confirmados (veja abaixo o que cada status representa), ou também para limpar contatos ainda sem acessos.
+
+Este filtro apresenta as seguintes opções:
+
+div{float:right;margin-left:20px;width:240px}. !images/segmentation/por_status.png(Filtro por status)!
+
+* *Aguardando*
+** O contato se cadastrou pelo formulário, mas ainda não confirmou o cadastro.
+* *Descadastrado*
+** O contato solicitou descadastro.
+* *Inválido*
+** O filtro de spam do Mailee rejeitou este contato ou o último envio feito para este contato foi rejeitado em definitivo. Os motivos mais comuns para isto é que o email ou o domínio não existem ou o servidor rejeitou os emails 3 vezes seguidas.
+* *Em análise*
+** O contato foi recém cadastrado e está em análise anti-spam do Mailee.
+* *Soft bounce*
+** O último envio feito para este contato foi rejeitado temporariamente, mas ele ainda está ativo. Os motivos mais comuns para isto é caixa cheia, suspeita de spam ou erro temporário. Se isto se repetir 3 vezes o contato será invalidado.
+* *Desconhecido*
+** O contato ainda não recebeu mensagens.
+* *Válido*
+** O contato já recebeu mensagens mas ainda não acessou.
+* *Confirmado*
+** O contato já recebeu e acessou mensagens e não teve retornos.
+
+div{clear:both}. &nbsp;
+
+h4. Por sexo
+
+div{float:left;margin-right:20px;width:240px}. !images/segmentation/por_sexo.png(Filtro por sexo)!
+
+O filtro por sexo permite segmentar sua base em masculino ou feminino. Para importar os contatos com esta coluna corretamente utilize os valores "M" e "F".
+
+div{clear:both}. &nbsp;
+
+h4. Por domínio
+
+div{float:right;margin-left:20px;width:240px}. !images/segmentation/por_dominio.png(Filtro por domínio)!
+
+O filtro por domínio permite segmentar sua pelos domínios dos e-mails de seus contatos, como por exemplo <samp>gmail.com</samp>, <samp>hotmail.com</samp> e <samp>yahoo.com</samp>. O filtro já traz os 8 domínios mais comuns em sua base, e você pode também escrever o domínio completo (como em <samp>meudominio.com.br</samp>) no campo em branco.
+
+Esta segmentação é interessante quando você quer comparar resultados entre domínios, quer fazer uma promoção especial para uma empresa específica (<samp>dominiodaempresa.com.br</samp>) ou quer mandar uma mensagem diferente para um certo domínio que possua alguma restrição em relação ao formato da mensagem.
+
+div{clear:both}. &nbsp;
+
+h4. Por email
+
+div{float:left;margin-right:20px;width:240px}. !images/segmentation/por_email.png(Filtro por email)!
+
+O filtro por email permite buscar contatos cujo email seja igual, diferente, que contenha ou que não contenha uma certa sequência de caracteres. O filtro "contendo" é realizado sem levar em consideração caracteres maiúsculos e minúsculos. Por exemplo, um filtro por _witt_ deve encontrar contatos cujo email seja _wittgenstein@tractatus.org_ ou _JOHN.HEWITT@GMAIL.COM_.
+
+div{clear:both}. &nbsp;
+
+h4. Por idade
+
+div{float:right;margin-left:20px;width:240px}. !images/segmentation/por_idade.png(Filtro por idade)!
+
+O filtro por idade permite segmentar seus contatos por faixas de idade. Os valores vão de 0 a 125. O valor padrão é 20-40 mas você pode modificá-lo arrastando as pontas do <i>slider</i>.
+
+div{clear:both}. &nbsp;
+
+h4. Por aniversário
+
+O filtro por aniversário permite segmentar seus contatos de três modos:
+
+div{float:right;margin-left:20px;width:240px}. !images/segmentation/por_aniversario.png(Filtro por aniversário)!
+
+* Neste mês
+** Este filtro apresentará os contatos cujos aniversários sejam no mês em que filtro está sendo <i>aplicado</i>. Isto significa dizer que, estando em janeiro, você verá os contatos que nasceram em janeiro, da mesma forma, em junho você verá os contatos que nasceram em junho.
+* Nesta semana
+** Este filtro apresentará os contatos cujos aniversários sejam nos próximos 7 dias do dia em que filtro está sendo <i>aplicado</i>. Isto significa dizer que, estando no dia 11 de janeiro, você verá os contatos que nasceram entre 11 e 18 de janeiro, da mesma forma, estando no dia 6 de junho, você verá os contatos que nasceram entre 6 e 13 de junho.
+* Em um determinado mês
+** Este filtro apresentará os contatos cujos aniversários sejam no mês especificado.
+
+INFO. A data de aplicação de um filtro temporal *não é a data de criação* do filtro, mas sim qualquer data em que o filtro está sendo utilizado. Isto quer dizer que, se você entrar no Mailee no dia 17 de dezembro, e for visualizar os contatos de um segmento que filtra contatos cujos aniversários sejam "neste mês", você verá todos os que nasceram em dezembro. Este detalhe é importante, pois se você criar uma mensagem utilizando este segmento em novembro, e programar para esta ser enviada em dezembro, *a data de aplicação será a data de envio*, ou seja, a mensagem irá para os aniversariantes de dezembro.
+
+div{clear:both}. &nbsp;
+
+h4. Por tag
+
+div{float:left;margin-right:20px;width:240px}. !images/segmentation/por_tag.png(Filtro por tag)!
+
+O filtro por tag permite segmentar seus contatos pelas tags associadas à seus contatos manualmente ou pelas "funcionalidades de integração com redes sociais":http//todo do Mailee. O filtro já traz as 8 tags mais comuns em sua base, e você pode também escrever a tag desejada no campo em branco.
+
+Esta segmentação é interessante para enviar mensagens focadas de acordo com as preferências do usuário. Imagine que você possui uma loja de material esportivo em geral, e vai fazer uma campanha para vender produtos associados ao Corinthians. Enviar isto para toda sua base certamente será um tiro no pé, e você terá muitos descadastros dos palmeirenses. Um filtro pela tag "corinthians" seria muito apropriado.
+
+div{clear:both}. &nbsp;
+
+INFO. O Mailee é capaz de buscar automaticamente tags de seus contatos em algumas redes sociais, como o Last.fm (de música) e o Delicious (de <i>bookmarks</i>). Tente manter os dados de redes sociais de seus contatos atualizados, pois isto é uma ferramenta muito poderosa de segmentação.
+
+
+h4. Por localização
+
+div{float:right;margin-left:20px;width:240px}. !images/segmentation/por_localizacao.png(Filtro por localização)!
+
+O filtro por localização é uma poderosa ferramenta para segmentar contatos de acordo com sua localização geográfica _presumida_. 
+
+INFO. A localização é estabilecida utilizando o IP fornecido pelo servidor usado pelo seu contato no último acesso que este fez à alguma mensagem sua. A localização é aproximada, não refletindo exatamente o local do acesso. Normalmente a localização inferida é baseada na cidade do acesso (todos acessos na cidade de São Paulo terão a mesma posição). Nos casos de acesso via _proxy_ a posição inferida não será confiável.
+
+div{clear:both}. &nbsp;
+
+h4. Por klout
+
+!images/segmentation/por_klout.png(Filtro por klout)!
+
+h4. Por seguidores no Twitter
+
+!images/segmentation/por_seguidores_no_twitter.png(Filtro por seguidores no twitter)!
+
+h4. Por conexões no LinkedIn
+
+!images/segmentation/por_conexoes_no_linkedin.png(Filtro por conexões no linkedin)!
+
+h4. Por recomendações no LinkedIn
+
+!images/segmentation/por_recomendacoes_no_linkedin.png(Filtro por recomendações no linkedin)!
+
+h4. Por campos personalizados
+
+!images/segmentation/por_campos_personalizados.png(Filtro por campos personalizados)!
+
+h3. Enviando para um segmento
+
+O conteúdo dos campos é arbitrário. O único uso que o Mailee faz deles é inferir automaticamente campos como <samp>email</samp> e <samp>nome</samp>. Ou seja, se você colocar uma coluna com um nome "Email" e ela não contiver e-mails, o Mailee não irá associá-la por padrão com o e-mail dos contatos, preferindo uma coluna cujos dados batam com o formato correto.
+
+h3. Colocando a planilha no Mailee
+
+Na tela de contatos, localize no menu à direita o item "Importar".
+
+!images/import_spreadsheet/contact_index_import.png(Importar)!
+
+Em seguida, escolha a opção "Planilha".
+
+!images/import_spreadsheet/import_button.png(Importar)!
+
+Chegamos lá. A tela abaixo é a tela de importação via planilha:
+
+!images/import_spreadsheet/import_textarea.png(Importar)!
+
+Agora você vai até a sua planilha, seleciona todos os elementos (geralmente o atalho Crtl a funciona), copia (Ctrl c) e cola (Ctrl v) no campo do Mailee.
+
+!images/import_spreadsheet/select_all.png(Importar)!
+
+!images/import_spreadsheet/import_textarea_filled.png(Importar)!
+
+Se é a primeira vez que você está importando, você não verá a opção que aparece na imagem "Usar a configuração utilizada na última importação". Se você realiza importações periodicamente e o formato dos dados é o mesmo (as mesmas colunas) você poderá marcar esta opção. Fazendo isto, você não precisará configurar a importação (que veremos como fazer adiante) e o sistema irá diretamente para a tela de progresso.
+
+WARNING. Se você marcar a opção "Usar a configuração utilizada na última importação" e os campos do arquivo importado forem diferentes da última importação você provavelmente receberá um erro de importação na tela seguinte. Mas nem tudo está perdido: simplesmente a importação não será feita, não gerando nenhum erro em seus contatos. Você poderá refazer a importação, desta vez não marcando a opção.
+
+h3. Configurando a importação
+
+Após enviar os dados, se você não tiver escolhido a opção de utilizar a últimca importação, você será encaminhado para a tela de configuração da importação. Nesta tela serão apresentados todos os campos do seu arquivo em uma lista horizontal.
+
+!images/import_spreadsheet/navigate.png(Importar)!
+
+Você pode navegar entre os campos utilizando os dois botões de navegação abaixo da lista. Para cada coluna você tem três opções:
+
+* *Associar a coluna com um campo do Mailee*
+** A importação irá inserir ou atualizar os valores dessa coluna no campo do Mailee
+* *Criar uma nova coluna*
+** A importação irá criar um "campo dinâmico":http://todo, e inserir os valores dessa coluna neste campo
+* *Não importar*
+** A importação irá ignorar esta coluna
+
+!images/import_spreadsheet/column_options.png(Opções de importação para cada coluna)!
+
+INFO. É obrigatório que ao menos um campo seja associado à coluna <samp>email</samp>.
+
+Defina a ação correta para *todas* as colunas, marque as listas nas quais você deseja inserir os contatos e clique no botão de continuar. Em seguida você será enviado para a tela que apresenta a barra de progresso da importação:
+
+!images/import_spreadsheet/progress_bar.png(Barra de progresso)!
+
+INFO. Você não precisa ficar nesta tela para que a importação seja realizada. Você pode continuar trabalhado no Mailee, ler algum artigo para aprender mais sobre o sistema ou então aproveitar para tomar um café.
+
+Todas as importações em andamento e finalizadas nas últimas horas ficam visíveis no <samp>dashboard</samp> e também na tela inicial de importação.
+
+!images/import_spreadsheet/import_dashboard.png(Barra de progresso)!
+
+h3. O filtro do Mailee
+
+Após a importação, você poderá ver seus contatos listados. Por padrão, o Mailee define os contatos com o status "Em análise". Estes contatos passarão pelo filtro do Mailee. Este filtro irá invalidar automaticamente os contatos: cujo domínio não exista, ou não esteja corretamente configurado para receber emails; cujo usuário (a parte inicial do email) não exista; que sigam algum padrão suspeito. Estas verificações são úteis para três propósitos. Primeiro, ela já limpa a sua base, reduzindo seus custos. Segundo, ela melhora a entregabilidade geral da sua base, pois enviará um número menor de mensagens erradas. Terceiro, é por meio deste filtro que podemos identificar clientes que porventura estejam tendo práticas não respeitosas de email marketing (a.k.a. SPAM). Ao identificarmos um usuário do Mailee com importações suspeitas, realizamos uma análise do histórico deste, e caso a suspeita se confirme o usuário é notificado e removido. Assim, todos os outros clientes ganham, pois podem ficar tranquilos que estão utilizando um produto que segue não apenas as melhores práticas de mercado mas está constantemente melhorando as ferramentas de análise para identificação se SPAM.
