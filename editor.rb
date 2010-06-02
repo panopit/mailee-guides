@@ -35,7 +35,7 @@ post '/:file' do
   @file_name = params[:file]
   @file = File.open("source/#{@file_name}",'w')
   @file.write params[:file_content]
-  
+
   @first_part = @file_name.split(/\./).shift
 
   `ruby spree_guides.rb #{@first_part}`
@@ -45,3 +45,4 @@ end
 #get '/preview/:file' do
 #  File.read("output/#{params[:file]}")
 #end
+

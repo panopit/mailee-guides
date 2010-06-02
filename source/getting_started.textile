@@ -1,13 +1,13 @@
-h2. Como importar contatos de uma planilha
+h2. Iniciando com o Mailee
 
-O Mailee possui um sistema para importação de contatos de planilha muito poderoso e completo. Com ele você pode importar dados dos contatos e também colunas novas, adequando o Mailee à sua base de dados real.
+O Mailee é uma aplicação web de email marketing. Com ele, você pode manter uma relação próxima com as pessoas para quem você é importante.
 
-Em vez de criarmos uma importação apenas de arquivos MS Excel, nós fizemos uma importação intermediária, na qual você precisa fazer um _copiar_ e _colar_ da sua planilha. Assim você pode importar, além do MS Excel, planilhas do Open Office, Google Docs ou Numbers do iWork. Vamos ver:
+Neste guia, iremos ver:
 
-* Como formatar a planilha.
-* Como colocar a planilha no Mailee.
-* Como configurar a importação.
-* Como funciona o filtro do Mailee.
+* Em que casos é bom usar o Mailee.
+* Para quem o Mailee é melhor.
+* O que o Mailee tem de diferente.
+* Como começar agora mesmo.
 
 endprologue.
 
