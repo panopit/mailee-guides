@@ -1,11 +1,19 @@
 <% content_for :header_section do %>
+
 h2. Manual do Mailee
+
 Foo bar
+
 * "Yo":http://www.mailee.me/site/history - baseado na última versão do Mailee
+
 <% end %>
+
 <% content_for :index_section do %>
+
 h3. Inicie aqui
+
 <dl>
+
   <% guide('Iniciando com o Mailee', 'iniciando.html') do %>
     Tudo o que você precisa saber para iniciar com o Mailee.
   <% end %>
