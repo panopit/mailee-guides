@@ -1,49 +1,128 @@
-h2. CriaÁ„o de templates
+h2. Como criar templates
 
-Esse guia È voltado para pessoas que desejam produzir templates para uso no Mailee. Ele cobre funcionalidades que v„o do nÌvel b·sico ao avanÁado, e ao final dele vocÍ dever·:
+p. Esse guia √© voltado para pessoas que desejam saber como criar seus pr√≥prios templates para usar no Mailee.me. Ele cobre funcionalidades que v√£o do n√≠vel b√°sico ao avan√ßado, e ao final dele voc√™ poder√°:
 
-* Saber como È construida um email em HTML
-* Poder montar a configuraÁ„o b·sica para suas mensagens
-* Criar blocos replic·veis para inserÁ„o de conte˙do
-* Tornar edit·veis elementos em seu template HTML
-* Conhecer boas pr·ticas na criaÁ„o de templates
-* Aprender sobre links autom·ticos, como descadastro (unsubscribe), visualizar na web (weblink), adicionar a lista de contatos (whitelist) e encaminhar aos amigos (forward)
+* Entender o conceito de template
+* Configurar corretamente sua mensagem
+* Tornar campos e imagens edit√°veis
+* Criar blocos replic√°veis para inser√ß√£o de conte√∫do
+* Saber como inserir links din√¢micos (unsubscribe, weblink, etc) na sua mensagem
+* Conhecer boas pr√°ticas para cria√ß√£o de Email em HTML
+* Baixar modelos prontos para trabalhar em cima
 
 endprologue.
 
-h3. Antes de comeÁar:
+h5. Antes de come√ßar:
 
-Esse guia È escrito de forma simples, para que vocÍ consiga montar um template patindo do zero. No entanto ele assume que vocÍ possui um conhecimento b·sico de HTML e CSS. Para isso, vocÍ poder· usar como referÍncia a documentaÁ„o encontrada em:
+INFO. Esse guia √© escrito de forma simples, para que voc√™ consiga montar um template patindo do zero.<br/> No entanto ele assume que voc√™ possui um conhecimento b√°sico de HTML e CSS. Para saber mais sobre HTML e CSS, indicamos fontes com informa√ß√£o no final desse artigo.
 
-* "HTML na w3 Schools":http://www.w3schools.com/html/default.asp - Guia com tutorial e documentaÁ„o para HTML (em inglÍs)
-* "CSS na w3 Schools":http://www.w3schools.com/css/default.asp - Guia com tutorial e documentaÁ„o para CSS (em inglÍs)
+h3. O template de email
 
-Sugerimos a vocÍ o uso de ferramenta de validaÁ„o da W3C
-* "W3C Validator":http://validator.w3.org/check
+p. Diferen√ßa b√°sica entre template e mensagem
 
-h3. Email em HTML lol
+h3. Email em HTML
 
-Um email em HTML È escrito, basicamente, como uma p·gina web, tendo algumas restriÁıes impostas pelos clientes de email.
+p. Um email em HTML √© escrito, basicamente, como uma p√°gina web, tendo algumas restri√ß√µes impostas pelos clientes de email.
 
-Quanto ‡s restriÁıes podemos citar:
+p. Quanto √†s restri√ß√µes podemos citar:
 
 * O CSS precisa ser inserido inline
-* RenderizaÁ„o de DIVs n„o È 100% confi·vel
-* 
+* Renderiza√ß√£o de DIVs n√£o √© 100% confi√°vel
 
-h3. ConfiguraÁ„o da mensagem
+h3. Configurando seu template
 
-<shell>
-  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-  <html>
-    <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-      <title>Aqui vai o nome de seu template</title>
-    </head>
-    <body style="margin:0; padding:0; border:0 none; text-align:center;">
-      <center>
-      
-      </center>
-    </body>
-  </html>
-</shell>
+h4. Codifica√ß√£o
+
+p. Todos os arquivos colocados no Mailee.me devem ser salvos em UTF-8.
+
+p. Para seus HTMLs, ser√° necess√°rio inserir o seguinte c√≥digo no <samp>&lt;head&gt;</samp> de seus layouts:
+
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</html>
+
+h4. T√≠tulo
+
+<html>
+  <title>T√≠tulo do seu template</title>
+</html>
+
+h3. Tornando √°res de texto edit√°veis
+
+p. Imagine que voc√™ precisa permitir que o conte√∫do de texto, dentro de um elemento <samp>&lt;p&gt;‚Ä¶&lt;/p&gt;</samp>, seja editado, e seu HTML √© algo assim:
+
+<html>
+  <p>
+    Essa informa√ß√£o dever√° ser editada
+  </p>
+</html>
+
+p. Nesse caso, voc√™ simplesmente precisar√° adicionar uma <samp>class="edit"</samp> ao seu elemento <samp>&lt;p&gt;‚Ä¶&lt;/p&gt;</samp>
+
+<html>
+  <p class="edit">
+    Essa informa√ß√£o poder√° ser editada
+  </p>
+</html>
+
+p. A <samp>class="edit"</samp> n√£o precisa, obrigatoriamente, ser aplicada em elementos <samp>display:block;</samp>, conforme exemplo abaixo:
+
+<html>
+  <p>
+    Voc√™ tamb√©m pode definir <span class="edit">pequenas partes</span> para edi√ß√£o.
+  </p>
+</html>
+
+WARNING. N√£o use elementos com <samp>class="edit"</samp>, dentro de outros elementos com <samp>class="edit"</samp>.
+
+h3. Imagens
+
+<html>
+  <img class="edit" ‚Ä¶ />
+</html>
+
+h4. Tornando uma imagem substitu√≠vel
+
+h4. Definindo um tamanho para as imagens
+
+h3. Blocos para repeti√ß√£o
+
+h4. Definindo um bloco repet√≠vel
+
+h4. Definindo o √≠ndice dos itens no bloco repet√≠vel
+
+h3. Links din√¢micos
+
+h4. Descadastramento (unsubscribe)
+
+h4. Visualiza√ß√£o na Web (weblink)
+
+h4. Encaminhar para amigos (forward)
+
+h4. Adicionando √† lista de contatos (whitelist)
+
+h3. Campos din√¢micos
+
+h4. dados dos contatos
+
+h4. dados da lista
+
+h4. data
+
+h3. Upload para o Mailee.me
+
+h3. Dicas
+
+Sugerimos a voc√™ o uso de ferramenta de valida√ß√£o da W3C
+* "W3C Validator":http://validator.w3.org/check
+
+h3. Download de modelos
+
+h3. Refer√™ncia
+
+* "HTML na w3 Schools":http://www.w3schools.com/html/default.asp - Guia com tutorial e documenta√ß√£o para HTML (em ingl√™s)
+* "CSS na w3 Schools":http://www.w3schools.com/css/default.asp - Guia com tutorial e documenta√ß√£o para CSS (em ingl√™s)
+* "HTML - Wikipedia [en]":http://en.wikipedia.org/wiki/HTML - Informa√ß√µes sobre HTML (em ingl√™s)
+* "HTML - Wikipedia [pt-Br]":http://pt.wikipedia.org/wiki/HTML - Informa√ß√µes sobre HTML (em portugu√™s)
+* "Artigo na Wikipedia sobre CSS":http://en.wikipedia.org/wiki/Cascading_Style_Sheets - Informa√ß√µes sobre CSS (em ingl√™s)
+* "Artigo na Wikipedia sobre CSS":http://pt.wikipedia.org/wiki/Cascading_Style_Sheets - Informa√ß√µes sobre CSS (em portugu√™s)

@@ -13,7 +13,8 @@ dl dt { font-weight: bold; }
 dd { margin-left: 1.5em;}
 
 pre,code { margin: 1.5em 0; white-space: pre; overflow: auto; }
-pre,code,tt { font: 1em 'andale mono', 'lucida console', monospace; line-height: 1.5; }
+pre,code,tt, samp { font-size: 14px; font-family: menlo, monaco, 'andale mono', 'lucida console', 'courier new', monospace; line-height: 1.5; }
+samp { background: #ddd; color: #444; font-size: 14px; margin: 0 0.25em; padding: 0.25em 0.5em;}
 abbr, acronym { border-bottom: 1px dotted #666; }
 address { margin: 0 0 1.5em; font-style: italic; }
 del { color:#666; }
@@ -29,7 +30,6 @@ legend { font-weight: bold; font-size:1.2em; }
 input.text, input.title,
 textarea, select { margin:0.5em 0; border:1px solid #bbb; }
 table { margin: 0 0 1.5em; border: 2px solid #CCC; background: #FFF; border-collapse: collapse; }
- 
 table th, table td { padding: 0.25em 1em; border: 1px solid #CCC; border-collapse: collapse; }
 table th { border-bottom: 2px solid #CCC; background: #EEE; font-weight: bold; padding: 0.5em 1em; }
 

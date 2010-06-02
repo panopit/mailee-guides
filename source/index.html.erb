@@ -1,0 +1,30 @@
+<% content_for :header_section do %>
+h2. Manual do Mailee
+Foo bar
+* "Yo":http://www.mailee.me/site/history - baseado na última versão do Mailee
+<% end %>
+<% content_for :index_section do %>
+h3. Inicie aqui
+<dl>
+  <% guide('Iniciando com o Mailee', 'iniciando.html') do %>
+    Tudo o que você precisa saber para iniciar com o Mailee.
+  <% end %>
+</dl>
+h3. Importação
+<dl>
+  <% guide('Importe planilhas', 'import_csv.html') do %>
+    Importando planilhas
+  <% end %>
+</dl>
+h3. Exportação
+<dl>
+  <% guide('Exportando contatos', 'export.html') do %>
+    So and so
+  <% end %>
+</dl>
+<dl>
+  <% guide('REST', 'rest.html') do %>
+    This and that!
+  <% end %>
+</dl>
+<% end %>
