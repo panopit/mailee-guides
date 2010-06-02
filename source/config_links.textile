@@ -1,0 +1,31 @@
+h2. Configuração dos links
+
+Para que o Mailee contabilize os _clicks_ em sua mensagem, o Mailee modifica o caminho dos links para a página que irá realizar a contabilização. Por padrão, o caminho desta página aponta para +seusubdominio.mailee.me+, mas é possível apontar para o seu site.
+
+* Como configurar o DNS do seu site
+* Como definir o caminho no Mailee
+
+endprologue.
+
+h3. Configurar o DNS
+
+O primeiro passo para configurar o DNS para colocar os links para o seu site é escolher um subdomínio. Se o seu domínio é +seu_dominio.com+, você pode optar, por exemplo, por +email.seu_dominio.com+ ou +mkt.seu_dominio.com+. Uma vez escolhido, abra o painel de controle da sua hospedagem. No painel crie um novo registro do tipo CNAME com o subdomínio que você escolheu (apenas o subdomínio) apontando para +subdominio_no_mailee.mailee.me.+. O subdomínio que você escolheu *não precisa* ser o mesmo que você usa no Mailee.
+
+INFO. É muito importante que exista o ponto no final, é ele que indica que você quer apontar para subdominio_no_mailee.mailee.me e não subdominio_no_mailee.mailee.me.seudominio.com.br).
+
+Exemplo no painel da locaweb:
+
+!images/config_links/dns_config.png(Configuração do DNS na Locaweb)!
+
+No exemplo acima, estou apontando +email.seu_dominio.com+, que é o subdomínio que escolhí no *meu domínio* para +softa.mailee.me+ que é o *meu subdomínio no mailee*.
+
+h3. Configurar o Mailee
+
+Vá em configurações e depois em links. Defina o caminho completo escolhido, com subdomínio e domínio (não coloque o "http"):
+
+!images/config_links/config_url.png(Definindo o link)!
+
+No exemplo acima foi definido +mkt.softa.com.br+. Isto quer dizer que o meu domínio é +softa.com.br+ e o subdomínio que configurei é o +mkt+. Clique em "Salvar". Pronto. Agora, se quiser, envie uma mensagem de para o seu e-mail (envie uma mensagem real, não um teste) para ver se está funcionando. Como você pode ver no rodapé do e-mail abaixo, o link está apontando corretamente para +mkt.softa.com.br+.
+
+!images/config_links/modified_link.png(Link modificado corretamente)!
+
