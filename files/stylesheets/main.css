@@ -58,7 +58,7 @@ azul do degradê do logo: c0d0df
 
 /* Links --------------------------------------- */
 a, a:link, a:visited { color: #162F54; text-decoration: underline; }
-#mainCol a, #subCol a, #feature a {color: #0080ce;}
+#mainCol a, #subCol a, #feature a {color: #2255a0;}
 #mainCol a:hover, #subCol a:hover, #feature a:hover {color: #001526;}
 #footer a { color: #0080CE; text-decoration: underline; }
 
@@ -88,6 +88,7 @@ a, a:link, a:visited { color: #162F54; text-decoration: underline; }
 #guides hr { display: block; border: none; height: 1px; color: #001526; background: #001526; }
 
 /* Headings--------------------------------------- */
+h1,h2,h3,h4,h5{ font-family: 'Droid Sans', arial, serif; }
 h1 { font-size: 2.5em; line-height: 1em; margin: 0.6em 0 .2em; font-weight: bold; }
 h2 { font-size: 2.1428em; line-height: 1em; margin: 0.7em 0 .2333em; font-weight: bold; }
 h3 { color: #444; font-size: 1.7142em; line-height: 1.286em; margin: 0.875em 0 0.2916em; font-weight: bold; }
@@ -111,6 +112,7 @@ h6 { font-size: 1em; line-height: 1.5em; margin: 1em 0 .5em; font-weight: normal
 #mainCol dd.ticket, #subCol dd.ticket { background: #fff9d8 url(../../images/tab_yellow.gif) no-repeat left top; border: none; padding: 1.25em 1em 1.25em 48px; margin-left: 0; margin-top: 0.25em; }
 #mainCol div.warning, #subCol dd.warning { background: #f9d9d8 url(../../images/tab_red.gif) no-repeat left top; border: none; padding: 1.25em 1.25em 1.25em 48px; margin-left: 0; margin-top: 0.25em; }
 #subCol .chapters {color: #001526;}
+
 #subCol .chapters a {font-weight: bold;}
 #subCol .chapters ul a {font-weight: normal;}
 #subCol .chapters li {margin-bottom: 0.75em;}
