@@ -1,0 +1,42 @@
+h2. Integração com Google Analytics
+
+O Mailee permite a integração das suas mensagens com o "Google Analytics":http://www.google.com/analytics. Com esta integração você poderá ver os resultados das campanhas do Mailee integrados os relatórios do seu site.
+
+* Como configurar o Google Analytics no seu site
+* Como enviar mensagens com a integração
+* Como ver os relatórios no Google Analytics
+
+endprologue.
+
+h3. Colocando Google Analytics em seu site
+
+Para colocar o Google Analytics em seu site e aprendeer o básico, acesse o a "documentação oficial":http://www.google.com/support/googleanalytics/. Lá você vai encontrar "este artigo específico sobre a instalação do código de _tracking_":http://www.google.com.br/support/googleanalytics/bin/answer.py?hl=br&answer=66983
+
+Existem alguns tutoriais bem completos em português também. Acesse:
+
+* "Tutorial Mundo SEO":http://www.mundoseo.com.br/google-analytics/tutorial-basico-google-analytics
+* "Vídeo no Youtube":http://www.youtube.com/watch?v=19KIg4Nu2eI
+
+h3. Enviar mensagens integradas ao Analytics
+
+Enviar suas mensagens no Mailee corretamente integradas ao Analytics é muito simples. Basta, ao criar uma campanha, marcar o campo "Analytics?" (ele já vem marcado por padrão).
+
+div{float:right;margin-left:20px}. !images/analytics/analytics_check.png(Marque o campo Analytics)!
+
+Uma vez feito isto, quando um contato clicar em algum link de sua mensagem, ele será redirecionado ao link original e será acrescido à este os dados que o Analytics irá ler. Por exemplo, se você tem um link para ...
+
+*http://www.seudominio.com/produto.php*
+
+... o Mailee redirecionará para a página ...
+
+*http://www.seudominio.com/produto.php?utm_source=Mailee&utm_medium=email&utm_campaign=CAMPANHA&utm_term=&utm_content=MENSAGEM*
+
+... onde CAMPANHA é o título da campanha e MENSAGEM o título da mensagem. Estas informações são então lidas pelo Google Analytics.
+
+Quando você acessar seu painel de controle no Analytics, você poderá ver os resultados comparativos de fontes em "Fontes de tráfego" (Traffic Sources) na "Visão geral" como na imagem abaixo.
+
+!images/analytics/traffic_sources.png(Mailee nas fontes de tráfego)!
+
+E em "Campanhas" você verá este resultado segmentado por campanhas e mensagens como na imagem abaixo.
+
+!images/analytics/campaigns.png(Campanhas no Analytics)!
