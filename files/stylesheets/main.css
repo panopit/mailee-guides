@@ -35,9 +35,16 @@ table th { border-bottom: 2px solid #CCC; background: #EEE; font-weight: bold; p
 /* Structure and Layout --------------------------------------- */
 body { text-align: center; font-family: Helvetica, Arial, sans-serif; font-size: 87.5%; line-height: 1.5em; background-color: #D5E9F6; color: #222; }
 div.wrapper { text-align: left; margin: 0 auto; width: 900px; }
-#topNav { padding: 5px 0; color: #fff; background-color: #DA9500; border-bottom: 5px solid #000; }
-#header { background-color: #001526; color: #FFF; padding: 2em 0; position: relative; z-index: 99; border-bottom: 5px solid #0080ce; }
-#feature { color: #333; padding: 0.5em 0 1.5em; background-color: #fff; }
+#topNav { padding: 5px 0; color: #fff; background-color: #000; border-bottom: 5px solid #000; }
+#topNav a { color: #5d93ca; font-weight: 900 }
+#header { background: #001526 url(../../images/texture_background.gif); color: #FFF; padding: 2em 0; position: relative; z-index: 99; border-bottom: 5px solid #0080ce; }
+/*
+azul do degradê do logo: c0d0df
+#feature { color: #333; padding: 0.5em 0 1.5em; background-color: #5D93CA; }
+*/
+
+#feature { color: #333; padding: 0.5em 0 1.5em; background-color: #D5E9F6; }
+
 #container { background: #FFF; color: #333; padding: 0.5em 0 1.5em 0; border-bottom: #D5E9F6 1px solid; }
 #mainCol { width: 630px; }
 #subCol { position: absolute; z-index: 0; top: 0; right: 0; background: #FFF; padding: 13px; width: 220px; font-size: 0.9285em; line-height: 1.3846em; }
@@ -59,10 +66,17 @@ a, a:link, a:visited { color: #162F54; text-decoration: underline; }
 #header .nav li {margin: 0 0 0 0.5em;}
 #header .nav a {color: #FFF; text-decoration: none;}
 #header .nav a:hover {text-decoration: underline;}
-#header .nav .index { padding: 0.5em 1.5em; border-radius: 1em; -webkit-border-radius: 1em; -moz-border-radius: 1em; background: #0080ce; position: relative; }
-#header .nav .index a { background: #0080ce url(../../images/nav_arrow.gif) no-repeat right top; padding-right: 1em; position: relative; z-index: 15; padding-bottom: 0.125em; }
+#header .nav .index { padding: 0.5em 1.5em; border-radius: 1em; -webkit-border-radius: 1em; -moz-border-radius: 1em; background: #5d93ca; position: relative; }
+
+/*#header .nav .index a { background: #0080ce url(../../images/nav_arrow.gif) no-repeat right top; padding-right: 1em; position: relative; z-index: 15; padding-bottom: 0.125em; }*/
+
+#header .nav .index a { background: #5d93ca url(../../images/nav_arrow.gif) no-repeat right top; padding-right: 1em; position: relative; z-index: 15; padding-bottom: 0.125em; }
+
+
+
+
 #header .nav .index:hover a, #header .nav .index a:hover {background-position: right -81px;}
-#guides { width: 27em; display: block; background: #0080ce; border-radius: 1em; -webkit-border-radius: 1em; -moz-border-radius: 1em; -webkit-box-shadow: 0.25em 0.25em 1em rgba(0,0,0,0.25); -moz-box-shadow: rgba(0,0,0,0.25) 0.25em 0.25em 1em; color: #001526; padding: 1.5em 2em; position: absolute; z-index: 10; top: -0.25em; right: 0; padding-top: 2em; }
+#guides { width: 27em; display: block; background: #5d93ca; border-radius: 1em; -webkit-border-radius: 1em; -moz-border-radius: 1em; -webkit-box-shadow: 0.25em 0.25em 1em rgba(0,0,0,0.25); -moz-box-shadow: rgba(0,0,0,0.25) 0.25em 0.25em 1em; color: #001526; padding: 1.5em 2em; position: absolute; z-index: 10; top: -0.25em; right: 0; padding-top: 2em; }
 #guides dt, #guides dd { font-weight: normal; font-size: 0.722em; margin: 0; padding: 0; }
 #guides dt {padding:0; margin: 0.5em 0 0; font-weight: bold;}
 #guides a {color: #FFF; background: none !important;}
