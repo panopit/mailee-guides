@@ -89,7 +89,7 @@ h4. Por aniversário
 
 O filtro por aniversário permite segmentar seus contatos de três modos:
 
-div{float:right;margin-left:20px;width:240px}. !images/segmentation/por_aniversario.png(Filtro por aniversário)!
+div{float:right;margin-left:20px;width:340px}. !images/segmentation/por_aniversario.png(Filtro por aniversário)!
 
 * Neste mês
 ** Este filtro apresentará os contatos cujos aniversários sejam no mês em que filtro está sendo <i>aplicado</i>. Isto significa dizer que, estando em janeiro, você verá os contatos que nasceram em janeiro, da mesma forma, em junho você verá os contatos que nasceram em junho.
@@ -117,7 +117,7 @@ INFO. O Mailee é capaz de buscar automaticamente tags de seus contatos em algum
 
 h4. Por localização
 
-div{float:right;margin-left:20px;width:240px}. !images/segmentation/por_localizacao.png(Filtro por localização)!
+div{float:right;margin-left:20px;width:340px}. !images/segmentation/por_localizacao.png(Filtro por localização)!
 
 O filtro por localização é uma poderosa ferramenta para segmentar contatos de acordo com sua localização geográfica _presumida_. 
 
