@@ -37,7 +37,8 @@ body { text-align: center; font-family: Helvetica, Arial, sans-serif; font-size:
 div.wrapper { text-align: left; margin: 0 auto; width: 900px; }
 #topNav { padding: 5px 0; color: #fff; background-color: #000; border-bottom: 5px solid #000; }
 #topNav a { color: #5d93ca; font-weight: 900 }
-#header { background: #001526 url(../../images/texture_background.gif); color: #FFF; padding: 2em 0; position: relative; z-index: 99; border-bottom: 5px solid #0080ce; }
+#header { background: transparent url(../../images/texture_background.gif); color: #FFF; padding: 0; position: relative; z-index: 99; border-bottom: 5px solid #0080ce; }
+.header_wrapper { background: transparent url(../../images/help_header_light.png) no-repeat scroll 200px top; padding: 25px 0; position: relative; z-index: 99; }
 /*
 azul do degradê do logo: c0d0df
 #feature { color: #333; padding: 0.5em 0 1.5em; background-color: #5D93CA; }
@@ -66,13 +67,11 @@ a, a:link, a:visited { color: #162F54; text-decoration: underline; }
 #header .nav li {margin: 0 0 0 0.5em;}
 #header .nav a {color: #FFF; text-decoration: none;}
 #header .nav a:hover {text-decoration: underline;}
-#header .nav .index { padding: 0.5em 1.5em; border-radius: 1em; -webkit-border-radius: 1em; -moz-border-radius: 1em; background: #5d93ca; position: relative; }
+#header .nav .index { padding: 0.5em 1.5em; border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; background: #5d93ca; position: relative; }
 
 /*#header .nav .index a { background: #0080ce url(../../images/nav_arrow.gif) no-repeat right top; padding-right: 1em; position: relative; z-index: 15; padding-bottom: 0.125em; }*/
 
 #header .nav .index a { background: #5d93ca url(../../images/nav_arrow.gif) no-repeat right top; padding-right: 1em; position: relative; z-index: 15; padding-bottom: 0.125em; }
-
-
 
 
 #header .nav .index:hover a, #header .nav .index a:hover {background-position: right -81px;}
@@ -86,7 +85,7 @@ a, a:link, a:visited { color: #162F54; text-decoration: underline; }
 
 /* Headings--------------------------------------- */
 h1 { font-size: 2.5em; line-height: 1em; margin: 0.6em 0 .2em; font-weight: bold; }
-h2 { font-size: 2.1428em; line-height: 1em; margin: 0.7em 0 .2333em; font-weight: bold; }
+h2 { font-size: 2.1428em; line-height: 1em; margin: 0.7em 0 .2333em; font-weight: bold; text-shadow: #fff 0 1px 0;}
 h3 { color: #005595; font-size: 1.7142em; line-height: 1.286em; margin: 0.875em 0 0.2916em; font-weight: bold; }
 	
 h4 { font-size: 1.2857em; line-height: 1.2em; margin: 1.6667em 0 .3887em; font-weight: bold; }

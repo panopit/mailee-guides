@@ -1,0 +1,49 @@
+h2. Criação de templates
+
+Esse guia é voltado para pessoas que desejam produzir templates para uso no Mailee. Ele cobre funcionalidades que vão do nível básico ao avançado, e ao final dele você deverá:
+
+* Saber como é construida um email em HTML
+* Poder montar a configuração básica para suas mensagens
+* Criar blocos replicáveis para inserção de conteúdo
+* Tornar editáveis elementos em seu template HTML
+* Conhecer boas práticas na criação de templates
+* Aprender sobre links automáticos, como descadastro (unsubscribe), visualizar na web (weblink), adicionar a lista de contatos (whitelist) e encaminhar aos amigos (forward)
+
+endprologue.
+
+h3. Antes de começar:
+
+Esse guia é escrito de forma simples, para que você consiga montar um template patindo do zero. No entanto ele assume que você possui um conhecimento básico de HTML e CSS. Para isso, você poderá usar como referência a documentação encontrada em:
+
+* "HTML na w3 Schools":http://www.w3schools.com/html/default.asp - Guia com tutorial e documentação para HTML (em inglês)
+* "CSS na w3 Schools":http://www.w3schools.com/css/default.asp - Guia com tutorial e documentação para CSS (em inglês)
+
+Sugerimos a você o uso de ferramenta de validação da W3C
+* "W3C Validator":http://validator.w3.org/check
+
+h3. Email em HTML lol
+
+Um email em HTML é escrito, basicamente, como uma página web, tendo algumas restrições impostas pelos clientes de email.
+
+Quanto às restrições podemos citar:
+
+* O CSS precisa ser inserido inline
+* Renderização de DIVs não é 100% confiável
+* 
+
+h3. Configuração da mensagem
+
+<shell>
+  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  <html>
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <title>Aqui vai o nome de seu template</title>
+    </head>
+    <body style="margin:0; padding:0; border:0 none; text-align:center;">
+      <center>
+      
+      </center>
+    </body>
+  </html>
+</shell>
