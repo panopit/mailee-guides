@@ -37,16 +37,19 @@ body { text-align: center; font-family: Helvetica, Arial, sans-serif; font-size:
 div.wrapper { text-align: left; margin: 0 auto; width: 900px; }
 #topNav { padding: 5px 0; color: #fff; background-color: #000; border-bottom: 5px solid #000; }
 #topNav a { color: #5d93ca; font-weight: 900 }
-#header { background: #001526 url(../../images/texture_background.gif); color: #FFF; padding: 2em 0; position: relative; z-index: 99; border-bottom: 5px solid #0080ce; }
+#header { background: #001526 url(../../images/texture_background.gif); color: #FFF; padding: 20px 0; position: relative; z-index: 99; border-bottom: 5px solid #5d93ca; }
 /*
 azul do degradê do logo: c0d0df
-#feature { color: #333; padding: 0.5em 0 1.5em; background-color: #5D93CA; }
+*/
+/*
+#feature { color: #333; padding: 0.5em 0 1.5em; background-color: #D5E9F6; }
 */
 
 #feature { color: #333; padding: 0.5em 0 1.5em; background-color: #D5E9F6; }
-
+/*#feature { color: #333; padding: 0.5em 0 1.5em; background-color: #DDF3FF; }*/
 #container { background: #FFF; color: #333; padding: 0.5em 0 1.5em 0; border-bottom: #D5E9F6 1px solid; }
 #mainCol { width: 630px; }
+#mainCol img{ border:1px solid #CCC; -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.3)}
 #subCol { position: absolute; z-index: 0; top: 0; right: 0; background: #FFF; padding: 13px; width: 220px; font-size: 0.9285em; line-height: 1.3846em; }
 	
 #extraCol {display: none;}
@@ -87,7 +90,7 @@ a, a:link, a:visited { color: #162F54; text-decoration: underline; }
 /* Headings--------------------------------------- */
 h1 { font-size: 2.5em; line-height: 1em; margin: 0.6em 0 .2em; font-weight: bold; }
 h2 { font-size: 2.1428em; line-height: 1em; margin: 0.7em 0 .2333em; font-weight: bold; }
-h3 { color: #005595; font-size: 1.7142em; line-height: 1.286em; margin: 0.875em 0 0.2916em; font-weight: bold; }
+h3 { color: #444; font-size: 1.7142em; line-height: 1.286em; margin: 0.875em 0 0.2916em; font-weight: bold; }
 	
 h4 { font-size: 1.2857em; line-height: 1.2em; margin: 1.6667em 0 .3887em; font-weight: bold; }
 h5 { font-size: 1em; line-height: 1.5em; margin: 1em 0 .5em; font-weight: bold; }
@@ -113,6 +116,7 @@ h6 { font-size: 1em; line-height: 1.5em; margin: 1em 0 .5em; font-weight: normal
 #subCol .chapters li {margin-bottom: 0.75em;}
 #subCol h3.chapter {margin-top: 0.25em;}
 #subCol h3.chapter img {vertical-align: text-bottom;}
+
 #subCol .chapters ul {margin-left: 0; margin-top: 0.5em;}
 #subCol .chapters ul li { list-style: none; padding: 0 0 0 1em; background: url(../../images/bullet.gif) no-repeat left 0.45em; margin-left: 0; font-size: 1em; font-weight: normal; }
 tt { font-family: monaco, "Bitstream Vera Sans Mono", "Courier New", courier, monospace; }
