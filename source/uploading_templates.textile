@@ -1,0 +1,32 @@
+h2. Como realizar _upload_ de template
+
+p. Esse guia é voltado para pessoas que desejam saber o que é necessário para enviar seus templates para o Mailee.me. Ao final dele você devera saber como:
+
+* Organizar o conteúdo do _zip_
+* Fazer _upload_ do template para o Mailee.me
+* Conferir o template enviado
+
+endprologue.
+
+h3. Preparando o arquivo compactado para _upload_
+
+p. Após a criação de seu template, você deverá compactar todos os arquivos em _zip_ para realizar upload para o sistema.
+
+Seu _zip_ deve, obrigatoriamente, conter apenas:
+
+* Um arquivo .html (e apenas UM) <strong style="color:#bf2f2f;">OBRIGATÓRIO</strong>
+* Arquivos de imagem em formato <samp>.gif</samp> <samp>.jpg</samp> <samp>.jpeg</samp> <samp>.png</samp> ou <samp>.bmp</samp>
+
+WARNING. O sistema irá descartar quaisquer arquivos que não preencherem essas especificações.
+
+h3. _Upload_ do template
+
+# Clique no botão *Upload* e um formulário para envio de arquivo irá aparecer
+# Clique no botão para envio de arquivo<sup>*</sup>
+# Selecione seu arquivo em uma lista
+# Pronto
+
+INFO. * *Observação:* O nome no botão de envio de arquivo pode ser diferente, dependendo do sistema operacionar e navegador utilizado.
+
+h3. Conferindo o seu template
+

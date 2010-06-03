@@ -2,7 +2,6 @@ h2. Como criar templates
 
 p. Esse guia é voltado para pessoas que desejam saber como criar seus próprios templates para usar no Mailee.me. Ele cobre funcionalidades que vão do nível básico ao avançado, e ao final dele você poderá:
 
-* Entender o conceito de template
 * Configurar corretamente sua mensagem
 * Tornar campos e imagens editáveis
 * Criar blocos replicáveis para inserção de conteúdo
@@ -14,28 +13,21 @@ endprologue.
 
 h5. Antes de começar:
 
-INFO. Esse guia é escrito de forma simples, para que você consiga montar um template patindo do zero.<br/> No entanto ele assume que você possui um conhecimento básico de HTML e CSS. Para saber mais sobre HTML e CSS, indicamos fontes com informação no final desse artigo.
+INFO. Esse guia é escrito de forma simples, para que você consiga montar um template partindo do zero.<br/> No entanto ele assume que você possui um conhecimento básico de HTML e CSS. Para saber mais sobre HTML e CSS, indicamos fontes com informação no "final desse artigo":"#html_css_reference" .
 
-h3. O template de email
+h4. O que é um template de email
 
-p. Diferença básica entre template e mensagem
-
-h3. Email em HTML
-
-p. Um email em HTML é escrito, basicamente, como uma página web, tendo algumas restrições impostas pelos clientes de email.
-
-p. Quanto às restrições podemos citar:
-
-* O CSS precisa ser inserido inline
-* Renderização de DIVs não é 100% confiável
+p. Explicar diferença básica entre template (modelo de layout com conteúdo substituível) e mensagem (composição a partir de um modelo com conteúdo fixo).
 
 h3. Configurando seu template
+
+p. Templates criados para o Mailee.me precisam obedecer 
 
 h4. Codificação
 
 p. Todos os arquivos colocados no Mailee.me devem ser salvos em UTF-8.
 
-p. Para seus HTMLs, será necessário inserir o seguinte código no <samp>&lt;head&gt;</samp> de seus layouts:
+p. Para seus HTMLs, será necessário inserir o seguinte código no <samp>&lt;head&gt;…&lt;/head&gt;</samp> de seus layouts:
 
 <html>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -43,11 +35,13 @@ p. Para seus HTMLs, será necessário inserir o seguinte código no <samp>&lt;he
 
 h4. Título
 
+p. Você pode decidir qual será o nome de seu template escrevendto dentro da tag <samp>&lt;title&gt;…&lt;/title&gt;</samp>. Caso você não defina um <samp>&lt;title&gt;</samp> o título será estabelecido pelo nome do HTML de seu arquivo zip. 
+
 <html>
   <title>Título do seu template</title>
 </html>
 
-h3. Tornando áres de texto editáveis
+h3. Tornando áreas de texto editáveis
 
 p. Imagine que você precisa permitir que o conteúdo de texto, dentro de um elemento <samp>&lt;p&gt;…&lt;/p&gt;</samp>, seja editado, e seu HTML é algo assim:
 
@@ -75,21 +69,83 @@ p. A <samp>class="edit"</samp> não precisa, obrigatoriamente, ser aplicada em e
 
 WARNING. Não use elementos com <samp>class="edit"</samp>, dentro de outros elementos com <samp>class="edit"</samp>.
 
-h3. Imagens
+h4. Possibilitando a troca de uma imagem no template
+
+p. Para que uma imagem pode ser substituida em seu template, basta adicionar a <samp>class="edit"</samp>. 
 
 <html>
-  <img class="edit" … />
+  <img src="sua_imagem.jpg" class="edit" … />
 </html>
-
-h4. Tornando uma imagem substituível
 
 h4. Definindo um tamanho para as imagens
 
-h3. Blocos para repetição
+p. Se você quiser restringir o tamanho de uma imagem basta imediatamente após a classe 'edit':
 
-h4. Definindo um bloco repetível
+<html>
+  <img src="sua_imagem.jpg" class="edit 100x100" … />
+</html>
 
-h4. Definindo o índice dos itens no bloco repetível
+p. O formato deve seguir *largura* x *altura*, sendo que, os valores colocados são interpretados por _default_ em pixels, e o tamanho definido como o *máximo* para a imagem no seu layout.
+
+p. Você também poderá usar valores com os seguintes operadores:
+
+* *#* Mantém a proporção da imagem durante o redimensionamento
+* *!* Ignora a proporção da imamge durante o redimensionamento
+* *%* Interpreta os valores como percentual
+* *&gt;* Redimensiona a imagem para o tamanho estabelecido somente se a imagem for *menor*
+* *&lt;* Redimensiona a imagem para o tamanho estabelecido somente se a imagem for *maior*
+
+p. Para mais informações sobre redimensionamento das imagens usando o ImageMagik, acesse o site "imagemagick.org/Magick++/Geometry.html":http://www.imagemagick.org/Magick++/Geometry.html
+
+h3. Blocos de repetição <span class="small" style="color:#a2bf2f;">novidade</span>
+
+p. Blocos de repetição servem para criação de templates onde é necessário repetir o layout, alterando conteúdos.
+
+h4. Definindo um bloco de repetição
+
+p. Para criar um bloco de repetição em seu template basta adicionar uma <samp>&lt;div&gt;</samp> com a <samp>class="repeat"</samp>, um <samp>id=""</samp> que represente o nome do bloco para indexação e um <samp>title=""</samp> que será usado para o botão adicionar na edição de mensagens.
+
+p. Consideremos o seguinte cenário, onde terei um bloco de repetição de notícias:
+
+<html>
+  <div>
+    <h1> Seu título aqui </h1>
+    <img src='sua_imagem.jpg' />
+    <p> Conteúdo de seus textos aqui… </p>
+  </div>
+</html>
+
+p. Para tornar essa <samp>&lt;div&gt;</samp> em um bloco de repetição de notícias, basta adicionar a class, id e title:
+
+<html>
+  <div id="news" class="repeat" title="notícias">
+    <h1> Seu título aqui </h1>
+    <img src='sua_imagem.jpg' />
+    <p> Conteúdo de seus textos aqui… </p>
+  </div>
+</html>
+
+INFO. O bloco de repetição já apresentará todos os elementos como editáveis.
+
+
+p. Recapitulando:
+
+|_. *<samp>class='repeat'</samp>*| torna um elemento <samp>&lt;div&gt;</samp> em um bloco de repetição|
+|_. *<samp>id=''</samp>*| define o conteúdo do bloco e aponta para um índice|
+|_. *<samp>title=''</samp>*| indica o conteúdo para o botão.|
+
+
+h4. Definindo o índice dos itens no bloco de repetição
+
+p. Você pode incluir em suas mensagens uma lista contendo o índice de seus blocos repetíveis montado a partir dos títulos nos blocos repetíveis. 
+
+p. Começamos com o seguinte caso:
+
+<div class="index +ID+"></div>
+
+
+p. Para começar, é preciso que a div envoltória dos elementos tenha a id 'news' assim o Mailee sabe que tudo que estiver dentro dela será repetido para cada notícia. Depois é só colocar um class em cada componente da notícia. As classes de cada campo devem ser: news-title news-image news-content
+
 
 h3. Links dinâmicos
 
@@ -109,8 +165,6 @@ h4. dados da lista
 
 h4. data
 
-h3. Upload para o Mailee.me
-
 h3. Dicas
 
 Sugerimos a você o uso de ferramenta de validação da W3C
@@ -120,9 +174,13 @@ h3. Download de modelos
 
 h3. Referência
 
+<div id="html_css_reference">
+
 * "HTML na w3 Schools":http://www.w3schools.com/html/default.asp - Guia com tutorial e documentação para HTML (em inglês)
 * "CSS na w3 Schools":http://www.w3schools.com/css/default.asp - Guia com tutorial e documentação para CSS (em inglês)
 * "HTML - Wikipedia [en]":http://en.wikipedia.org/wiki/HTML - Informações sobre HTML (em inglês)
 * "HTML - Wikipedia [pt-Br]":http://pt.wikipedia.org/wiki/HTML - Informações sobre HTML (em português)
 * "Artigo na Wikipedia sobre CSS":http://en.wikipedia.org/wiki/Cascading_Style_Sheets - Informações sobre CSS (em inglês)
 * "Artigo na Wikipedia sobre CSS":http://pt.wikipedia.org/wiki/Cascading_Style_Sheets - Informações sobre CSS (em português)
+
+</div>
