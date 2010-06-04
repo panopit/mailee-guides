@@ -1,0 +1,20 @@
+h2. Como importar contatos do Gmail
+
+O Mailee permite a importação do Gmail, caso você utilize uma conta neste serviço para organizar seus contatos.
+
+* Como importar do Gmail.
+
+endprologue.
+
+h3. Iniciando a importação
+
+Na tela de contatos, localize no menu à direita o item "Importar".
+
+!images/import/spreadsheet/contact_index_import.png(Importar)!
+
+Em seguida, escolha a opção "Gmail".
+
+!images/import/gmail/import_button.png(Importar)!
+
+Chegamos lá. A tela abaixo é a tela de importação via planilha:
+

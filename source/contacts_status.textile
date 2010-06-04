@@ -9,7 +9,7 @@ endprologue.
 
 h3. Status dos contatos
 
-div{float:left;margin-right:20px}. !images/contacts/status.png(Representação gráfica dos status)!
+div{float:left;margin-right:20px}. !images/contacts/status/status.png(Representação gráfica dos status)!
 
 Os contatos no Mailee possuem um _status_. Este status dá informações sobre as ações do contato, e informa também se o contato poderá ou não receber mensagens. 
 
@@ -75,4 +75,4 @@ h3. Fluxo
 
 Abaixo um fluxo simplificado das possíveis trocas de status:
 
-!images/contacts/flux.png(Fluxo dos status)!
+!images/contacts/status/flux.png(Fluxo dos status)!

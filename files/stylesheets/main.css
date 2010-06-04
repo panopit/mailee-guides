@@ -51,7 +51,7 @@ azul do degradê do logo: c0d0df
 /*#feature { color: #333; padding: 0.5em 0 1.5em; background-color: #DDF3FF; }*/
 #container { background: #FFF; color: #333; padding: 0.5em 0 1.5em 0; border-bottom: #D5E9F6 1px solid; }
 #mainCol { width: 630px; }
-#mainCol img{ border:1px solid #CCC; -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.3); box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);}
+#mainCol img{ border:1px solid #CCC; -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.3); box-shadow: 0 0 1em rgba(0, 0, 0, 0.3); }
 #subCol { position: absolute; z-index: 0; top: 0; right: 0; background: #FFF; padding: 13px; width: 220px; font-size: 0.9285em; line-height: 1.3846em; border-radius: 1em; -webkit-border-radius: 1em; -moz-border-radius: 1em;}
 
 #extraCol {display: none;}

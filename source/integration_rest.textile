@@ -4,7 +4,9 @@ O Mailee pode ser integrado à qualquer aplicação online por meio de sua API "
 
 Existem integrações já prontas para "Spree":http://todo, "Ruby on Rails":http://todo e "PHP":http://todo. Este tutorial será útil caso você queira fazer a sua própria integralção.
 
+* Como pegar a chave de acesso
 * Quais métodos estão disponíveis
+* Como testar os métodos
 
 endprologue.
 

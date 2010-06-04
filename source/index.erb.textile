@@ -13,26 +13,87 @@ Foo bar
 h3. Inicie aqui
 
 <dl>
-
   <% guide('Iniciando com o Mailee', 'iniciando.html') do %>
     Tudo o que você precisa saber para iniciar com o Mailee.
   <% end %>
 </dl>
-h3. Importação
+
+
+<% end %>
+
+
+h3. Contatus
+
 <dl>
-  <% guide('Importe planilhas', 'import_csv.html') do %>
-    Importando planilhas
+  <% guide('Status', 'contacts_status.html') do %>
+    Saiba o que são os status dos contatos.
   <% end %>
 </dl>
+<dl>
+  <% guide('Cadastro', 'contacts_new.html') do %>
+    Veja como cadastrar contatos, e como funcionam os campos de redes sociais.
+  <% end %>
+</dl>
+<dl>
+  <% guide('Importação do Gmail', 'import_gmail.html') do %>
+    Importação do Gmail
+  <% end %>
+</dl>
+
+h3. Importação
+
+<dl>
+  <% guide('Importação simples', 'import_quick.html') do %>
+    Importação simples
+  <% end %>
+</dl>
+<dl>
+  <% guide('Importação de planilha', 'import_spreadsheet.html') do %>
+    Importação de planilha
+  <% end %>
+</dl>
+<dl>
+  <% guide('Importação do Gmail', 'import_gmail.html') do %>
+    Importação do Gmail
+  <% end %>
+</dl>
+
 h3. Exportação
+
 <dl>
   <% guide('Exportando contatos', 'export.html') do %>
     So and so
   <% end %>
 </dl>
+
+
+
+
+h3. Integração
+
 <dl>
-  <% guide('REST', 'rest.html') do %>
-    This and that!
+  <% guide('Por formulário', 'integration_form.html') do %>
+    Utilize esta integração para cadastrar e descadastrar contatos diretamente do seu site.
   <% end %>
 </dl>
-<% end %>
+<dl>
+  <% guide('REST', 'integration_rest.html') do %>
+    Utilize esta integração para sincronizar sua aplicação com o Mailee.
+  <% end %>
+</dl>
+<dl>
+  <% guide('Ruby on Rails', 'integration_rails.html') do %>
+    Utilize esta integração para sincronizar sua aplicação Ruby on Rails com o Mailee.
+  <% end %>
+</dl>
+<dl>
+  <% guide('Spree', 'integration_spree.html') do %>
+    Utilize esta integração para sincronizar sua loja Spree com o Mailee.
+  <% end %>
+</dl>
+<dl>
+  <% guide('PHP', 'integration_php.html') do %>
+    Utilize esta integração para sincronizar sua aplicação PHP com o Mailee.
+  <% end %>
+</dl>
+
