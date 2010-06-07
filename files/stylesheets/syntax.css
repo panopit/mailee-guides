@@ -1,31 +1,10 @@
-.html .tag {
-	color : green;
-}
-
-.html .doctype {
-  color: #708090;
-}
-
-.erb .tag {
-	color : green;
-}
-
-.erb .doctype {
-  color: #708090;
-}
-
-.ruby .keywords {
-  color : red;
-}
-
-.ruby .ivar {
-  color : blue;
-}
-
-.ruby .comment {
-  color: #708090;
-}
-
-.ruby .symbol {
- color: green;
-}
+.html .tag { color : rgb(255,172,0); }
+.html .doctype { color: #708090; }
+.html .attribute { color: rgb(124,189,255); }
+.html .string { color: rgb(129,177,122); }
+.erb .tag { color : green; }
+.erb .doctype { color: #708090; }
+.ruby .keywords { color : red; }
+.ruby .ivar { color : blue; }
+.ruby .comment { color: #708090; }
+.ruby .symbol { color: green; }

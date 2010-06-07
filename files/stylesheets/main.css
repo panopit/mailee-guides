@@ -39,7 +39,7 @@ div.wrapper { text-align: left; margin: 0 auto; width: 900px; }
 #topNav { padding: 1em 0; color: #555; background-color: #000; border-bottom: 1px solid #333; font-size: 14px;}
 #topNav a { color: #5d93ca; font-weight: 500 }
 #header { background: transparent url(../../images/texture_background.gif); color: #FFF; padding: 0; position: relative; z-index: 99; border-bottom: 5px solid #5D93CA; }
-.header_wrapper { background: transparent url(../../images/help_header_light.png) no-repeat scroll 200px top; padding: 25px 0; position: relative; z-index: 99; }
+.header_wrapper { background: transparent no-repeat fixed -200px 50px; padding: 25px 0; position: relative; z-index: 99; }
 /*
 azul do degradê do logo: c0d0df
 */

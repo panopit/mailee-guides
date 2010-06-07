@@ -1,19 +1,17 @@
 h2. Como criar templates
 
-p. Esse guia é voltado para pessoas que desejam saber como criar seus próprios templates para usar no Mailee.me. Ele cobre funcionalidades que vão do nível básico ao avançado, e ao final dele você poderá:
+p. Esse guia é voltado para pessoas que desejam saber como criar seus próprios templates para usar no Mailee.me. Ele cobre funcionalidades que vão do nível básico ao avançado, e ao final dele você deverá saber como:
 
 * Configurar corretamente sua mensagem
 * Tornar campos e imagens editáveis
-* Criar blocos replicáveis para inserção de conteúdo
+* Criar blocos de repetição
 * Saber como inserir links dinâmicos (unsubscribe, weblink, etc) na sua mensagem
-* Conhecer boas práticas para criação de Email em HTML
-* Baixar modelos prontos para trabalhar em cima
 
 endprologue.
 
 h5. Antes de começar:
 
-INFO. Esse guia é escrito de forma simples, para que você consiga montar um template partindo do zero.<br/> No entanto ele assume que você possui um conhecimento básico de HTML e CSS. Para saber mais sobre HTML e CSS, indicamos fontes com informação no "final desse artigo":"#html_css_reference" .
+INFO. Esse guia é escrito de forma simples, para que você consiga montar um template partindo do zero.<br/> No entanto ele assume que você possui um conhecimento básico de HTML e CSS. Para saber mais sobre HTML e CSS, indicamos fontes com informação no "final desse artigo":creating_templates.html#html_css_reference .
 
 h4. O que é um template de email
 
@@ -25,23 +23,42 @@ p. Templates criados para o Mailee.me precisam obedecer
 
 h4. Codificação
 
-p. Todos os arquivos colocados no Mailee.me devem ser salvos em UTF-8.
+p. Todos os arquivos colocados no Mailee.me devem ser salvos como UTF-8. Abaixo, segue um mini tutorial explicando como salvar seus arquivos HTML na codificação UTF-8.
 
-p. Para seus HTMLs, será necessário inserir o seguinte código no <samp>&lt;head&gt;…&lt;/head&gt;</samp> de seus layouts:
+h5. Bloco de Notas (Windows)
 
-<html>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</html>
+* No bloco de notas, selecione o menu "Arquivo" e selecione "Salvar como…". Selecione a opção UTF-8 na Codificação (encoding) conforme imagem abaixo.
+
+!images/templates/notepad_utf8.gif(Codificação UTF-8 no Bloco de Notas)!
+
+h5. TextEdit (Mac)
+
+* Acesse as preferências do TextEdit, e escolha a Tab "Abrir e Salvar (Open and Save)". Lá você poderá definir as preferências para edição de arquivos HTML, conforme imagem abaixo:
+
+!images/templates/textedit_utf8.gif(Codificação UTF-8 no TextEdit)!
+
+h5. GEdit (Sistemas operacionais Linux baseados em Gnome)
+
+* Menu "Arquivo", depois "Salvar como…" e selecionar a codificação conforme imagem abaixo:
+
+!images/templates/gedit_utf8.gif(Codificação UTF-8 no GEdit)!
 
 h4. Título
 
-p. Você pode decidir qual será o nome de seu template escrevendto dentro da tag <samp>&lt;title&gt;…&lt;/title&gt;</samp>. Caso você não defina um <samp>&lt;title&gt;</samp> o título será estabelecido pelo nome do HTML de seu arquivo zip. 
+p. Você pode decidir qual será o nome de seu template escrevendto dentro da tag <samp>&lt;title&gt;…&lt;/title&gt;</samp>. Caso você não defina um <samp>&lt;title&gt;</samp> o título será estabelecido pelo nome do HTML de seu arquivo _zip_.
+
+p. Para saber mais sobre _upload_ de templates, "clique aqui":uploading_templates.html.
 
 <html>
   <title>Título do seu template</title>
 </html>
 
+p. Após carregado no <strong>Mailee.me</strong> você poderá editar o nome de seu template a qualquer momento. Para isso, basta entrar em <strong>Templates</strong>, e, no template que desejar renomear, escolher a ação "editar". O nome do template poderá ser alterado no local indicado pela imagem abaixo:
+
+!images/templates/editando_nome_do_template.gif(Alterando títulos de templates no Mailee.me)!
+
 h3. Tornando áreas de texto editáveis
+
 
 p. Imagine que você precisa permitir que o conteúdo de texto, dentro de um elemento <samp>&lt;p&gt;…&lt;/p&gt;</samp>, seja editado, e seu HTML é algo assim:
 
@@ -59,11 +76,11 @@ p. Nesse caso, você simplesmente precisará adicionar uma <samp>class="edit"</s
   </p>
 </html>
 
-p. A <samp>class="edit"</samp> não precisa, obrigatoriamente, ser aplicada em elementos <samp>display:block;</samp>, conforme exemplo abaixo:
+p. A <samp>class="edit"</samp> não precisa, obrigatoriamente, ser aplicada em elementos de bloco <samp>display:block;</samp>, e pode ser adicionada em elementos <samp>display:inline;</samp>, conforme exemplo abaixo:
 
 <html>
   <p>
-    Você também pode definir <span class="edit">pequenas partes</span> para edição.
+    Você também pode definir que <span class="edit">apenas uma pequena porção de texto</span> seja editável.
   </p>
 </html>
 
@@ -71,7 +88,7 @@ WARNING. Não use elementos com <samp>class="edit"</samp>, dentro de outros elem
 
 h4. Possibilitando a troca de uma imagem no template
 
-p. Para que uma imagem pode ser substituida em seu template, basta adicionar a <samp>class="edit"</samp>. 
+p. Para que uma imagem pode ser substituida em seu template, basta adicionar a <samp>class="edit"</samp>.
 
 <html>
   <img src="sua_imagem.jpg" class="edit" … />
@@ -89,13 +106,13 @@ p. O formato deve seguir *largura* x *altura*, sendo que, os valores colocados s
 
 p. Você também poderá usar valores com os seguintes operadores:
 
-* *#* Mantém a proporção da imagem durante o redimensionamento
-* *!* Ignora a proporção da imamge durante o redimensionamento
-* *%* Interpreta os valores como percentual
-* *&gt;* Redimensiona a imagem para o tamanho estabelecido somente se a imagem for *menor*
-* *&lt;* Redimensiona a imagem para o tamanho estabelecido somente se a imagem for *maior*
+|_. *#* | Mantém a proporção da imagem durante o redimensionamento |
+|_. *!* | Ignora a proporção da imamge durante o redimensionamento |
+|_. *%* | Interpreta os valores como percentual |
+|_. *&gt;* | Redimensiona a imagem para o tamanho estabelecido somente se a imagem for *menor* |
+|_. *&lt;* | Redimensiona a imagem para o tamanho estabelecido somente se a imagem for *maior* |
 
-p. Para mais informações sobre redimensionamento das imagens usando o ImageMagik, acesse o site "imagemagick.org/Magick++/Geometry.html":http://www.imagemagick.org/Magick++/Geometry.html
+p. Para mais informações sobre redimensionamento das imagens usando o ImageMagik, acesse o site "imagemagick.org/Magick++/Geometry.html":http://www.imagemagick.org/Magick%2B%2B/Geometry.html
 
 h3. Blocos de repetição <span class="small" style="color:#a2bf2f;">novidade</span>
 
@@ -125,33 +142,57 @@ p. Para tornar essa <samp>&lt;div&gt;</samp> em um bloco de repetição de notí
   </div>
 </html>
 
-INFO. O bloco de repetição já apresentará todos os elementos como editáveis.
-
+INFO. Dentro dos blocos de repetição não será necessário definir <samp>class="edit"</samp> nos elementos, pois o bloco de repetição, por padrão, já apresenta todos os elementos como editáveis.
 
 p. Recapitulando:
 
-|_. *<samp>class='repeat'</samp>*| torna um elemento <samp>&lt;div&gt;</samp> em um bloco de repetição|
-|_. *<samp>id=''</samp>*| define o conteúdo do bloco e aponta para um índice|
-|_. *<samp>title=''</samp>*| indica o conteúdo para o botão.|
-
+|_. *<samp>class='repeat'</samp>* | torna um elemento <samp>&lt;div&gt;</samp> em um bloco de repetição |
+|_. *<samp>id=''</samp>* | define o conteúdo do bloco e aponta para um índice |
+|_. *<samp>title=''</samp>* | indica o conteúdo para o botão |
 
 h4. Definindo o índice dos itens no bloco de repetição
 
-p. Você pode incluir em suas mensagens uma lista contendo o índice de seus blocos repetíveis montado a partir dos títulos nos blocos repetíveis. 
+p. Você pode incluir em suas mensagens uma lista contendo o índice de seus blocos repetíveis montado a partir dos títulos nos blocos repetíveis.
 
 p. Começamos com o seguinte caso:
 
-<div class="index +ID+"></div>
+<html>
+  <div class="index +ID+"></div>
+</html>
 
-
-p. Para começar, é preciso que a div envoltória dos elementos tenha a id 'news' assim o Mailee sabe que tudo que estiver dentro dela será repetido para cada notícia. Depois é só colocar um class em cada componente da notícia. As classes de cada campo devem ser: news-title news-image news-content
-
+p. Para começar, é preciso que a <samp>&lt;div&gt;</samp> envoltória dos elementos tenha a <samp>id=""</samp> como <strong>news</strong> assim o Mailee sabe que tudo que estiver dentro dela será repetido para cada notícia. Depois é só colocar um class em cada componente da notícia. As classes de cada campo devem ser: news-title news-image news-content
 
 h3. Links dinâmicos
 
 h4. Descadastramento (unsubscribe)
 
+p. É necessário que o seu email contenha um link para o usuário deixar de receber suas notícias, caso ele queira. Você pode colocar um link para o seu site, ou colocar um link diretamente mara o *Mailee.me*. Se o seu link é assim&hellip;
+
+<html>
+  Para deixar de receber a nossa campanha, <a href="#">clique aqui</a>.
+</html>
+
+p. Basta adicionar o <samp>class="unsubscribe"</samp>:
+
+<html>
+  Para deixar de receber a nossa campanha, <a href="#" class="unsubscribe">clique aqui</a>.
+</html>
+
+p. Assim o *Mailee.me* vai trocar o destino do link para o link de  descadastro de cada contato.
+
+INFO. Recomendamos como boa prática sempre incluir ao menos um link para descadastro em suas mensagens.
+
 h4. Visualização na Web (weblink)
+
+p. O link para visualização no browser é indicado para garantir que os usuários que tiverem problemas de visualização com as mensagens no formato HTML, possam visualizar a mensagem no navegador, como uma página de web.
+
+p. Para inserir um *weblink* em sua mensagem, utilize o seguinte código:
+
+<html>
+  Para visualizar nossa campanha em seu navegador, <a href="#" class="web-link">clique aqui</a>.
+</html>
+
+p. Assim o *Mailee.me* vai trocar o destino desse link para uma url de visualização na web da mensagem.
 
 h4. Encaminhar para amigos (forward)
 
@@ -164,11 +205,6 @@ h4. dados dos contatos
 h4. dados da lista
 
 h4. data
-
-h3. Dicas
-
-Sugerimos a você o uso de ferramenta de validação da W3C
-* "W3C Validator":http://validator.w3.org/check
 
 h3. Download de modelos
 

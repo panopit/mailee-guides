@@ -1,0 +1,59 @@
+h2. Boas práticas na criação de templates de email em HTML
+
+p. Esse guia é voltado para pessoas que querem aprender mais sobre a criação de templates em HTML. Ele cobre funcionalidades que vão do nível básico ao avançado, e ao final dele você deverá aprender como:
+
+* Configurar a codificação da mensagem
+* Aprender boas práticas na criação de email em HTML
+* Aplicar boas práticas na criação de email em HTML
+* Fazer download de modelos prontos
+
+endprologue.
+
+h3. Dicas
+
+INFO. Recomendamos que você insira no cabeçalho de seus HTMLs (e dentro da tag <samp>&lt;head&gt;…&lt;/head&gt;</samp>) o seguinte código:
+
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</html>
+
+INFO. Modelo para email em HTML com conteúdo em 600px de largura e centralizado.
+
+<html>
+  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+  <html>
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <title></title>
+    </head>
+    <body style="margin:0; padding:0; border:0 none; text-align:center;">
+      <center>
+        <table width="100%" frame="void" cellspacing="0" cellpadding="0" border="0" style="margin:0; padding:0; border:0 none; border-spacing:0px 0px; border-collapse:collapse;">
+          <tbody style="margin:0; padding:0; border:0;">
+            <tr>
+              <td valign="top" align="center" style="margin:0; padding:0; border:0 none;">
+                <table width="600" frame="void" cellspacing="0" cellpadding="0" border="0" style="margin:0; padding:0; border:0 none; border-spacing:0px 0px; border-collapse:collapse;">
+                  <tbody style="margin:0; padding:0; border:0;">
+                    <tr>
+                      <td valign="top" align="left" style="margin:0; padding:0; border:0 none;">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </center>
+    </body>
+  </html>
+</html>
+
+Sugerimos a você o uso de ferramenta de validação da W3C
+* "W3C Validator":http://validator.w3.org/check
+
+
+
+
+INFO. Recomendamos que você insira no cabeçalho de seus HTMLs (e dentro da tag <samp>&lt;head&gt;…&lt;/head&gt;</samp>) o seguinte código:
+
