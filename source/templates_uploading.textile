@@ -1,0 +1,39 @@
+h2. Como realizar _upload_ de template
+
+Esse guia é voltado para pessoas que desejam saber o que é necessário para enviar seus templates para o Mailee.me. Ao final dele você devera saber como:
+
+* Organizar o conteúdo do _zip_
+* Fazer _upload_ do template para o Mailee.me
+* Conferir o template enviado
+
+endprologue.
+
+h3. Preparando o arquivo compactado para _upload_
+
+Após a criação de seu template, você deverá compactar todos os arquivos em _zip_ para realizar upload para o sistema.
+
+Seu _zip_ deve, obrigatoriamente, conter apenas:
+
+* Um arquivo .html (e apenas UM) <strong style="color:#bf2f2f;">OBRIGATÓRIO</strong>
+* Arquivos de imagem em formato <samp>.gif</samp> <samp>.jpg</samp> <samp>.jpeg</samp> <samp>.png</samp> ou <samp>.bmp</samp>
+
+WARNING. O sistema irá descartar quaisquer arquivos que não preencherem essas especificações.
+
+h3. _Upload_ do template
+
+# Clique no botão *Upload* e um formulário para envio de arquivo irá aparecer
+# Clique no botão para envio de arquivo<sup>*</sup>
+# Selecione seu arquivo em uma lista
+# Pronto
+
+Com seu template feito, renomeie o HTML para 'template.html' e coloque todas as imagens na mesma pasta. Zipe tudo e envie para o Mailee. O sistema criará uma pasta e descompactará seu conteúdo, ajustando seu HTML ao padrão do *Mailee.me*.
+
+Para colocar uma imagem de _thumbnail_ do seu template, faça o seu _print screen_ e coloque o nome 'template.png'. A imagem deve ir junto no zip. Se você não enviar o thumbnail, não se preocupe, o Mailee tentará gerar um para você.
+
+Após enviar, você pode verificar como ficou seu layout com notícias de exemplo, ou mesmo fazer um checklist para ver se fez tudo corretamente.
+
+WARNING. *Importante:* <br/> O arquivo deve se chamar literalmente 'template.html' e o thumbnail 'template.png'. Todas as imagens e arquivos devem estar na mesma pasta.
+
+INFO. * *Observação:* O nome no botão de envio de arquivo pode ser diferente, dependendo do sistema operacionar e navegador utilizado.
+
+h3. Conferindo o seu template

@@ -6,6 +6,8 @@ p. Esse guia é voltado para pessoas que querem aprender mais sobre a criação 
 * Aprender boas práticas na criação de email em HTML
 * Aplicar boas práticas na criação de email em HTML
 * Fazer download de modelos prontos
+* Dicas
+
 
 endprologue.
 
@@ -50,10 +52,17 @@ INFO. Modelo para email em HTML com conteúdo em 600px de largura e centralizado
 </html>
 
 Sugerimos a você o uso de ferramenta de validação da W3C
+!images/templates/w3_validator.gif(Ferramenta de validação de HTML da W3C)!
 * "W3C Validator":http://validator.w3.org/check
-
-
-
 
 INFO. Recomendamos que você insira no cabeçalho de seus HTMLs (e dentro da tag <samp>&lt;head&gt;…&lt;/head&gt;</samp>) o seguinte código:
 
+h3. Dicas
+
+Durante o desenvolvimento dos templates, para apresentar os campos editáveis coloque o seguinte código no <samp>&lt;head&gt;</samp> de seu HTML:
+
+<html>
+  <style type='text/css'>
+    .edit { outline: 1px dotted #7711EE; }
+  </style>
+</html>
