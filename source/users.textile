@@ -1,0 +1,53 @@
+h2. Cadastro de usuários
+
+Esse artigo irá mostrar como:
+ 
+* Criar e editar usuários
+
+endprologue.
+
+h3. Tela de usuários
+
+O Mailee possui no menu um item específico para usuários, clicando nele você terá a imagem a seguir
+
+!images/users/user_screen.png(Tela de usuários)!
+
+Nesta tela é possível ver todos os usuários cadastrados no seu subdomínio do Mailee. Se necessário, instalamos um campo de pesquisa para facilitar a localização.
+
+h4. Criando usuários
+
+Clique no botão **"Adicionar usuário"** para ser direcionado a tela de criação.
+
+Nessa tela os campos abertos são: 
+
+**Nome** - Aqui deve ser preenchido o nome completo do usuário.
+
+**Email** - O email deve ser preenchido para que o contato receba o lembrete de senha.
+
+**Usário** - o nome do usário para acessar a conta do mailee. 
+ 
+**Senha** e **Confirmação de senha** - preencha com sua senha e a confirme.
+
+h4. Permissões:
+
+Quais acessos o usuário terá?
+
+!images/users/diagram_32.png(Relatórios)!  **Relatórios?**
+Acessa os relatórios de envio.
+
+!images/users/letter_32.png(Mensagens)!  **Mensagens?**
+Permite cadastrar campanhas e enviar mensagens.
+
+!images/users/document_32.png(Templates)!  **Templates?**
+Permite visualizar e cadastrar templates.
+
+!images/users/address_32.png(Contatos)!  **Contatos?**
+Permite visualizar, cadastrar, importar e exportar contatos.
+
+!images/users/gear_32.png(Administrador)!  **Administrador?**
+Acessa conteúdos administrativos, como: pagamento da conta, criação de outros usuários e atualização dos dados do cliente.
+
+h3. Editando usuários
+
+Para editar um usuário existente, Basta clicar no usuário desejado para ser direcionado a tela de edição. Os campos são os mesmo para adicionar um novo usuário.
+
