@@ -1,92 +1,71 @@
-h2. Iniciando com o Mailee
+h2. Iniciando com o Mailee.me
 
-O Mailee é uma aplicação web de email marketing. Com ele, você pode manter uma relação próxima com as pessoas para quem você é importante.
+O Mailee.me é uma aplicação web de email marketing. Com ele, você pode manter uma relação próxima com as pessoas para quem você é importante.
 
 Neste guia, iremos ver:
 
-* Em que casos é bom usar o Mailee.
-* Para quem o Mailee é melhor.
-* O que o Mailee tem de diferente.
+* Em que casos é bom usar o Mailee.me.
+* Para quem o Mailee.me é melhor.
+* O que o Mailee.me tem de diferente.
 * Como começar agora mesmo.
 
 endprologue.
 
-h3. Formatando a planilha
+h3. Quando usar o Mailee.me
 
-h4. Cabeçalhos
+h4. Newsletters, notícias ou novidades por email
 
-A importação do Mailee aceita apenas planilhas com cabeçalho. O cabeçalho contém o nome dos campos que você está importando e é sempre a primeira linha da planilha.
+O Mailee.me é ideal para o envio de newsletters, notícias ou novidades por email. Como este tipo de comunicação é geralmente realizada com uma frequência constante, você pode acompanhar a "evolução da sua campanha":http://todo ao longo do tempo.
 
-No exemplo abaixo, você pode ver uma planilha do Google Docs com três colunas. A primeira linha, com os campos "Nome", "Email" e "Escola", é o cabeçalho.
+Assim, é possível desenvolver uma estratégia para sempre melhorar e se aproximar mais das pessoas.
 
-!images/import_spreadsheet/headers.png(Cabeçalho da planilha)!
+h4. Promoções e campanhas por email
 
-h4. Conteúdo
+Campanhas e promoções por email, com objetivo de gerar conversões (vendas, cliques em links importantes, etc), são outros casos onde é bom utilizar o Mailee.me.
 
-O conteúdo dos campos pode ser o que você quiser. O único uso que o Mailee faz deles é para encontrar automaticamente campos como <samp>email</samp> e <samp>nome</samp>. Fique atento, então, pois se você colocar uma coluna com nome "Email" e ela não contiver emails, o Mailee não irá associá-la por padrão ao email dos contatos, preferindo uma coluna cujos dados batam com o formato correto.
+Com nossa "integração com o Google Analytics":http://todo, é possível saber exatamente quais conversões foram originadas pelo Mailee.me e, consequentemente, aprimorar as campanhas para chegar a seu objetivo.
 
-h3. Colocando a planilha no Mailee
+h4. O que mais você inventar
 
-Na tela de contatos, localize no menu à direita o item "Importar".
+Qualquer tipo de comunicação para pessoas que estejam esperando receber contatos seus é bem-vinda. Só não vale mandar emails *não solicitados* ou *não relevantes*. O resto tudo vale. É só botar sua criatividade para funcionar!
 
-!images/import_spreadsheet/contact_index_import.png(Importar)!
+WARNING. Em todos os casos acima, só recomendamos o envio de mensagens *solicitadas ativamente* pelas pessoas. Além das questões legais envolvendo SPAM, campanhas para contatos que não solicitaram recebê-las *não valem o investimento* realizado, por menor que seja. Seus resultados são piores e a sua reputação fica comprometida.
 
-Em seguida, escolha a opção "Planilha".
+h3. Quando não usar o Mailee.me
 
-!images/import_spreadsheet/import_button.png(Importar)!
+h4. Prospecção, novos contatos, etc
 
-Chegamos lá. A tela abaixo é a tela de importação via planilha:
+O Mailee.me, assim como o email em geral, *não é feito para prospecção* ou novos contatos. Ao entrar em contato com uma pessoa que não solicitou seu email, você a está desrespeitando e interrompendo. E relações que iniciam assim não costumam gerar bons frutos para nenhum dos lados.
 
-!images/import_spreadsheet/import_textarea.png(Importar)!
+Para saber mais sobre o marketing do respeito, leia o "nosso blog":http://blog.mailee.me/tag/respeito.
 
-Agora você vai até a sua planilha, seleciona todos os elementos (geralmente o atalho Crtl+A funciona), copia (Ctrl+C) e cola (Ctrl+V) no campo do Mailee.
+INFO. Apesar de o Mailee.me não ser feito para prospecções, não significa que você não possa utilizá-lo junto com outras formas de realizar novos contatos. Criar uma campanha no seu Twitter solicitando assinaturas para a sua newsletter, por exemplo, é uma maneira de utilizar o Mailee.me para desenvolver a relação, e outros meios mais adequados para iniciá-la.
 
-!images/import_spreadsheet/select_all.png(Importar)!
+h3. O que o Mailee.me tem de diferente
 
-!images/import_spreadsheet/import_textarea_filled.png(Importar)!
+O Mailee.me é um serviço web de email marketing, e existem muitas opções de serviços equivalentes. Queremos que você fique conosco apenas se nosso serviço for melhor do que os outros para você.
 
-Se é a primeira vez que você está importando, você não verá a opção "Usar a configuração utilizada na última importação", que aparece na imagem. Se você realiza importações periodicamente e o formato dos dados é o mesmo (as mesmas colunas), você poderá marcar esta opção. Fazendo isto, você não precisará configurar a importação (que veremos como fazer adiante) e o sistema irá diretamente para a tela de progresso.
+Acreditamos que a melhor maneira de você saber isto é "testando":http://mailee.me. Mas, ainda assim, podemos elencar algumas coisas que temos de diferente.
 
-WARNING. Se você marcar a opção "Usar a configuração utilizada na última importação" e os campos do arquivo importado forem diferentes da última importação, você provavelmente receberá um erro de importação na tela seguinte. Mas nem tudo está perdido: simplesmente a importação não será feita, não gerando nenhum erro em seus contatos. Você poderá refazer a importação, desta vez não marcando a opção.
+h4. Criador de templates
 
-h3. Configurando a importação
+Somos os únicos no Brasil a possuir um criador de templates que permite que você crie emails profissionais sem saber nada de HTML.
 
-Após enviar os dados, se você não tiver escolhido a opção de utilizar a última importação, você será encaminhado para a tela de configuração da importação. Nesta tela serão apresentados todos os campos do seu arquivo em uma lista horizontal.
+Ao mesmo tempo, caso você seja designer, você pode criar seus templates em HTML como quiser e só dizer quais campos são editáveis. Depois, seus clientes editam a mensagem e seu design permanece intácto.
 
-!images/import_spreadsheet/navigate.png(Importar)!
+h4. Geolocalização
 
-Você pode navegar entre os campos utilizando os dois botões de navegação abaixo da lista. Para cada coluna você tem três opções:
+Nossos relatórios incluem informações de localização dos contatos na hora em que eles acessaram suas mensagens. A partir destas informações, você pode até criar campanhas segmentadas por região no mapa.
 
-* *Associar a coluna com um campo do Mailee*
-** A importação irá inserir ou atualizar os valores dessa coluna no campo do Mailee
-* *Criar uma nova coluna*
-** A importação irá criar um "campo dinâmico":http://todo, e inserir os valores dessa coluna neste campo
-* *Não importar*
-** A importação irá ignorar esta coluna
+h4. Integração com redes sociais
 
-!images/import_spreadsheet/column_options.png(Opções de importação para cada coluna)!
+Temos um foco em integração com redes sociais e no Mailee.me você pode até enviar campanhas baseado no total de seguidores que seus contatos têm no Twitter, entre outras coisas.
 
-INFO. É obrigatório que ao menos um campo seja associado à coluna <samp>email</samp>.
+h4. Atualizações frequentes
 
-Defina a ação correta para *todas* as colunas, marque as listas nas quais você deseja inserir os contatos e clique no botão de continuar. Em seguida você será enviado para a tela que apresenta a barra de progresso da importação:
+Estamos sempre melhorando o Mailee.me. Para alguns clientes, é até perturbador a quantidade de mudanças. Se você não gosta de mudanças, talvez seja melhor escolher outro serviço. Mas se você gosta de aprender coisas novas, achamos que deve ficar conosco.
 
-!images/import_spreadsheet/progress_bar.png(Barra de progresso)!
+h4. Suporte técnico incansável
 
-INFO. Você não precisa ficar nesta tela para que a importação seja realizada. Você pode continuar trabalhado no Mailee, ler algum artigo para aprender mais sobre o sistema ou então aproveitar para tomar um café.
-
-Todas as importações em andamento e finalizadas nas últimas horas ficam visíveis no <samp>Dashboard</samp> e também na tela inicial de importação.
-
-!images/import_spreadsheet/import_dashboard.png(Barra de progresso)!
-
-h3. O filtro do Mailee
-
-Após a importação, você poderá ver seus contatos listados. Por padrão, o Mailee define os contatos com o status "Em análise". Estes contatos passarão pelo filtro do Mailee. Este filtro irá invalidar automaticamente os contatos cujo domínio não exista, ou não esteja corretamente configurado para receber emails, cujo usuário (a parte inicial do email) não exista, ou que sigam algum padrão suspeito.
-
-Estas verificações são úteis para três propósitos:
-
-* Primeiro, elas já limpam a sua base, reduzindo seus custos.
-* Segundo, elas melhoram a entregabilidade geral da sua base, pois você enviará um número menor de mensagens erradas.
-* Terceiro, é por meio deste filtro que podemos identificar clientes que porventura estejam tendo práticas não respeitosas de email marketing (também conhecidas como SPAM).
-
-Ao identificarmos um usuário do Mailee com importações suspeitas, realizamos uma análise do histórico deste, e caso a suspeita se confirme o usuário é notificado e removido. Assim, todos os outros clientes ganham, pois podem ficar tranquilos que estão utilizando um produto que segue não apenas as melhores práticas de mercado, mas está constantemente melhorando as ferramentas de análise para identificação se SPAM.
+Nós possuímos uma equipe de suporte pequena mas matadora. As mesmas pessoas que criam a aplicação solucionam os chamados. "Entre em contato":mailto:suporte@mailee.me e você vai conversar com uma pessoa pensante e que não vai descansar enquanto não resolver qualquer desafio.
 
