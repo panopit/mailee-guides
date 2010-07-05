@@ -1,6 +1,6 @@
 h2. Campos personalizados
 
-Este artigo apresenta o que são e para que servem os campos personalizados do Mailee.
+Este artigo apresenta o que são e para que servem os campos personalizados do Mailee.me.
 
 * Criando campos personalizados
 * Colocando campos personalizados nas mensagens.
@@ -10,7 +10,7 @@ endprologue.
 
 h3. O que são campos personalizados
 
-Além dos campos usuais (email, nome, telefone, endereço...) o Mailee permite que você crie campos personalizados. Estes campos podem representar qualquer informação que você tenha do contato. Alguns exemplos destes campos:
+Além dos campos usuais (email, nome, telefone, endereço, etc), o Mailee.me permite que você crie campos personalizados. Estes campos podem representar qualquer informação que você tenha do contato. Alguns exemplos destes campos:
 
 * Time de futebol
 * Cor favorita
@@ -23,19 +23,19 @@ Estes campos são úteis para que você tenha mais informações sobre seus cont
 
 h3. Criando campos personalizados
 
-Existem duas formas de se criar campos personalizados. A primeira é realizando uma importação de planilha. Esta é explicada "aqui":http://todo. A outra forma, é indo em "Configurações" e depois em "Campos personalizados".
+Existem duas formas de se criar campos personalizados. A primeira é realizando uma "importação de planilha":import_spreadsheet.html. A outra forma, é indo em _Configurações_ e depois em _Campos personalizados_.
 
 !images/contacts/custom_fields/form.png(Formulário dos campos personalizados)!
 
-Preencha os campos "Nome da coluna" e "Tag" e salve. O campo criado deve aparecer na listagem acima.
+Preencha os campos _Nome da coluna_ e _Tag_ e salve. O campo criado deve aparecer na listagem acima.
 
-O campo "Tag" deve conter apenas letras minúsculas, sem espaço. Este campo será utilizado para colocar dados destes campos em suas mensagens como veremos a seguir.
+O campo _Tag_ deve conter apenas letras minúsculas, sem espaço. Este campo será utilizado para colocar dados destes campos em suas mensagens, como veremos a seguir.
 
 h3. Colocando campos personalizados nas mensagens
 
 Ao criar um template, você pode definir lugares aonde serão colocadas automaticamente informações dos campos personalizados.
 
-Imagine que na sua empresa você possui um sistema de pontuação dos clientes, e quer informar estes quantos pontos eles ainda possuem para aproveitar em alguma promoção. Você pode criar este campo, como explicado acima, ou importá-lo automaticamente de uma "planilha":http://todo. Digamos que você tenha criado este com a tag "pontos". Para incorporar isto em seu template, utilize:
+Imagine que na sua empresa você possui um sistema de pontuação dos clientes, e quer informar estes quantos pontos eles ainda possuem para aproveitar em alguma promoção. Você pode criar este campo, como explicado acima, ou importá-lo automaticamente de uma "planilha":import_spreadsheet.html. Digamos que você tenha criado este com a tag _pontos_. Para incorporar isto em seu template, utilize:
 
 <shell>
   A sua pontuação é <span class="contact pontos">0</span> pontos.
@@ -43,16 +43,19 @@ Imagine que na sua empresa você possui um sistema de pontuação dos clientes, 
 
 Neste caso, se o contato não tiver os dados nesta coluna, o valor "0" será o padrão.
 
+Para saber mais sobre como criar templates para o Mailee.me, "clique aqui":creating_templates.html.
+
 h3. Segmentando por campos personalizados
 
 Você poderá segmentar seus contatos a partir de informações dos campos personalizados.
 
 div{float:left;margin-right:20px}. !images/contacts/custom_fields/segment.png(Segmentando)!
 
-Imagine que você divulga shows e possui na base um campo "Preferência musical", onde os valores são "Rock", "Samba", "MPB", "Jazz", etc. Uma banda de rock irá se apresentar, e você quer enviar uma mensagem apenas para aqueles contatos que gostam deste estilo.
+Imagine que você divulga shows e possui na base um campo _Preferência musical_, onde os valores são _Rock_, _Samba_, _MPB_, _Jazz_, etc. Uma banda de rock irá se apresentar, e você quer enviar uma mensagem apenas para aqueles contatos que gostam deste estilo.
 
-Vá em "Contatos" e abra a busca avançada. Na coluna da direita, serão apresentados todos os campos personalizados. Clique sobe o campo "Preferência musical", escolha o filtro "Igual" e esceve no campo "Rock". Adicione o filtro e veja quantos contatos satisfazem esta regra.
+Vá em _Contatos_ e abra a pesquisa avançada. Na coluna da direita, serão apresentados todos os campos personalizados. Clique no campo _Preferência musical_, escolha o filtro _é igual a_ e escreva _Rock_. Adicione o filtro e veja quantos contatos satisfazem esta regra.
 
-Neste caso você também poderia segmentar por sexo, região e idade. Mais informações sobre a segmentação "aqui":http://todo.
+Neste caso, você também poderia segmentar por sexo, região e idade. Mais informações sobre a segmentação "aqui":segmentation.html.
 
 div{clear:both}. &nbsp;
+
