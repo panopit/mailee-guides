@@ -1,0 +1,45 @@
+h2. Integração com PHP
+
+O Mailee pode ser integrado a qualquer aplicação online por meio de sua API "REST":http://en.wikipedia.org/wiki/Representational_State_Transfer. Com ela, você poderá manter seus contatos sincronizados com o Mailee de forma transparente.
+
+Existem integrações já prontas para "Spree":integration_spree.html, "Ruby on Rails":integration_rails.html e "PHP":integration_php.html. Este tutorial será útil caso você queira fazer a sua própria integração.
+
+* Como pegar a chave de acesso
+* Quais métodos estão disponíveis
+* Como testar os métodos
+
+endprologue.
+
+h3. A chave de acesso
+
+Para usar a API o Mailee gera uma chave secreta para cada cliente. Tome muito cuidade com esta chave, ela é tão ou mais importante que a sua senha. Com ela, alguém mal intencionado poderá ter acesso aos seus clientes. Para pegar esta chave, vá em configuração, depois em integração e por fim em rest.
+
+!images/integration/spree/mailee_integrar.png(Integrar)!
+
+!images/integration/spree/mailee_rest.png(REST)!
+
+h3. Ações
+
+|HTTP|Caminho|Ação|
+|GET|/lists|Retorna a coleção das suas listas|
+|GET|/lists/ID|Retorna uma lista de acordo com o ID|
+|POST|/lists|Cria uma nova lista com os parâmetros enviados.|
+|PUT|/lists/ID|Atualiza uma lista pelo ID com os parâmetros enviados.|
+|GET|/contacts|Retorna a coleção das seus contatos paginada de 30 em 30(parâmetro "page").|
+|GET|/contacts/ID|Retorna um contato de acordo com o ID|
+|POST|/contacts|Cria um novo contato com os parâmetros enviados.|
+|PUT|/contacts/ID|Atualiza um contato pelo ID com os parâmetros enviados.|
+|GET|/contacts/statuses|Retorna a coleção dos status possíveis para um contato|
+|PUT|/contacts/ID/subscribe|Inscreve um contato pelo ID em uma lista. O nome da lista deve ser passado como parâmetro. Se a lista não existir ela será criada automaticamente.|
+|PUT|/contacts/ID/unsubscribe|Desinscreve um contato pelo ID em uma lista. O nome da lista deve ser passado como parâmetro. Se a lista não existir ela será criada automaticamente.|
+|GET|/templates|Retorna a coleção dos seus templates|
+|GET|/templates/ID|Retorna um template de acordo com o ID|
+|POST|/templates|Cria um novo templates com os parâmetros enviados.|
+|PUT|/templates/ID|Atualiza um template pelo ID com os parâmetros enviados.|
+
+h3. Testando
+
+Uma dica é testar utilizando o "Hurl":http://www.hurl.it. Basta acessar o site e utilizar o caminho da sua chave acrescentado à ação. Veja um exemplo abaixo, listando os contatos de uma conta:
+
+!images/integration/rest/hurl.png(REST)!
+
