@@ -10,7 +10,7 @@ endprologue.
 
 h3. Colocando Google Analytics em seu site
 
-Para colocar o Google Analytics em seu site e aprendeer o básico, acesse o a "documentação oficial":http://www.google.com/support/googleanalytics/. Lá você vai encontrar "este artigo específico sobre a instalação do código de _tracking_":http://www.google.com.br/support/googleanalytics/bin/answer.py?hl=br&answer=66983.
+Para colocar o Google Analytics em seu site e aprendeer o básico, acesse a "documentação oficial":http://www.google.com/support/googleanalytics/. Lá você vai encontrar "este artigo específico sobre a instalação do código de _tracking_":http://www.google.com.br/support/googleanalytics/bin/answer.py?hl=br&answer=66983.
 
 Existem alguns tutoriais bem completos em português, também. Acesse:
 
