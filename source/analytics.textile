@@ -1,6 +1,6 @@
 h2. Integração com Google Analytics
 
-O Mailee permite a integração das suas mensagens com o "Google Analytics":http://www.google.com/analytics. Com esta integração, você poderá ver os resultados das campanhas do Mailee integrados aos relatórios do seu site.
+O Mailee.me permite a integração das suas mensagens com o "Google Analytics":http://www.google.com/analytics. Com esta integração, você poderá ver os resultados das campanhas do Mailee.me integrados aos relatórios do seu site.
 
 * Como configurar o Google Analytics no seu site
 * Como enviar mensagens integradas ao Analytics
@@ -19,7 +19,7 @@ Existem alguns tutoriais bem completos em português, também. Acesse:
 
 h3. Enviar mensagens integradas ao Analytics
 
-Enviar suas mensagens no Mailee corretamente integradas ao Analytics é muito simples. Basta, ao criar uma campanha, marcar o campo "Analytics?" (ele já vem marcado por padrão).
+Enviar suas mensagens no Mailee.me corretamente integradas ao Analytics é muito simples. Basta, ao criar uma campanha, marcar o campo "Analytics?" (ele já vem marcado por padrão).
 
 div{float:right;margin-left:20px}. !images/analytics/analytics_check.png(Marque o campo Analytics)!
 
@@ -27,7 +27,7 @@ Uma vez feito isto, quando um contato clicar em algum link de sua mensagem, ele 
 
 *http://www.seudominio.com/produto.php*
 
-o Mailee redirecionará para a página
+o Mailee.me redirecionará para a página
 
 *http://www.seudominio.com/produto.php?utm_source=Mailee&utm_medium=email&utm_campaign=CAMPANHA&utm_term=&utm_content=MENSAGEM*
 
@@ -35,7 +35,7 @@ onde CAMPANHA é o título da campanha e MENSAGEM o título da mensagem. Estas i
 
 Quando você acessar seu painel de controle no Analytics, você poderá ver os resultados comparativos de fontes em _Fontes de tráfego_ (_Traffic Sources_) na _Visão geral_, como na imagem abaixo.
 
-!images/analytics/traffic_sources.png(Mailee nas fontes de tráfego)!
+!images/analytics/traffic_sources.png(Mailee.me nas fontes de tráfego)!
 
 E em _Campanhas_ você verá este resultado segmentado por campanhas e mensagens como na imagem abaixo.
 
