@@ -1,6 +1,6 @@
 h2. Contatos
 
-Este artigo apresenta o "ciclo de vida" dos contatos no Mailee.
+Este artigo apresenta o _ciclo de vida_ dos contatos no Mailee.me.
 
 * Quais os status dos contatos
 * Quais as ações que modificam estes status
@@ -11,13 +11,13 @@ h3. Status dos contatos
 
 div{float:left;margin-right:20px}. !images/contacts/status/status.png(Representação gráfica dos status)!
 
-Os contatos no Mailee possuem um _status_. Este status dá informações sobre as ações do contato, e informa também se o contato poderá ou não receber mensagens. 
+Os contatos no Mailee.me possuem um _status_. Este status dá informações sobre as ações do contato, e informa também se o contato poderá ou não receber mensagens.
 
 Ao lado, está a representação gráfica dos status, que pode ser vista na listagem geral de contatos.
 
 h4. Aguardando
 
-Este status significa que o contato se cadastrou por meio de um formulário online, mas que ainda não validou o seu e-mail. Para validá-lo este contato receberá um e-mail com o link de validação, e deverá clicar neste. Uma vez validado, o contato irá para o status "Confirmado".
+Este status significa que o contato se cadastrou por meio de um formulário online, mas que ainda não validou o seu e-mail. Para validá-lo, este contato receberá um e-mail com o link de validação, e deverá clicar neste. Uma vez validado, o contato irá para o status _Confirmado_.
 
 Os contatos neste status *não receberão* mensagens.
 
@@ -25,30 +25,30 @@ h4. Descadastrado
 
 Este status significa que o contato solicitou o descadastro. O motivo do descadastro é apresentado na listagem de contatos descadastrados e também no relatório de descadastros de cada mensagem.
 
-Ao se descadastrar o contato pode ter reportado SPAM ou não. No cado de tê-lo feito, ele é contabilizado em nossa base de monitoramento dos clientes.
+Ao se descadastrar o contato pode ter reportado SPAM ou não. No caso de tê-lo feito, ele é contabilizado em nossa base de monitoramento dos clientes.
 
 Os contatos neste status *não receberão* mensagens.
 
 h4. Inválido
 
-Este status significa que o contato foi considerado inválido pelo Mailee. Isto pode acontecer por uma série de motivos:
+Este status significa que o contato foi considerado inválido pelo Mailee.me. Isto pode acontecer por uma série de motivos:
 
-* O contato não passou no "filtro":http://todo do Mailee.
+* O contato não passou no filtro do Mailee.me.
 * O provedor do contato não existe ou não está corretamente configurado para receber emails.
 * Uma mensagem foi enviada para o contato e o provedor deste retornou informando que este usuário não existe.
-* Três mensagens consecutivas foram enviadas para o contato e o provedor deste retornou informando algum problema (Ver Soft Bounce).
+* Três mensagens consecutivas foram enviadas para o contato e o provedor deste retornou informando algum problema (ver "Soft Bounce":#softbounce).
 
 Os contatos neste status *não receberão* mensagens.
 
 h4. Em análise
 
-Todo contato cadastrado por você no Mailee iniciará no status "Em análise". Estes contatos passarão inicialmente pelo filtro do Mailee. Se aprovado, um contato será marcado como "Desconhecido". Caso contrário, será marcado como "Inválido".
+Todo contato cadastrado por você no Mailee.me iniciará no status _Em análise_. Estes contatos passarão inicialmente pelo filtro do Mailee.me. Se aprovado, um contato será marcado como _Desconhecido_. Caso contrário, será marcado como _Inválido_.
 
-O filtro do Mailee constuma ser muito rápido, classificando os contatos em poucos minutos. Mas como há este tempo, a priori você pode enviar mensagens para os contatos neste status.
+O filtro do Mailee.me constuma ser muito rápido, classificando os contatos em poucos minutos. Mas como há este tempo, a priori você *pode enviar* mensagens para os contatos neste status.
 
 h4. Soft bounce
 
-Este status significa que a última mensagem enviada para o contato retornou com algum erro temporário. Você poderá continuar enviando para este contato. Se ocorrerem três retornos consecutivos, o contato será marcado como "Inválido".
+Este status significa que a última mensagem enviada para o contato retornou com algum erro temporário. Você *poderá continuar enviando* para este contato. Se ocorrerem três retornos consecutivos, o contato será marcado como _Inválido_.
 
 Os erros mais comuns são:
 
@@ -57,22 +57,29 @@ Os erros mais comuns são:
 * Seu email foi rejeitado pelo servidor do cliente. Tente seguir as melhores práticas no próximo envio.
 * O cliente está com sua caixa de email cheia.
 * O servidor do cliente está indisponível no momento.
-* Problema não catalogado. (Quando encontramos este status nós analisamos a mensagem para catalogá-la novamente)
+* Problema não catalogado (quando encontramos este status, nós analisamos a mensagem para catalogá-la novamente).
 
 h4. Desconhecido
 
-O contato foi cadastrado por você no Mailee e foi aprovado no filtro, mas ainda não se tem informações para garantir a validade do e-mail nem a existência do contato. Para ter estas informações é necessário realizar o primeiro envio para o contato.
+O contato foi cadastrado por você no Mailee.me e foi aprovado no filtro, mas ainda não se tem informações para garantir a validade do email nem a existência do contato. Para ter estas informações é necessário realizar o primeiro envio para o contato.
+
+Os contatos neste status *poderão receber* mensagens.
 
 h4. Válido
 
-A última mensagem foi enviada com sucesso para o contato, mas o contato não interagiu com esta, nem houve retorno do servidor. Isto significa que não há problemas com o e-mail em questão, mas que, ou o contato está ignorando as mensagens, ou está abrindo sem habilitar imagens, o que é comum.
+A última mensagem foi enviada com sucesso para o contato, mas o contato não interagiu com esta, nem houve retorno do servidor. Isto significa que não há problemas com o email em questão, mas que, ou o contato está ignorando as mensagens, ou está abrindo sem habilitar imagens, o que é comum.
+
+Os contatos neste status *poderão receber* mensagens.
 
 h4. Confirmado
 
-Este status significa que ou o contato já interagiu com alguma mensagem sua e que nenhum retorno ou descadastro ocorreu ou que ele se cadastrou por um formulário na internet e validou seu e-mail.
+Este status significa que ou o contato já interagiu com alguma mensagem sua e que nenhum retorno ou descadastro ocorreu ou que ele se cadastrou por um formulário na internet e validou seu email.
+
+Os contatos neste status *poderão receber* mensagens.
 
 h3. Fluxo
 
-Abaixo um fluxo simplificado das possíveis trocas de status:
+Abaixo, um fluxo simplificado das possíveis trocas de status:
 
 !images/contacts/status/flux.png(Fluxo dos status)!
+

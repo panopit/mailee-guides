@@ -1,13 +1,13 @@
 h2. Como importar contatos de uma planilha
 
-O Mailee possui um sistema para importação de contatos de planilha muito poderoso e completo. Com ele você pode importar dados dos contatos e também colunas novas, adequando o Mailee à sua base de dados real.
+O Mailee.me possui um sistema para importação de contatos de planilha muito poderoso e completo. Com ele você pode importar dados dos contatos e também colunas novas, adequando o Mailee.me à sua base de dados real.
 
 Em vez de criarmos uma importação apenas de arquivos MS Excel, nós fizemos uma importação intermediária, na qual você precisa fazer um _copiar_ e _colar_ da sua planilha. Assim você pode importar, além do MS Excel, planilhas do Open Office, Google Docs ou Numbers do iWork. Vamos ver:
 
 * Como formatar a planilha.
-* Como colocar a planilha no Mailee.
+* Como colocar a planilha no Mailee.me.
 * Como configurar a importação.
-* Como funciona o filtro do Mailee.
+* Como funciona o filtro do Mailee.me.
 
 endprologue.
 
@@ -15,23 +15,25 @@ h3. Formatando a planilha
 
 h4. Cabeçalhos
 
-A importação do Mailee aceita apenas planilhas com cabeçalho. O cabeçalho contém o nome dos campos que você está importando e é sempre a primeira linha da planilha.
+A importação do Mailee.me aceita *apenas planilhas com cabeçalho*. O cabeçalho contém o nome dos campos que você está importando e é sempre a primeira linha da planilha.
 
-No exemplo abaixo, você pode ver uma planilha do Google Docs com três colunas. A primeira linha, com os campos "Nome", "Email" e "Escola", é o cabeçalho.
+No exemplo abaixo, você pode ver uma planilha do Google Docs com três colunas. A primeira linha, com os campos _Nome_, _Email_ e _Escola_, é o cabeçalho.
 
 !images/import/spreadsheet/headers.png(Cabeçalho da planilha)!
 
+WARNING. Não se esqueça de colocar o cabeçalho corretamente e conferir os dados. A maior parte dos problemas que nossos clientes encontram ao realizar importação de planilhas se deve a ausencia de cabeçalhos ou a cabeçalhos incompletos.
+
 h4. Conteúdo
 
-O conteúdo dos campos pode ser o que você quiser. O único uso que o Mailee faz deles é para encontrar automaticamente campos como <samp>email</samp> e <samp>nome</samp>. Fique atento, então, pois se você colocar uma coluna com nome "Email" e ela não contiver emails, o Mailee não irá associá-la por padrão ao email dos contatos, preferindo uma coluna cujos dados batam com o formato correto.
+O conteúdo dos campos pode ser o que você quiser. O único uso que o Mailee.me faz deles é para encontrar automaticamente campos como <samp>email</samp> e <samp>nome</samp>. Fique atento, então, pois se você colocar uma coluna com nome _Email_ e ela não contiver emails, o Mailee.me não irá associá-la por padrão ao email dos contatos, preferindo uma coluna cujos dados batam com o formato correto.
 
-h3. Colocando a planilha no Mailee
+h3. Colocando a planilha no Mailee.me
 
-Na tela de contatos, localize no menu à direita o item "Importar".
+Na tela de contatos, localize no menu à direita o item _Importar_.
 
 !images/import/spreadsheet/contact_index_import.png(Importar)!
 
-Em seguida, escolha a opção "Planilha".
+Em seguida, escolha a opção _Planilha_.
 
 !images/import/spreadsheet/import_button.png(Importar)!
 
@@ -39,15 +41,15 @@ Chegamos lá. A tela abaixo é a tela de importação via planilha:
 
 !images/import/spreadsheet/import_textarea.png(Importar)!
 
-Agora você vai até a sua planilha, seleciona todos os elementos (geralmente o atalho Crtl+A funciona), copia (Ctrl+C) e cola (Ctrl+V) no campo do Mailee.
+Agora você vai até a sua planilha, seleciona todos os elementos (geralmente o atalho Crtl&#43;A funciona), copia (Ctrl&#43;C) e cola (Ctrl&#43;V) no campo do Mailee.me.
 
 !images/import/spreadsheet/select_all.png(Importar)!
 
 !images/import/spreadsheet/import_textarea_filled.png(Importar)!
 
-Se é a primeira vez que você está importando, você não verá a opção "Usar a configuração utilizada na última importação", que aparece na imagem. Se você realiza importações periodicamente e o formato dos dados é o mesmo (as mesmas colunas), você poderá marcar esta opção. Fazendo isto, você não precisará configurar a importação (que veremos como fazer adiante) e o sistema irá diretamente para a tela de progresso.
+Se é a primeira vez que você está importando, você não verá a opção _Usar a configuração utilizada na última importação_, que aparece na imagem. Se você realiza importações periodicamente e o formato dos dados é o mesmo (as mesmas colunas), você poderá marcar esta opção. Fazendo isto, você não precisará configurar a importação (que veremos como fazer adiante) e o sistema irá diretamente para a tela de progresso.
 
-WARNING. Se você marcar a opção "Usar a configuração utilizada na última importação" e os campos do arquivo importado forem diferentes da última importação, você provavelmente receberá um erro de importação na tela seguinte. Mas nem tudo está perdido: simplesmente a importação não será feita, não gerando nenhum erro em seus contatos. Você poderá refazer a importação, desta vez não marcando a opção.
+WARNING. Se você marcar a opção _Usar a configuração utilizada na última importação_ e os campos do arquivo importado forem diferentes da última importação, você provavelmente receberá um erro de importação na tela seguinte. Mas nem tudo está perdido: simplesmente a importação não será feita, não gerando nenhum erro em seus contatos. Você poderá refazer a importação, desta vez não marcando a opção.
 
 h3. Configurando a importação
 
@@ -57,30 +59,30 @@ Após enviar os dados, se você não tiver escolhido a opção de utilizar a úl
 
 Você pode navegar entre os campos utilizando os dois botões de navegação abaixo da lista. Para cada coluna você tem três opções:
 
-* *Associar a coluna com um campo do Mailee*
-** A importação irá inserir ou atualizar os valores dessa coluna no campo do Mailee
+* *Associar a coluna com um campo do Mailee.me*
+** A importação irá inserir ou atualizar os valores desta coluna no campo do Mailee.me
 * *Criar uma nova coluna*
-** A importação irá criar um "campo dinâmico":http://todo, e inserir os valores dessa coluna neste campo
+** A importação irá criar um "campo personalizado":contacts_custom_fields.html, e inserir os valores desta coluna neste campo
 * *Não importar*
 ** A importação irá ignorar esta coluna
 
 !images/import/spreadsheet/column_options.png(Opções de importação para cada coluna)!
 
-INFO. É obrigatório que ao menos um campo seja associado à coluna <samp>email</samp>.
+INFO. É obrigatório que ao menos uma coluna seja associada ao campo _Email_.
 
 Defina a ação correta para *todas* as colunas, marque as listas nas quais você deseja inserir os contatos e clique no botão de continuar. Em seguida você será enviado para a tela que apresenta a barra de progresso da importação:
 
 !images/import/spreadsheet/progress_bar.png(Barra de progresso)!
 
-INFO. Você não precisa ficar nesta tela para que a importação seja realizada. Você pode continuar trabalhado no Mailee, ler algum artigo para aprender mais sobre o sistema ou então aproveitar para tomar um café.
+INFO. Você não precisa ficar nesta tela para que a importação seja realizada. Você pode continuar trabalhado no Mailee.me, ler algum artigo para aprender mais sobre o sistema ou então aproveitar para tomar um café.
 
-Todas as importações em andamento e finalizadas nas últimas horas ficam visíveis no <samp>Dashboard</samp> e também na tela inicial de importação.
+Todas as importações em andamento e finalizadas nas últimas horas ficam visíveis no _Dashboard_ e também na tela inicial de importação.
 
-!images/import/spreadsheet/import_dashboard.png(Barra de progresso)!
+!images/import/spreadsheet/import_dashboard.png(Importações recentes)!
 
-h3. O filtro do Mailee
+h3. O filtro do Mailee.me
 
-Após a importação, você poderá ver seus contatos listados. Por padrão, o Mailee define os contatos com o status "Em análise". Estes contatos passarão pelo filtro do Mailee. Este filtro irá invalidar automaticamente os contatos cujo domínio não exista, ou não esteja corretamente configurado para receber emails, cujo usuário (a parte inicial do email) não exista, ou que sigam algum padrão suspeito.
+Após a importação, você poderá ver seus contatos listados. Por padrão, o Mailee.me define os contatos com o status _Em análise_. Estes contatos passarão pelo filtro do Mailee.me. Este filtro irá invalidar automaticamente os contatos cujo domínio não exista ou não esteja corretamente configurado para receber emails, cujo usuário (a parte inicial do email) não exista, ou que sigam algum padrão suspeito.
 
 Estas verificações são úteis para três propósitos:
 
@@ -88,5 +90,7 @@ Estas verificações são úteis para três propósitos:
 * Segundo, elas melhoram a entregabilidade geral da sua base, pois você enviará um número menor de mensagens erradas.
 * Terceiro, é por meio deste filtro que podemos identificar clientes que porventura estejam tendo práticas não respeitosas de email marketing (também conhecidas como SPAM).
 
-Ao identificarmos um usuário do Mailee com importações suspeitas, realizamos uma análise do histórico deste, e caso a suspeita se confirme o usuário é notificado e removido. Assim, todos os outros clientes ganham, pois podem ficar tranquilos que estão utilizando um produto que segue não apenas as melhores práticas de mercado, mas está constantemente melhorando as ferramentas de análise para identificação se SPAM.
+Ao identificarmos um usuário do Mailee.me com importações suspeitas, realizamos uma análise do histórico deste, e caso a suspeita se confirme o usuário é notificado e sua conta excluída. Assim, todos os outros clientes ganham, pois podem ficar tranquilos que estão utilizando um produto que segue não apenas as melhores práticas de mercado, mas está constantemente melhorando as ferramentas de análise para identificação de SPAM.
+
+Saiba mais sobre os status e o ciclo de vida dos contatos "aqui":contacts_status.html.
 

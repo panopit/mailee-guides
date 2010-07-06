@@ -22,7 +22,7 @@ h3. Inicie aqui
 <% end %>
 
 
-h3. Contatus
+h3. Contatos
 
 <dl>
   <% guide('Status', 'contacts_status.html') do %>

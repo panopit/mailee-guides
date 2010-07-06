@@ -1,6 +1,6 @@
 h2. Cadastro de contato
 
-Este artigo apresenta como cadastrar um contato no Mailee.
+Este artigo apresenta como cadastrar um contato no Mailee.me.
 
 * Como chegar ao cadastro
 * Como abrir mais campos de cadastro
@@ -8,33 +8,33 @@ Este artigo apresenta como cadastrar um contato no Mailee.
 
 endprologue.
 
-h3. Cadastro 
+h3. Cadastro
 
-Vá em "Contatos" e clique no link à direita "Adicionar". Abrirá o seguinte formulário:
+Vá em _Contatos_ e clique no link à direita _Adicionar_. Abrirá o seguinte formulário:
 
 !images/contacts/new/form.png(Formulário dos contatos)!
 
-O único campo obrigatório é o email, que é o identificador do contato. 
+O único campo obrigatório é o email, que é o identificador do contato.
 
-Nesta tela inicial, você pode também preencher o nome e definir em quais listas o contato se inscreveu.
+Nesta tela inicial, você pode também preencher o nome e informar em quais listas o contato se inscreveu.
 
 h4. Dados pessoais
 
-Você pode clicar na aba "Dados pessoais" para abrir mais campos:
+Você pode clicar na caixa _Dados pessoais_ para abrir mais campos:
 
 !images/contacts/new/personal_data.png(Formulário dos dados pessoais)!
 
 * *Foto*
-** Uma imagem do contato. Esta imagem sempre sobreescreve caso o usuário possua uma imagem no twitter ou no gravatar.
+** Uma imagem do contato. Caso você não coloque uma foto usando este campo, o Mailee.me buscará a imagem do contato do "Twitter":http://twitter.com e do "Gravatar":http://www.gravatar.com, nesta ordem.
 
 * *Identificador*
-** Se o contato possui um identificador em outro sistema que você usa, utilize este campo para isto. Ao usar as biblioletas de integração disponíveis do Mailee este campo será utilizado.
+** Se o contato possui um identificador em outro sistema que você usa, utilize este campo para isto. Ao usar as bibliotecas de integração do Mailee.me, este campo será utilizado.
 
 * *Sexo*
-** Difine o gênero do contato. Poderá ser usado na "segmentação":http://todo.
+** Define o gênero do contato. Poderá ser usado na "segmentação":segmentation.html.
 
 * *Aniversário*
-** Abre um campo com um calendário para definir a data de nascimento do contato. Poderá ser usado na "segmentação":http://todo.
+** Abre um campo com um calendário para definir a data de nascimento do contato. Poderá ser usado na "segmentação":segmentation.html.
 
 * *Fone*
 ** Permite armazenar o telefone pessoal ou comercial do contato.
@@ -50,39 +50,40 @@ Você pode clicar na aba "Dados pessoais" para abrir mais campos:
 
 h4. Redes sociais
 
-Você pode clicar na aba "Redes sociais" para abrir mais campos:
+Você pode clicar na caixa _Redes sociais_ para abrir mais campos:
 
 !images/contacts/new/social_networks.png(Formulário das redes sociais)!
 
 div{float:right;margin-left:20px}. !images/contacts/new/linkedin_logo.png(LinkedIn)!
 
 * *LinkedIn*
-** Coloque aqui o nome do usuário ou o caminho completo do usuário no "LinkedIn":http://www.linkedin.com. O LinkedIn é uma rede social de negócios muito útil para relações de trabalho. O Mailee é capaz de saber o número de conexões, recomendações (estes dois campos poderão ser utilizados na "segmentação":http://todo.) e informações da indústria, trabalho, experiência, interesses, grupos e o sumário do seu contato no LinkIn. Se você não informar o nome do seu contato, ele utilizará a informação desta rede social.
+** Coloque aqui o nome do usuário ou o caminho completo do usuário no "LinkedIn":http://www.linkedin.com. O LinkedIn é uma rede social de negócios muito útil para relações de trabalho. O Mailee.me é capaz de saber o número de conexões, recomendações (estes dois campos poderão ser utilizados na "segmentação":segmentation.html.), informações da indústria, trabalho, experiência, interesses, grupos e o sumário do seu contato no LinkedIn. Se você não informar o nome do seu contato, ele utilizará a informação desta rede social.
 
 div{float:right;margin-left:20px}. !images/contacts/new/twitter_logo.png(Twitter)! !images/contacts/new/klout_logo.png(Klout)!
 
 * *Twitter*
-** Coloque aqui o nome do usuário no "Twitter":http://www.twitter.com. O Mailee é capaz de saber o número de seguidores e também busca o ranking do contato no Klout:"http://www.klout.com. Estes campos poderão ser utilizados na "segmentação":http://todo.
+** Coloque aqui o nome do usuário no "Twitter":http://twitter.com. O Mailee.me é capaz de saber o número de seguidores e também busca o ranking do contato no "Klout":http://www.klout.com. Estes campos poderão ser utilizados na "segmentação":segmentation.html.
 
 div{float:right;margin-left:20px}. !images/contacts/new/delicious_logo.jpg(Delicious)!
 
 * *Delicious*
-** Coloque aqui o nome do usuário no "Delicious":http://www.delicious.com. O Delicious é um serviço de _bookmarks_ organizado por tags. O Mailee é capaz buscar todas as tags neste serviço e também a ocorrência de cada uma. Estas tags poderão ser utilizadas na "segmentação":http://todo.
+** Coloque aqui o nome do usuário no "Delicious":http://www.delicious.com. O Delicious é um serviço de _bookmarks_ organizado por tags. O Mailee.me é capaz de buscar todas as tags neste serviço e também a ocorrência de cada uma. Estas tags poderão ser utilizadas na "segmentação":segmentation.html.
 
 div{float:right;margin-left:20px}. !images/contacts/new/lastfm_logo.png(Last.fm)!
 
-* *Laft.fm*
-** Coloque aqui o nome do usuário no "Laft.fm":http://www.laft.fm. O Laft.fm é uma rede social para comparilhar informações sobre e ouvir música. O Mailee é capaz buscar todas as tags neste serviço e também a ocorrência de cada uma. Estas tags poderão ser utilizadas na "segmentação":http://todo.
+* *Last.fm*
+** Coloque aqui o nome do usuário no "Last.fm":http://www.last.fm. O Last.fm é uma rede social para compartilhar informações sobre música e ouvir música. O Mailee.me é capaz de buscar todas as tags neste serviço e também a ocorrência de cada uma. Estas tags poderão ser utilizadas na "segmentação":segmentation.html.
 
 div{float:right;margin-left:20px}. !images/contacts/new/grooveshark_logo.png(Grooveshark)!
 
 * *Grooveshark*
-** Coloque aqui o nome do usuário no "Grooveshar":http://www.grooveshark.com. O Grooveshark é uma sistema online para ouvir música.
+** Coloque aqui o nome do usuário no "Grooveshark":http://www.grooveshark.com. O Grooveshark é uma sistema online para ouvir música.
 
 h4. Campos personalizados
 
-Você pode clicar na aba "Campos personalizados" para abrir mais campos:
+Você pode clicar na caixa _Campos personalizados_ para abrir mais campos:
 
 !images/contacts/new/custom_fields.png(Formulário dos campos personalizados)!
 
-Mais informações sobre estes campos "aqui":http://todo.
+Mais informações sobre estes campos "aqui":contacts_custom_fields.html.
+
