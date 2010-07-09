@@ -1,0 +1,12 @@
+h2. Integração de formulários
+
+Esse artigo irá mostrar como:
+
+* Integrar um formulário de cadastro em seu site
+* Integrar um formulário de descadastro em seu site
+
+endprologue.
+
+h3. Formulário de cadastro
+
+h3. Formulário de descadastro

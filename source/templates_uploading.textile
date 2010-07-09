@@ -14,8 +14,8 @@ Após a criação de seu template, você deverá compactar todos os arquivos em 
 
 Seu _zip_ deve, obrigatoriamente, conter apenas:
 
-* Um arquivo .html (e apenas UM) <strong style="color:#bf2f2f;">OBRIGATÓRIO</strong>
-* Arquivos de imagem em formato <samp>.gif</samp> <samp>.jpg</samp> <samp>.jpeg</samp> <samp>.png</samp> ou <samp>.bmp</samp>
+* Um arquivo .html (e apenas UM) salvo em UTF-8 (saiba como salvar em UTF-8 em "Como criar templates":templates_creating.html)
+* Arquivos de imagem em formato <samp>.gif</samp>, <samp>.jpg</samp>, <samp>.jpeg</samp>, <samp>.png</samp> ou <samp>.bmp</samp>.
 
 WARNING. O sistema irá descartar quaisquer arquivos que não preencherem essas especificações.
 

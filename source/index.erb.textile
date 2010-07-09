@@ -13,14 +13,12 @@ Foo bar
 h3. Inicie aqui
 
 <dl>
-  <% guide('Iniciando com o Mailee', 'iniciando.html') do %>
+  <% guide('Iniciando com o Mailee', 'getting_started.html') do %>
     Tudo o que você precisa saber para iniciar com o Mailee.
   <% end %>
 </dl>
 
-
 <% end %>
-
 
 h3. Contatos
 
@@ -28,17 +26,15 @@ h3. Contatos
   <% guide('Status', 'contacts_status.html') do %>
     Saiba o que são os status dos contatos.
   <% end %>
-</dl>
-<dl>
   <% guide('Cadastro', 'contacts_new.html') do %>
     Veja como cadastrar contatos, e como funcionam os campos de redes sociais.
   <% end %>
-</dl>
-<dl>
   <% guide('Importação do Gmail', 'import_gmail.html') do %>
     Importação do Gmail
   <% end %>
 </dl>
+
+<hr>
 
 h3. Importação
 
@@ -46,17 +42,15 @@ h3. Importação
   <% guide('Importação simples', 'import_quick.html') do %>
     Importação simples
   <% end %>
-</dl>
-<dl>
   <% guide('Importação de planilha', 'import_spreadsheet.html') do %>
     Importação de planilha
   <% end %>
-</dl>
-<dl>
   <% guide('Importação do Gmail', 'import_gmail.html') do %>
     Importação do Gmail
   <% end %>
 </dl>
+
+<hr>
 
 h3. Exportação
 
@@ -66,8 +60,7 @@ h3. Exportação
   <% end %>
 </dl>
 
-
-
+<hr>
 
 h3. Integração
 
@@ -75,25 +68,32 @@ h3. Integração
   <% guide('Por formulário', 'integration_form.html') do %>
     Utilize esta integração para cadastrar e descadastrar contatos diretamente do seu site.
   <% end %>
-</dl>
-<dl>
   <% guide('REST', 'integration_rest.html') do %>
     Utilize esta integração para sincronizar sua aplicação com o Mailee.
   <% end %>
-</dl>
-<dl>
   <% guide('Ruby on Rails', 'integration_rails.html') do %>
     Utilize esta integração para sincronizar sua aplicação Ruby on Rails com o Mailee.
   <% end %>
-</dl>
-<dl>
   <% guide('Spree', 'integration_spree.html') do %>
     Utilize esta integração para sincronizar sua loja Spree com o Mailee.
   <% end %>
-</dl>
-<dl>
   <% guide('PHP', 'integration_php.html') do %>
     Utilize esta integração para sincronizar sua aplicação PHP com o Mailee.
   <% end %>
 </dl>
 
+<hr>
+
+h3. Templates
+
+<dl>
+  <% guide('Como criar templates', 'templates_creating.html') do %>
+    Aprenda como criar templates para usar no *Mailee.me*
+  <% end %>
+  <% guide('Como realizar _upload_ de template', 'templates_uploading.html') do %>
+    Aprenda como realizar _upload_ de templates no *Mailee.me*
+  <% end %>
+  <% guide('Boas práticas na criação de templates de email em HTML', 'templates_good_practices.html') do %>
+    Boas práticas na criação de templates de email em HTML
+  <% end %>
+</dl>

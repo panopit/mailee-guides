@@ -3,8 +3,8 @@ h2. Campos personalizados
 Este artigo apresenta o que são e para que servem os campos personalizados do Mailee.me.
 
 * Criando campos personalizados
-* Colocando campos personalizados nas mensagens.
-* Utilizando campos personalizados para segmentação.
+* Colocando campos personalizados nas mensagens
+* Utilizando campos personalizados para segmentação
 
 endprologue.
 
