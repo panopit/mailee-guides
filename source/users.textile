@@ -1,8 +1,6 @@
 h2. Cadastro de usuários
 
-Esse artigo irá mostrar como:
- 
-* Criar e editar usuários
+Este artigo irá mostrar como é realizada a criação e a edição de usuários. 
 
 endprologue.
 
@@ -49,5 +47,5 @@ Acessa conteúdos administrativos, como: pagamento da conta, criação de outros
 
 h3. Editando usuários
 
-Para editar um usuário existente, Basta clicar no usuário desejado para ser direcionado a tela de edição. Os campos são os mesmo para adicionar um novo usuário.
+Para editar um usuário existente, Basta clicar no usuário desejado para ser direcionado a tela de edição. Os campos são os mesmos para adicionar um novo usuário.
 

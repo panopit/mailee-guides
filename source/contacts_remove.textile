@@ -1,22 +1,19 @@
 h2. Exclusão de Contatos	
 
-Este artigo irá mostrar como:
-
-* Excluir contatos
+Este artigo irá mostrar as possíveis alternativas para *Exclusão de contatos* da sua conta no Mailee.me.
 
 endprologue.
 
-h3. Exclusão de Contatos específicos
+h3. Exclusão de Contatos por de Seleção
 
-Para excluir um contato específico, você deve marcar o contato como selecionado. Você pode selecionar mais de um contato ao mesmo tempo. 
-No que realizar primeira seleção, irá surgir o link **"Excluir contatos"** no topo da lista de contatos. 
+Para excluir um contato em específico você deve marcar o contato como selecionado (como a imagem abaixo). No que realizar a primeira seleção, irá surgir o link **"Excluir contatos"** no topo da lista de contatos. Você pode selecionar mais de um contato ao mesmo tempo.
 
 !images/contacts/del/del_contact_link.png(Link de exclusão)!
 
 h3. Exclusão de Contatos por Lista
 
-Se você já tem uma lista de emails para excluir, basta clicar no botão **"Excluir vários"** e colar a informação dentro da caixa de diálogo.
+Se você já tem uma lista de emails para que deseja excluir, basta clicar no botão **"Excluir vários"** e colar a informação dentro da caixa de diálogo.
 
 !images/contacts/del/del_contactbox.png(Deletar lista de contatos)!
 
-INFO. Não é necessário realizar a exclusão de contatos inválidos. Isto porque eles são automaticamente removidos das listas de envio.
+INFO. Não é necessário realizar a exclusão de contatos inválidos. Porque eles são automaticamente removidos das listas de envio e você não corre o risco de desperdiçar créditos.

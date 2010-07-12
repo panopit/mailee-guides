@@ -1,12 +1,25 @@
-h2. Integração de formulários
+h2. Integração com Site Através de Formulário
 
-Esse artigo irá mostrar como:
-
-* Integrar um formulário de cadastro em seu site
-* Integrar um formulário de descadastro em seu site
+Este artigo irá mostrar como o Mailee.me cria para você um código _hmtl_ pronto para ser integrado ao seu site. Assim os seus contatos podem fornecer seus emails diretamente para sua base de dados do Mailee.me, tudo através do seu Site.
 
 endprologue.
 
-h3. Formulário de cadastro
+h3. Gerando o Código
 
-h3. Formulário de descadastro
+Primeiro, vá até a guia *configurações* da barra de navegação. Selecione _Integrar_ e clique no botão _cadastro_
+
+!images/integration/form/integration_form_button.png(Integração por formulário)!
+
+Escolha para qual ou quais listas os contatos devem ser inscritos. 
+
+INFO. Lembre-se. Os contatos devem estar inscritos em listas para receber suas mensagens.
+
+Após ter escolhido as listas, clique no botão _Gerar novo Html_.
+
+WARNING. Antes de copiar o código, localize a terceira e quarta linha. Elas possuem os valores *URL_OK* e *URL_ERROR*. Ambos devem ser substituídos.
+
+!images/integration/form/value_change.png(Valores)!
+
+*URL_OK* - Substitua pela página em seu site que aparecerá depois que o contato for inserido com sucesso no Mailee.me. 
+
+*URL_ERROR* - Substitua pela página em seu site que aparecerá depois que ocorrer algum problema na inserção do contato no Mailee. Será passado o erro por GET pela variável "error". 
