@@ -1,0 +1,123 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Mailee.me Help - Campos personalizados</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:bold' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/style.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/print.css" media="print" />
+    <script type="text/javascript" src="files/javascripts/guides.js"></script>
+    <script type="text/javascript" src="files/javascripts/code_highlighter.js"></script>
+    <script type="text/javascript" src="files/javascripts/highlighters.js"></script>
+  </head>
+  <body class="guide">
+    <div id="topNav">
+      <div class="wrapper">
+        <strong>Mais em <a href="http://www.mailee.me/">mailee.me:</a> </strong>
+        <a href="http://www.mailee.me/recursos">Recursos</a> |
+        <a href="http://www.mailee.me/precos">Preços</a> |
+        <a href="http://www.mailee.me/cadastro">Cadastro</a>
+      </div>
+    </div>
+    <div id="header">
+      <div class="header_wrapper">
+        <div class="wrapper clearfix">
+          <h1><a href="index.html" title="Guides">Mailee.me Help</a></h1>
+          <p class="hide"><a href="#mainCol">Skip navigation</a>.</p>
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="index"><a href="index.html" onclick="guideMenu(); return false;" id="guidesMenu">Índice</a>
+              <div id="guides" class="clearfix" style="display: none;">
+                <hr />
+                <dl class="L">
+                  <dt>Começe aqui</dt>
+                  <dd><a href="getting_started.html">Iniciando com o Mailee.me</a></dd>
+                </dl>
+                <dl class="R">
+                  <dt>Importação</dt>
+                  <dd><a href="import_csv.html">Importando CSV</a></dd>
+                  <dt>Exportação</dt>
+                  <dd><a href="export.html">Exportando contatos</a></dd>
+                  <dt>Integração</dt>
+                  <dd><a href="integration_rest.html">API REST</a></dd>
+                  <dd><a href="integration_rails.html">Integrando com Ruby on Rails</a></dd>
+                  <dd><a href="integration_php.html">Integrando com PHP</a></dd>
+                  <dd><a href="integration_spree.html">Integrando com Spree</a></dd>
+                  <dt>Templates</dt>
+                  <dd><a href="templates_creating.html">Como criar templates</a></dd>
+                  <dd><a href="templates_uploading.html">Como realizar <em>upload</em> de templates</a></dd>
+                  <dd><a href="templates_good_practices.html">Conheça boas práticas na criação de email marketing em HTML</a></dd>
+                </dl>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="feature">
+      <div class="wrapper">
+        <h2>Campos personalizados</h2>
+<p>Este artigo apresenta o que são e para que servem os campos personalizados do Mailee.me.</p>
+<ul>
+	<li>Criando campos personalizados</li>
+	<li>Colocando campos personalizados nas mensagens</li>
+	<li>Utilizando campos personalizados para segmentação</li>
+</ul>
+              <div id="subCol">
+        <h3 class="chapter"><img src="images/chapters_icon.gif" alt="Capítulos">Cap&iacute;tulos</h3>
+        <ol class="chapters">
+<li><a href="#oquesocampospersonalizados">O que são campos personalizados</a><ul></ul></li><li><a href="#criandocampospersonalizados">Criando campos personalizados</a><ul></ul></li><li><a href="#colocandocampospersonalizadosnasmensagens">Colocando campos personalizados nas mensagens</a><ul></ul></li><li><a href="#segmentandoporcampospersonalizados">Segmentando por campos personalizados</a><ul></ul></li></ol></div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="wrapper">
+        <div id="mainCol"><h3 id="oquesocampospersonalizados">1 O que são campos personalizados</h3>
+<p>Além dos campos usuais (email, nome, telefone, endereço, etc), o Mailee.me permite que você crie campos personalizados. Estes campos podem representar qualquer informação que você tenha do contato. Alguns exemplos destes campos:</p>
+<ul>
+	<li>Time de futebol</li>
+	<li>Cor favorita</li>
+	<li>Cargo</li>
+	<li>Pontuação (caso você possua um sistema de pontuação dos contatos)</li>
+	<li>Estilo de música favorito</li>
+	<li>Número da roupa</li>
+</ul>
+<p>Estes campos são úteis para que você tenha mais informações sobre seus contatos e, com estas, faça campanhas mais focadas.</p>
+<h3 id="criandocampospersonalizados">2 Criando campos personalizados</h3>
+<p>Existem duas formas de se criar campos personalizados. A primeira é realizando uma <a href="import_spreadsheet.html">importação de planilha</a>. A outra forma, é indo em <em>Configurações</em> e depois em <em>Campos personalizados</em>.</p>
+<p><img src="images/contacts/custom_fields/form.png" title="Formulário dos campos personalizados" alt="Formulário dos campos personalizados" /></p>
+<p>Preencha os campos <em>Nome da coluna</em> e <em>Tag</em> e salve. O campo criado deve aparecer na listagem acima.</p>
+<p>O campo <em>Tag</em> deve conter apenas letras minúsculas, sem espaço. Este campo será utilizado para colocar dados destes campos em suas mensagens, como veremos a seguir.</p>
+<h3 id="colocandocampospersonalizadosnasmensagens">3 Colocando campos personalizados nas mensagens</h3>
+<p>Ao criar um template, você pode definir lugares aonde serão colocadas automaticamente informações dos campos personalizados.</p>
+<p>Imagine que na sua empresa você possui um sistema de pontuação dos clientes, e quer informar estes quantos pontos eles ainda possuem para aproveitar em alguma promoção. Você pode criar este campo, como explicado acima, ou importá-lo automaticamente de uma <a href="import_spreadsheet.html">planilha</a>. Digamos que você tenha criado este com a tag <em>pontos</em>. Para incorporar isto em seu template, utilize:</p>
+<div class="code_container"><code class="html">
+  A sua pontuação é &lt;span class=&quot;contact pontos&quot;&gt;0&lt;/span&gt; pontos.
+</code></div>
+<p>Neste caso, se o contato não tiver os dados nesta coluna, o valor &#8220;0&#8221; será o padrão.</p>
+<p>Para saber mais sobre como criar templates para o Mailee.me, <a href="creating_templates.html">clique aqui</a>.</p>
+<h3 id="segmentandoporcampospersonalizados">4 Segmentando por campos personalizados</h3>
+<p>Você poderá segmentar seus contatos a partir de informações dos campos personalizados.</p>
+<div style="float:left;margin-right:20px;"><img src="images/contacts/custom_fields/segment.png" title="Segmentando" alt="Segmentando" /></div>
+<p>Imagine que você divulga shows e possui na base um campo <em>Preferência musical</em>, onde os valores são <em>Rock</em>, <em>Samba</em>, <em><span class="caps">MPB</span></em>, <em>Jazz</em>, etc. Uma banda de rock irá se apresentar, e você quer enviar uma mensagem apenas para aqueles contatos que gostam deste estilo.</p>
+<p>Vá em <em>Contatos</em> e abra a pesquisa avançada. Na coluna da direita, serão apresentados todos os campos personalizados. Clique no campo <em>Preferência musical</em>, escolha o filtro <em>é igual a</em> e escreva <em>Rock</em>. Adicione o filtro e veja quantos contatos satisfazem esta regra.</p>
+<p>Neste caso, você também poderia segmentar por sexo, região e idade. Mais informações sobre a segmentação <a href="segmentation.html">aqui</a>.</p>
+<div style="clear:both;">&nbsp;</div></div>
+      </div>
+    </div>
+    <hr class="hide">
+    <div id="footer">
+      <div class="wrapper">
+        <p>Este trabalho é licenciado como <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0</a></p>
+      </div>
+    </div>
+  </body>
+</html>
+      <script type="text/javascript">
+      	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+      	var pageTracker = _gat._getTracker("");
+      	pageTracker._initData();
+      	pageTracker._trackPageview();
+      </script>      

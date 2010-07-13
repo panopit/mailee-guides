@@ -1,0 +1,129 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Mailee.me Help - Gerenciamento de Listas</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:bold' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/style.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/print.css" media="print" />
+    <script type="text/javascript" src="files/javascripts/guides.js"></script>
+    <script type="text/javascript" src="files/javascripts/code_highlighter.js"></script>
+    <script type="text/javascript" src="files/javascripts/highlighters.js"></script>
+  </head>
+  <body class="guide">
+    <div id="topNav">
+      <div class="wrapper">
+        <strong>Mais em <a href="http://www.mailee.me/">mailee.me:</a> </strong>
+        <a href="http://www.mailee.me/recursos">Recursos</a> |
+        <a href="http://www.mailee.me/precos">Preços</a> |
+        <a href="http://www.mailee.me/cadastro">Cadastro</a>
+      </div>
+    </div>
+    <div id="header">
+      <div class="header_wrapper">
+        <div class="wrapper clearfix">
+          <h1><a href="index.html" title="Guides">Mailee.me Help</a></h1>
+          <p class="hide"><a href="#mainCol">Skip navigation</a>.</p>
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="index"><a href="index.html" onclick="guideMenu(); return false;" id="guidesMenu">Índice</a>
+              <div id="guides" class="clearfix" style="display: none;">
+                <hr />
+                <dl class="L">
+                  <dt>Começe aqui</dt>
+                  <dd><a href="getting_started.html">Iniciando com o Mailee.me</a></dd>
+                </dl>
+                <dl class="R">
+                  <dt>Importação</dt>
+                  <dd><a href="import_csv.html">Importando CSV</a></dd>
+                  <dt>Exportação</dt>
+                  <dd><a href="export.html">Exportando contatos</a></dd>
+                  <dt>Integração</dt>
+                  <dd><a href="integration_rest.html">API REST</a></dd>
+                  <dd><a href="integration_rails.html">Integrando com Ruby on Rails</a></dd>
+                  <dd><a href="integration_php.html">Integrando com PHP</a></dd>
+                  <dd><a href="integration_spree.html">Integrando com Spree</a></dd>
+                  <dt>Templates</dt>
+                  <dd><a href="templates_creating.html">Como criar templates</a></dd>
+                  <dd><a href="templates_uploading.html">Como realizar <em>upload</em> de templates</a></dd>
+                  <dd><a href="templates_good_practices.html">Conheça boas práticas na criação de email marketing em HTML</a></dd>
+                </dl>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="feature">
+      <div class="wrapper">
+        <h2>Gerenciamento de Listas</h2>
+<p>Esse artigo irá mostrar como é realizado o gerenciamento de listas.</p>
+<ul>
+	<li>Criação de listas</li>
+	<li>Edição de listas</li>
+	<li>Exclusão de listas</li>
+	<li>Visualização dos contatos inseridos em listas</li>
+</ul>
+              <div id="subCol">
+        <h3 class="chapter"><img src="images/chapters_icon.gif" alt="Capítulos">Cap&iacute;tulos</h3>
+        <ol class="chapters">
+<li><a href="#criandoeditandoeexcluindoumalista">Criando, editando e excluindo uma lista</a><ul><li><a href="#criandoumalistadecontatos">Criando uma lista de contatos</a></li><li><a href="#editandoumalistadecontatos">Editando uma lista de contatos</a></li><li><a href="#exclusodelistadecontatos">Exclusão de lista de contatos</a></li></ul></li><li><a href="#visualizandooscontatosinseridosemlistas">Visualizando os contatos inseridos em listas.</a><ul></ul></li></ol></div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="wrapper">
+        <div id="mainCol"><h3 id="criandoeditandoeexcluindoumalista">1 Criando, editando e excluindo uma lista</h3>
+<p>Para iniciar o gerenciamento de listas, selecione <strong>Contatos</strong> na barra de navegação e clique no botão <em>gerenciar listar</em> no final da coluna lateral.</p>
+<p><img src="images/lists_management/lists_manage_button.png" title="Gerenciar listas" alt="Gerenciar listas" /></p>
+<h4 id="criandoumalistadecontatos">1.1 Criando uma lista de contatos</h4>
+<p>Ao iniciar o gerenciamento de em uma nova conta, o <em>modal</em> de gerenciamento estará vazio. Para criar uma lista clique no botão <strong>adicionar uma lista</strong></p>
+<p>Na tela de criação de lista você tem os seguintes campos:</p>
+<ul>
+	<li><strong>Nome</strong> &#8211; Nome da sua futura lista, campo obrigatório</li>
+</ul>
+<ul>
+	<li><strong>Empresa</strong> &#8211; Nome da empresa, ou do produto</li>
+</ul>
+<ul>
+	<li><strong>Site</strong> &#8211; Endereço na web</li>
+</ul>
+<ul>
+	<li><strong>Endereço</strong> &#8211; Endereço físico</li>
+</ul>
+<ul>
+	<li><strong>Fone</strong> &#8211; Número de contato</li>
+</ul>
+<ul>
+	<li><strong>Descrição</strong> &#8211; Texto livre.</li>
+</ul>
+<div class='info'><p>Você sabe porquê há tantos campos não obrigatórios na criação de uma lista? É porque você pode usá-los como campos dinâmicos em suas mensagens. Veja mais detalhes no nosso <a href="http://www.mailee.me/manual"><strong>manual</strong></a>.</p></div>
+<h4 id="editandoumalistadecontatos">1.2 Editando uma lista de contatos</h4>
+<p>Dentro do gerenciador de lista, posicione o mouse sobre a lista desejada. Perceba que a lista é destacada ao passar o mouse, adquirindo um fundo azul claro e deixando visível o botão <em>&#8220;excluir&#8221;</em>. Agora é só clicar sobre a lista destacada e você será direcionado a tela de edição. A edição possuí os mesmos campos que a criação de lista.</p>
+<p><img src="images/lists_management/list_modal_hover.png" title="Modal de listas" alt="Modal de listas" /></p>
+<h4 id="exclusodelistadecontatos">1.3 Exclusão de lista de contatos</h4>
+<p>Dentro do gerenciador de lista, posicione o mouse sobre a lista desejada. Perceba que a lista é destacada ao passar o mouse, adquirindo um fundo azul claro e deixando visível o botão <em>&#8220;excluir&#8221;</em>. Clique no botão <em>&#8220;excluir&#8221;</em>. Aguarde a mensagem do sistema confirmando a exclusão.</p>
+<div class='info'><p>Excluir uma lista de contatos não irá excluir os contatos inseridos na lista.</p></div>
+<h3 id="visualizandooscontatosinseridosemlistas">2 Visualizando os contatos inseridos em listas.</h3>
+<p>Para visualizar os contatos inseridos dentro de listas e seguimentos, clique no botão <em>&#8220;listas &amp; segmentos&#8221;</em> e clique na lista e ou seguimento desejado. Observe que a cor da lista e do seguimento ficarão sólidas ao serem clicadas, demonstrando que estão ativas.</p>
+<p><img src="images/lists_management/lists_select.png" title="Seleção de lista" alt="Seleção de lista" /></p>
+<p>Com a lista selecionada, é possível voltar a tela de contatos e realizar diversas ações. Para que a lista de contatos mostre novamente todos os contatos, é necessário clicar novamente em <em>&#8220;listas &amp; segmentos&#8221;</em> e desmarcar as opções.</p>
+<p><img src="images/lists_management/lists_unslect.png" title="Não-seleção de lista" alt="Não-seleção de lista" /></p></div>
+      </div>
+    </div>
+    <hr class="hide">
+    <div id="footer">
+      <div class="wrapper">
+        <p>Este trabalho é licenciado como <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0</a></p>
+      </div>
+    </div>
+  </body>
+</html>
+      <script type="text/javascript">
+      	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+      	var pageTracker = _gat._getTracker("");
+      	pageTracker._initData();
+      	pageTracker._trackPageview();
+      </script>      

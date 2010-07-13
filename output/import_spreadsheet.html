@@ -1,0 +1,149 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Mailee.me Help - Como importar contatos de uma planilha</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:bold' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/style.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/print.css" media="print" />
+    <script type="text/javascript" src="files/javascripts/guides.js"></script>
+    <script type="text/javascript" src="files/javascripts/code_highlighter.js"></script>
+    <script type="text/javascript" src="files/javascripts/highlighters.js"></script>
+  </head>
+  <body class="guide">
+    <div id="topNav">
+      <div class="wrapper">
+        <strong>Mais em <a href="http://www.mailee.me/">mailee.me:</a> </strong>
+        <a href="http://www.mailee.me/recursos">Recursos</a> |
+        <a href="http://www.mailee.me/precos">Preços</a> |
+        <a href="http://www.mailee.me/cadastro">Cadastro</a>
+      </div>
+    </div>
+    <div id="header">
+      <div class="header_wrapper">
+        <div class="wrapper clearfix">
+          <h1><a href="index.html" title="Guides">Mailee.me Help</a></h1>
+          <p class="hide"><a href="#mainCol">Skip navigation</a>.</p>
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="index"><a href="index.html" onclick="guideMenu(); return false;" id="guidesMenu">Índice</a>
+              <div id="guides" class="clearfix" style="display: none;">
+                <hr />
+                <dl class="L">
+                  <dt>Começe aqui</dt>
+                  <dd><a href="getting_started.html">Iniciando com o Mailee.me</a></dd>
+                </dl>
+                <dl class="R">
+                  <dt>Importação</dt>
+                  <dd><a href="import_csv.html">Importando CSV</a></dd>
+                  <dt>Exportação</dt>
+                  <dd><a href="export.html">Exportando contatos</a></dd>
+                  <dt>Integração</dt>
+                  <dd><a href="integration_rest.html">API REST</a></dd>
+                  <dd><a href="integration_rails.html">Integrando com Ruby on Rails</a></dd>
+                  <dd><a href="integration_php.html">Integrando com PHP</a></dd>
+                  <dd><a href="integration_spree.html">Integrando com Spree</a></dd>
+                  <dt>Templates</dt>
+                  <dd><a href="templates_creating.html">Como criar templates</a></dd>
+                  <dd><a href="templates_uploading.html">Como realizar <em>upload</em> de templates</a></dd>
+                  <dd><a href="templates_good_practices.html">Conheça boas práticas na criação de email marketing em HTML</a></dd>
+                </dl>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="feature">
+      <div class="wrapper">
+        <h2>Como importar contatos de uma planilha</h2>
+<p>O Mailee.me possui um sistema para importação de contatos de planilha muito poderoso e completo. Com ele você pode importar dados dos contatos e também colunas novas, adequando o Mailee.me à sua base de dados real.</p>
+<p>Em vez de criarmos uma importação apenas de arquivos MS Excel, nós fizemos uma importação intermediária, na qual você precisa fazer um <em>copiar</em> e <em>colar</em> da sua planilha. Assim você pode importar, além do MS Excel, planilhas do Open Office, Google Docs ou Numbers do iWork. Vamos ver:</p>
+<ul>
+	<li>Como formatar a planilha.</li>
+	<li>Como colocar a planilha no Mailee.me.</li>
+	<li>Como configurar a importação.</li>
+	<li>Como funciona o filtro do Mailee.me.</li>
+</ul>
+              <div id="subCol">
+        <h3 class="chapter"><img src="images/chapters_icon.gif" alt="Capítulos">Cap&iacute;tulos</h3>
+        <ol class="chapters">
+<li><a href="#formatandoaplanilha">Formatando a planilha</a><ul><li><a href="#cabealhos">Cabeçalhos</a></li><li><a href="#contedo">Conteúdo</a></li></ul></li><li><a href="#colocandoaplanilhano-maileeme">Colocando a planilha no Mailee.me</a><ul></ul></li><li><a href="#configurandoaimportao">Configurando a importação</a><ul></ul></li><li><a href="#ofiltrodo-maileeme">O filtro do Mailee.me</a><ul></ul></li></ol></div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="wrapper">
+        <div id="mainCol"><h3 id="formatandoaplanilha">1 Formatando a planilha</h3>
+<h4 id="cabealhos">1.1 Cabeçalhos</h4>
+<p>A importação do Mailee.me aceita <strong>apenas planilhas com cabeçalho</strong>. O cabeçalho contém o nome dos campos que você está importando e é sempre a primeira linha da planilha.</p>
+<p>No exemplo abaixo, você pode ver uma planilha do Google Docs com três colunas. A primeira linha, com os campos <em>Nome</em>, <em>Email</em> e <em>Escola</em>, é o cabeçalho.</p>
+<p><img src="images/import/spreadsheet/headers.png" title="Cabeçalho da planilha" alt="Cabeçalho da planilha" /></p>
+<div class='warning'><p>Não se esqueça de colocar o cabeçalho corretamente e conferir os dados. A maior parte dos problemas que nossos clientes encontram ao realizar importação de planilhas se deve a ausencia de cabeçalhos ou a cabeçalhos incompletos.</p></div>
+<h4 id="contedo">1.2 Conteúdo</h4>
+<p>O conteúdo dos campos pode ser o que você quiser. O único uso que o Mailee.me faz deles é para encontrar automaticamente campos como <samp>email</samp> e <samp>nome</samp>. Fique atento, então, pois se você colocar uma coluna com nome <em>Email</em> e ela não contiver emails, o Mailee.me não irá associá-la por padrão ao email dos contatos, preferindo uma coluna cujos dados batam com o formato correto.</p>
+<h3 id="colocandoaplanilhano-maileeme">2 Colocando a planilha no Mailee.me</h3>
+<p>Na tela de contatos, localize no menu à direita o item <em>Importar</em>.</p>
+<p><img src="images/import/spreadsheet/contact_index_import.png" title="Importar" alt="Importar" /></p>
+<p>Em seguida, escolha a opção <em>Planilha</em>.</p>
+<p><img src="images/import/spreadsheet/import_button.png" title="Importar" alt="Importar" /></p>
+<p>Chegamos lá. A tela abaixo é a tela de importação via planilha:</p>
+<p><img src="images/import/spreadsheet/import_textarea.png" title="Importar" alt="Importar" /></p>
+<p>Agora você vai até a sua planilha, seleciona todos os elementos (geralmente o atalho Crtl&#43;A funciona), copia (Ctrl&#43;C) e cola (Ctrl&#43;V) no campo do Mailee.me.</p>
+<p><img src="images/import/spreadsheet/select_all.png" title="Importar" alt="Importar" /></p>
+<p><img src="images/import/spreadsheet/import_textarea_filled.png" title="Importar" alt="Importar" /></p>
+<p>Se é a primeira vez que você está importando, você não verá a opção <em>Usar a configuração utilizada na última importação</em>, que aparece na imagem. Se você realiza importações periodicamente e o formato dos dados é o mesmo (as mesmas colunas), você poderá marcar esta opção. Fazendo isto, você não precisará configurar a importação (que veremos como fazer adiante) e o sistema irá diretamente para a tela de progresso.</p>
+<div class='warning'><p>Se você marcar a opção <em>Usar a configuração utilizada na última importação</em> e os campos do arquivo importado forem diferentes da última importação, você provavelmente receberá um erro de importação na tela seguinte. Mas nem tudo está perdido: simplesmente a importação não será feita, não gerando nenhum erro em seus contatos. Você poderá refazer a importação, desta vez não marcando a opção.</p></div>
+<h3 id="configurandoaimportao">3 Configurando a importação</h3>
+<p>Após enviar os dados, se você não tiver escolhido a opção de utilizar a última importação, você será encaminhado para a tela de configuração da importação. Nesta tela serão apresentados todos os campos do seu arquivo em uma lista horizontal.</p>
+<p><img src="images/import/spreadsheet/navigate.png" title="Importar" alt="Importar" /></p>
+<p>Você pode navegar entre os campos utilizando os dois botões de navegação abaixo da lista. Para cada coluna você tem três opções:</p>
+<ul>
+	<li><strong>Associar a coluna com um campo do Mailee.me</strong>
+	<ul>
+		<li>A importação irá inserir ou atualizar os valores desta coluna no campo do Mailee.me</li>
+	</ul></li>
+	<li><strong>Criar uma nova coluna</strong>
+	<ul>
+		<li>A importação irá criar um <a href="contacts_custom_fields.html">campo personalizado</a>, e inserir os valores desta coluna neste campo</li>
+	</ul></li>
+	<li><strong>Não importar</strong>
+	<ul>
+		<li>A importação irá ignorar esta coluna</li>
+	</ul></li>
+</ul>
+<p><img src="images/import/spreadsheet/column_options.png" title="Opções de importação para cada coluna" alt="Opções de importação para cada coluna" /></p>
+<div class='info'><p>É obrigatório que ao menos uma coluna seja associada ao campo <em>Email</em>.</p></div>
+<p>Defina a ação correta para <strong>todas</strong> as colunas, marque as listas nas quais você deseja inserir os contatos e clique no botão de continuar. Em seguida você será enviado para a tela que apresenta a barra de progresso da importação:</p>
+<p><img src="images/import/spreadsheet/progress_bar.png" title="Barra de progresso" alt="Barra de progresso" /></p>
+<div class='info'><p>Você não precisa ficar nesta tela para que a importação seja realizada. Você pode continuar trabalhado no Mailee.me, ler algum artigo para aprender mais sobre o sistema ou então aproveitar para tomar um café.</p></div>
+<p>Todas as importações em andamento e finalizadas nas últimas horas ficam visíveis no <em>Dashboard</em> e também na tela inicial de importação.</p>
+<p><img src="images/import/spreadsheet/import_dashboard.png" title="Importações recentes" alt="Importações recentes" /></p>
+<h3 id="ofiltrodo-maileeme">4 O filtro do Mailee.me</h3>
+<p>Após a importação, você poderá ver seus contatos listados. Por padrão, o Mailee.me define os contatos com o status <em>Em análise</em>. Estes contatos passarão pelo filtro do Mailee.me. Este filtro irá invalidar automaticamente os contatos cujo domínio não exista ou não esteja corretamente configurado para receber emails, cujo usuário (a parte inicial do email) não exista, ou que sigam algum padrão suspeito.</p>
+<p>Estas verificações são úteis para três propósitos:</p>
+<ul>
+	<li>Primeiro, elas já limpam a sua base, reduzindo seus custos.</li>
+	<li>Segundo, elas melhoram a entregabilidade geral da sua base, pois você enviará um número menor de mensagens erradas.</li>
+	<li>Terceiro, é por meio deste filtro que podemos identificar clientes que porventura estejam tendo práticas não respeitosas de email marketing (também conhecidas como <span class="caps">SPAM</span>).</li>
+</ul>
+<p>Ao identificarmos um usuário do Mailee.me com importações suspeitas, realizamos uma análise do histórico deste, e caso a suspeita se confirme o usuário é notificado e sua conta excluída. Assim, todos os outros clientes ganham, pois podem ficar tranquilos que estão utilizando um produto que segue não apenas as melhores práticas de mercado, mas está constantemente melhorando as ferramentas de análise para identificação de <span class="caps">SPAM</span>.</p>
+<p>Saiba mais sobre os status e o ciclo de vida dos contatos <a href="contacts_status.html">aqui</a>.</p></div>
+      </div>
+    </div>
+    <hr class="hide">
+    <div id="footer">
+      <div class="wrapper">
+        <p>Este trabalho é licenciado como <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0</a></p>
+      </div>
+    </div>
+  </body>
+</html>
+      <script type="text/javascript">
+      	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+      	var pageTracker = _gat._getTracker("");
+      	pageTracker._initData();
+      	pageTracker._trackPageview();
+      </script>      

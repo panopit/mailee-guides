@@ -1,0 +1,113 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Mailee.me Help - Como realizar _upload_ de template</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:bold' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/style.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/print.css" media="print" />
+    <script type="text/javascript" src="files/javascripts/guides.js"></script>
+    <script type="text/javascript" src="files/javascripts/code_highlighter.js"></script>
+    <script type="text/javascript" src="files/javascripts/highlighters.js"></script>
+  </head>
+  <body class="guide">
+    <div id="topNav">
+      <div class="wrapper">
+        <strong>Mais em <a href="http://www.mailee.me/">mailee.me:</a> </strong>
+        <a href="http://www.mailee.me/recursos">Recursos</a> |
+        <a href="http://www.mailee.me/precos">Preços</a> |
+        <a href="http://www.mailee.me/cadastro">Cadastro</a>
+      </div>
+    </div>
+    <div id="header">
+      <div class="header_wrapper">
+        <div class="wrapper clearfix">
+          <h1><a href="index.html" title="Guides">Mailee.me Help</a></h1>
+          <p class="hide"><a href="#mainCol">Skip navigation</a>.</p>
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="index"><a href="index.html" onclick="guideMenu(); return false;" id="guidesMenu">Índice</a>
+              <div id="guides" class="clearfix" style="display: none;">
+                <hr />
+                <dl class="L">
+                  <dt>Começe aqui</dt>
+                  <dd><a href="getting_started.html">Iniciando com o Mailee.me</a></dd>
+                </dl>
+                <dl class="R">
+                  <dt>Importação</dt>
+                  <dd><a href="import_csv.html">Importando CSV</a></dd>
+                  <dt>Exportação</dt>
+                  <dd><a href="export.html">Exportando contatos</a></dd>
+                  <dt>Integração</dt>
+                  <dd><a href="integration_rest.html">API REST</a></dd>
+                  <dd><a href="integration_rails.html">Integrando com Ruby on Rails</a></dd>
+                  <dd><a href="integration_php.html">Integrando com PHP</a></dd>
+                  <dd><a href="integration_spree.html">Integrando com Spree</a></dd>
+                  <dt>Templates</dt>
+                  <dd><a href="templates_creating.html">Como criar templates</a></dd>
+                  <dd><a href="templates_uploading.html">Como realizar <em>upload</em> de templates</a></dd>
+                  <dd><a href="templates_good_practices.html">Conheça boas práticas na criação de email marketing em HTML</a></dd>
+                </dl>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="feature">
+      <div class="wrapper">
+        <h2>Como realizar <em>upload</em> de template</h2>
+<p>Esse guia é voltado para pessoas que desejam saber o que é necessário para enviar seus templates para o Mailee.me. Ao final dele você devera saber como:</p>
+<ul>
+	<li>Organizar o conteúdo do <em>zip</em></li>
+	<li>Fazer <em>upload</em> do template para o Mailee.me</li>
+	<li>Conferir o template enviado</li>
+</ul>
+              <div id="subCol">
+        <h3 class="chapter"><img src="images/chapters_icon.gif" alt="Capítulos">Cap&iacute;tulos</h3>
+        <ol class="chapters">
+<li><a href="#preparandooarquivocompactadopara-upload-">Preparando o arquivo compactado para <em>upload</em></a><ul></ul></li><li><a href="#-upload-dotemplate"><em>Upload</em> do template</a><ul></ul></li><li><a href="#conferindooseutemplate">Conferindo o seu template</a><ul></ul></li></ol></div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="wrapper">
+        <div id="mainCol"><h3 id="preparandooarquivocompactadopara-upload-">1 Preparando o arquivo compactado para <em>upload</em></h3>
+<p>Após a criação de seu template, você deverá compactar todos os arquivos em <em>zip</em> para realizar upload para o sistema.</p>
+<p>Seu <em>zip</em> deve, obrigatoriamente, conter apenas:</p>
+<ul>
+	<li>Um arquivo .html (e apenas UM) salvo em <span class="caps">UTF</span>-8 (saiba como salvar em <span class="caps">UTF</span>-8 em <a href="templates_creating.html">Como criar templates</a>)</li>
+	<li>Arquivos de imagem em formato <samp>.gif</samp>, <samp>.jpg</samp>, <samp>.jpeg</samp>, <samp>.png</samp> ou <samp>.bmp</samp>.</li>
+</ul>
+<div class='warning'><p>O sistema irá descartar quaisquer arquivos que não preencherem essas especificações.</p></div>
+<h3 id="-upload-dotemplate">2 <em>Upload</em> do template</h3>
+<ol>
+	<li>Clique no botão <strong>Upload</strong> e um formulário para envio de arquivo irá aparecer</li>
+	<li>Clique no botão para envio de arquivo<sup>*</sup></li>
+	<li>Selecione seu arquivo em uma lista</li>
+	<li>Pronto</li>
+</ol>
+<p>Com seu template feito, renomeie o <span class="caps">HTML</span> para &#8216;template.html&#8217; e coloque todas as imagens na mesma pasta. Zipe tudo e envie para o Mailee. O sistema criará uma pasta e descompactará seu conteúdo, ajustando seu <span class="caps">HTML</span> ao padrão do <strong>Mailee.me</strong>.</p>
+<p>Para colocar uma imagem de <em>thumbnail</em> do seu template, faça o seu <em>print screen</em> e coloque o nome &#8216;template.png&#8217;. A imagem deve ir junto no zip. Se você não enviar o thumbnail, não se preocupe, o Mailee tentará gerar um para você.</p>
+<p>Após enviar, você pode verificar como ficou seu layout com notícias de exemplo, ou mesmo fazer um checklist para ver se fez tudo corretamente.</p>
+<div class='warning'><p><strong>Importante:</strong> <br/> O arquivo deve se chamar literalmente &#8216;template.html&#8217; e o thumbnail &#8216;template.png&#8217;. Todas as imagens e arquivos devem estar na mesma pasta.</p></div>
+<div class='info'><p>* <strong>Observação:</strong> O nome no botão de envio de arquivo pode ser diferente, dependendo do sistema operacionar e navegador utilizado.</p></div>
+<h3 id="conferindooseutemplate">3 Conferindo o seu template</h3></div>
+      </div>
+    </div>
+    <hr class="hide">
+    <div id="footer">
+      <div class="wrapper">
+        <p>Este trabalho é licenciado como <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0</a></p>
+      </div>
+    </div>
+  </body>
+</html>
+      <script type="text/javascript">
+      	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+      	var pageTracker = _gat._getTracker("");
+      	pageTracker._initData();
+      	pageTracker._trackPageview();
+      </script>      

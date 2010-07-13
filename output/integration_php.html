@@ -1,0 +1,183 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Mailee.me Help - Integração com PHP</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:bold' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/style.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/print.css" media="print" />
+    <script type="text/javascript" src="files/javascripts/guides.js"></script>
+    <script type="text/javascript" src="files/javascripts/code_highlighter.js"></script>
+    <script type="text/javascript" src="files/javascripts/highlighters.js"></script>
+  </head>
+  <body class="guide">
+    <div id="topNav">
+      <div class="wrapper">
+        <strong>Mais em <a href="http://www.mailee.me/">mailee.me:</a> </strong>
+        <a href="http://www.mailee.me/recursos">Recursos</a> |
+        <a href="http://www.mailee.me/precos">Preços</a> |
+        <a href="http://www.mailee.me/cadastro">Cadastro</a>
+      </div>
+    </div>
+    <div id="header">
+      <div class="header_wrapper">
+        <div class="wrapper clearfix">
+          <h1><a href="index.html" title="Guides">Mailee.me Help</a></h1>
+          <p class="hide"><a href="#mainCol">Skip navigation</a>.</p>
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="index"><a href="index.html" onclick="guideMenu(); return false;" id="guidesMenu">Índice</a>
+              <div id="guides" class="clearfix" style="display: none;">
+                <hr />
+                <dl class="L">
+                  <dt>Começe aqui</dt>
+                  <dd><a href="getting_started.html">Iniciando com o Mailee.me</a></dd>
+                </dl>
+                <dl class="R">
+                  <dt>Importação</dt>
+                  <dd><a href="import_csv.html">Importando CSV</a></dd>
+                  <dt>Exportação</dt>
+                  <dd><a href="export.html">Exportando contatos</a></dd>
+                  <dt>Integração</dt>
+                  <dd><a href="integration_rest.html">API REST</a></dd>
+                  <dd><a href="integration_rails.html">Integrando com Ruby on Rails</a></dd>
+                  <dd><a href="integration_php.html">Integrando com PHP</a></dd>
+                  <dd><a href="integration_spree.html">Integrando com Spree</a></dd>
+                  <dt>Templates</dt>
+                  <dd><a href="templates_creating.html">Como criar templates</a></dd>
+                  <dd><a href="templates_uploading.html">Como realizar <em>upload</em> de templates</a></dd>
+                  <dd><a href="templates_good_practices.html">Conheça boas práticas na criação de email marketing em HTML</a></dd>
+                </dl>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="feature">
+      <div class="wrapper">
+        <h2>Integração com <span class="caps">PHP</span></h2>
+<p>O Mailee pode ser integrado a qualquer aplicação online por meio de sua <span class="caps">API</span> <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer"><span class="caps">REST</span></a>. Com ela, você poderá manter seus contatos sincronizados com o Mailee de forma transparente.</p>
+<p>Existem integrações já prontas para <a href="integration_spree.html">Spree</a>, <a href="integration_rails.html">Ruby on Rails</a> e <a href="integration_php.html"><span class="caps">PHP</span></a>. Este tutorial será útil caso você queira fazer a sua própria integração.</p>
+<ul>
+	<li>Como pegar a chave de acesso</li>
+	<li>Quais métodos estão disponíveis</li>
+	<li>Como testar os métodos</li>
+</ul>
+              <div id="subCol">
+        <h3 class="chapter"><img src="images/chapters_icon.gif" alt="Capítulos">Cap&iacute;tulos</h3>
+        <ol class="chapters">
+<li><a href="#achavedeacesso">A chave de acesso</a><ul></ul></li><li><a href="#aes">Ações</a><ul></ul></li><li><a href="#testando">Testando</a><ul></ul></li></ol></div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="wrapper">
+        <div id="mainCol"><h3 id="achavedeacesso">1 A chave de acesso</h3>
+<p>Para usar a <span class="caps">API</span> o Mailee gera uma chave secreta para cada cliente. Tome muito cuidade com esta chave, ela é tão ou mais importante que a sua senha. Com ela, alguém mal intencionado poderá ter acesso aos seus clientes. Para pegar esta chave, vá em configuração, depois em integração e por fim em rest.</p>
+<p><img src="images/integration/spree/mailee_integrar.png" title="Integrar" alt="Integrar" /></p>
+<p><img src="images/integration/spree/mailee_rest.png" title="REST" alt="REST" /></p>
+<h3 id="aes">2 Ações</h3>
+<table>
+	<tr>
+		<td><span class="caps">HTTP</span></td>
+		<td>Caminho</td>
+		<td>Ação</td>
+	</tr>
+	<tr>
+		<td><span class="caps">GET</span></td>
+		<td>/lists</td>
+		<td>Retorna a coleção das suas listas</td>
+	</tr>
+	<tr>
+		<td><span class="caps">GET</span></td>
+		<td>/lists/ID</td>
+		<td>Retorna uma lista de acordo com o ID</td>
+	</tr>
+	<tr>
+		<td><span class="caps">POST</span></td>
+		<td>/lists</td>
+		<td>Cria uma nova lista com os parâmetros enviados.</td>
+	</tr>
+	<tr>
+		<td><span class="caps">PUT</span></td>
+		<td>/lists/ID</td>
+		<td>Atualiza uma lista pelo ID com os parâmetros enviados.</td>
+	</tr>
+	<tr>
+		<td><span class="caps">GET</span></td>
+		<td>/contacts</td>
+		<td>Retorna a coleção das seus contatos paginada de 30 em 30(parâmetro &#8220;page&#8221;).</td>
+	</tr>
+	<tr>
+		<td><span class="caps">GET</span></td>
+		<td>/contacts/ID</td>
+		<td>Retorna um contato de acordo com o ID</td>
+	</tr>
+	<tr>
+		<td><span class="caps">POST</span></td>
+		<td>/contacts</td>
+		<td>Cria um novo contato com os parâmetros enviados.</td>
+	</tr>
+	<tr>
+		<td><span class="caps">PUT</span></td>
+		<td>/contacts/ID</td>
+		<td>Atualiza um contato pelo ID com os parâmetros enviados.</td>
+	</tr>
+	<tr>
+		<td><span class="caps">GET</span></td>
+		<td>/contacts/statuses</td>
+		<td>Retorna a coleção dos status possíveis para um contato</td>
+	</tr>
+	<tr>
+		<td><span class="caps">PUT</span></td>
+		<td>/contacts/ID/subscribe</td>
+		<td>Inscreve um contato pelo ID em uma lista. O nome da lista deve ser passado como parâmetro. Se a lista não existir ela será criada automaticamente.</td>
+	</tr>
+	<tr>
+		<td><span class="caps">PUT</span></td>
+		<td>/contacts/ID/unsubscribe</td>
+		<td>Desinscreve um contato pelo ID em uma lista. O nome da lista deve ser passado como parâmetro. Se a lista não existir ela será criada automaticamente.</td>
+	</tr>
+	<tr>
+		<td><span class="caps">GET</span></td>
+		<td>/templates</td>
+		<td>Retorna a coleção dos seus templates</td>
+	</tr>
+	<tr>
+		<td><span class="caps">GET</span></td>
+		<td>/templates/ID</td>
+		<td>Retorna um template de acordo com o ID</td>
+	</tr>
+	<tr>
+		<td><span class="caps">POST</span></td>
+		<td>/templates</td>
+		<td>Cria um novo templates com os parâmetros enviados.</td>
+	</tr>
+	<tr>
+		<td><span class="caps">PUT</span></td>
+		<td>/templates/ID</td>
+		<td>Atualiza um template pelo ID com os parâmetros enviados.</td>
+	</tr>
+</table>
+<h3 id="testando">3 Testando</h3>
+<p>Uma dica é testar utilizando o <a href="http://www.hurl.it">Hurl</a>. Basta acessar o site e utilizar o caminho da sua chave acrescentado à ação. Veja um exemplo abaixo, listando os contatos de uma conta:</p>
+<p><img src="images/integration/rest/hurl.png" title="REST" alt="REST" /></p></div>
+      </div>
+    </div>
+    <hr class="hide">
+    <div id="footer">
+      <div class="wrapper">
+        <p>Este trabalho é licenciado como <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0</a></p>
+      </div>
+    </div>
+  </body>
+</html>
+      <script type="text/javascript">
+      	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+      	var pageTracker = _gat._getTracker("");
+      	pageTracker._initData();
+      	pageTracker._trackPageview();
+      </script>      

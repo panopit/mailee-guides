@@ -1,0 +1,289 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Mailee.me Help - Como integrar com o Spree</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:bold' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/style.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/print.css" media="print" />
+    <script type="text/javascript" src="files/javascripts/guides.js"></script>
+    <script type="text/javascript" src="files/javascripts/code_highlighter.js"></script>
+    <script type="text/javascript" src="files/javascripts/highlighters.js"></script>
+  </head>
+  <body class="guide">
+    <div id="topNav">
+      <div class="wrapper">
+        <strong>Mais em <a href="http://www.mailee.me/">mailee.me:</a> </strong>
+        <a href="http://www.mailee.me/recursos">Recursos</a> |
+        <a href="http://www.mailee.me/precos">Preços</a> |
+        <a href="http://www.mailee.me/cadastro">Cadastro</a>
+      </div>
+    </div>
+    <div id="header">
+      <div class="header_wrapper">
+        <div class="wrapper clearfix">
+          <h1><a href="index.html" title="Guides">Mailee.me Help</a></h1>
+          <p class="hide"><a href="#mainCol">Skip navigation</a>.</p>
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="index"><a href="index.html" onclick="guideMenu(); return false;" id="guidesMenu">Índice</a>
+              <div id="guides" class="clearfix" style="display: none;">
+                <hr />
+                <dl class="L">
+                  <dt>Começe aqui</dt>
+                  <dd><a href="getting_started.html">Iniciando com o Mailee.me</a></dd>
+                </dl>
+                <dl class="R">
+                  <dt>Importação</dt>
+                  <dd><a href="import_csv.html">Importando CSV</a></dd>
+                  <dt>Exportação</dt>
+                  <dd><a href="export.html">Exportando contatos</a></dd>
+                  <dt>Integração</dt>
+                  <dd><a href="integration_rest.html">API REST</a></dd>
+                  <dd><a href="integration_rails.html">Integrando com Ruby on Rails</a></dd>
+                  <dd><a href="integration_php.html">Integrando com PHP</a></dd>
+                  <dd><a href="integration_spree.html">Integrando com Spree</a></dd>
+                  <dt>Templates</dt>
+                  <dd><a href="templates_creating.html">Como criar templates</a></dd>
+                  <dd><a href="templates_uploading.html">Como realizar <em>upload</em> de templates</a></dd>
+                  <dd><a href="templates_good_practices.html">Conheça boas práticas na criação de email marketing em HTML</a></dd>
+                </dl>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="feature">
+      <div class="wrapper">
+        <h2>Como integrar com o Spree</h2>
+<p><img src="images/integration/spree/spree.jpg" title="Spree" alt="Spree" /></p>
+<p>O <a href="http://www.spreecommerce.com">Spree</a> é um projeto de comércio eletrônico de código aberto feito em <a href="http://www.rubyonrails.com">Ruby on Rails</a> que evoluiu muito nos últimos anos. Já possui tradução para português, integração com os correios e uma série de formas de pagamento. Além disso, o Spree possui uma <a href="http://ext.spreecommerce.com">comunidade vibrante</a>, o que garante qualidade no código e plugins novos a todo momento para todas as necessidades de um e-commerce, como fórum, blog, sitemaps, pesquisas de opinião, vídeos, conexão com Facebook, promoções e fornecedores só para citar alguns.</p>
+<p>Mas um bom e-commerce pressupõe manter a base atualizada e constância na comunicação com seus clientes por e-mail, enviando novidades e promoções. Por isso criamos uma extensão para que você possa ter a sua loja online já integrada ao Mailee. Esta extensão utiliza a <span class="caps">API</span> do Mailee, que permite que qualquer aplicação possa conversar com o ele pela internet. Se você quiser saber mais sobre como integrar sua aplicação mesmo não usando Spree, fale conosco!</p>
+<p>A seguir veremos como usar o Spree com a integração do Mailee, passo a passo. Recomendo que você coloque agora um café para passar, pois teremos um intervalo no meio. Tópicos que serão vistos:</p>
+<ul>
+	<li>Como instalar o Spree.</li>
+	<li>Como iniciar nossa loja.</li>
+	<li>Como instalar a extensão MaileeSpree na loja.</li>
+	<li>Como sincronizar os contatos manualmente.</li>
+	<li>Como sincronizar os contatos automaticamente.</li>
+</ul>
+              <div id="subCol">
+        <h3 class="chapter"><img src="images/chapters_icon.gif" alt="Capítulos">Cap&iacute;tulos</h3>
+        <ol class="chapters">
+<li><a href="#requisitos">Requisitos</a><ul></ul></li><li><a href="#instalandoo-spree">Instalando o Spree</a><ul><li><a href="#instalandoagem">Instalando a gem</a></li><li><a href="#criandoaestruturadaloja">Criando a estrutura da loja</a></li></ul></li><li><a href="#configurandoo-spree">Configurando o Spree</a><ul><li><a href="#rodarumgemsinstalljustincase">Rodar um gems install just in case</a></li><li><a href="#editaroconfigdatabaseyml">Editar o config/database.yml</a></li><li><a href="#criarousuriodobanco">Criar o usuário do banco</a></li><li><a href="#criarobanco">Criar o banco</a></li><li><a href="#alimentarcomalgunsprodutosiniciais">Alimentar com alguns produtos iniciais</a></li><li><a href="#feito">Feito!</a></li></ul></li><li><a href="#instalandoo-mailee-spree">Instalando o MaileeSpree</a><ul><li><a href="#instaleaextenso">Instale a extensão</a></li><li><a href="#criesuacontano-mailee">Crie sua conta no Mailee</a></li><li><a href="#pegueachaveda-api">Pegue a chave da <span class="caps">API</span></a></li><li><a href="#configureachavenoenvironmentrbounoenvquevocacharmelhor">Configure a chave no environment.rb (ou no env que você achar melhor)</a></li></ul></li><li><a href="#usandoo-mailee-spree">Usando o MaileeSpree</a><ul><li><a href="#enviandoosclientesiniciaisparaomailee">Enviando os clientes iniciais para o mailee</a></li><li><a href="#apsocaf">Após o café</a></li><li><a href="#verificandoasincronizao">Verificando a sincronização</a></li></ul></li><li><a href="#colhendooslourosdavitria-porenquanto">Colhendo os louros da vitória &#8211; por enquanto</a><ul></ul></li></ol></div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="wrapper">
+        <div id="mainCol"><h3 id="requisitos">1 Requisitos</h3>
+<p>First things first. Para poder seguir este tutorial você precisará de algumas coisas instaladas em sua máquina. Basicamente você precisa do Ruby, do Rails e do Rubygems 1.3.6 instalado. Para quem usa Linux, isso é fácil, basta entrar no Synaptic e instalar. Se você usa o MacOS o Ruby já vem instalado por padrão, você precisa apenas instalar ou atualizar o Rails e o Rubygems. Já no windows são outros 500. Existe um instalador <a href="http://rubyforge.org/frs/?group_id=167">aqui</a> , mas não sei se ele tem o Rubygems correto. Se alguém fizer o tutorial neste ambiente com sucesso, por favor, comente sobre como proceder.</p>
+<h3 id="instalandoo-spree">2 Instalando o Spree</h3>
+<h4 id="instalandoagem">2.1 Instalando a gem</h4>
+<p>Uma vez com os requisitos instalados, instalamos o Spree. Abra o seu console e nele execute:</p>
+<div class="code_container"><code class="html">
+$ gem install spree
+</code></div>
+<p>Uma série de plugins serão instalados.</p>
+<h4 id="criandoaestruturadaloja">2.2 Criando a estrutura da loja</h4>
+<p>Agora, você tem o comando &#8220;spree&#8221;, que permite a criação de uma loja. Vou chamar de &#8220;my_store&#8221;:</p>
+<div class="code_container"><code class="html">
+$ spree my_store
+    create
+    create CHANGELOG
+    create CONTRIBUTORS
+    create INSTALL
+    create LICENSE
+    create README.markdown
+     ...
+</code></div>
+<p>Está feito. Agora você já tem a loja criada, mas ela ainda não está configurada.</p>
+<h3 id="configurandoo-spree">3 Configurando o Spree</h3>
+<h4 id="rodarumgemsinstalljustincase">3.1 Rodar um gems install just in case</h4>
+<p>Entre na pasta do projeto e rode o comando abaixo. Ele irá instalar todas as gems necessárias para rodar o spree. No meu caso, ele instalou apenas uma gem para autenticação com openid, mas isso dependerá das gems que você já tem. Este processo pode levar alguns minutos.</p>
+<div class="code_container"><code class="html">
+$ cd my_store
+$ sudo rake gems:install
+</code></div>
+<h4 id="editaroconfigdatabaseyml">3.2 Editar o config/database.yml</h4>
+<p>Agora você precisa configurar o seu banco de dados. O Spree vêm com uma configuração padrão com o banco SQLite. Como aqui na empresa só usamos Postgres, segue a minha configuração:</p>
+<div class="code_container"><code class="html">
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: my_store_development
+  username: my_store
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: my_store_production
+  username: my_store
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: my_store_production
+  username: my_store
+</code></div>
+<h4 id="criarousuriodobanco">3.3 Criar o usuário do banco</h4>
+<p>Agora vamos criar o usuário do banco. Como você viu na configuração, eu chamei ele de &#8220;my_store&#8221;. Eu vou criar o usuário entrando no meu usuário chamado postgres, pois só ele tem permissões para fazer isso, e usar o comando createuser:</p>
+<div class="code_container"><code class="html">
+$ sudo su postgres
+$ createuser my_store
+Ctrl+D para voltar ao usuário original
+</code></div>
+<p>Como não poderei falar de todos os bancos neste tutorial, se você usa outro banco, ou trabalha com o Postgres de outra forma e está com dúvidas em como criar o usuário, entre em contato.</p>
+<h4 id="criarobanco">3.4 Criar o banco</h4>
+<p>Você pode criar o banco da forma que achar melhor. Eu acho mais prático usar o comando rake que já vem com o Rails:</p>
+<div class="code_container"><code class="html">
+$ rake db:create
+</code></div>
+<p>Isso irá criar o banco de desenvolvimento (development). Para criar os outros bancos, basta passar um RAILS_ENV=env no comando, onde env poderá ser production, test ou o que você quiser usar.</p>
+<h4 id="alimentarcomalgunsprodutosiniciais">3.5 Alimentar com alguns produtos iniciais</h4>
+<p>O banco está criado, mas ainda está vazio. Felizmente, o Spree tem um comando para popular o banco com dados fictícios, para que você possa já sair testando sua loja com clientes, produtos e pedidos (infelizmente, os pagamentos também são fictícios :D ).</p>
+<p>Esse comando irá lhe perguntar algumas coisas. A primeira é que ele vai apagar os dados se eles já existirem na base. Como estamos iniciando a loja, isso não é um problema, escreva &#8220;y&#8221; e continue. Depois ele pergunta se você quer colocar dados no banco. Coloque &#8220;y&#8221; também. No fim ele irá perguntar pelo e-mail e senha do primeiro usuário administrador. Se você apenas der <span class="caps">ENTER</span>, ele criará um usuário &#8220;spree@example.com&#8221; com senha &#8220;spree&#8221;. Mas isso não é muito relevante por enquanto.</p>
+<div class="code_container"><code class="html">
+$ rake db:bootstrap
+    (in /home/maiz/projetos/my_store)
+    [find_by_param error] database not available?
+    This task will destroy any data in the database. Are you sure you want to
+    continue? [yn] y
+    == SpreeZeroNineZero: migrating ==============================================
+    -- create_table(&quot;addresses&quot;, {:force=&gt;true})
+    NOTICE: CREATE TABLE will create implicit sequence &quot;addresses_id_seq&quot; for serial column &quot;addresses.id&quot;
+    NOTICE: CREATE TABLE / PRIMARY KEY will create implicit index &quot;addresses_pkey&quot; for table &quot;addresses&quot;
+       -&gt; 0.1865s
+    ...
+    loading fixture /var/lib/gems/1.8/gems/spree-0.10.2/db/default/states.yml
+    Default data has been loaded
+    Loading db/seeds.rb for each extension
+    Load Sample Data? [y]: y
+    loading fixture /var/lib/gems/1.8/gems/spree-0.10.2/db/sample/assets.yml
+    ...
+    loading ruby /var/lib/gems/1.8/gems/spree-0.10.2/db/sample/users.rb
+    Create the admin user (press enter for defaults).
+    Email [spree@example.com]:
+    Password [spree]:
+    Sample data has been loaded
+    Bootstrap Complete.
+</code></div>
+<h4 id="feito">3.6 Feito!</h4>
+<p>Concluímos a instalação e a configuração do Spree. Agora você pode iniciar o servidor:</p>
+</shell>
+<p>$ script/server</p>
+</shell>
+<p>E acessando <samp>http://localhost:3000</samp> em seu navegador de preferência você já terá acesso à loja:</p>
+<p><img src="images/integration/spree/spree_front.png" title="Loja no ar" alt="Loja no ar" /></p>
+<h3 id="instalandoo-mailee-spree">4 Instalando o MaileeSpree</h3>
+<h4 id="instaleaextenso">4.1 Instale a extensão</h4>
+<p>Agora vamos instalar a extensão do Mailee para que sua loja esteja integrada ao e-mail marketing. O Spree tem a capacidade de instalar extensões diretamente do GitHub, que é justamente onde a nossa extensão está hospedada. Veja só!</p>
+<div class="code_container"><code class="html">
+$ script/extension install git://github.com/softa/mailee_spree
+    removing: /home/maiz/projetos/my_store/vendor/extensions/mailee_spree/.git
+    Initialized empty Git repository in /home/maiz/projetos/my_store/vendor/extensions/mailee_spree/.git/
+    remote: Counting objects: 19, done.
+    remote: Compressing objects: 100% (12/12), done.
+    remote: Total 19 (delta 1), reused 0 (delta 0)
+    Receiving objects: 100% (19/19), 18.56 KiB, done.
+    Resolving deltas: 100% (1/1), done.
+</code></div>
+<p>Feito isto todos os arquivos da extensão devem estar em <samp>caminho_da_sua_loja/vendor/extensions/mailee_spree</samp></p>
+<p><img src="images/integration/spree/extension_files.png" title="Arquivos da extensão" alt="Arquivos da extensão" /></p>
+<h4 id="criesuacontano-mailee">4.2 Crie sua conta no Mailee</h4>
+<p>Se você ainda não tem uma conta no Mailee, acesse ele no <samp>http://mailee.me</samp> e cadastre-se. É bem fácil, basta apenas colocar seu e-mail, definir seu subdomínio e sua senha. Este subdomínio é o seu caminho no Mailee. No meu caso, criei um chamado &#8220;spreedemo&#8221;. Isso significa que sempre que eu for acessar a minha conta no Mailee, usarei o caminho <samp>http://spreedemo.mailee.me</samp>, mas ao se cadastrar você receberá um e-mail com este caminho caso tenha dúvidas. O Mailee também é muito preocupado com segurança e irá lhe informar se a senha que você escolheu é segura o suficiente. Aceite os <a href="http://mailee.me/terms">termos de serviço</a>, clique em &#8220;Enviar&#8221; e você estará automaticamente &#8220;logado&#8221; no Mailee.</p>
+<p><img src="images/integration/spree/cadastro.png" title="Cadastro no Mailee" alt="Cadastro no Mailee" /></p>
+<p><img src="images/integration/spree/mailee_dashboard.png" title="Cadastro realizado com sucesso" alt="Cadastro realizado com sucesso" /></p>
+<h4 id="pegueachaveda-api">4.3 Pegue a chave da <span class="caps">API</span></h4>
+<p>Para usar a <span class="caps">API</span> o Mailee gera uma chave secreta para cada cliente. Tome muito cuidade com esta chave, ela é tão ou mais importante que a sua senha. Com ela, alguém mal intencionado poderá ter acesso aos seus clientes. Para pegar esta chave, vá em configuração, depois em integração e por fim em rest.</p>
+<p><img src="images/integration/spree/mailee_integrar.png" title="Integrar" alt="Integrar" /></p>
+<p><img src="images/integration/spree/mailee_rest.png" title="REST" alt="REST" /></p>
+<h4 id="configureachavenoenvironmentrbounoenvquevocacharmelhor">4.4 Configure a chave no environment.rb (ou no env que você achar melhor)</h4>
+<p>Copie o link inteiro e abra o arquivo <samp>config/environment.rb</samp> da sua loja no Spree e adicione a seguinte linha no final:</p>
+<div class="code_container"><code class="html">
+Mailee::Config.site = 'http://api.0x1xc4x5ebxax.spreedemo.mailee.me'
+</code></div>
+<p>Não esqueça de colocar alí o link que você acabou de copiar.</p>
+<p>Pronto. Agora a sua loja já está integrada com o Mailee. Vamos então ver como usar isso!</p>
+<h3 id="usandoo-mailee-spree">5 Usando o MaileeSpree</h3>
+<h4 id="enviandoosclientesiniciaisparaomailee">5.1 Enviando os clientes iniciais para o mailee</h4>
+<p>Se você já possui clientes na base de dados, vai precisar começar enviando estes para o Mailee. Como o Spree criou clientes fictícios para facilitar nossa vida, vamos ver se isso de fato funciona. O comando para fazer isso é o &#8220;mailee:send&#8221;. Execute ele com o operador &#8220;-D&#8221; para ver a descrição:</p>
+<div class="code_container"><code class="html">
+$ rake -D mailee:send
+    (in /home/maiz/projetos/my_store)
+    rake mailee:send
+        Sincroniza os items da tabela &quot;users&quot; com os contatos do Mailee.
+        Você pode também especificar o env AFTER para enviar apenas os contatos atualizados após uma data.
+        E.g. rake mailee:send CLASS=Contact AFTER=1.day
+</code></div>
+<p>Então vamos lá:</p>
+<div class="code_container"><code class="html">
+$ rake mailee:send
+    (in /home/maiz/projetos/my_store)
+    Enviando
+    .............. (segue)
+</code></div>
+<p>O Spree cria por padrão 501 usuários, então agora é uma boa hora para fazer aquele intervalo e tomar um café.</p>
+<h4 id="apsocaf">5.2 Após o café</h4>
+<p>Agora você pode voltar ao Mailee e dar uma olhada nos contatos.</p>
+<p><img src="images/integration/spree/mailee_active_contacts.png" title="Contatos ativos" alt="Contatos ativos" /></p>
+<p>Você deve estar se perguntando: Onde estão os 501 contatos? Só vejo X (onde X é aproximadamente 140). Bom, é que o Mailee tem um filtro no qual todo contato passa. Neste filtro verificamos uma série de coisas. Agora, se você entrar na aba &#8220;inativos&#8221;&#8230;</p>
+<p><img src="images/integration/spree/mailee_inactive_contacts.png" title="Contatos inativos" alt="Contatos inativos" /></p>
+<p>&#8230; os contatos que faltaram estarão lá. Como os dados do Spree são gerados aleatoriamente, a maioria dos domínios ou usuários de fato não existe e um envio para estes geraria um retorno, o que além de gerar um custo a mais para você, pode gerar problemas de entrega. Filtro esperto, hum?</p>
+<h4 id="verificandoasincronizao">5.3 Verificando a sincronização</h4>
+<p>Neste ponto você já deve estar um pouco mais acordado com o café. E já tem seus clientes antigos no Mailee. Bons momentos. Mas e os contatos novos? Bom, a extensão já pensou nisso. Sempre que um usuário se cadastrar em sua loja, ele estará automaticamente cadastrado no Mailee. Vamos então criar um usuário novo no Spree e ver se não estou mentindo. Mas <strong>não esqueça de reiniciar o server e executar as migrações</strong> se você não tiver feito isso após instalar a extensão.</p>
+<div class="code_container"><code class="html">
+$ rake db:migrate
+$ script/server
+</code></div>
+<p>Ao acessar o formulário você verá esta tela:</p>
+<p><img src="images/integration/spree/novo_usuario.png" title="Cadastro de usuário" alt="Cadastro de usuário" /></p>
+<p>O Spree não possui por padrão um campo para que o usuário aceite receber mensagens (e.g. &#8220;Deseja receber notícias em seu email?&#8221;). A extensão criará na migração o campo &#8220;news&#8221; do tipo <samp>boolean</samp> na tabela de usuários e utilizará este campo para saber quais usuários enviar ou não para o Mailee. Se um usuário for cadastrado sem marcar, ele não será enviado para o Mailee, mas se, no futuro, ele marcar o campo, será adicionado corretamente. Da mesma forma, se um usuário estiver cadastrado e desmarcar este campo no futuro, ele será descadastrado do Mailee.</p>
+<p>O campo já é apresentado corretamente com traduções para en-US (inglês) e pt-BR (português).</p>
+<p>Uma vez preenchido o formulário e enviado, você poderá dar uma olhadinha no seu console (o que está rodando o servidor). Você verá algo assim:</p>
+<div class="code_container"><code class="html">
+Processing UsersController#create (for 127.0.0.1 at 2010-05-14 16:59:59) [POST]
+  Parameters: {&quot;commit&quot;=&gt;&quot;Create&quot;, &quot;action&quot;=&gt;&quot;create&quot;, &quot;authenticity_token&quot;=&gt;&quot;XFJroHBsMoFLCJRqYC3Z15c7U3hooDDiqZW09pWAH6U=&quot;, &quot;controller&quot;=&gt;&quot;users&quot;, &quot;user&quot;=&gt;{&quot;password_confirmation&quot;=&gt;&quot;[FILTERED]&quot;, &quot;openid_identifier&quot;=&gt;&quot;&quot;, &quot;password&quot;=&gt;&quot;[FILTERED]&quot;, &quot;email&quot;=&gt;&quot;wittgenstein@tractatus.org&quot;}}
+  AppConfiguration Load (1.0ms) SELECT * FROM &quot;configurations&quot; WHERE (&quot;configurations&quot;.&quot;name&quot; = E'Default configuration') AND ( (&quot;configurations&quot;.&quot;type&quot; = 'AppConfiguration' ) ) LIMIT 1
+Cache hit: Spree::Config ({})
+Cache hit: Spree::Config ({})
+  SQL (0.3ms) BEGIN
+  User Load (1.5ms) SELECT &quot;users&quot;.id FROM &quot;users&quot; WHERE (LOWER(&quot;users&quot;.&quot;email&quot;) = E'wittgenstein@tractatus.org') LIMIT 1
+  User Load (1.0ms) SELECT &quot;users&quot;.id FROM &quot;users&quot; WHERE (LOWER(&quot;users&quot;.&quot;login&quot;) = E'wittgenstein@tractatus.org') LIMIT 1
+  User Load (0.3ms) SELECT &quot;users&quot;.id FROM &quot;users&quot; WHERE (&quot;users&quot;.&quot;persistence_token&quot; = E'8b2211023b79864659e7ac4ebb1f51362a4d35e7ca1bcb741e71d9d0f55d7421ae9478d45da4bc69a561c84ded554b8326098e97b38d73474312837f34a84bf2') LIMIT 1
+  User Load (0.3ms) SELECT &quot;users&quot;.id FROM &quot;users&quot; WHERE (&quot;users&quot;.&quot;single_access_token&quot; = E'v0Qa6y_GX2QChPgilq4s') LIMIT 1
+  Role Load (0.3ms) SELECT * FROM &quot;roles&quot; WHERE (&quot;roles&quot;.&quot;name&quot; = E'user') LIMIT 1
+  SQL (0.6ms) INSERT INTO &quot;users&quot; (&quot;salt&quot;, &quot;ship_address_id&quot;, &quot;created_at&quot;, &quot;single_access_token&quot;, &quot;last_request_at&quot;, &quot;bill_address_id&quot;, &quot;crypted_password&quot;, &quot;remember_token_expires_at&quot;, &quot;updated_at&quot;, &quot;perishable_token&quot;, &quot;api_key&quot;, &quot;failed_login_count&quot;, &quot;current_login_ip&quot;, &quot;openid_identifier&quot;, &quot;current_login_at&quot;, &quot;remember_token&quot;, &quot;persistence_token&quot;, &quot;login_count&quot;, &quot;last_login_ip&quot;, &quot;last_login_at&quot;, &quot;login&quot;, &quot;email&quot;) VALUES(E'zGIlvY3r9tI42OcWZ9ZC', NULL, '2010-05-14 20:00:00.115490', E'v0Qa6y_GX2QChPgilq4s', '2010-05-14 20:00:00.114477', NULL, E'f971f283985e15983c89b7d89e52837cdd77dc7f065b72462fed770850eb9aac7f2207597832f36577240e4837899bf95cad2fb265dbbfb050adf6a16cefc50a', NULL, '2010-05-14 20:00:00.115490', E'KxeobwPE_Sk-uczRtvqk', NULL, 0, E'127.0.0.1', NULL, '2010-05-14 19:59:59.922021', NULL, E'8b2211023b79864659e7ac4ebb1f51362a4d35e7ca1bcb741e71d9d0f55d7421ae9478d45da4bc69a561c84ded554b8326098e97b38d73474312837f34a84bf2', 1, NULL, NULL, E'wittgenstein@tractatus.org', E'wittgenstein@tractatus.org') RETURNING &quot;id&quot;
+  SQL (0.4ms) INSERT INTO &quot;roles_users&quot; (&quot;role_id&quot;, &quot;user_id&quot;) VALUES (2, 1068482858)
+Criando contato no Mailee (542.0ms)
+</code></div>
+<p>Como você pode ver na linha &#8220;Criando contato no Mailee&#8221;, a coisa parece ter funcionado. O tempo que a transação leva é o que aparece a direita.</p>
+<p>Se houver algum problema com a criação do contato, isso não gerará nenhum problema em seu e-commerce, pois a extensão falha silenciosamente. Mas essa informação também constará no log. Aparecerá assim: &#8220;<span class="caps">MAILEE</span>-<span class="caps">API</span>: Falhou ao criar o contato 12345 no Mailee&#8221;. Onde 12345 é o id do usuário no seu banco do Spree.</p>
+<p>Se você quiser poderá rodar novamente o comando rake mailee:send para atualizar os dados, utilizando o parâmetro <span class="caps">AFTER</span> para não precisar enviar todos novamente. Não se preocupe, o Mailee é esperto e não irá duplicar seus clientes, apenas atualizando os dados necessários corretamente.</p>
+<p>Agora vamos ao Mailee ver se de fato o contato está lá.</p>
+<p><img src="images/integration/spree/mailee_contact_found_index.png" title="Contato na lista do Mailee" alt="Contato na lista do Mailee" /></p>
+<p><img src="images/integration/spree/mailee_contact_found_index.png" title="Visualização do contato no Mailee" alt="Visualização do contato no Mailee" /></p>
+<div class='info'><p>Como você pode ver nesta segunda tela, o contato tem um &#8220;identificador&#8221;. Este é o campo em que o Mailee armazena o &#8220;id&#8221; do contado na sua loja. É por este campo que a integração sabe o que é novo e o que deve ser atualizado, por isso tome cuidado para não alterar o valor dele. Este campo também é útil caso você queira no futuro bater os dados do Mailee com sua base.</p></div>
+<h3 id="colhendooslourosdavitria-porenquanto">6 Colhendo os louros da vitória &#8211; por enquanto</h3>
+<p>Até aqui estamos bem. Criamos a loja e temos ela integrada com o Mailee. Agora você precisa publicar sua loja no mundo real e começar a fazer suas campanhas. Uma dica importante aqui é trabalhar bem com os dados do contatos. O Mailee possui um sistema poderoso de segmentação, para que você possa enviar exatamente o que o seu cliente quer receber.</p>
+<p>Se ainda sobrou algum café, é uma boa hora para acabar com ele.</p>
+<p><img src="images/integration/spree/coffee-shaking.jpg" title="Café demais faz mal" alt="Café demais faz mal" /></p></div>
+      </div>
+    </div>
+    <hr class="hide">
+    <div id="footer">
+      <div class="wrapper">
+        <p>Este trabalho é licenciado como <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0</a></p>
+      </div>
+    </div>
+  </body>
+</html>
+      <script type="text/javascript">
+      	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+      	var pageTracker = _gat._getTracker("");
+      	pageTracker._initData();
+      	pageTracker._trackPageview();
+      </script>      

@@ -1,0 +1,190 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Mailee.me Help - Cadastro de contato</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:bold' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/style.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/print.css" media="print" />
+    <script type="text/javascript" src="files/javascripts/guides.js"></script>
+    <script type="text/javascript" src="files/javascripts/code_highlighter.js"></script>
+    <script type="text/javascript" src="files/javascripts/highlighters.js"></script>
+  </head>
+  <body class="guide">
+    <div id="topNav">
+      <div class="wrapper">
+        <strong>Mais em <a href="http://www.mailee.me/">mailee.me:</a> </strong>
+        <a href="http://www.mailee.me/recursos">Recursos</a> |
+        <a href="http://www.mailee.me/precos">Preços</a> |
+        <a href="http://www.mailee.me/cadastro">Cadastro</a>
+      </div>
+    </div>
+    <div id="header">
+      <div class="header_wrapper">
+        <div class="wrapper clearfix">
+          <h1><a href="index.html" title="Guides">Mailee.me Help</a></h1>
+          <p class="hide"><a href="#mainCol">Skip navigation</a>.</p>
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="index"><a href="index.html" onclick="guideMenu(); return false;" id="guidesMenu">Índice</a>
+              <div id="guides" class="clearfix" style="display: none;">
+                <hr />
+                <dl class="L">
+                  <dt>Começe aqui</dt>
+                  <dd><a href="getting_started.html">Iniciando com o Mailee.me</a></dd>
+                </dl>
+                <dl class="R">
+                  <dt>Importação</dt>
+                  <dd><a href="import_csv.html">Importando CSV</a></dd>
+                  <dt>Exportação</dt>
+                  <dd><a href="export.html">Exportando contatos</a></dd>
+                  <dt>Integração</dt>
+                  <dd><a href="integration_rest.html">API REST</a></dd>
+                  <dd><a href="integration_rails.html">Integrando com Ruby on Rails</a></dd>
+                  <dd><a href="integration_php.html">Integrando com PHP</a></dd>
+                  <dd><a href="integration_spree.html">Integrando com Spree</a></dd>
+                  <dt>Templates</dt>
+                  <dd><a href="templates_creating.html">Como criar templates</a></dd>
+                  <dd><a href="templates_uploading.html">Como realizar <em>upload</em> de templates</a></dd>
+                  <dd><a href="templates_good_practices.html">Conheça boas práticas na criação de email marketing em HTML</a></dd>
+                </dl>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="feature">
+      <div class="wrapper">
+        <h2>Cadastro de contato</h2>
+<p>Este artigo apresenta como cadastrar um contato no Mailee.me.</p>
+<ul>
+	<li>Como chegar ao cadastro</li>
+	<li>Como abrir mais campos de cadastro</li>
+	<li>Informações sobre os campos das redes sociais</li>
+</ul>
+              <div id="subCol">
+        <h3 class="chapter"><img src="images/chapters_icon.gif" alt="Capítulos">Cap&iacute;tulos</h3>
+        <ol class="chapters">
+<li><a href="#cadastro">Cadastro</a><ul><li><a href="#dadospessoais">Dados pessoais</a></li><li><a href="#redessociais">Redes sociais</a></li><li><a href="#campospersonalizados">Campos personalizados</a></li></ul></li></ol></div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="wrapper">
+        <div id="mainCol"><h3 id="cadastro">1 Cadastro</h3>
+<p>Vá em <em>Contatos</em> e clique no link à direita <em>Adicionar</em>. Abrirá o seguinte formulário:</p>
+<p><img src="images/contacts/new/form.png" title="Formulário dos contatos" alt="Formulário dos contatos" /></p>
+<p>O único campo obrigatório é o email, que é o identificador do contato.</p>
+<p>Nesta tela inicial, você pode também preencher o nome e informar em quais listas o contato se inscreveu.</p>
+<h4 id="dadospessoais">1.1 Dados pessoais</h4>
+<p>Você pode clicar na caixa <em>Dados pessoais</em> para abrir mais campos:</p>
+<p><img src="images/contacts/new/personal_data.png" title="Formulário dos dados pessoais" alt="Formulário dos dados pessoais" /></p>
+<ul>
+	<li><strong>Foto</strong>
+	<ul>
+		<li>Uma imagem do contato. Caso você não coloque uma foto usando este campo, o Mailee.me buscará a imagem do contato do <a href="http://twitter.com">Twitter</a> e do <a href="http://www.gravatar.com">Gravatar</a>, nesta ordem.</li>
+	</ul></li>
+</ul>
+<ul>
+	<li><strong>Identificador</strong>
+	<ul>
+		<li>Se o contato possui um identificador em outro sistema que você usa, utilize este campo para isto. Ao usar as bibliotecas de integração do Mailee.me, este campo será utilizado.</li>
+	</ul></li>
+</ul>
+<ul>
+	<li><strong>Sexo</strong>
+	<ul>
+		<li>Define o gênero do contato. Poderá ser usado na <a href="segmentation.html">segmentação</a>.</li>
+	</ul></li>
+</ul>
+<ul>
+	<li><strong>Aniversário</strong>
+	<ul>
+		<li>Abre um campo com um calendário para definir a data de nascimento do contato. Poderá ser usado na <a href="segmentation.html">segmentação</a>.</li>
+	</ul></li>
+</ul>
+<ul>
+	<li><strong>Fone</strong>
+	<ul>
+		<li>Permite armazenar o telefone pessoal ou comercial do contato.</li>
+	</ul></li>
+</ul>
+<ul>
+	<li><strong>Celular</strong>
+	<ul>
+		<li>Permite armazenar o celular pessoal ou comercial do contato.</li>
+	</ul></li>
+</ul>
+<ul>
+	<li><strong>Endereço</strong>
+	<ul>
+		<li>Permite armazenar o endereço pessoal, comercial ou de cobrança do contato. O campo é aberto para qualquer formato.</li>
+	</ul></li>
+</ul>
+<ul>
+	<li><strong>Notas</strong>
+	<ul>
+		<li>Campo aberto.</li>
+	</ul></li>
+</ul>
+<h4 id="redessociais">1.2 Redes sociais</h4>
+<p>Você pode clicar na caixa <em>Redes sociais</em> para abrir mais campos:</p>
+<p><img src="images/contacts/new/social_networks.png" title="Formulário das redes sociais" alt="Formulário das redes sociais" /></p>
+<div style="float:right;margin-left:20px;"><img src="images/contacts/new/linkedin_logo.png" title="LinkedIn" alt="LinkedIn" /></div>
+<ul>
+	<li><strong>LinkedIn</strong>
+	<ul>
+		<li>Coloque aqui o nome do usuário ou o caminho completo do usuário no <a href="http://www.linkedin.com">LinkedIn</a>. O LinkedIn é uma rede social de negócios muito útil para relações de trabalho. O Mailee.me é capaz de saber o número de conexões, recomendações (estes dois campos poderão ser utilizados na <a href="segmentation.html">segmentação</a>.), informações da indústria, trabalho, experiência, interesses, grupos e o sumário do seu contato no LinkedIn. Se você não informar o nome do seu contato, ele utilizará a informação desta rede social.</li>
+	</ul></li>
+</ul>
+<div style="float:right;margin-left:20px;"><img src="images/contacts/new/twitter_logo.png" title="Twitter" alt="Twitter" /> <img src="images/contacts/new/klout_logo.png" title="Klout" alt="Klout" /></div>
+<ul>
+	<li><strong>Twitter</strong>
+	<ul>
+		<li>Coloque aqui o nome do usuário no <a href="http://twitter.com">Twitter</a>. O Mailee.me é capaz de saber o número de seguidores e também busca o ranking do contato no <a href="http://www.klout.com">Klout</a>. Estes campos poderão ser utilizados na <a href="segmentation.html">segmentação</a>.</li>
+	</ul></li>
+</ul>
+<div style="float:right;margin-left:20px;"><img src="images/contacts/new/delicious_logo.jpg" title="Delicious" alt="Delicious" /></div>
+<ul>
+	<li><strong>Delicious</strong>
+	<ul>
+		<li>Coloque aqui o nome do usuário no <a href="http://www.delicious.com">Delicious</a>. O Delicious é um serviço de <em>bookmarks</em> organizado por tags. O Mailee.me é capaz de buscar todas as tags neste serviço e também a ocorrência de cada uma. Estas tags poderão ser utilizadas na <a href="segmentation.html">segmentação</a>.</li>
+	</ul></li>
+</ul>
+<div style="float:right;margin-left:20px;"><img src="images/contacts/new/lastfm_logo.png" title="Last.fm" alt="Last.fm" /></div>
+<ul>
+	<li><strong>Last.fm</strong>
+	<ul>
+		<li>Coloque aqui o nome do usuário no <a href="http://www.last.fm">Last.fm</a>. O Last.fm é uma rede social para compartilhar informações sobre música e ouvir música. O Mailee.me é capaz de buscar todas as tags neste serviço e também a ocorrência de cada uma. Estas tags poderão ser utilizadas na <a href="segmentation.html">segmentação</a>.</li>
+	</ul></li>
+</ul>
+<div style="float:right;margin-left:20px;"><img src="images/contacts/new/grooveshark_logo.png" title="Grooveshark" alt="Grooveshark" /></div>
+<ul>
+	<li><strong>Grooveshark</strong>
+	<ul>
+		<li>Coloque aqui o nome do usuário no <a href="http://www.grooveshark.com">Grooveshark</a>. O Grooveshark é uma sistema online para ouvir música.</li>
+	</ul></li>
+</ul>
+<h4 id="campospersonalizados">1.3 Campos personalizados</h4>
+<p>Você pode clicar na caixa <em>Campos personalizados</em> para abrir mais campos:</p>
+<p><img src="images/contacts/new/custom_fields.png" title="Formulário dos campos personalizados" alt="Formulário dos campos personalizados" /></p>
+<p>Mais informações sobre estes campos <a href="contacts_custom_fields.html">aqui</a>.</p></div>
+      </div>
+    </div>
+    <hr class="hide">
+    <div id="footer">
+      <div class="wrapper">
+        <p>Este trabalho é licenciado como <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0</a></p>
+      </div>
+    </div>
+  </body>
+</html>
+      <script type="text/javascript">
+      	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+      	var pageTracker = _gat._getTracker("");
+      	pageTracker._initData();
+      	pageTracker._trackPageview();
+      </script>      

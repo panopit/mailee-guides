@@ -1,0 +1,112 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Mailee.me Help - Cadastro de usuários</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:bold' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/style.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/print.css" media="print" />
+    <script type="text/javascript" src="files/javascripts/guides.js"></script>
+    <script type="text/javascript" src="files/javascripts/code_highlighter.js"></script>
+    <script type="text/javascript" src="files/javascripts/highlighters.js"></script>
+  </head>
+  <body class="guide">
+    <div id="topNav">
+      <div class="wrapper">
+        <strong>Mais em <a href="http://www.mailee.me/">mailee.me:</a> </strong>
+        <a href="http://www.mailee.me/recursos">Recursos</a> |
+        <a href="http://www.mailee.me/precos">Preços</a> |
+        <a href="http://www.mailee.me/cadastro">Cadastro</a>
+      </div>
+    </div>
+    <div id="header">
+      <div class="header_wrapper">
+        <div class="wrapper clearfix">
+          <h1><a href="index.html" title="Guides">Mailee.me Help</a></h1>
+          <p class="hide"><a href="#mainCol">Skip navigation</a>.</p>
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="index"><a href="index.html" onclick="guideMenu(); return false;" id="guidesMenu">Índice</a>
+              <div id="guides" class="clearfix" style="display: none;">
+                <hr />
+                <dl class="L">
+                  <dt>Começe aqui</dt>
+                  <dd><a href="getting_started.html">Iniciando com o Mailee.me</a></dd>
+                </dl>
+                <dl class="R">
+                  <dt>Importação</dt>
+                  <dd><a href="import_csv.html">Importando CSV</a></dd>
+                  <dt>Exportação</dt>
+                  <dd><a href="export.html">Exportando contatos</a></dd>
+                  <dt>Integração</dt>
+                  <dd><a href="integration_rest.html">API REST</a></dd>
+                  <dd><a href="integration_rails.html">Integrando com Ruby on Rails</a></dd>
+                  <dd><a href="integration_php.html">Integrando com PHP</a></dd>
+                  <dd><a href="integration_spree.html">Integrando com Spree</a></dd>
+                  <dt>Templates</dt>
+                  <dd><a href="templates_creating.html">Como criar templates</a></dd>
+                  <dd><a href="templates_uploading.html">Como realizar <em>upload</em> de templates</a></dd>
+                  <dd><a href="templates_good_practices.html">Conheça boas práticas na criação de email marketing em HTML</a></dd>
+                </dl>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="feature">
+      <div class="wrapper">
+        <h2>Cadastro de usuários</h2>
+<p>Este artigo irá mostrar como é realizada a criação e a edição de usuários.</p>
+              <div id="subCol">
+        <h3 class="chapter"><img src="images/chapters_icon.gif" alt="Capítulos">Cap&iacute;tulos</h3>
+        <ol class="chapters">
+<li><a href="#teladeusurios">Tela de usuários</a><ul><li><a href="#criandousurios">Criando usuários</a></li><li><a href="#permisses">Permissões:</a></li></ul></li><li><a href="#editandousurios">Editando usuários</a><ul></ul></li></ol></div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="wrapper">
+        <div id="mainCol"><h3 id="teladeusurios">1 Tela de usuários</h3>
+<p>O Mailee possui no menu um item específico para usuários, clicando nele você terá a imagem a seguir</p>
+<p><img src="images/users/user_screen.png" title="Tela de usuários" alt="Tela de usuários" /></p>
+<p>Nesta tela é possível ver todos os usuários cadastrados no seu subdomínio do Mailee. Se necessário, instalamos um campo de pesquisa para facilitar a localização.</p>
+<h4 id="criandousurios">1.1 Criando usuários</h4>
+<p>Clique no botão <b>&#8220;Adicionar usuário&#8221;</b> para ser direcionado a tela de criação.</p>
+<p>Nessa tela os campos abertos são:</p>
+<p><b>Nome</b> &#8211; Aqui deve ser preenchido o nome completo do usuário.</p>
+<p><b>Email</b> &#8211; O email deve ser preenchido para que o contato receba o lembrete de senha.</p>
+<p><b>Usário</b> &#8211; o nome do usário para acessar a conta do mailee.</p>
+<p><b>Senha</b> e <b>Confirmação de senha</b> &#8211; preencha com sua senha e a confirme.</p>
+<h4 id="permisses">1.2 Permissões:</h4>
+<p>Quais acessos o usuário terá?</p>
+<p><img src="images/users/diagram_32.png" title="Relatórios" alt="Relatórios" />  <b>Relatórios?</b>
+Acessa os relatórios de envio.</p>
+<p><img src="images/users/letter_32.png" title="Mensagens" alt="Mensagens" />  <b>Mensagens?</b>
+Permite cadastrar campanhas e enviar mensagens.</p>
+<p><img src="images/users/document_32.png" title="Templates" alt="Templates" />  <b>Templates?</b>
+Permite visualizar e cadastrar templates.</p>
+<p><img src="images/users/address_32.png" title="Contatos" alt="Contatos" />  <b>Contatos?</b>
+Permite visualizar, cadastrar, importar e exportar contatos.</p>
+<p><img src="images/users/gear_32.png" title="Administrador" alt="Administrador" />  <b>Administrador?</b>
+Acessa conteúdos administrativos, como: pagamento da conta, criação de outros usuários e atualização dos dados do cliente.</p>
+<h3 id="editandousurios">2 Editando usuários</h3>
+<p>Para editar um usuário existente, Basta clicar no usuário desejado para ser direcionado a tela de edição. Os campos são os mesmos para adicionar um novo usuário.</p></div>
+      </div>
+    </div>
+    <hr class="hide">
+    <div id="footer">
+      <div class="wrapper">
+        <p>Este trabalho é licenciado como <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0</a></p>
+      </div>
+    </div>
+  </body>
+</html>
+      <script type="text/javascript">
+      	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+      	var pageTracker = _gat._getTracker("");
+      	pageTracker._initData();
+      	pageTracker._trackPageview();
+      </script>      
