@@ -15,7 +15,7 @@ h3. Quando usar o Mailee.me
 
 h4. Newsletters, notícias ou novidades por email
 
-O Mailee.me é ideal para o envio de newsletters, notícias ou novidades por email. Como este tipo de comunicação é geralmente realizada com uma frequência constante, você pode acompanhar a "evolução da sua campanha":http://todo ao longo do tempo.
+O Mailee.me é ideal para o envio de newsletters, notícias ou novidades por email. Como este tipo de comunicação é geralmente realizada com uma frequência constante, você pode acompanhar a "evolução da sua campanha":what_is_a_campaign.html ao longo do tempo.
 
 Assim, é possível desenvolver uma estratégia para sempre melhorar e se aproximar mais das pessoas.
 
@@ -23,7 +23,7 @@ h4. Promoções e campanhas por email
 
 Campanhas e promoções por email, com objetivo de gerar conversões (vendas, cliques em links importantes, etc), são outros casos onde é bom utilizar o Mailee.me.
 
-Com nossa "integração com o Google Analytics":http://todo, é possível saber exatamente quais conversões foram originadas pelo Mailee.me e, consequentemente, aprimorar as campanhas para chegar a seu objetivo.
+Com nossa "integração com o Google Analytics":analytics.html, é possível saber exatamente quais conversões foram originadas pelo Mailee.me e, consequentemente, aprimorar as campanhas para chegar a seu objetivo.
 
 h4. O que mais você inventar
 
@@ -51,7 +51,7 @@ h4. Criador de templates
 
 Somos os únicos no Brasil a possuir um criador de templates que permite que você crie emails profissionais sem saber nada de HTML.
 
-Ao mesmo tempo, caso você seja designer, você pode criar seus templates em HTML como quiser e só dizer quais campos são editáveis. Depois, seus clientes editam a mensagem e seu design permanece intácto.
+Ao mesmo tempo, caso você seja designer, você pode "criar seus templates":templates_creating.html em HTML como quiser e só dizer quais campos são editáveis. Depois, seus clientes editam a mensagem e seu design permanece intacto.
 
 h4. Geolocalização
 
