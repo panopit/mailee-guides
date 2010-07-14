@@ -6,9 +6,11 @@ endprologue.
 
 h3. Criando uma nova mensagem.
 
-Clique em *mensagens* na barra de navegação. Selecione a campanha que deseja utilizar para realizar o envio da mensagem.
+Clique em *Mensagens* na barra de navegação. Clique na campanha que deseja utilizar para realizar o envio da mensagem. Caso você queira criar uma campanha nova, clique em _Nova campanha_.
 
-Clique no botão de nova mensagem.
+INFO. Para saber como funcionam as campanhas, "clique aqui":what_is_a_campaign.html.
+
+Se você já possui a campanha que deseja e já clicou nela, clique no botão de nova mensagem.
 
 !images/messages/new/message_new_button.png(Nova mensagem)!
 
@@ -22,17 +24,17 @@ h5. Os ícones de edição
 
 *Lápis* - permite você editar diretamente o conteúdo na mensagem.
 
-*WYSIWYG* - Abre o modal de edição _What you see is what you got_. Para editar a formatação da notícia ou inserir links. 
+*HTML* - Abre a edição de HTML para editar a formatação da notícia ou inserir links, por exemplo.
 
 *Disquete* - Salva as alterações realizadas.
 
-*Não permitido* - Abandona a edição atual da notícia, removendo alterações realizadas.
+*Não permitido* - Abandona a edição atual da notícia, cancelando alterações realizadas.
 
 *Remoção* - Remove uma notícia adicionada ao template.
 
 h4. Conferir
 
-*Número de contatos* - O Mailee lhe informa para quantos contatos a mensagem será enviada. Os números pode ser alterados, dependendo da lista e do segmento.
+*Número de contatos* - O Mailee.me lhe informa para quantos contatos a mensagem será enviada. Os números podem ser alterados, dependendo da lista e do segmento.
 
 *Título* - O título da mensagem.
 
@@ -42,9 +44,9 @@ h4. Conferir
 
 *Email do remetente* - O email de quem realiza o envio.
 
-*Email de resposta* - Para onde as mensagens respondidas devem ser encaminhadas.
+*Email de resposta* - Para onde as mensagens respondidas serão encaminhadas.
 
-*Lista* - Para qual lista será realizado o envio. 
+*Lista* - Para qual lista será realizado o envio.
 
 *Segmento* - Para qual segmento será realizado o envio.
 
@@ -54,15 +56,13 @@ Mostra sua mensagem pronta e como seus contatos irão recebe-lá.
 
 h4. Testar
 
-Você pode realizar testes de envio para contatos de suas listas. 
+Você pode realizar testes de envio para contatos de suas listas.
 
 h4. Enviar
 
-*Enviar Agora* - Inicia imediatamente o envio da mensagem.
+*Enviar agora* - Inicia imediatamente o envio da mensagem.
 
 *Enviar em* - Envio agendado. Escolha a data e horário do início do envio.
 
-INFO. A qualquer momento do processo de criação de uma nova mensagem é possível envia-la para *Rascunho* e continuar depois o envio. 
-
-
+INFO. A qualquer momento do processo de criação de uma nova mensagem é possível salvá-la como *Rascunho* e continuar depois.
 
