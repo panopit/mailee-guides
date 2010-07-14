@@ -2,6 +2,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title><%= 'Mailee.me Help - ' + (yield(:page_title) || 'Mailee.me Help') %></title>
+    <link rel="shortcut icon" href="images/help-favicon.ico" />
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans:bold' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" type="text/css" href="files/stylesheets/style.css" />
     <link rel="stylesheet" type="text/css" href="files/stylesheets/syntax.css" />
@@ -26,12 +27,17 @@
           <p class="hide"><a href="#mainCol">Skip navigation</a>.</p>
           <ul class="nav">
             <li><a href="index.html">Home</a></li>
-            <li class="index"><a href="index.html" onclick="guideMenu(); return false;" id="guidesMenu">Índice</a>
+            <li class="index">
+              <a href="index.html" onclick="guideMenu(); return false;" id="guidesMenu">Índice</a>
               <div id="guides" class="clearfix" style="display: none;">
                 <hr />
                 <dl class="L">
                   <dt>Começe aqui</dt>
                   <dd><a href="getting_started.html">Iniciando com o Mailee.me</a></dd>
+                  <dt>Templates</dt>
+                  <dd><a href="templates_creating.html">Como criar templates</a></dd>
+                  <dd><a href="templates_uploading.html">Como realizar <em>upload</em> de templates</a></dd>
+                  <!-- <dd><a href="templates_good_practices.html">Conheça boas práticas na criação de email marketing em HTML</a></dd> -->
                 </dl>
                 <dl class="R">
                   <dt>Importação</dt>
@@ -43,10 +49,6 @@
                   <dd><a href="integration_rails.html">Integrando com Ruby on Rails</a></dd>
                   <dd><a href="integration_php.html">Integrando com PHP</a></dd>
                   <dd><a href="integration_spree.html">Integrando com Spree</a></dd>
-                  <dt>Templates</dt>
-                  <dd><a href="templates_creating.html">Como criar templates</a></dd>
-                  <dd><a href="templates_uploading.html">Como realizar <em>upload</em> de templates</a></dd>
-                  <dd><a href="templates_good_practices.html">Conheça boas práticas na criação de email marketing em HTML</a></dd>
                 </dl>
               </div>
             </li>

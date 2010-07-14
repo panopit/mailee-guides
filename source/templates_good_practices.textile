@@ -1,13 +1,12 @@
 h2. Boas práticas na criação de templates de email em HTML
 
-p. Esse guia é voltado para pessoas que querem aprender mais sobre a criação de templates em HTML. Ele cobre funcionalidades que vão do nível básico ao avançado, e ao final dele você deverá aprender como:
+Esse guia é voltado para pessoas que querem aprender mais sobre a criação de templates em HTML. Ele cobre funcionalidades que vão do nível básico ao avançado, e ao final dele você deverá aprender como:
 
 * Configurar a codificação da mensagem
 * Aprender boas práticas na criação de email em HTML
 * Aplicar boas práticas na criação de email em HTML
 * Fazer download de modelos prontos
 * Dicas
-
 
 endprologue.
 
