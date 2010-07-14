@@ -1,6 +1,6 @@
 h2. Como criar templates
 
-Esse guia é voltado para pessoas que desejam saber como criar seus próprios templates para usar no *Mailee.me*. Ele cobre funcionalidades que vão do nível básico ao avançado, e ao final dele você deverá saber como:
+Esse guia é voltado para pessoas que desejam saber como criar seus próprios templates para usar no Mailee.me. Ele cobre funcionalidades que vão do nível básico ao avançado, e ao final dele você deverá saber como:
 
 * Configurar corretamente sua mensagem
 * Tornar campos e imagens editáveis
@@ -22,14 +22,14 @@ O uso de templates de email é aconselhado para campanhas de email que devem ter
 
 h3. Configurando seu template
 
-Templates criados para o *Mailee.me* precisam obedecer certas regras. São elas:
+Templates criados para o Mailee.me precisam obedecer certas regras. São elas:
 
 * Todo conteúdo salvo em codificação UTF-8
 * Arquivo _zip_ com os arquivos
 
 h4. Codificação
 
-Todos os arquivos colocados no *Mailee.me* devem ser salvos como *UTF-8*. Confira como configurar seus arquivos HTML:
+Todos os arquivos colocados no Mailee.me devem ser salvos como *UTF-8*. Confira como configurar seus arquivos HTML:
 
 h5. no Bloco de Notas (Windows)
 
@@ -61,13 +61,13 @@ Você pode decidir qual será o nome de seu template pelo nome do arquivo _zip_.
 
 Para saber mais sobre _upload_ de templates, "clique aqui":templates_uploading.html.
 
-Após carregado no *Mailee.me* você poderá editar o nome de seu template a qualquer momento, bastando entrar em *Templates*, e, no template que desejar renomear, escolher a ação *"editar"*. O nome do template poderá ser alterado no local indicado pela imagem abaixo:
+Após carregado no Mailee.me, você poderá editar o nome de seu template a qualquer momento, bastando entrar em *Templates*, e, no template que desejar renomear, escolher a ação *"editar"*. O nome do template poderá ser alterado no local indicado pela imagem abaixo:
 
 !images/templates/editando_nome_do_template.gif(Alterando títulos de templates no Mailee.me)!
 
 ***
 
-h4. Áreas editáveis em templates do *Mailee.me*
+h4. Áreas editáveis em templates do Mailee.me
 
 h4. Tornando áreas de texto editáveis
 
@@ -125,7 +125,7 @@ Você também poderá usar valores com os seguintes operadores:
 |_. *&gt;* | Redimensiona a imagem para o tamanho estabelecido somente se a imagem for *menor* |
 |_. *&lt;* | Redimensiona a imagem para o tamanho estabelecido somente se a imagem for *maior* |
 
-Para mais informações sobre redimensionamento das imagens usando o ImageMagik, acesse o site "imagemagick.org/Magick++/Geometry.html":http://www.imagemagick.org/Magick%2B%2B/Geometry.html
+Para mais informações sobre redimensionamento das imagens usando o ImageMagik, acesse "imagemagick.org/Magick++/Geometry.html":http://www.imagemagick.org/Magick%2B%2B/Geometry.html
 
 ***
 
@@ -135,7 +135,7 @@ Blocos de repetição servem para criação de templates onde é necessário rep
 
 h4. Definindo um bloco de repetição
 
-Para criar um bloco de repetição em seu template basta adicionar uma <samp>&lt;div&gt;</samp> com a <samp>class="repeat"</samp>, um <samp>id=""</samp> que represente o nome do bloco para indexação e um <samp>title=""</samp> que será usado para o botão adicionar na edição de mensagens.
+Para criar um bloco de repetição em seu template basta adicionar uma <samp>&lt;div&gt;</samp> com a <samp>class="repeat"</samp>, um <samp>id</samp> que represente o nome do bloco para indexação e um <samp>title</samp> que será usado para o botão adicionar na edição de mensagens.
 
 Consideremos o seguinte cenário, onde terei um bloco de repetição de notícias:
 
@@ -157,21 +157,21 @@ Para tornar essa <samp>&lt;div&gt;</samp> um bloco de repetição de notícias, 
   </div>
 </html>
 
-Dessa forma, o *Mailee.me* interpretará tudo que estiver dentro dessa <samp>&lt;div id="news" class="repeat" title="notícias"&gt;</samp> como um bloco de repetição.
+Dessa forma, o Mailee.me interpretará tudo que estiver dentro dessa <samp>&lt;div id="news" class="repeat" title="notícias"&gt;</samp> como um bloco de repetição.
 
 INFO. Dentro dos blocos de repetição não será necessário definir <samp>class="edit"</samp> nos elementos, pois o bloco de repetição, por padrão, já é editável.
 
 h6. Recapitulando:
 
 |_. *<samp>class="repeat"</samp>* | torna um elemento <samp>&lt;div&gt;</samp> em um bloco de repetição |
-|_. *<samp>id=""</samp>* | define o conteúdo do bloco e aponta para um índice |
-|_. *<samp>title=""</samp>* | indica o conteúdo para o botão |
+|_. *<samp>id="seu_id_unico"</samp>* | define o conteúdo do bloco e aponta para um índice |
+|_. *<samp>title="seu_titulo"</samp>* | indica o conteúdo para o botão |
 
 h4. Definindo uma lista de índice para os itens no bloco de repetição
 
 Você pode incluir em sua mensagem uma *lista de índice* contendo as informações nos títulos dos blocos repetíveis.
 
-Para adicionar ao seu template uma *lista de índice*, será necessário copiar a informação do atributo <samp>id=""</samp> de seu bloco de repetição. Vamos utilizar como exemplo o seguinte bloco de repetição:
+Para adicionar ao seu template uma *lista de índice*, será necessário copiar a informação do atributo <samp>id</samp> de seu bloco de repetição. Vamos utilizar como exemplo o seguinte bloco de repetição:
 
 <html>
   <div id="news" class="repeat" title="notícias">
@@ -181,7 +181,7 @@ Para adicionar ao seu template uma *lista de índice*, será necessário copiar 
   </div>
 </html>
 
-Nesse caso, a informação do atributo <samp>id=""</samp> é <samp>"news"</samp>.
+Nesse caso, a informação do atributo <samp>id</samp> é <samp>"news"</samp>.
 
 Para criar a *lista de índice* para esse bloco de repetição, basta adicionar a informação <samp>"news"</samp> na classe de um elemento <samp>&lt;ul class="index"&gt;</samp>, da seguinte forma:
 
@@ -191,7 +191,7 @@ Para criar a *lista de índice* para esse bloco de repetição, basta adicionar 
   </ul>
 </html>
 
-Dessa forma, o *Mailee.me* irá interpretar o elemento <samp>&lt;ul class="index news"&gt;</samp> como sendo a lista de índice para o bloco de repetição de notícias. No final seu código deverá conter informações similares às apresentadas abaixo:
+Dessa forma, o Mailee.me irá interpretar o elemento <samp>&lt;ul class="index news"&gt;</samp> como sendo a lista de índice para o bloco de repetição de notícias. No final, seu código deverá conter informações similares às apresentadas abaixo:
 
 <html>
   <ul class="index news">
@@ -206,19 +206,19 @@ Dessa forma, o *Mailee.me* irá interpretar o elemento <samp>&lt;ul class="index
 
 ***
 
-h3. Links dinâmicos do *Mailee.me*
+h3. Links dinâmicos do Mailee.me
 
 h4. O que são links dinâmicos?
 
-O *Mailee.me* gera *links dinâmicos* facilitando as tarefas comuns em email marketing.
+O Mailee.me gera *links dinâmicos*, facilitando algumas tarefas comuns em email marketing.
 
-Você pode adicionar facilmente um *link para descadastramento (unsubscribe)*, atendendo uma funcionalidade básica para boas práticas de email marketing, um *link para visualização na web*, para usuários que tenham dificuldade em visualizar a mensagem em seu cliente de email, um *link para encaminhar a mensagem (forward)*, fornecendo ao usuário a possibilidade de enviar suas mensagens para amigos e um *link para adicionar à lista de contatos (whitelist)*, que levará a uma página com os passos necessários para o usuário adicionar o seu email na lista de contatos.
+Você pode adicionar facilmente um *link para descadastramento (unsubscribe)*, atendendo a um requisito básico para boas práticas de email marketing, um *link para visualização na web*, para usuários que tenham dificuldade para visualizar a mensagem em seu cliente de email, um *link para encaminhar a mensagem (forward)*, fornecendo ao usuário a possibilidade de enviar suas mensagens para amigos e um *link para adicionar à lista de contatos (whitelist)*, que levará a uma página com os passos necessários para o usuário adicionar o seu email na lista de contatos.
 
 h4. Link para descadastramento (unsubscribe)
 
 O *link de descadastramento* ou *unsubscribe* é um item recomendado a todas mensagens de email marketing. Ele serve para que o usuário que quiser deixar de receber suas notícias por email, seja por desinteresse, ou qualquer outro motivo, possa ser efetivamente descadastrado de sua lista.
 
-O *Mailee.me* oferece uma solução simples, e para inserir esse link em seus templates basta apenas colocar o seguinte código em seus templates:
+O Mailee.me oferece uma solução simples, e para inserir esse link em seus templates basta colocar o seguinte código em seus templates:
 
 <html>
   <p>
@@ -227,7 +227,7 @@ O *Mailee.me* oferece uma solução simples, e para inserir esse link em seus te
   </p>
 </html>
 
-O *Mailee.me* irá trocar automaticamente o destino no atributo <samp>href="#"</samp> pela URL que realiza o descadastro do contato.
+O Mailee.me irá trocar automaticamente o destino no atributo <samp>href="#"</samp> pela URL que realiza o descadastro do contato.
 
 INFO. Recomendamos como boa prática *sempre* incluir ao menos um link para descadastro em suas mensagens.
 
@@ -248,9 +248,9 @@ Para inserir um *weblink* em sua mensagem, utilize o seguinte código:
   </p>
 </html>
 
-O *Mailee.me* irá trocar automaticamente o destino no atributo <samp>href="#"</samp> pela URL de visualização na web da mensagem.
+O Mailee.me irá trocar automaticamente o destino no atributo <samp>href="#"</samp> pela URL de visualização na web da mensagem.
 
-INFO. Você também poderá utilizar um <samp>id="weblink"</samp>, <samp>id="web-link"</samp>, <samp>id="web_link"</samp>, <samp>class="web-link"</samp> ou <samp>class="web_link"</samp>. Lembre-se que o atributo de <samp>id</samp> é único, e só poderá ser utilizado *uma* vez por HTML, e, portanto, não é indicado caso você precise colocar mais de um link *forward* em seu template.
+INFO. Você também poderá utilizar um <samp>id="weblink"</samp>, <samp>id="web-link"</samp>, <samp>id="web_link"</samp>, <samp>class="web-link"</samp> ou <samp>class="web_link"</samp>. Lembre-se que o atributo de <samp>id</samp> é único, e só poderá ser utilizado *uma* vez por HTML, e, portanto, não é indicado caso você precise colocar mais de um link *weblink* em seu template.
 
 h4. Encaminhar a mensagem (forward)
 
@@ -265,9 +265,9 @@ Para inserir um link *forward* em seus templates, basta adicionar o seguinte có
   </p>
 </html>
 
-O *Mailee.me* irá trocar automaticamente o destino no atributo <samp>href="#"</samp> pela URL de encaminhar para amigos.
+O Mailee.me irá trocar automaticamente o destino no atributo <samp>href="#"</samp> pela URL de encaminhar para amigos.
 
-INFO. Se você desejar poderá utilizar um <samp>id="forward"</samp>, porém lembre-se que o atributo <samp>id</samp> é único, e só poderá ser utilizado *uma* vez por HTML, e, portanto, não é recomendado caso você precise colocar mais de um link de *forward* em seu template.
+INFO. Se você desejar, poderá utilizar um <samp>id="forward"</samp>, porém lembre-se que o atributo <samp>id</samp> é único, e só poderá ser utilizado *uma* vez por HTML, e, portanto, não é recomendado caso você precise colocar mais de um link de *forward* em seu template.
 
 h4. Adicionando à lista de contatos (whitelist)
 
@@ -283,17 +283,17 @@ Para inserir um link *whitelist* em seus templates, basta adicionar o seguinte c
   </p>
 </html>
 
-O *Mailee.me* irá trocar o atributo <samp>href=""</samp> com a URL de destino para as instruções de *whitelist*.
+O Mailee.me irá trocar o atributo <samp>href=""</samp> com a URL de destino para as instruções de *whitelist*.
 
-INFO. Se você desejar poderá utilizar um <samp>id="whitelist"</samp>, porém lembre-se que o atributo <samp>id=""</samp> é único e só poderá ser utilizado UMA vez por HTML, sendo portanto pouco indicado caso você precise colocar mais de um link *whitelist* em seu template.
+INFO. Se você desejar poderá utilizar um <samp>id="whitelist"</samp>, porém lembre-se que o atributo <samp>id</samp> é único e só poderá ser utilizado *uma* vez por HTML, sendo portanto pouco indicado caso você precise colocar mais de um link *whitelist* em seu template.
 
 ***
 
-h3. Personalização de mensagens no *Mailee.me*
+h3. Personalização de mensagens no Mailee.me
 
-h4. Informações de campos dinâmicos
+h4. Informações de campos dos contatos
 
-O *Mailee.me* possui *campos dinâmicos* que podem ser usados para personalizar suas mensagens com os dados dos seus contatos.
+Você pode usar campos dos contatos para personalizar suas mensagens do Mailee.me.
 
 Para, por exemplo, montar uma frase como:
 
@@ -309,14 +309,14 @@ Basta inserir um elemento <samp>&lt;span&gt;&lt;/span&gt;</samp> com o atributo 
   <p>Confira as ofertas que selecionamos para você.</p>
 </html>
 
-Você *pode deixar vazio* o conteúdo da <samp>&lt;span class="contact name"&gt;&lt;/span&gt;</samp>, e o *Mailee.me* irá inserir automaticamente a informação contida na <samp>tag</samp> <samp>"name"</samp> do contato de sua lista, e, como _fallback_ exibirá o texto *"Bom dia! Confira as ofertas selecionadas para você."*.
+Você *pode deixar vazio* o conteúdo da <samp>&lt;span class="contact name"&gt;&lt;/span&gt;</samp>, e o Mailee.me irá inserir automaticamente a informação contida na <samp>tag</samp> <samp>"name"</samp> do contato de sua lista, e, como _fallback_ (caso o contato não tenha nenhuma informação para a <samp>tag</samp> <samp>"name"</samp>) exibirá o texto *"Bom dia! Confira as ofertas selecionadas para você."*.
 
 WARNING. Evite preencher com textos de _fallback_ como *Fulano*, pois, no caso do contato em sua lista não conter nenhuma informação para a <samp>tag</samp> <samp>"name"</samp>, ele receberá a mensagem como *"Bom dia Fulano!"*.
 
-Confira a lista completa de *campos dinâmicos*:
+Confira a lista completa de *campos*:
 
 |_. Campo |_. Descrição |
-|_. <samp>class="contact id"</samp> | Identificador do contato no *Mailee.me* |
+|_. <samp>class="contact id"</samp> | Identificador do contato no Mailee.me |
 |_. <samp>class="contact name"</samp> | Nome do contato |
 |_. <samp>class="contact contact_status_id"</samp> | Identificador do status do contato |
 |_. <samp>class="contact internal_id"</samp> | Identificador do contato no seu sistema |
@@ -330,13 +330,13 @@ Confira a lista completa de *campos dinâmicos*:
 
 h4. Informações de campos personalizados
 
-"*Campos personalizados*":contacts_custom_fields.html podem ser criados na importações de suas bases de dados ou diretamente no *Mailee.me*. Os dados importados podem também ser inseridos em seus templates ou utilizados para "*segmentação de listas*":segmentation.html.
+"*Campos personalizados*":contacts_custom_fields.html podem ser criados nas importações de suas bases de dados ou diretamente no Mailee.me. Os dados importados podem também ser inseridos em seus templates ou utilizados para "*segmentação de listas*":segmentation.html.
 
 Digamos que você possua uma base como a da imagem abaixo:
 
 !images/templates/database_fields.gif(Base de dados com campos personalizados)!
 
-Enquanto *Nome* e *E-mail* são *campos dinâmicos* no *Mailee.me*, o campo *Gosta de* é personalizado. Ele será importado e você poderá associar a uma coluna da seguinte forma:
+Enquanto *Nome* e *E-mail* são *campos dos contatos* no Mailee.me, o campo *Gosta de* é um *campo personalizado*. Ele será importado e você poderá associar a uma coluna da seguinte forma:
 
 !images/templates/importing_fields.gif(Campos personalizados importados)!
 
@@ -348,14 +348,14 @@ Chamaremos esse campo personalizado de *estilo* e para inserir o campo em seu te
   </p>
 </html>
 
-O *Mailee.me* irá trocar automaticamente a informação do elemento <samp>&lt;span class="contact estilo"&gt;&lt;/span&gt;</samp> da mensagem de cada contato para a informação contida no campo com a <samp>tag</samp> <samp>estilo</samp>.
+O Mailee.me irá trocar automaticamente a informação do elemento <samp>&lt;span class="contact estilo"&gt;&lt;/span&gt;</samp> da mensagem de cada contato para a informação contida no campo com a <samp>tag</samp> <samp>estilo</samp>.
 
-INFO. *Importante:* <br/> Para os *campos dinâmicos* você deve usar a <samp>tag</samp> deste campo e não o *nome*.
+WARNING. Para os *campos personalizados* você deve usar a <samp>tag</samp> deste campo e não o *nome* dos mesmos.
 
 
 h4. Informações da lista
 
-Todas as mensagens enviadas pelo *Mailee.me* estão relacionadas à uma lista de contatos. Para colocar os *dados da lista* basta colocar o atributo <samp>class="list"</samp> seguida do campo que você desejar.
+Todas as mensagens enviadas pelo Mailee.me estão relacionadas a uma lista de contatos. Para colocar os *dados da lista* basta colocar o atributo <samp>class="list"</samp> seguida do campo que você desejar.
 
 Confira o seguinte exemplo:
 
@@ -365,7 +365,7 @@ Confira o seguinte exemplo:
   </p>
 </html>
 
-Para inserir a informação de *endereço* relacionada a lista, basta adicionar um <samp>&lt;span&gt;</samp> com o atributo <samp>class="contact name"</samp>, ficando assim:
+Para inserir a informação de *endereço* relacionada a lista, basta adicionar um <samp>&lt;span&gt;</samp> com o atributo <samp>class="list address"</samp>, ficando assim:
 
 <html>
   <p>
@@ -373,11 +373,11 @@ Para inserir a informação de *endereço* relacionada a lista, basta adicionar 
   </p>
 </html>
 
-O *Mailee.me* irá trocar automaticamente o conteúdo do <samp>&lt;span class="list address"&gt;&lt;/span&gt;</samp> para o endereço cadastrado na lista da mensagem.
+O Mailee.me irá trocar automaticamente o conteúdo do <samp>&lt;span class="list address"&gt;&lt;/span&gt;</samp> para o endereço cadastrado na lista da mensagem.
 
 WARNING. Utilize sempre um _fallback_ válido, para o caso de não possuir a informação exibida cadastrada em sua lista.
 
-Veja abaixo os campos possíveis com *informações da lista* no *Mailee.me*:
+Veja abaixo os campos possíveis com *informações da lista* no Mailee.me:
 
 |_. Campo |_. Descrição |
 |_. <samp>class="list id"</samp> | Identificador da lista no Mailee |
@@ -387,13 +387,13 @@ Veja abaixo os campos possíveis com *informações da lista* no *Mailee.me*:
 |_. <samp>class="list phone"</samp> | Telefone da lista |
 |_. <samp>class="list company"</samp> | Nome da empresa associada à lista |
 
-Veja como cadastrar essas informações em "Listas de contatos":contacts_lists.html.
+Veja como cadastrar essas informações em "Gerenciamento de listas":lists_management.html.
 
 NOTE.  *Você sabia?* <br/> Colocar o endereço, o telefone e o nome da empresa é obrigatório de acordo com a legislação estadunidense. Além disso, é uma boa prática para email marketing. Saiba mais aqui » "Artigo da Wikipedia sobre o CAN SPAM Act de 2003 [link em inglês]":http://en.wikipedia.org/wiki/CAN-SPAM_Act_of_2003
 
 h4. Informações de data
 
-É possível colocar *informações de data* preenchidas automaticamente pelo *Mailee.me* em seus templates.
+É possível colocar *informações de data* preenchidas automaticamente pelo Mailee.me em seus templates.
 
 Por exemplo, se desejar inserir a data de seu envio:
 
@@ -411,9 +411,9 @@ Basta inserir o seguinte código:
   </p>
 </html>
 
-O *Mailee.me* irá trocar automaticamente o conteúdo do <samp>&lt;span class="auto date"&gt;&lt;/span&gt;</samp> pela data do momento do envio.
+O Mailee.me irá trocar automaticamente o conteúdo do <samp>&lt;span class="auto date"&gt;&lt;/span&gt;</samp> pela data do momento do envio.
 
-Veja a lista das informações de <samp>"data"</samp> do *Mailee.me*:
+Veja a lista das informações de <samp>"data"</samp> do Mailee.me:
 
 |_. Campo |_. Descrição |
 |_. <samp>class="auto date"</samp> | Data completa atual, com dia, mês e ano |
