@@ -1,6 +1,6 @@
-h2. Integração com Site Através de Formulário
+h2. Integração com site através de formulário
 
-Este artigo irá mostrar como o Mailee.me cria para você um código _hmtl_ pronto para ser integrado ao seu site. Assim os seus contatos podem fornecer seus emails diretamente para sua base de dados do Mailee.me, tudo através do seu Site. Os formulários estão disponíveis para.
+Este artigo irá mostrar como o Mailee.me cria para você um código _HTML_ pronto para ser integrado ao seu site. Assim os seus contatos podem fornecer seus emails diretamente para sua base de dados no Mailee.me, através do seu site. Os formulários estão disponíveis para:
 
 * Cadastro de contato
 
@@ -8,32 +8,35 @@ Este artigo irá mostrar como o Mailee.me cria para você um código _hmtl_ pron
 
 endprologue.
 
-h3. Gerando o Código para Cadastro
+h3. Gerando o código para cadastro
 
-Primeiro, vá até a guia *configurações* da barra de navegação. Selecione _Integrar_ e clique no botão _cadastro_
+Primeiro, vá até a guia *Configurações* da barra de navegação. Selecione _Integrar_ e clique no botão _Cadastro_.
 
 !images/integration/form/integration_form_button.png(Integração por formulário)!
 
-Escolha para qual ou quais listas os contatos devem ser inscritos. 
+Escolha em qual ou quais listas os contatos devem ser inscritos.
 
-INFO. Lembre-se. Os contatos devem estar inscritos em listas para receber suas mensagens.
+INFO. Lembre-se: os contatos devem estar inscritos em listas para receber suas mensagens.
 
-Após ter escolhido as listas, clique no botão _Gerar novo Html_.
+Após ter escolhido as listas, clique no botão _Gerar novo HTML_.
 
-WARNING. Antes de copiar o código, localize a terceira e quarta linha. Elas possuem os valores *URL_OK* e *URL_ERROR*. Ambos devem ser substituídos.
+WARNING. Antes de copiar o código, localize a terceira e quarta linha. Elas possuem os valores *URL_OK* e *URL_ERROR*. Ambos devem ser substituídos pelos endereços adequados.
 
 !images/integration/form/value_change.png(Valores)!
 
-*URL_OK* - Substitua pela página em seu site que aparecerá depois que o contato for inserido com sucesso no Mailee.me. 
+*URL_OK* - Substitua pela página em seu site que aparecerá depois que o contato for inserido com sucesso no Mailee.me.
 
-*URL_ERROR* - Substitua pela página em seu site que aparecerá depois que ocorrer algum problema na inserção do contato no Mailee. Será passado o erro por GET pela variável "error". 
+*URL_ERROR* - Substitua pela página em seu site que aparecerá depois que ocorrer algum problema na inserção do contato no Mailee.me. O erro será passado por GET pela variável _error_.
 
-h3. Gerando Código para Descadastro
+h3. Gerando código para descadastro
 
-Não é necessário gerar o código de descadastro de contatos, basta copiar e colar. Não esquecendo de alterar os valores:
+Primeiro, vá até a guia *Configurações* da barra de navegação. Selecione _Integrar_ e clique no botão _Descadastro_.
 
-*URL_OK* - Substitua pela página em seu site que aparecerá depois que o contato for inserido com sucesso no Mailee.me. 
+Não é necessário gerar o código de descadastro de contatos. Basta copiar e colar, não esquecendo de alterar os seguintes valores:
 
-*URL_ERROR* - Substitua pela página em seu site que aparecerá depois que ocorrer algum problema na inserção do contato no Mailee. Será passado o erro por GET pela variável "error".
+*URL_OK* - Substitua pela página em seu site que aparecerá depois que o contato for inserido com sucesso no Mailee.me.
+
+*URL_ERROR* - Substitua pela página em seu site que aparecerá depois que ocorrer algum problema na inserção do contato no Mailee.me. O erro será passado por GET pela variável _error_.
 
 !images/integration/form/unsubscribe.png(descadastro)!
+
