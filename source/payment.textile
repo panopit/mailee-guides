@@ -1,34 +1,34 @@
-h2. Compra de Créditos
+h2. Compra de créditos
 
-Este artigo irá mostrar o processo de *compra de créditos*.
+Este artigo irá mostrar como realizar a *compra de créditos*.
 
 * Tela de créditos
 * Pacotes de créditos disponíveis
-* Compra de créditos usando o _Pagseguro_
+* Compra de créditos usando o _PagSeguro_
 
 endprologue.
 
-h3. Tela de Créditos
+h3. Tela de créditos
 
-No Mailee, clique na guia *Configurações* na barra de navegação.
+No Mailee.me, clique em *Configurações* na barra de navegação.
 
 Por padrão, a primeira opção das configurações é a compra de créditos.
 
-!images/payment/credits_buy_main.png(compra de créditos)!
+!images/payment/credits_buy_main.png(Compra de créditos)!
 
 *Créditos restantes* - Quantos créditos estão ativos e disponíveis em sua conta.
 
-*Contatos ativos* - Quantos contatos *ativos* estão cadastrados na sua conta do Mailee.me
+*Contatos ativos* - Quantos contatos *ativos* estão cadastrados na sua conta.
 
-*Créditos recomendados* - Número aproximado para que seja realizado 1(um) envio semanal para seus contatos.
+*Créditos recomendados* - Número aproximado para que seja realizado 1 envio semanal para seus contatos.
 
-*Ver outras opções* - 	Expande e mostra todos os pacotes disponíveis para compra de créditos.
+*Ver outras opções* - Expande e mostra todos os pacotes disponíveis para compra de créditos.
 
-*Comprar* - Inicia o processo de compram, você será encaminhado para o _Pagseguro_.
+*Comprar* - Inicia o processo de compra. Você será encaminhado para o _PagSeguro_.
 
 INFO. O créditos são válidos enquanto sua conta existir. E sua conta só deixará de existir caso você solicite ou fique mais de um ano sem realizar envios.
 
-h3. Pacotes de Crédito
+h3. Pacotes de crédito
 
 Os pacotes de crédito disponíveis são:
 
@@ -36,9 +36,9 @@ Os pacotes de crédito disponíveis são:
 
 INFO. Quanto maior o pacote de créditos, menor será o valor por envio individual.
 
-h3. Pagseguro
+h3. PagSeguro
 
-Após clicar no botão _Pagar_ você será encaminhado para o _Pagseguro_.
+Após clicar no botão _Pagar_, você será encaminhado para o _PagSeguro_.
 
 Na primeira tela, verifique se o pacote de créditos e o valor estão corretos e preencha seu CEP.
 
@@ -50,10 +50,11 @@ Complete seu endereço.
 
 !images/payment/address_fill_up.png(completar endereço)!
 
-Se você já realizou compras pelo _Pagseguro_, será solicitado seu email e senha. Se nunca realizou compras através por ele antes, você será encaminhado para tela de cadastro. 
+Se você já realizou compras pelo _PagSeguro_, será solicitado seu email e senha. Se nunca realizou compras através por ele antes, você será encaminhado para tela de cadastro.
 
 !images/payment/create_acc.png(criação de conta)!
 
-Após realizar o _login_ ou a criação de conta é só optar pelo método de pagamento.
+Após realizar o _login_ ou a criação de conta, é só optar pelo método de pagamento.
 
 !images/payment/payment_types.png(tipos de pagamento)!
+
