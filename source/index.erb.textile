@@ -1,11 +1,11 @@
 <% content_for :header_section do %>
 
-h2. Manual do Mailee
+h2. Manual do Mailee.me
 
-Foo bar
+Bem-vindo ao manual do Mailee.me. Aqui você irá encontrar artigos escritos pelos próprios desenvolvedores. Neles são descritas todas as funcionalidades do aplicativo. Tudo isso para que você possa extrair o máximo do Email Marketing 2.0.  
 
-* "Yo":http://www.mailee.me/site/history - baseado na última versão do Mailee
-
+Permanecendo qualquer dúvida é só mandar um email para "suporte@mailee.me":mailto:suporte@mailee.me e prontamente iremos ajudar. E nada de vergonha! Mande também suas críticas, elogios e sugestões.
+ 
 <% end %>
 
 <% content_for :index_section do %>
@@ -14,7 +14,7 @@ h3. Inicie aqui
 
 <dl>
   <% guide('Iniciando com o Mailee', 'getting_started.html') do %>
-    Tudo o que você precisa saber para iniciar com o Mailee.
+   Tudo o que você precisa saber para iniciar com o Mailee.
   <% end %>
 </dl>
 
@@ -23,15 +23,24 @@ h3. Inicie aqui
 h3. Contatos
 
 <dl>
-  <% guide('Status', 'contacts_status.html') do %>
+	<% guide('Cadastro', 'contacts_new.html') do %>
+    Veja como cadastrar contatos, e como funcionam os campos de redes sociais.
+  <% end %>  
+	<% guide('Status', 'contacts_status.html') do %>
     Saiba o que são os status dos contatos.
   <% end %>
-  <% guide('Cadastro', 'contacts_new.html') do %>
-    Veja como cadastrar contatos, e como funcionam os campos de redes sociais.
-  <% end %>
-  <% guide('Importação do Gmail', 'import_gmail.html') do %>
-    Importação do Gmail
-  <% end %>
+  <% guide('Campos personalizados', 'contacts_custom_fields.html') do %> 
+		O que são e para que servem.
+	<% end %>
+	<% guide('Exclusão de contatos', 'contacts_remove.html') do %>
+		Como excluir contatos.
+	<% end %>
+	<% guide('Gerenciamento de listas', 'lists_management.html') do %>
+		Trabalhando com listas de contatos.
+	<% end %>
+	<% guide('Segmentação', 'segmentation.html') do %>
+		As possíveis formas de segmentar sua lista de contatos e como fazê-lo.
+	<% end %>
 </dl>
 
 <hr>
@@ -52,35 +61,18 @@ h3. Importação
 
 <hr>
 
-h3. Exportação
+h3. Mensagens
 
-<dl>
-  <% guide('Exportando contatos', 'export.html') do %>
-    So and so
-  <% end %>
-</dl>
-
-<hr>
-
-h3. Integração
-
-<dl>
-  <% guide('Por formulário', 'integration_form.html') do %>
-    Utilize esta integração para cadastrar e descadastrar contatos diretamente do seu site.
-  <% end %>
-  <% guide('REST', 'integration_rest.html') do %>
-    Utilize esta integração para sincronizar sua aplicação com o Mailee.
-  <% end %>
-  <% guide('Ruby on Rails', 'integration_rails.html') do %>
-    Utilize esta integração para sincronizar sua aplicação Ruby on Rails com o Mailee.
-  <% end %>
-  <% guide('Spree', 'integration_spree.html') do %>
-    Utilize esta integração para sincronizar sua loja Spree com o Mailee.
-  <% end %>
-  <% guide('PHP', 'integration_php.html') do %>
-    Utilize esta integração para sincronizar sua aplicação PHP com o Mailee.
-  <% end %>
-</dl>
+<dl> 
+	<% guide('Como funcionam as campanhas', 'what_is_a_campaign.html') do %>
+		O que é uma campanha e para que serve.
+	<% end %>
+	<% guide('Como enviar uma mensagem', 'message_new.html') do %>
+		Como criar e enviar uma mensagem. 
+	<% end %>
+	<% guide('Relatórios', 'reports.html') do %>
+		Visualizando relatórios gerados após o envio de mensagens. 
+	<% end %>
 
 <hr>
 
@@ -97,3 +89,47 @@ h3. Templates
     Boas práticas na criação de templates de email em HTML
   <% end %>
 </dl>
+
+<hr>
+
+h3. Integração
+
+<dl>
+  <% guide('Por formulário', 'integration_form.html') do %>
+    Utilize esta integração para cadastrar e descadastrar contatos diretamente do seu site.
+  <% end %>
+  <% guide('REST', 'integration_rest.html') do %>
+    Utilize esta integração para sincronizar sua aplicação com o Mailee.me
+  <% end %>
+  <% guide('Ruby on Rails', 'integration_rails.html') do %>
+    Utilize esta integração para sincronizar sua aplicação Ruby on Rails com o Mailee.me
+  <% end %>
+  <% guide('Spree', 'integration_spree.html') do %>
+    Utilize esta integração para sincronizar sua loja Spree com o Mailee.me
+  <% end %>
+  <% guide('PHP', 'integration_php.html') do %>
+    Utilize esta integração para sincronizar sua aplicação PHP com o Mailee.me
+  <% end %>
+</dl>
+
+<hr>
+
+h3. Configurações
+
+<dl>
+  <% guide('Pagamentos', 'payment.html') do %>
+    Como realizar a compra de créditos.
+  <% end %>
+  <% guide('Usuários', 'users.html') do %>
+    Como criar mais usuários e os níveis de permissões disponíveis.
+  <% end %>
+  <% guide('Configuração de links', 'config_links.html') do %>
+    Configure os links das mensagens apontarem para o seu site.
+  <% end %>
+  <% guide('Alterando o logo', 'logo_change.html') do %>
+    Deixe o  Mailee.me com a sua cara.
+  <% end %>
+</dl>
+
+<hr>
+

@@ -3,7 +3,6 @@ h2. Integração com site através de formulário
 Este artigo irá mostrar como o Mailee.me cria para você um código _HTML_ pronto para ser integrado ao seu site. Assim os seus contatos podem fornecer seus emails diretamente para sua base de dados no Mailee.me, através do seu site. Os formulários estão disponíveis para:
 
 * Cadastro de contato
-
 * Descadastro de contato
 
 endprologue.
