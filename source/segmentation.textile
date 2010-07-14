@@ -1,6 +1,6 @@
 h2. Segmentação
 
-Enviar mensagens pertinentes e focadas é muito importante para ter o melhor retorno para suas ações de email marketing. O Mailee permite segmentar seus contatos de forma fácil e, ao mesmo tempo, muito completa.
+Enviar mensagens pertinentes e focadas é muito importante para ter o melhor retorno de suas ações de email marketing. O Mailee.me permite segmentar seus contatos de uma forma fácil e, ao mesmo tempo, muito completa. Veremos:
 
 * Como criar segmentos.
 * Quais os filtros existentes e como funcionam.
@@ -12,11 +12,11 @@ h3. O que é um segmento?
 
 div{float:right;margin-left:20px}. !images/segmentation/segmentation.jpg(Segmentação)!
 
-Um segmento é um conjunto de contatos da sua base que obedecem certos critérios determinados. Os critérios para um segmento são determinados por você. Você pode, por exemplo, criar um segmento de todas as mulheres cujo e-mail é do Hotmail, que moram próximo de São Paulo e que torcem para o Corinthians. Uma vez criado, um segmento funciona como uma _lista dinâmica_. Isto é, sempre que um novo contato satisfizer os critérios, ele estará no segmento automaticamente. Isto é muito prático, pois não requer que você fique organizando os contatos em listas "rígidas", mas apenas que mantenha os dados dos contatos o mais atualizado possível e que crie os segmentos corretos.
+Um segmento é um conjunto de contatos da sua base que obedecem certos critérios determinados. Os critérios para um segmento são determinados por você. Você pode, por exemplo, criar um segmento de todas as mulheres cujo email é do Hotmail, que moram próximo de São Paulo e que torcem para o Corinthians. Uma vez criado, um segmento funciona como uma _lista dinâmica_. Isto é, sempre que um novo contato satisfizer os critérios, ele estará no segmento automaticamente. Isto é muito prático, pois não requer que você fique organizando os contatos em listas "rígidas", mas apenas que mantenha os dados dos contatos o mais atualizado possível e que crie os segmentos corretos.
 
-A segmentação é extremamente útil para criar campanhas e promoções focadas, pois é possível enviar mensagens para um determinado segmento.
+A segmentação é extremamente útil para criar campanhas e promoções focadas, pois é possível enviar mensagens para um segmento determinado.
 
-O Mailee permite criar segmentos por diversos critérios apresentados abaixo, com destaque para localização geográfica, possuir certas tags que são collhidas automaticamente de redes sociais e também a influência e número de seguidores em certas redes sociais, além dos básicos, nome, sexo, idade...
+O Mailee.me permite criar segmentos pelos diversos critérios apresentados abaixo, com destaque para localização geográfica, para certas tags que são collhidas automaticamente de redes sociais e também a influência e número de seguidores em certas redes sociais, além dos básicos nome, sexo, idade, etc.
 
 h3. Criando um segmento
 
@@ -36,7 +36,7 @@ No canto superior à direta, será informado o total de contatos atuais (ver fil
 
 div{clear:both}. &nbsp;
 
-Continue adicionando filtros enquanto necessário e clique no botão "criar segmento". Informe o nome do segmento e dê o _ok_. 
+Continue adicionando filtros enquanto necessário e clique no botão "criar segmento". Informe o nome do segmento e dê o _ok_.
 
 div{float:left;margin-right:20px}. !images/segmentation/segment_create.png(Criar segmento)!
 
@@ -70,11 +70,11 @@ div{float:right;margin-left:20px;width:240px}. !images/segmentation/por_status.p
 * *Descadastrado*
 ** O contato solicitou descadastro.
 * *Inválido*
-** O filtro de spam do Mailee rejeitou este contato ou o último envio feito para este contato foi rejeitado em definitivo. Os motivos mais comuns para isto é que o email ou o domínio não existem ou o servidor rejeitou os emails 3 vezes seguidas.
+** O filtro de spam do Mailee.me rejeitou este contato ou o último envio feito para este contato foi rejeitado em definitivo. Os motivos mais comuns para isto são email ou domínio inexistentes ou rejeição do email pelo servidor 3 vezes seguidas.
 * *Em análise*
-** O contato foi recém cadastrado e está em análise anti-spam do Mailee.
+** O contato foi recém cadastrado e está em análise anti-spam do Mailee.me.
 * *Soft bounce*
-** O último envio feito para este contato foi rejeitado temporariamente, mas ele ainda está ativo. Os motivos mais comuns para isto é caixa cheia, suspeita de spam ou erro temporário. Se isto se repetir 3 vezes o contato será invalidado.
+** O último envio feito para este contato foi rejeitado temporariamente, mas ele ainda está ativo. Os motivos mais comuns para isto são caixa cheia, suspeita de spam ou erro temporário. Se isto se repetir 3 vezes o contato será invalidado.
 * *Desconhecido*
 ** O contato ainda não recebeu mensagens.
 * *Válido*
@@ -96,7 +96,7 @@ h4. Por domínio
 
 div{float:right;margin-left:20px;width:240px}. !images/segmentation/por_dominio.png(Filtro por domínio)!
 
-O filtro por domínio permite segmentar sua pelos domínios dos e-mails de seus contatos, como por exemplo +gmail.com+, +hotmail.com+ e +yahoo.com+. O filtro já traz os 8 domínios mais comuns em sua base, e você pode também escrever o domínio completo (como em +meudominio.com.br+) no campo em branco.
+O filtro por domínio permite segmentar pelos domínios dos emails de seus contatos, como por exemplo +gmail.com+, +hotmail.com+ e +yahoo.com+. O filtro já traz os 8 domínios mais comuns em sua base, e você pode também escrever o domínio completo (como em +meudominio.com.br+) no campo em branco.
 
 Esta segmentação é interessante quando você quer comparar resultados entre domínios, quer fazer uma promoção especial para uma empresa específica (+dominiodaempresa.com.br+) ou quer mandar uma mensagem diferente para um certo domínio que possua alguma restrição em relação ao formato da mensagem.
 
@@ -125,13 +125,13 @@ O filtro por aniversário permite segmentar seus contatos de três modos:
 div{float:right;margin-left:20px;width:340px}. !images/segmentation/por_aniversario.png(Filtro por aniversário)!
 
 * Neste mês
-** Este filtro apresentará os contatos cujos aniversários sejam no mês em que filtro está sendo _aplicado_. Isto significa dizer que, estando em janeiro, você verá os contatos que nasceram em janeiro, da mesma forma, em junho você verá os contatos que nasceram em junho.
+** Este filtro apresentará os contatos cujos aniversários sejam no mês em que o filtro está sendo _aplicado_. Isto significa dizer que, estando em janeiro, você verá os contatos que nasceram em janeiro. Da mesma forma, em junho você verá os contatos que nasceram em junho.
 * Nesta semana
-** Este filtro apresentará os contatos cujos aniversários sejam nos próximos 7 dias do dia em que filtro está sendo _aplicado_. Isto significa dizer que, estando no dia 11 de janeiro, você verá os contatos que nasceram entre 11 e 18 de janeiro, da mesma forma, estando no dia 6 de junho, você verá os contatos que nasceram entre 6 e 13 de junho.
+** Este filtro apresentará os contatos cujos aniversários sejam nos próximos 7 dias do dia em que filtro está sendo _aplicado_. Isto significa dizer que, estando no dia 11 de janeiro, você verá os contatos que nasceram entre 11 e 18 de janeiro. Da mesma forma, estando no dia 6 de junho, você verá os contatos que nasceram entre 6 e 13 de junho.
 * Em um determinado mês
 ** Este filtro apresentará os contatos cujos aniversários sejam no mês especificado.
 
-INFO. A data de aplicação de um filtro temporal *não é a data de criação* do filtro, mas sim qualquer data em que o filtro está sendo utilizado. Isto quer dizer que, se você entrar no Mailee no dia 17 de dezembro, e for visualizar os contatos de um segmento que filtra contatos cujos aniversários sejam "neste mês", você verá todos os que nasceram em dezembro. Este detalhe é importante, pois se você criar uma mensagem utilizando este segmento em novembro, e programar para esta ser enviada em dezembro, *a data de aplicação será a data de envio*, ou seja, a mensagem irá para os aniversariantes de dezembro.
+INFO. A data de aplicação de um filtro temporal *não é a data de criação* do filtro, mas sim qualquer data em que o filtro está sendo utilizado. Isto quer dizer que, se você entrar no Mailee.me no dia 17 de dezembro, e for visualizar os contatos de um segmento que filtra contatos cujos aniversários sejam "neste mês", você verá todos os que nasceram em dezembro. Este detalhe é importante, pois se você criar uma mensagem utilizando este segmento em novembro, e programar para esta ser enviada em dezembro, *a data de aplicação será a data de envio*, ou seja, a mensagem irá para os aniversariantes de dezembro.
 
 div{clear:both}. &nbsp;
 
@@ -139,13 +139,13 @@ h4. Por tag
 
 div{float:left;margin-right:20px;width:240px}. !images/segmentation/por_tag.png(Filtro por tag)!
 
-O filtro por tag permite segmentar seus contatos pelas tags associadas à seus contatos manualmente ou pelas "funcionalidades de integração com redes sociais":http//todo do Mailee. O filtro já traz as 8 tags mais comuns em sua base, e você pode também escrever a tag desejada no campo em branco.
+O filtro por tag permite segmentar seus contatos pelas tags associadas a seus contatos manualmente ou pelas funcionalidades de integração com redes sociais do Mailee.me. O filtro já traz as 8 tags mais comuns em sua base, e você pode também escrever a tag desejada no campo em branco.
 
 Esta segmentação é interessante para enviar mensagens focadas de acordo com as preferências do usuário. Imagine que você possui uma loja de material esportivo em geral, e vai fazer uma campanha para vender produtos associados ao Corinthians. Enviar isto para toda sua base certamente será um tiro no pé, e você terá muitos descadastros dos palmeirenses. Um filtro pela tag "corinthians" seria muito apropriado.
 
 div{clear:both}. &nbsp;
 
-INFO. O Mailee é capaz de buscar automaticamente tags de seus contatos em algumas redes sociais, como o Last.fm (de música) e o Delicious (de _bookmarks_). Tente manter os dados de redes sociais de seus contatos atualizados, pois isto é uma ferramenta muito poderosa de segmentação.
+INFO. O Mailee.me é capaz de buscar automaticamente tags de seus contatos em algumas redes sociais, como o Last.fm (de música) e o Delicious (de _bookmarks_). Tente manter os dados de redes sociais de seus contatos atualizados, pois isto é uma ferramenta muito poderosa de segmentação.
 
 
 h4. Por localização
@@ -162,7 +162,7 @@ h4. Por Klout
 
 div{float:left;margin-right:20px;width:240px}. !images/segmentation/por_klout.png(Filtro por klout)!
 
-O "Klout":http://klout.com é um serviço online que calcula a influência de usuários no "Twitter":http://twitter.com. Sempre que você colocar o usuário do Twitter em algum contato no Mailee, o sistema irá buscar o número Klout do contato.
+O "Klout":http://klout.com é um serviço online que calcula a influência de usuários no "Twitter":http://twitter.com. Sempre que você colocar o usuário do Twitter em algum contato no Mailee.me, o sistema irá buscar o número Klout do contato.
 
 O filtro por Klout permite que você crie mensagens com foco em contatos influentes no Twitter, caso queira fazer campanhas para esta mídia.
 
@@ -172,7 +172,7 @@ h4. Por seguidores no Twitter
 
 div{float:right;margin-left:20px;width:240px}. !images/segmentation/por_seguidores_no_twitter.png(Filtro por seguidores no twitter)!
 
-Sempre que você colocar o usuário do Twitter em algum contato no Mailee, o sistema irá número de seguidores do contato.
+Sempre que você colocar o usuário do Twitter em algum contato no Mailee.me, o sistema irá buscar o número de seguidores do contato.
 
 O filtro por seguidores no Twitter permite que você crie mensagens com foco em contatos influentes no Twitter, caso queira fazer campanhas para esta mídia.
 
@@ -182,7 +182,7 @@ h4. Por conexões no LinkedIn
 
 div{float:left;margin-right:20px;width:240px}. !images/segmentation/por_conexoes_no_linkedin.png(Filtro por conexões no linkedin)!
 
-O "LinkedIn":http://linkedin.com é uma rede social com foco em negócios. Sempre que você colocar o usuário do LinkedIn em algum contato no Mailee, o sistema irá buscar o número de conexões no LinkedIn do contato.
+O "LinkedIn":http://linkedin.com é uma rede social com foco em negócios. Sempre que você colocar o usuário do LinkedIn em algum contato no Mailee.me, o sistema irá buscar o número de conexões no LinkedIn do contato.
 
 O filtro por conexões no LinkedIn permite que você crie mensagens com foco em contatos influentes no LinkedIn, caso queira fazer campanhas para esta mídia.
 
@@ -192,7 +192,7 @@ h4. Por recomendações no LinkedIn
 
 div{float:right;margin-left:20px;width:240px}. !images/segmentation/por_recomendacoes_no_linkedin.png(Filtro por recomendações no linkedin)!
 
-O "LinkedIn":http://linkedin.com é uma rede social com foco em negócios. Sempre que você colocar o usuário do LinkedIn em algum contato no Mailee, o sistema irá buscar o número de recomendações no LinkedIn do contato.
+O "LinkedIn":http://linkedin.com é uma rede social com foco em negócios. Sempre que você colocar o usuário do LinkedIn em algum contato no Mailee.me, o sistema irá buscar o número de recomendações no LinkedIn do contato.
 
 O filtro por recomendações no LinkedIn permite que você crie mensagens com foco em contatos influentes no LinkedIn, caso queira fazer campanhas para esta mídia.
 
@@ -202,7 +202,7 @@ h4. Por campos personalizados
 
 div{float:left;margin-right:20px;width:240px}. !images/segmentation/por_campos_personalizados.png(Filtro por campos personalizados)!
 
-Em todo "campo personalizado":http://todo que você criar no Mailee, será possível aplicar filtros para segmentação.
+Em todo "campo personalizado":contacts_custom_fields.html que você criar no Mailee.me, será possível aplicar filtros para segmentação.
 
 Os filtros por campos personalizados permitem buscar contatos cujo valor do campo em questão seja igual, diferente, que contenha ou que não contenha uma certa sequência de caracteres. O filtro "contendo" é realizado sem levar em consideração caracteres maiúsculos e minúsculos. Por exemplo, se você tem um campo "Estilo musical" um filtro por _rock_ deve encontrar contatos cujo "Estilo musical" seja _Rock n' Roll_ ou _Hard Rock_.
 
@@ -213,14 +213,15 @@ h3. Enviando para um segmento
 
 div{float:right;margin-left:20px;}. !images/segmentation/segment_on_campaign.png(Segmento na campanha)!
 
-Uma vez com seu segmento criado, você poderá ou criar mensagens específicas para este. Ao criar uma nova campanha, basta definir o segmento após a escolha da lista.
+Uma vez com seu segmento criado, você poderá criar mensagens específicas para este. Ao criar uma nova campanha, basta definir o segmento após a escolha da lista.
 
 div{clear:both}. &nbsp;
 
-INFO. Uma mensagem é sempre enviada para uma lista. Isto é necessário por uma série de motivos. O primeiro é a prevenir _spam_. Depois, o Mailee permite (e recomenda) que você coloque tags nas mensagens com informações sobre a sua empresa, como site, telefone e até mesmo endereço.
+INFO. Uma mensagem é sempre enviada para uma lista. Isto é necessário por uma série de motivos. O primeiro é prevenir _spam_. Depois, o Mailee.me permite (e recomenda) que você coloque tags nas mensagens com informações sobre a sua empresa, como site, telefone e até mesmo endereço.
 
 div{float:left;margin-right:20px;}. !images/segmentation/segment_on_verify.png(Segmento na campanha)!
 
 Se você já possui uma campanha e quer passar a enviar esta para o segmento, quando for criar uma nova mensagem, na tela de verificação, basta definir o segmento.
 
 div{clear:both}. &nbsp;
+
