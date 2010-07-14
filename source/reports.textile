@@ -8,36 +8,35 @@ h3. Relatórios
 
 h4. Resumo
 
-Para acessar o resumo completo de uma mensagem, basta clicar na mensagem desejada. Seja na lista de mensagens, dashboard ou campanha.
+Para acessar o resumo completo de uma mensagem, basta clicar na mensagem desejada, seja na lista de mensagens, dashboard ou campanha.
 
 !images/reports/reports_main.png(Resumo)!
 
-Nesta tela você pode observar os dados do envio, estatísticas de acesso, a contagem de cliques nos _links_ inseridos na mensagem e também pode acompanhar os acessos em tempo real (Big Brother).
-
+Nesta tela você pode observar os dados do envio, estatísticas de acesso, a contagem de cliques nos links inseridos na mensagem e também pode acompanhar os acessos em tempo real (Big Brother).
 
 h4. Big Brother 2.0
 
 Através do Big Brother 2.0 você pode acompanhar os acessos em tempo real com a localização geográfica do contato.
 
-h4. Contato
+h4. Por contato
 
 Mostra os contatos que mais acessaram a sua mensagem.
 
 h4. InMail
 
-Visualize o contéudo da sua mensagem com os links destacados e a quantidade de cliques em cada.
+Visualize o contéudo da sua mensagem com os links destacados e a quantidade de cliques em cada um.
 
 h4. Geográfica
 
-Resultado dos acessos por cidades, no Brasil e no mundo.
+Resultado dos acessos por cidades no Brasil e no mundo, e países.
 
 h4. Descadastros
 
-Veja quem descadastrou e o porquê.
+Veja quem se descadastrou e porque.
 
 h4. Forwards
 
-Mostra os contatos que realizaram encaminhamento da mensagem.
+Mostra os contatos que realizaram encaminhamento da mensagem para seus contatos.
 
 h4. Exportar
 
