@@ -1,51 +1,51 @@
 h2. Cadastro de usuários
 
-Este artigo irá mostrar como é realizada a criação e a edição de usuários. 
+Este artigo irá mostrar como é realizada a criação e a edição de usuários no Mailee.me.
 
 endprologue.
 
 h3. Tela de usuários
 
-O Mailee possui no menu um item específico para usuários, clicando nele você terá a imagem a seguir
+O Mailee.me possui no menu um item _Usuários_. Clicando nele você verá a imagem a seguir
 
 !images/users/user_screen.png(Tela de usuários)!
 
-Nesta tela é possível ver todos os usuários cadastrados no seu subdomínio do Mailee. Se necessário, instalamos um campo de pesquisa para facilitar a localização.
+Nesta tela é possível ver todos os usuários cadastrados em sua conta. Se necessário, você pode usar o campo de pesquisa para facilitar a localização.
 
 h4. Criando usuários
 
-Clique no botão **"Adicionar usuário"** para ser direcionado a tela de criação.
+Clique no botão **"Adicionar usuário"** para ser direcionado à tela de criação.
 
-Nessa tela os campos abertos são: 
+Nessa tela os campos abertos são:
 
 **Nome** - Aqui deve ser preenchido o nome completo do usuário.
 
 **Email** - O email deve ser preenchido para que o contato receba o lembrete de senha.
 
-**Usário** - o nome do usário para acessar a conta do mailee. 
- 
-**Senha** e **Confirmação de senha** - preencha com sua senha e a confirme.
+**Usário** - O nome de usário para acessar a conta do Mailee.me.
+
+**Senha** e **Confirmação de senha** - Preencha com a senha do usuário e a confirme.
 
 h4. Permissões:
 
-Quais acessos o usuário terá?
+O que o usuário poderá fazer?
 
 !images/users/diagram_32.png(Relatórios)!  **Relatórios?**
-Acessa os relatórios de envio.
+Acessar os relatórios de envio.
 
 !images/users/letter_32.png(Mensagens)!  **Mensagens?**
-Permite cadastrar campanhas e enviar mensagens.
+Cadastrar campanhas e enviar mensagens.
 
 !images/users/document_32.png(Templates)!  **Templates?**
-Permite visualizar e cadastrar templates.
+Visualizar e cadastrar templates.
 
 !images/users/address_32.png(Contatos)!  **Contatos?**
-Permite visualizar, cadastrar, importar e exportar contatos.
+Visualizar, cadastrar, importar e exportar contatos.
 
 !images/users/gear_32.png(Administrador)!  **Administrador?**
-Acessa conteúdos administrativos, como: pagamento da conta, criação de outros usuários e atualização dos dados do cliente.
+Acessar conteúdos administrativos, como pagamento da conta, criação de outros usuários e atualização dos dados do cliente.
 
 h3. Editando usuários
 
-Para editar um usuário existente, Basta clicar no usuário desejado para ser direcionado a tela de edição. Os campos são os mesmos para adicionar um novo usuário.
+Para editar um usuário existente, basta clicar no usuário desejado para ser direcionado à tela de edição. Os campos são os mesmos para adicionar um novo usuário.
 
