@@ -25,7 +25,7 @@ h3. Configurando seu template
 Templates criados para o *Mailee.me* precisam obedecer certas regras. São elas:
 
 * Todo conteúdo salvo em codificação UTF-8
-* Arquivo _zip_ contendo
+* Arquivo _zip_ com os arquivos
 
 h4. Codificação
 
@@ -101,7 +101,7 @@ WARNING. Não use elementos com <samp>class="edit"</samp>, dentro de outros elem
 
 h4. Possibilitando a troca de uma imagem no template
 
-Para que uma imagem pode ser substituida em seu template, basta adicionar a <samp>class="edit"</samp>.
+Para que uma imagem possa ser substituida em seu template, basta adicionar a <samp>class="edit"</samp>.
 
 <html>
   <img src="sua_imagem.jpg" class="edit" … />
@@ -109,18 +109,18 @@ Para que uma imagem pode ser substituida em seu template, basta adicionar a <sam
 
 h4. Definindo um tamanho para as imagens
 
-Se você quiser restringir o tamanho de uma imagem basta inserir, imediatamente após o atributo de classe "edit", conforme exemplo abaixo:
+Se você quiser restringir o tamanho de uma imagem basta informá-lo, imediatamente após o atributo de classe "edit", conforme exemplo abaixo:
 
 <html>
   <img src="sua_imagem.jpg" class="edit 100x100" … />
 </html>
 
-O formato deve seguir *largura* x *altura*, sendo que, os valores colocados são interpretados em pixels por padrão, e o tamanho definido como o *máximo* para a imagem no seu layout.
+O formato deve seguir *largura* x *altura*, sendo que os valores colocados são interpretados em pixels por padrão, e o tamanho definido como o *máximo* para a imagem no seu layout.
 
 Você também poderá usar valores com os seguintes operadores:
 
 |_. *#* | Mantém a proporção da imagem durante o redimensionamento |
-|_. *!* | Ignora a proporção da imamge durante o redimensionamento |
+|_. *!* | Ignora a proporção da imagem durante o redimensionamento |
 |_. *%* | Interpreta os valores como percentual |
 |_. *&gt;* | Redimensiona a imagem para o tamanho estabelecido somente se a imagem for *menor* |
 |_. *&lt;* | Redimensiona a imagem para o tamanho estabelecido somente se a imagem for *maior* |
@@ -147,7 +147,7 @@ Consideremos o seguinte cenário, onde terei um bloco de repetição de notícia
   </div>
 </html>
 
-Para tornar essa <samp>&lt;div&gt;</samp> em um bloco de repetição de notícias, basta adicionar um atributo de <samp>class</samp>, um de <samp>id</samp> e outro de <samp>title</samp>, assim:
+Para tornar essa <samp>&lt;div&gt;</samp> um bloco de repetição de notícias, basta adicionar um atributo de <samp>class</samp>, um de <samp>id</samp> e outro de <samp>title</samp>, assim:
 
 <html>
   <div id="news" class="repeat" title="notícias">
@@ -216,9 +216,9 @@ Você pode adicionar facilmente um *link para descadastramento (unsubscribe)*, a
 
 h4. Link para descadastramento (unsubscribe)
 
-O *link de descadastramento* ou *unsubscribe* é um item recomendado a todas mensagens de email marketing. Ele serve para o usuário que quiser deixar de receber suas notícias por email, seja por desinteresse, ou qualquer outro motivo, possa ser efetivamente descadastrado de sua lista.
+O *link de descadastramento* ou *unsubscribe* é um item recomendado a todas mensagens de email marketing. Ele serve para que o usuário que quiser deixar de receber suas notícias por email, seja por desinteresse, ou qualquer outro motivo, possa ser efetivamente descadastrado de sua lista.
 
-O *Mailee.me* oferece uma solução simples, e, para inserir esse link em seus templates, basta apenas colocar esse código em seus templates:
+O *Mailee.me* oferece uma solução simples, e para inserir esse link em seus templates basta apenas colocar o seguinte código em seus templates:
 
 <html>
   <p>
@@ -231,13 +231,13 @@ O *Mailee.me* irá trocar automaticamente o destino no atributo <samp>href="#"</
 
 INFO. Recomendamos como boa prática *sempre* incluir ao menos um link para descadastro em suas mensagens.
 
-INFO. Você também poderá utilizar um atributo <samp>class="unsubscribe"</samp> ou <samp>id="unsubscribe"</samp>, porém, lembre-se que ao usar o atributo <samp>id="unsubscribe"</samp> ele só poderá ser utilizado UMA vez por template, e, portanto, não é indicado caso você precise colocar mais de um link *unsubscribe* em seu template.
+INFO. Você também poderá utilizar um atributo <samp>id="unsubscribe"</samp>, porém, lembre-se que ao usar o atributo <samp>id="unsubscribe"</samp> ele só poderá ser utilizado *uma* vez por template, e, portanto, não é indicado caso você precise colocar mais de um link *unsubscribe* em seu template.
 
-O descadastramento também pode ser realizado pela *integração de formulário de descadastro*. Saiba mais em "Integração por formulário":integration_form.html
+O descadastramento também pode ser realizado pela *integração de formulário de descadastro*. Saiba mais em "Integração por formulário":integration_form.html.
 
 h4. Visualização na Web (weblink)
 
-O *link para visualização na web* ou *weblink* é indicado para garantir que usuários que tenham problemas de visualização de suas mensagens no formato HTML, possam visualizar a mensagem no navegador, como uma página de web.
+O *link para visualização na web* ou *weblink* é indicado para garantir que usuários que tenham problemas de visualização de suas mensagens no formato HTML possam visualizar a mensagem no navegador, como uma página de web.
 
 Para inserir um *weblink* em sua mensagem, utilize o seguinte código:
 
@@ -250,11 +250,11 @@ Para inserir um *weblink* em sua mensagem, utilize o seguinte código:
 
 O *Mailee.me* irá trocar automaticamente o destino no atributo <samp>href="#"</samp> pela URL de visualização na web da mensagem.
 
-INFO. Você também poderá utilizar um <samp>id="weblink"</samp>, <samp>id="web-link"</samp>, <samp>id="web_link"</samp>, <samp>class="web-link"</samp> ou <samp>class="web_link"</samp>. Lembre-se que o atributo de <samp>id</samp> é único, e só poderá ser utilizado UMA vez por HTML, e, portanto, não é indicado caso você precise colocar mais de um link *forward* em seu template.
+INFO. Você também poderá utilizar um <samp>id="weblink"</samp>, <samp>id="web-link"</samp>, <samp>id="web_link"</samp>, <samp>class="web-link"</samp> ou <samp>class="web_link"</samp>. Lembre-se que o atributo de <samp>id</samp> é único, e só poderá ser utilizado *uma* vez por HTML, e, portanto, não é indicado caso você precise colocar mais de um link *forward* em seu template.
 
 h4. Encaminhar a mensagem (forward)
 
-Com o *link de encaminhar a mensagem* ou *forward* você permite que seus contatos possam encaminhar a mensagem para seus amigos o que poderá gerar novos contatos e aumentar sua lista.
+Com o *link de encaminhar a mensagem* ou *forward* você permite que seus contatos possam encaminhar a mensagem para seus amigos, o que poderá gerar novos contatos e aumentar sua lista.
 
 Para inserir um link *forward* em seus templates, basta adicionar o seguinte código:
 
@@ -267,7 +267,7 @@ Para inserir um link *forward* em seus templates, basta adicionar o seguinte có
 
 O *Mailee.me* irá trocar automaticamente o destino no atributo <samp>href="#"</samp> pela URL de encaminhar para amigos.
 
-INFO. Se você desejar poderá utilizar um <samp>id="forward"</samp>, porém lembre-se que o atributo <samp>id</samp> é único, e só poderá ser utilizado UMA vez por HTML, e, portanto, não é recomendado caso você precise colocar mais de um link de *forward* em seu template.
+INFO. Se você desejar poderá utilizar um <samp>id="forward"</samp>, porém lembre-se que o atributo <samp>id</samp> é único, e só poderá ser utilizado *uma* vez por HTML, e, portanto, não é recomendado caso você precise colocar mais de um link de *forward* em seu template.
 
 h4. Adicionando à lista de contatos (whitelist)
 
@@ -437,3 +437,4 @@ Para saber mais sobre HTML e CSS, acesse os links abaixo:
 * "Artigo na Wikipedia sobre CSS":http://pt.wikipedia.org/wiki/Cascading_Style_Sheets - Informações sobre CSS (em português)
 
 </div>
+
