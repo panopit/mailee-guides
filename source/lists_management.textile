@@ -1,0 +1,61 @@
+h2. Gerenciamento de Listas
+
+Esse artigo irá mostrar como é realizado o gerenciamento de listas.
+
+* Criação de listas
+* Edição de listas
+* Exclusão de listas
+* Visualização dos contatos inseridos em listas
+
+endprologue.
+
+h3. Criando, editando e excluindo uma lista
+
+Para iniciar o gerenciamento de listas, selecione *Contatos* na barra de navegação e clique no botão _gerenciar listar_ no final da coluna lateral.
+
+!images/lists_management/lists_manage_button.png(Gerenciar listas)!
+
+h4. Criando uma lista de contatos
+
+p. Ao iniciar o gerenciamento de em uma nova conta, o _modal_ de gerenciamento estará vazio. Para criar uma lista clique no botão *adicionar uma lista*
+
+p. Na tela de criação de lista você tem os seguintes campos:
+
+* *Nome* - Nome da sua futura lista, campo obrigatório
+
+* *Empresa* - Nome da empresa, ou do produto 
+
+* *Site* - Endereço na web
+
+* *Endereço* - Endereço físico
+
+* *Fone* - Número de contato
+
+* *Descrição* - Texto livre.
+
+INFO. Você sabe porquê há tantos campos não obrigatórios na criação de uma lista? É porque você pode usá-los como campos dinâmicos em suas mensagens. Veja mais detalhes no nosso "*manual*":http://www.mailee.me/manual.
+
+h4. Editando uma lista de contatos
+
+Dentro do gerenciador de lista, posicione o mouse sobre a lista desejada. Perceba que a lista é destacada ao passar o mouse, adquirindo um fundo azul claro e deixando visível o botão _"excluir"_. Agora é só clicar sobre a lista destacada e você será direcionado a tela de edição. A edição possuí os mesmos campos que a criação de lista. 
+
+!images/lists_management/list_modal_hover.png(Modal de listas)!
+
+h4. Exclusão de lista de contatos
+
+Dentro do gerenciador de lista, posicione o mouse sobre a lista desejada. Perceba que a lista é destacada ao passar o mouse, adquirindo um fundo azul claro e deixando visível o botão _"excluir"_. Clique no botão _"excluir"_. Aguarde a mensagem do sistema confirmando a exclusão.
+
+INFO. Excluir uma lista de contatos não irá excluir os contatos inseridos na lista.
+
+h3. Visualizando os contatos inseridos em listas.
+
+Para visualizar os contatos inseridos dentro de listas e seguimentos, clique no botão _"listas & segmentos"_ e clique na lista e ou seguimento desejado. Observe que a cor da lista e do seguimento ficarão sólidas ao serem clicadas, demonstrando que estão ativas.
+
+!images/lists_management/lists_select.png(Seleção de lista)!
+
+Com a lista selecionada, é possível voltar a tela de contatos e realizar diversas ações. Para que a lista de contatos mostre novamente todos os contatos, é necessário clicar novamente em _"listas & segmentos"_ e desmarcar as opções.
+
+!images/lists_management/lists_unslect.png(Não-seleção de lista)!
+
+
+

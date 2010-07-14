@@ -1,0 +1,108 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Mailee.me Help - Integração com Site Através de Formulário</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:bold' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/style.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/print.css" media="print" />
+    <script type="text/javascript" src="files/javascripts/guides.js"></script>
+    <script type="text/javascript" src="files/javascripts/code_highlighter.js"></script>
+    <script type="text/javascript" src="files/javascripts/highlighters.js"></script>
+  </head>
+  <body class="guide">
+    <div id="topNav">
+      <div class="wrapper">
+        <strong>Mais em <a href="http://www.mailee.me/">mailee.me:</a> </strong>
+        <a href="http://www.mailee.me/recursos">Recursos</a> |
+        <a href="http://www.mailee.me/precos">Preços</a> |
+        <a href="http://www.mailee.me/cadastro">Cadastro</a>
+      </div>
+    </div>
+    <div id="header">
+      <div class="header_wrapper">
+        <div class="wrapper clearfix">
+          <h1><a href="index.html" title="Guides">Mailee.me Help</a></h1>
+          <p class="hide"><a href="#mainCol">Skip navigation</a>.</p>
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="index"><a href="index.html" onclick="guideMenu(); return false;" id="guidesMenu">Índice</a>
+              <div id="guides" class="clearfix" style="display: none;">
+                <hr />
+                <dl class="L">
+                  <dt>Começe aqui</dt>
+                  <dd><a href="getting_started.html">Iniciando com o Mailee.me</a></dd>
+                </dl>
+                <dl class="R">
+                  <dt>Importação</dt>
+                  <dd><a href="import_csv.html">Importando CSV</a></dd>
+                  <dt>Exportação</dt>
+                  <dd><a href="export.html">Exportando contatos</a></dd>
+                  <dt>Integração</dt>
+                  <dd><a href="integration_rest.html">API REST</a></dd>
+                  <dd><a href="integration_rails.html">Integrando com Ruby on Rails</a></dd>
+                  <dd><a href="integration_php.html">Integrando com PHP</a></dd>
+                  <dd><a href="integration_spree.html">Integrando com Spree</a></dd>
+                  <dt>Templates</dt>
+                  <dd><a href="templates_creating.html">Como criar templates</a></dd>
+                  <dd><a href="templates_uploading.html">Como realizar <em>upload</em> de templates</a></dd>
+                  <dd><a href="templates_good_practices.html">Conheça boas práticas na criação de email marketing em HTML</a></dd>
+                </dl>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="feature">
+      <div class="wrapper">
+        <h2>Integração com Site Através de Formulário</h2>
+<p>Este artigo irá mostrar como o Mailee.me cria para você um código <em>hmtl</em> pronto para ser integrado ao seu site. Assim os seus contatos podem fornecer seus emails diretamente para sua base de dados do Mailee.me, tudo através do seu Site. Os formulários estão disponíveis para.</p>
+<ul>
+	<li>Cadastro de contato</li>
+</ul>
+<ul>
+	<li>Descadastro de contato</li>
+</ul>
+              <div id="subCol">
+        <h3 class="chapter"><img src="images/chapters_icon.gif" alt="Capítulos">Cap&iacute;tulos</h3>
+        <ol class="chapters">
+<li><a href="#gerandoo-cdigopara-cadastro">Gerando o Código para Cadastro</a><ul></ul></li><li><a href="#gerando-cdigopara-descadastro">Gerando Código para Descadastro</a><ul></ul></li></ol></div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="wrapper">
+        <div id="mainCol"><h3 id="gerandoo-cdigopara-cadastro">1 Gerando o Código para Cadastro</h3>
+<p>Primeiro, vá até a guia <strong>configurações</strong> da barra de navegação. Selecione <em>Integrar</em> e clique no botão <em>cadastro</em></p>
+<p><img src="images/integration/form/integration_form_button.png" title="Integração por formulário" alt="Integração por formulário" /></p>
+<p>Escolha para qual ou quais listas os contatos devem ser inscritos.</p>
+<div class='info'><p>Lembre-se. Os contatos devem estar inscritos em listas para receber suas mensagens.</p></div>
+<p>Após ter escolhido as listas, clique no botão <em>Gerar novo Html</em>.</p>
+<div class='warning'><p>Antes de copiar o código, localize a terceira e quarta linha. Elas possuem os valores <strong>URL_OK</strong> e <strong>URL_ERROR</strong>. Ambos devem ser substituídos.</p></div>
+<p><img src="images/integration/form/value_change.png" title="Valores" alt="Valores" /></p>
+<p><strong>URL_OK</strong> &#8211; Substitua pela página em seu site que aparecerá depois que o contato for inserido com sucesso no Mailee.me.</p>
+<p><strong>URL_ERROR</strong> &#8211; Substitua pela página em seu site que aparecerá depois que ocorrer algum problema na inserção do contato no Mailee. Será passado o erro por <span class="caps">GET</span> pela variável &#8220;error&#8221;.</p>
+<h3 id="gerando-cdigopara-descadastro">2 Gerando Código para Descadastro</h3>
+<p>Não é necessário gerar o código de descadastro de contatos, basta copiar e colar. Não esquecendo de alterar os valores:</p>
+<p><strong>URL_OK</strong> &#8211; Substitua pela página em seu site que aparecerá depois que o contato for inserido com sucesso no Mailee.me.</p>
+<p><strong>URL_ERROR</strong> &#8211; Substitua pela página em seu site que aparecerá depois que ocorrer algum problema na inserção do contato no Mailee. Será passado o erro por <span class="caps">GET</span> pela variável &#8220;error&#8221;.</p>
+<p><img src="images/integration/form/unsubscribe.png" title="descadastro" alt="descadastro" /></p></div>
+      </div>
+    </div>
+    <hr class="hide">
+    <div id="footer">
+      <div class="wrapper">
+        <p>Este trabalho é licenciado como <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0</a></p>
+      </div>
+    </div>
+  </body>
+</html>
+      <script type="text/javascript">
+      	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+      	var pageTracker = _gat._getTracker("");
+      	pageTracker._initData();
+      	pageTracker._trackPageview();
+      </script>      

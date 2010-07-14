@@ -1,0 +1,38 @@
+h2. Importando Contatos Rapidamente
+
+Este artigo irá mostrar o procedimento de importação de diversos contatos através da *importação rápida*.
+
+endprologue.
+
+h3. Importação
+
+Clique em *Contatos* na barra de navegação e depois clique em _Importar_ na coluna lateral.
+
+Na tela de importações, clique no botão de *importação rápida*.
+
+!images/import/quick/import_screen.png(Tela de importação)!
+
+No quadro, escreva ou cole os emails que deseja adicionar a sua lista de contatos.
+
+!images/import/quick/import_quick_form.png(Formulário de importação rápida)!
+
+WARNING. Todos envios do Mailee.me são realizados para listas de emails, ou segmentos de listas. Por isso, sempre *adicione os seus contatos em listas*.  
+
+
+h3. Formatos aceitos na importação rápida
+
+
+* *Nome e email* 
+
+_Contato Softa_, _contato@softa.com.br_ 
+
+_Suporte Mailee_, _suporte@mailee.me_ 
+
+* *Apenas email* 
+
+_suporte@mailee.me_
+
+* *Formato de assinaturas de email*
+ 
+_"Suporte Mailee"_, _suporte@mailee.me_ 
+

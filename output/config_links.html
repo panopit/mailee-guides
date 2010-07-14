@@ -1,0 +1,102 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Mailee.me Help - Configuração dos links</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:bold' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/style.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/print.css" media="print" />
+    <script type="text/javascript" src="files/javascripts/guides.js"></script>
+    <script type="text/javascript" src="files/javascripts/code_highlighter.js"></script>
+    <script type="text/javascript" src="files/javascripts/highlighters.js"></script>
+  </head>
+  <body class="guide">
+    <div id="topNav">
+      <div class="wrapper">
+        <strong>Mais em <a href="http://www.mailee.me/">mailee.me:</a> </strong>
+        <a href="http://www.mailee.me/recursos">Recursos</a> |
+        <a href="http://www.mailee.me/precos">Preços</a> |
+        <a href="http://www.mailee.me/cadastro">Cadastro</a>
+      </div>
+    </div>
+    <div id="header">
+      <div class="header_wrapper">
+        <div class="wrapper clearfix">
+          <h1><a href="index.html" title="Guides">Mailee.me Help</a></h1>
+          <p class="hide"><a href="#mainCol">Skip navigation</a>.</p>
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="index"><a href="index.html" onclick="guideMenu(); return false;" id="guidesMenu">Índice</a>
+              <div id="guides" class="clearfix" style="display: none;">
+                <hr />
+                <dl class="L">
+                  <dt>Começe aqui</dt>
+                  <dd><a href="getting_started.html">Iniciando com o Mailee.me</a></dd>
+                </dl>
+                <dl class="R">
+                  <dt>Importação</dt>
+                  <dd><a href="import_csv.html">Importando CSV</a></dd>
+                  <dt>Exportação</dt>
+                  <dd><a href="export.html">Exportando contatos</a></dd>
+                  <dt>Integração</dt>
+                  <dd><a href="integration_rest.html">API REST</a></dd>
+                  <dd><a href="integration_rails.html">Integrando com Ruby on Rails</a></dd>
+                  <dd><a href="integration_php.html">Integrando com PHP</a></dd>
+                  <dd><a href="integration_spree.html">Integrando com Spree</a></dd>
+                  <dt>Templates</dt>
+                  <dd><a href="templates_creating.html">Como criar templates</a></dd>
+                  <dd><a href="templates_uploading.html">Como realizar <em>upload</em> de templates</a></dd>
+                  <dd><a href="templates_good_practices.html">Conheça boas práticas na criação de email marketing em HTML</a></dd>
+                </dl>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="feature">
+      <div class="wrapper">
+        <h2>Configuração dos links</h2>
+<p>Para que o Mailee.me contabilize os <em>clicks</em> em sua mensagem, o Mailee.me modifica o caminho dos links para a página que irá realizar a contabilização. Por padrão, o caminho desta página aponta para <tt>seusubdominio.mailee.me</tt>, mas é possível apontar para o seu site.</p>
+<ul>
+	<li>Como configurar o <span class="caps">DNS</span> do seu site</li>
+	<li>Como definir o caminho no Mailee.me</li>
+</ul>
+              <div id="subCol">
+        <h3 class="chapter"><img src="images/chapters_icon.gif" alt="Capítulos">Cap&iacute;tulos</h3>
+        <ol class="chapters">
+<li><a href="#configuraro-dns">Configurar o <span class="caps">DNS</span></a><ul></ul></li><li><a href="#configuraro-maileeme">Configurar o Mailee.me</a><ul></ul></li></ol></div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="wrapper">
+        <div id="mainCol"><h3 id="configuraro-dns">1 Configurar o <span class="caps">DNS</span></h3>
+<p>O primeiro passo para configurar o <span class="caps">DNS</span> para colocar os links para o seu site é escolher um subdomínio. Se o seu domínio é <tt>seu_dominio.com</tt>, você pode optar, por exemplo, por <tt>email.seu_dominio.com</tt> ou <tt>mkt.seu_dominio.com</tt>. Uma vez escolhido, abra o painel de controle da sua hospedagem. No painel, crie um novo registro do tipo <span class="caps">CNAME</span> com o subdomínio que você escolheu (apenas o subdomínio) apontando para <tt>subdominio_no_mailee.mailee.me.</tt> (incluindo o ponto no final). O subdomínio que você escolheu <strong>não precisa</strong> ser o mesmo que você usa no Mailee.me.</p>
+<div class='info'><p>É muito importante que exista o ponto no final, é ele que indica que você quer apontar para <tt>subdominio_no_mailee.mailee.me</tt> e não para <tt>subdominio_no_mailee.mailee.me.seudominio.com.br</tt>).</p></div>
+<p>Exemplo no painel da locaweb:</p>
+<p><img src="images/config_links/dns_config.png" title="Configuração do DNS na Locaweb" alt="Configuração do DNS na Locaweb" /></p>
+<p>No exemplo acima, estou apontando <tt>email.seu_dominio.com</tt>, que é o subdomínio que escolhí no <strong>meu domínio</strong> para <tt>softa.mailee.me</tt> que é o <strong>meu subdomínio no Mailee.me</strong>.</p>
+<h3 id="configuraro-maileeme">2 Configurar o Mailee.me</h3>
+<p>Vá em configurações e depois em links. Defina o caminho completo escolhido, com subdomínio e domínio (não coloque o &#8220;http&#8221;):</p>
+<p><img src="images/config_links/config_url.png" title="Definindo o link" alt="Definindo o link" /></p>
+<p>No exemplo acima foi definido <tt>mkt.softa.com.br</tt>. Isto quer dizer que o meu domínio é <tt>softa.com.br</tt> e o subdomínio que configurei é o <tt>mkt</tt>. Clique em <em>Salvar</em>. Pronto. Agora, se quiser, envie uma mensagem de para o seu e-mail (envie uma mensagem real, não um teste) para ver se está funcionando. Como você pode ver no rodapé do e-mail abaixo, o link está apontando corretamente para <tt>mkt.softa.com.br</tt>.</p>
+<p><img src="images/config_links/modified_link.png" title="Link modificado corretamente" alt="Link modificado corretamente" /></p></div>
+      </div>
+    </div>
+    <hr class="hide">
+    <div id="footer">
+      <div class="wrapper">
+        <p>Este trabalho é licenciado como <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0</a></p>
+      </div>
+    </div>
+  </body>
+</html>
+      <script type="text/javascript">
+      	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+      	var pageTracker = _gat._getTracker("");
+      	pageTracker._initData();
+      	pageTracker._trackPageview();
+      </script>      

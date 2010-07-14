@@ -1,0 +1,111 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Mailee.me Help - Como funcionam as Campanhas</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:bold' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/style.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/print.css" media="print" />
+    <script type="text/javascript" src="files/javascripts/guides.js"></script>
+    <script type="text/javascript" src="files/javascripts/code_highlighter.js"></script>
+    <script type="text/javascript" src="files/javascripts/highlighters.js"></script>
+  </head>
+  <body class="guide">
+    <div id="topNav">
+      <div class="wrapper">
+        <strong>Mais em <a href="http://www.mailee.me/">mailee.me:</a> </strong>
+        <a href="http://www.mailee.me/recursos">Recursos</a> |
+        <a href="http://www.mailee.me/precos">Preços</a> |
+        <a href="http://www.mailee.me/cadastro">Cadastro</a>
+      </div>
+    </div>
+    <div id="header">
+      <div class="header_wrapper">
+        <div class="wrapper clearfix">
+          <h1><a href="index.html" title="Guides">Mailee.me Help</a></h1>
+          <p class="hide"><a href="#mainCol">Skip navigation</a>.</p>
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="index"><a href="index.html" onclick="guideMenu(); return false;" id="guidesMenu">Índice</a>
+              <div id="guides" class="clearfix" style="display: none;">
+                <hr />
+                <dl class="L">
+                  <dt>Começe aqui</dt>
+                  <dd><a href="getting_started.html">Iniciando com o Mailee.me</a></dd>
+                </dl>
+                <dl class="R">
+                  <dt>Importação</dt>
+                  <dd><a href="import_csv.html">Importando CSV</a></dd>
+                  <dt>Exportação</dt>
+                  <dd><a href="export.html">Exportando contatos</a></dd>
+                  <dt>Integração</dt>
+                  <dd><a href="integration_rest.html">API REST</a></dd>
+                  <dd><a href="integration_rails.html">Integrando com Ruby on Rails</a></dd>
+                  <dd><a href="integration_php.html">Integrando com PHP</a></dd>
+                  <dd><a href="integration_spree.html">Integrando com Spree</a></dd>
+                  <dt>Templates</dt>
+                  <dd><a href="templates_creating.html">Como criar templates</a></dd>
+                  <dd><a href="templates_uploading.html">Como realizar <em>upload</em> de templates</a></dd>
+                  <dd><a href="templates_good_practices.html">Conheça boas práticas na criação de email marketing em HTML</a></dd>
+                </dl>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="feature">
+      <div class="wrapper">
+        <h2>Como funcionam as Campanhas</h2>
+<p>Esse artigo irá mostrar como funcionam as campanhas de email e porque elas são importantes no Mailee.me</p>
+              <div id="subCol">
+        <h3 class="chapter"><img src="images/chapters_icon.gif" alt="Capítulos">Cap&iacute;tulos</h3>
+        <ol class="chapters">
+<li><a href="#criando-uma-nova-campanha">Criando Uma Nova Campanha</a><ul></ul></li><li><a href="#mtricas">Métricas</a><ul></ul></li><li><a href="#editandoas-campanhas">Editando as Campanhas</a><ul></ul></li><li><a href="#reenviode-mensagempara-listas-diferentes">Reenvio de Mensagem para Listas Diferentes</a><ul></ul></li></ol></div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="wrapper">
+        <div id="mainCol"><h3 id="criando-uma-nova-campanha">1 Criando Uma Nova Campanha</h3>
+<p>Selecione <strong>Mensagens</strong> na barra de navegação do Mailee.me</p>
+<p>Se você nunca usou o Mailee.me antes, a sua tela de mensagens estará vazia e a única forma de criar uma nova mensagem é criando uma nova campanha. Para isso basta clicar no botão</p>
+<p><img src="images/campaign/new_campaign.png" title="Nova campanha" alt="Nova campanha" /></p>
+<div class='info'><p>Mas porque é necessário criar uma campanha antes de realizar o envio da mensagem? Porque a campanha é quem agrega todas as métricas das mensagens como índices de visualização, retornos e descadastros.</p></div>
+<p>Além disso, ao enviar uma nova mensagem de uma campanha existente, os dados de remetente, template, lista e conteúdo já estarão preenchidos.</p>
+<p>Na tela de nova campanha preencha os dados de <strong>Assunto</strong> das mensagens, <strong>Nome</strong> e <strong>email</strong> do remetente. Optando por usar o <em>Analytics</em> você poderá rastrear os acessos ao seu site que tiveram origem nos emails enviados pelo Mailee.me.</p>
+<p>Após selecionar a lista para quem as mensagens serão enviadas, basta clicar em salvar e você será redirecionado automaticamente para tela de uma nova mensagem.</p>
+<h3 id="mtricas">2 Métricas</h3>
+<p>Quando você utiliza uma campanha para realizar envios periódicos para um público em específico você pode se perguntar se está tendo retorno sobre estas ações. As métricas irão responder a esta questão e mais algumas.</p>
+<p>Para isto, basta clicar no nome da campanha.</p>
+<p>Exemplo de uma campanha ao longo do tempo.</p>
+<p><img src="images/campaign/campaign_graph.png" title="Gráfico de campanha" alt="Gráfico de campanha" /></p>
+<ul>
+	<li>Havendo aumento de visualizações, mostra que os seus contatos têm interesse em visualizar a sua mensagem.</li>
+	<li>Um grande número de descadastro pode demonstrar que não há mais interesse no conteúdo nas mensagens.</li>
+	<li>Um número decrescente de descadastros mostra que sua base de dados está se tornando sólida com contatos que possuem interesse nos assuntos das suas mensagens.</li>
+	<li>Um aumento nas visualizações totais demonstra que sua mensagem tem sido relida ao longo do tempo e ou enviada para outras pessoas por um contato que acredita que o conteúdo é relevante para outras pessoas.</li>
+</ul>
+<h3 id="editandoas-campanhas">3 Editando as Campanhas</h3>
+<p>Após uma campanha ter sido criada é possível editar algumas informações, como o nome da campanha. Se necessárop, os dados de remetente e assunto podem ser editados diretamente na mensagem. No 2º passo.</p>
+<p><img src="images/campaign/data_change.png" title="Alteração de dados" alt="Alteração de dados" /></p>
+<h3 id="reenviode-mensagempara-listas-diferentes">4 Reenvio de Mensagem para Listas Diferentes</h3>
+<p>É possível realizar o reenvio da mensagem para outras listas de contatos. Altera-se a lista no 2º passo de envio da mensagem. Todo conteúdo da mensagem é copiado quando o reenvio é utilizado. Assim é possível comparar no gráfico da campanha quais listas de contatos respodem melhor à assuntos específicos.</p></div>
+      </div>
+    </div>
+    <hr class="hide">
+    <div id="footer">
+      <div class="wrapper">
+        <p>Este trabalho é licenciado como <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0</a></p>
+      </div>
+    </div>
+  </body>
+</html>
+      <script type="text/javascript">
+      	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+      	var pageTracker = _gat._getTracker("");
+      	pageTracker._initData();
+      	pageTracker._trackPageview();
+      </script>      

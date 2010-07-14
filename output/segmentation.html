@@ -1,0 +1,235 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Mailee.me Help - Segmentação</title>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:bold' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/style.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="files/stylesheets/print.css" media="print" />
+    <script type="text/javascript" src="files/javascripts/guides.js"></script>
+    <script type="text/javascript" src="files/javascripts/code_highlighter.js"></script>
+    <script type="text/javascript" src="files/javascripts/highlighters.js"></script>
+  </head>
+  <body class="guide">
+    <div id="topNav">
+      <div class="wrapper">
+        <strong>Mais em <a href="http://www.mailee.me/">mailee.me:</a> </strong>
+        <a href="http://www.mailee.me/recursos">Recursos</a> |
+        <a href="http://www.mailee.me/precos">Preços</a> |
+        <a href="http://www.mailee.me/cadastro">Cadastro</a>
+      </div>
+    </div>
+    <div id="header">
+      <div class="header_wrapper">
+        <div class="wrapper clearfix">
+          <h1><a href="index.html" title="Guides">Mailee.me Help</a></h1>
+          <p class="hide"><a href="#mainCol">Skip navigation</a>.</p>
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="index"><a href="index.html" onclick="guideMenu(); return false;" id="guidesMenu">Índice</a>
+              <div id="guides" class="clearfix" style="display: none;">
+                <hr />
+                <dl class="L">
+                  <dt>Começe aqui</dt>
+                  <dd><a href="getting_started.html">Iniciando com o Mailee.me</a></dd>
+                </dl>
+                <dl class="R">
+                  <dt>Importação</dt>
+                  <dd><a href="import_csv.html">Importando CSV</a></dd>
+                  <dt>Exportação</dt>
+                  <dd><a href="export.html">Exportando contatos</a></dd>
+                  <dt>Integração</dt>
+                  <dd><a href="integration_rest.html">API REST</a></dd>
+                  <dd><a href="integration_rails.html">Integrando com Ruby on Rails</a></dd>
+                  <dd><a href="integration_php.html">Integrando com PHP</a></dd>
+                  <dd><a href="integration_spree.html">Integrando com Spree</a></dd>
+                  <dt>Templates</dt>
+                  <dd><a href="templates_creating.html">Como criar templates</a></dd>
+                  <dd><a href="templates_uploading.html">Como realizar <em>upload</em> de templates</a></dd>
+                  <dd><a href="templates_good_practices.html">Conheça boas práticas na criação de email marketing em HTML</a></dd>
+                </dl>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="feature">
+      <div class="wrapper">
+        <h2>Segmentação</h2>
+<p>Enviar mensagens pertinentes e focadas é muito importante para ter o melhor retorno para suas ações de email marketing. O Mailee permite segmentar seus contatos de forma fácil e, ao mesmo tempo, muito completa.</p>
+<ul>
+	<li>Como criar segmentos.</li>
+	<li>Quais os filtros existentes e como funcionam.</li>
+	<li>Como enviar uma mensagem para um segmento.</li>
+</ul>
+              <div id="subCol">
+        <h3 class="chapter"><img src="images/chapters_icon.gif" alt="Capítulos">Cap&iacute;tulos</h3>
+        <ol class="chapters">
+<li><a href="#oqueumsegmento">O que é um segmento?</a><ul></ul></li><li><a href="#criandoumsegmento">Criando um segmento</a><ul></ul></li><li><a href="#filtros">Filtros</a><ul><li><a href="#pornome">Por nome</a></li><li><a href="#porstatus">Por status</a></li><li><a href="#porsexo">Por sexo</a></li><li><a href="#pordomnio">Por domínio</a></li><li><a href="#poremail">Por email</a></li><li><a href="#poridade">Por idade</a></li><li><a href="#poraniversrio">Por aniversário</a></li><li><a href="#portag">Por tag</a></li><li><a href="#porlocalizao">Por localização</a></li><li><a href="#por-klout">Por Klout</a></li><li><a href="#porseguidoresno-twitter">Por seguidores no Twitter</a></li><li><a href="#porconexesno-linked-in">Por conexões no LinkedIn</a></li><li><a href="#porrecomendaesno-linked-in">Por recomendações no LinkedIn</a></li><li><a href="#porcampospersonalizados">Por campos personalizados</a></li></ul></li><li><a href="#enviandoparaumsegmento">Enviando para um segmento</a><ul></ul></li></ol></div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="wrapper">
+        <div id="mainCol"><h3 id="oqueumsegmento">1 O que é um segmento?</h3>
+<div style="float:right;margin-left:20px;"><img src="images/segmentation/segmentation.jpg" title="Segmentação" alt="Segmentação" /></div>
+<p>Um segmento é um conjunto de contatos da sua base que obedecem certos critérios determinados. Os critérios para um segmento são determinados por você. Você pode, por exemplo, criar um segmento de todas as mulheres cujo e-mail é do Hotmail, que moram próximo de São Paulo e que torcem para o Corinthians. Uma vez criado, um segmento funciona como uma <em>lista dinâmica</em>. Isto é, sempre que um novo contato satisfizer os critérios, ele estará no segmento automaticamente. Isto é muito prático, pois não requer que você fique organizando os contatos em listas &#8220;rígidas&#8221;, mas apenas que mantenha os dados dos contatos o mais atualizado possível e que crie os segmentos corretos.</p>
+<p>A segmentação é extremamente útil para criar campanhas e promoções focadas, pois é possível enviar mensagens para um determinado segmento.</p>
+<p>O Mailee permite criar segmentos por diversos critérios apresentados abaixo, com destaque para localização geográfica, possuir certas tags que são collhidas automaticamente de redes sociais e também a influência e número de seguidores em certas redes sociais, além dos básicos, nome, sexo, idade&#8230;</p>
+<h3 id="criandoumsegmento">2 Criando um segmento</h3>
+<div style="float:right;margin-left:20px;"><img src="images/segmentation/link_busca_avancada.png" title="Busca avançada" alt="Busca avançada" /></div>
+<p>Para criar um segmento, vá até a tela de contatos e clique em &#8220;Pesquisa avançada&#8221;, logo abaixo do campo de busca. Ao clicar neste link, abrirá o <em>box</em> de pesquisa avançada, com todas as <a href="#filtros">opções</a>.</p>
+<p><img src="images/segmentation/pesquisa_avancada_geral.png" title="Busca avançada" alt="Busca avançada" /></p>
+<p>Após selecionar o filtro que você deseja e adicioná-lo, aparecerá uma lista com todos os filtros escolhidos</p>
+<p><img src="images/segmentation/segment_list.png" title="Lista dos filtros do segmento" alt="Lista dos filtros do segmento" /></p>
+<div style="float:right;margin-left:20px;"><img src="images/segmentation/segment_contacts_found.png" title="Total de contatos encontrados" alt="Total de contatos encontrados" /></div>
+<p>No canto superior à direta, será informado o total de contatos atuais (ver filtros temporais abaixo) encontrados pelo filtro.</p>
+<div style="clear:both;">&nbsp;</div>
+<p>Continue adicionando filtros enquanto necessário e clique no botão &#8220;criar segmento&#8221;. Informe o nome do segmento e dê o <em>ok</em>.</p>
+<div style="float:left;margin-right:20px;"><img src="images/segmentation/segment_create.png" title="Criar segmento" alt="Criar segmento" /></div>
+<div style="clear:both;">&nbsp;</div>
+<p>O filtro será salvo e poderá ser visto na listagem e aplicado sempre que necessário.</p>
+<p><img src="images/segmentation/segment_box.png" title="Lista dos segmentos" alt="Lista dos segmentos" /></p>
+<h3 id="filtros">3 Filtros</h3>
+<h4 id="pornome">3.1 Por nome</h4>
+<div style="float:left;margin-right:20px;"><img src="images/segmentation/por_nome.png" title="Filtro por nome" alt="Filtro por nome" /></div>
+<p>O filtro por nome permite buscar contatos cujo nome seja igual, diferente, que contenha ou que não contenha uma certa sequência de caracteres. O filtro &#8220;contendo&#8221; é realizado sem levar em consideração caracteres maiúsculos e minúsculos. Por exemplo, um filtro por <em>witt</em> deve encontrar contatos cujo nome seja <em>Wittgenstein</em> ou <em>Hewitt</em>.</p>
+<div style="clear:both;">&nbsp;</div>
+<h4 id="porstatus">3.2 Por status</h4>
+<p>O filtro por status é útil em diversos cenários. Você pode utilizá-lo para valorizar os contatos confirmados (veja abaixo o que cada status representa), ou também para limpar contatos ainda sem acessos.</p>
+<p>Este filtro apresenta as seguintes opções:</p>
+<div style="float:right;margin-left:20px;width:240px;"><img src="images/segmentation/por_status.png" title="Filtro por status" alt="Filtro por status" /></div>
+<ul>
+	<li><strong>Aguardando</strong>
+	<ul>
+		<li>O contato se cadastrou pelo formulário, mas ainda não confirmou o cadastro.</li>
+	</ul></li>
+	<li><strong>Descadastrado</strong>
+	<ul>
+		<li>O contato solicitou descadastro.</li>
+	</ul></li>
+	<li><strong>Inválido</strong>
+	<ul>
+		<li>O filtro de spam do Mailee rejeitou este contato ou o último envio feito para este contato foi rejeitado em definitivo. Os motivos mais comuns para isto é que o email ou o domínio não existem ou o servidor rejeitou os emails 3 vezes seguidas.</li>
+	</ul></li>
+	<li><strong>Em análise</strong>
+	<ul>
+		<li>O contato foi recém cadastrado e está em análise anti-spam do Mailee.</li>
+	</ul></li>
+	<li><strong>Soft bounce</strong>
+	<ul>
+		<li>O último envio feito para este contato foi rejeitado temporariamente, mas ele ainda está ativo. Os motivos mais comuns para isto é caixa cheia, suspeita de spam ou erro temporário. Se isto se repetir 3 vezes o contato será invalidado.</li>
+	</ul></li>
+	<li><strong>Desconhecido</strong>
+	<ul>
+		<li>O contato ainda não recebeu mensagens.</li>
+	</ul></li>
+	<li><strong>Válido</strong>
+	<ul>
+		<li>O contato já recebeu mensagens mas ainda não acessou.</li>
+	</ul></li>
+	<li><strong>Confirmado</strong>
+	<ul>
+		<li>O contato já recebeu e acessou mensagens e não teve retornos.</li>
+	</ul></li>
+</ul>
+<div style="clear:both;">&nbsp;</div>
+<h4 id="porsexo">3.3 Por sexo</h4>
+<div style="float:left;margin-right:20px;width:240px;"><img src="images/segmentation/por_sexo.png" title="Filtro por sexo" alt="Filtro por sexo" /></div>
+<p>O filtro por sexo permite segmentar sua base em masculino ou feminino. Para importar os contatos com esta coluna corretamente utilize os valores &#8220;M&#8221; e &#8220;F&#8221;.</p>
+<div style="clear:both;">&nbsp;</div>
+<h4 id="pordomnio">3.4 Por domínio</h4>
+<div style="float:right;margin-left:20px;width:240px;"><img src="images/segmentation/por_dominio.png" title="Filtro por domínio" alt="Filtro por domínio" /></div>
+<p>O filtro por domínio permite segmentar sua pelos domínios dos e-mails de seus contatos, como por exemplo <tt>gmail.com</tt>, <tt>hotmail.com</tt> e <tt>yahoo.com</tt>. O filtro já traz os 8 domínios mais comuns em sua base, e você pode também escrever o domínio completo (como em <tt>meudominio.com.br</tt>) no campo em branco.</p>
+<p>Esta segmentação é interessante quando você quer comparar resultados entre domínios, quer fazer uma promoção especial para uma empresa específica (<tt>dominiodaempresa.com.br</tt>) ou quer mandar uma mensagem diferente para um certo domínio que possua alguma restrição em relação ao formato da mensagem.</p>
+<div style="clear:both;">&nbsp;</div>
+<h4 id="poremail">3.5 Por email</h4>
+<div style="float:left;margin-right:20px;width:240px;"><img src="images/segmentation/por_email.png" title="Filtro por email" alt="Filtro por email" /></div>
+<p>O filtro por email permite buscar contatos cujo email seja igual, diferente, que contenha ou que não contenha uma certa sequência de caracteres. O filtro &#8220;contendo&#8221; é realizado sem levar em consideração caracteres maiúsculos e minúsculos. Por exemplo, um filtro por <em>witt</em> deve encontrar contatos cujo email seja <em>wittgenstein@tractatus.org</em> ou <em><span class="caps">JOHN</span>.HEWITT@GMAIL.<span class="caps">COM</span></em>.</p>
+<div style="clear:both;">&nbsp;</div>
+<h4 id="poridade">3.6 Por idade</h4>
+<div style="float:right;margin-left:20px;width:240px;"><img src="images/segmentation/por_idade.png" title="Filtro por idade" alt="Filtro por idade" /></div>
+<p>O filtro por idade permite segmentar seus contatos por faixas de idade. Os valores vão de 0 a 125. O valor padrão é 20-40 mas você pode modificá-lo arrastando as pontas do <em>slider</em>.</p>
+<div style="clear:both;">&nbsp;</div>
+<h4 id="poraniversrio">3.7 Por aniversário</h4>
+<p>O filtro por aniversário permite segmentar seus contatos de três modos:</p>
+<div style="float:right;margin-left:20px;width:340px;"><img src="images/segmentation/por_aniversario.png" title="Filtro por aniversário" alt="Filtro por aniversário" /></div>
+<ul>
+	<li>Neste mês
+	<ul>
+		<li>Este filtro apresentará os contatos cujos aniversários sejam no mês em que filtro está sendo <em>aplicado</em>. Isto significa dizer que, estando em janeiro, você verá os contatos que nasceram em janeiro, da mesma forma, em junho você verá os contatos que nasceram em junho.</li>
+	</ul></li>
+	<li>Nesta semana
+	<ul>
+		<li>Este filtro apresentará os contatos cujos aniversários sejam nos próximos 7 dias do dia em que filtro está sendo <em>aplicado</em>. Isto significa dizer que, estando no dia 11 de janeiro, você verá os contatos que nasceram entre 11 e 18 de janeiro, da mesma forma, estando no dia 6 de junho, você verá os contatos que nasceram entre 6 e 13 de junho.</li>
+	</ul></li>
+	<li>Em um determinado mês
+	<ul>
+		<li>Este filtro apresentará os contatos cujos aniversários sejam no mês especificado.</li>
+	</ul></li>
+</ul>
+<div class='info'><p>A data de aplicação de um filtro temporal <strong>não é a data de criação</strong> do filtro, mas sim qualquer data em que o filtro está sendo utilizado. Isto quer dizer que, se você entrar no Mailee no dia 17 de dezembro, e for visualizar os contatos de um segmento que filtra contatos cujos aniversários sejam &#8220;neste mês&#8221;, você verá todos os que nasceram em dezembro. Este detalhe é importante, pois se você criar uma mensagem utilizando este segmento em novembro, e programar para esta ser enviada em dezembro, <strong>a data de aplicação será a data de envio</strong>, ou seja, a mensagem irá para os aniversariantes de dezembro.</p></div>
+<div style="clear:both;">&nbsp;</div>
+<h4 id="portag">3.8 Por tag</h4>
+<div style="float:left;margin-right:20px;width:240px;"><img src="images/segmentation/por_tag.png" title="Filtro por tag" alt="Filtro por tag" /></div>
+<p>O filtro por tag permite segmentar seus contatos pelas tags associadas à seus contatos manualmente ou pelas <a href="http//todo">funcionalidades de integração com redes sociais</a> do Mailee. O filtro já traz as 8 tags mais comuns em sua base, e você pode também escrever a tag desejada no campo em branco.</p>
+<p>Esta segmentação é interessante para enviar mensagens focadas de acordo com as preferências do usuário. Imagine que você possui uma loja de material esportivo em geral, e vai fazer uma campanha para vender produtos associados ao Corinthians. Enviar isto para toda sua base certamente será um tiro no pé, e você terá muitos descadastros dos palmeirenses. Um filtro pela tag &#8220;corinthians&#8221; seria muito apropriado.</p>
+<div style="clear:both;">&nbsp;</div>
+<div class='info'><p>O Mailee é capaz de buscar automaticamente tags de seus contatos em algumas redes sociais, como o Last.fm (de música) e o Delicious (de <em>bookmarks</em>). Tente manter os dados de redes sociais de seus contatos atualizados, pois isto é uma ferramenta muito poderosa de segmentação.</p></div>
+<h4 id="porlocalizao">3.9 Por localização</h4>
+<div style="float:right;margin-left:20px;width:340px;"><img src="images/segmentation/por_localizacao.png" title="Filtro por localização" alt="Filtro por localização" /></div>
+<p>O filtro por localização é uma poderosa ferramenta para segmentar contatos de acordo com sua localização geográfica <em>presumida</em>.</p>
+<div class='info'><p>A localização é estabilecida utilizando o IP fornecido pelo servidor usado pelo seu contato no último acesso que este fez à alguma mensagem sua. A localização é aproximada, não refletindo exatamente o local do acesso. Normalmente a localização inferida é baseada na cidade do acesso (todos acessos na cidade de São Paulo terão a mesma posição). Nos casos de acesso via <em>proxy</em> a posição inferida não será confiável.</p></div>
+<div style="clear:both;">&nbsp;</div>
+<h4 id="por-klout">3.10 Por Klout</h4>
+<div style="float:left;margin-right:20px;width:240px;"><img src="images/segmentation/por_klout.png" title="Filtro por klout" alt="Filtro por klout" /></div>
+<p>O <a href="http://klout.com">Klout</a> é um serviço online que calcula a influência de usuários no <a href="http://twitter.com">Twitter</a>. Sempre que você colocar o usuário do Twitter em algum contato no Mailee, o sistema irá buscar o número Klout do contato.</p>
+<p>O filtro por Klout permite que você crie mensagens com foco em contatos influentes no Twitter, caso queira fazer campanhas para esta mídia.</p>
+<div style="clear:both;">&nbsp;</div>
+<h4 id="porseguidoresno-twitter">3.11 Por seguidores no Twitter</h4>
+<div style="float:right;margin-left:20px;width:240px;"><img src="images/segmentation/por_seguidores_no_twitter.png" title="Filtro por seguidores no twitter" alt="Filtro por seguidores no twitter" /></div>
+<p>Sempre que você colocar o usuário do Twitter em algum contato no Mailee, o sistema irá número de seguidores do contato.</p>
+<p>O filtro por seguidores no Twitter permite que você crie mensagens com foco em contatos influentes no Twitter, caso queira fazer campanhas para esta mídia.</p>
+<div style="clear:both;">&nbsp;</div>
+<h4 id="porconexesno-linked-in">3.12 Por conexões no LinkedIn</h4>
+<div style="float:left;margin-right:20px;width:240px;"><img src="images/segmentation/por_conexoes_no_linkedin.png" title="Filtro por conexões no linkedin" alt="Filtro por conexões no linkedin" /></div>
+<p>O <a href="http://linkedin.com">LinkedIn</a> é uma rede social com foco em negócios. Sempre que você colocar o usuário do LinkedIn em algum contato no Mailee, o sistema irá buscar o número de conexões no LinkedIn do contato.</p>
+<p>O filtro por conexões no LinkedIn permite que você crie mensagens com foco em contatos influentes no LinkedIn, caso queira fazer campanhas para esta mídia.</p>
+<div style="clear:both;">&nbsp;</div>
+<h4 id="porrecomendaesno-linked-in">3.13 Por recomendações no LinkedIn</h4>
+<div style="float:right;margin-left:20px;width:240px;"><img src="images/segmentation/por_recomendacoes_no_linkedin.png" title="Filtro por recomendações no linkedin" alt="Filtro por recomendações no linkedin" /></div>
+<p>O <a href="http://linkedin.com">LinkedIn</a> é uma rede social com foco em negócios. Sempre que você colocar o usuário do LinkedIn em algum contato no Mailee, o sistema irá buscar o número de recomendações no LinkedIn do contato.</p>
+<p>O filtro por recomendações no LinkedIn permite que você crie mensagens com foco em contatos influentes no LinkedIn, caso queira fazer campanhas para esta mídia.</p>
+<div style="clear:both;">&nbsp;</div>
+<h4 id="porcampospersonalizados">3.14 Por campos personalizados</h4>
+<div style="float:left;margin-right:20px;width:240px;"><img src="images/segmentation/por_campos_personalizados.png" title="Filtro por campos personalizados" alt="Filtro por campos personalizados" /></div>
+<p>Em todo <a href="http://todo">campo personalizado</a> que você criar no Mailee, será possível aplicar filtros para segmentação.</p>
+<p>Os filtros por campos personalizados permitem buscar contatos cujo valor do campo em questão seja igual, diferente, que contenha ou que não contenha uma certa sequência de caracteres. O filtro &#8220;contendo&#8221; é realizado sem levar em consideração caracteres maiúsculos e minúsculos. Por exemplo, se você tem um campo &#8220;Estilo musical&#8221; um filtro por <em>rock</em> deve encontrar contatos cujo &#8220;Estilo musical&#8221; seja <em>Rock n&#8217; Roll</em> ou <em>Hard Rock</em>.</p>
+<div style="clear:both;">&nbsp;</div>
+<h3 id="enviandoparaumsegmento">4 Enviando para um segmento</h3>
+<div style="float:right;margin-left:20px;"><img src="images/segmentation/segment_on_campaign.png" title="Segmento na campanha" alt="Segmento na campanha" /></div>
+<p>Uma vez com seu segmento criado, você poderá ou criar mensagens específicas para este. Ao criar uma nova campanha, basta definir o segmento após a escolha da lista.</p>
+<div style="clear:both;">&nbsp;</div>
+<div class='info'><p>Uma mensagem é sempre enviada para uma lista. Isto é necessário por uma série de motivos. O primeiro é a prevenir <em>spam</em>. Depois, o Mailee permite (e recomenda) que você coloque tags nas mensagens com informações sobre a sua empresa, como site, telefone e até mesmo endereço.</p></div>
+<div style="float:left;margin-right:20px;"><img src="images/segmentation/segment_on_verify.png" title="Segmento na campanha" alt="Segmento na campanha" /></div>
+<p>Se você já possui uma campanha e quer passar a enviar esta para o segmento, quando for criar uma nova mensagem, na tela de verificação, basta definir o segmento.</p>
+<div style="clear:both;">&nbsp;</div></div>
+      </div>
+    </div>
+    <hr class="hide">
+    <div id="footer">
+      <div class="wrapper">
+        <p>Este trabalho é licenciado como <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0</a></p>
+      </div>
+    </div>
+  </body>
+</html>
+      <script type="text/javascript">
+      	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+      	var pageTracker = _gat._getTracker("");
+      	pageTracker._initData();
+      	pageTracker._trackPageview();
+      </script>      
