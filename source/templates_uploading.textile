@@ -1,6 +1,6 @@
 h2. Como realizar _upload_ de template
 
-Esse guia é voltado para pessoas que desejam saber o que é necessário para enviar seus templates para o Mailee.me. Ao final dele você devera saber como:
+Este guia é voltado para pessoas que desejam saber o que é necessário para enviar seus templates para o Mailee.me. Ao final dele você devera saber como:
 
 * Organizar o conteúdo do _zip_
 * Fazer _upload_ do template para o Mailee.me
@@ -12,9 +12,9 @@ h3. Preparando o arquivo compactado para _upload_
 
 A preparação dos arquivos necessários para o seu template em um arquivo compactado _zip_ deve ser feita após a finalização da criação da arte.
 
-Para realizar *upload* para o sistema, seu arquivo deve conter, obrigatoriamente, conter apenas:
+Para realizar *upload* para o sistema, seu arquivo deve, obrigatoriamente, conter apenas:
 
-* Um arquivo .html (e apenas UM) salvo em UTF-8 (saiba como salvar em UTF-8 em "Como criar templates":templates_creating.html)
+* Um arquivo .html (e apenas *um*) salvo em UTF-8 (saiba como salvar em UTF-8 em "Como criar templates":templates_creating.html)
 * Arquivos de imagem em formato <samp>.gif</samp>, <samp>.jpg</samp>, <samp>.jpeg</samp>, <samp>.png</samp> ou <samp>.bmp</samp>.
 
 WARNING. O sistema irá descartar quaisquer arquivos que não preencherem essas especificações.
@@ -25,7 +25,7 @@ Com seu template feito, siga as seguintes instruções:
 # Coloque todas as imagens na raiz da mesma pasta, conforme exemplo abaixo:
 !images/templates/template_and_images_folder.png(Localização das imagens no arquivo zip)!
 # Compacte os arquivos em um _zip_
-# Renomeie o arquivo _zip_ com o nome que deseja para seu template no *Mailee.me*
+# Renomeie o arquivo _zip_ com o nome que deseja para seu template no Mailee.me
 !images/templates/rename_zip_file.gif(Renomeie o arquivo zip)!
 
 Você pode colocar uma imagem que servirá de _thumbnail_ para seu template. Para isso, produza a imagem do seu template e renomeie ela para <samp>template.png</samp>. A imagem deve estar junto dos outros arquivos do template, dentro do _zip_. Se você não enviar o thumbnail o *Mailee.me* irá gerar um para você.
@@ -44,25 +44,26 @@ h3. _Upload_ do template
 
 h3. Conferindo o seu template
 
-Após o _upload_ de seu template para o *Mailee.me*, você poderá conferir o layout na forma de um *_Preview_* (com preenchimento de campos editáveis e blocos de repetição) ou *_Checklist_* (com a lista de conferência para ver se fez tudo corretamente).
+Após o _upload_ de seu template para o Mailee.me, você poderá conferir o layout na forma de um *_Preview_* (com preenchimento de campos editáveis e blocos de repetição) ou *_Checklist_* (com a lista de conferência para ver se fez tudo corretamente).
 
 h4. _Preview_ de templates
 
 
-A *pré-visualização* ou *preview* tem como objetivo fornecer uma amostra de como o template irá se comportar com a adição de conteúdo pelo usuário. O preenchimento é automático e irá adicionar imagens e textos nos _placeholders_ indicados em seu código HTML.
+A *pré-visualização* ou *preview* tem como objetivo fornecer uma amostra de como o template irá se comportar com a adição de conteúdo pelo usuário. O preenchimento é automático e irá adicionar imagens e textos nos campos editáveis indicados em seu código HTML.
 
 !images/templates/template_preview.gif(Pré-visualização de template)!
 
 h4. _Checklist_ de templates
 
-A *conferência de conteúdo* ou *checklist* pode ser realizada após a criação ou atualização de seu template e serve para conferir se os elementos que você codificou foram interpretados corretamente no *Mailee.me*.
+A *conferência de conteúdo* ou *checklist* pode ser realizada após a criação ou atualização de seu template e serve para conferir se os elementos que você codificou foram interpretados corretamente pelo Mailee.me.
 
 !images/templates/template_checklist.gif(Lista de conferência)!
 
 Nessa tela você poderá conferir se seu template está com elemenos corretos para:
 
-* links dinâmicos do *Mailee.me*
+* links dinâmicos do Mailee.me
 * apresentação de informações do contato
 * inserção de bloco de repetição com ou sem índice
 
-WARNING. *IMPORTANTE:* <br/> O checklist não irá realizar a validação de seu código HTML. Recomendamos a utilização de uma ferramenta externa de "validador de HTML da W3":http://validator.w3.org/check.
+WARNING. *IMPORTANTE:* <br/> O checklist não irá realizar a validação de seu código HTML. Recomendamos a utilização de uma ferramenta externa de "validador de HTML da W3":http://validator.w3.org.
+
