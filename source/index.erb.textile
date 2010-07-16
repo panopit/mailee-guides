@@ -14,7 +14,7 @@ h3. Inicie aqui
 
 <dl>
   <% guide('Iniciando com o Mailee', 'getting_started.html') do %>
-   Tudo o que você precisa saber para iniciar com o Mailee.
+   Tudo o que você precisa saber para iniciar com o *Mailee.me*.
   <% end %>
 </dl>
 
@@ -27,16 +27,16 @@ h3. Contatos
     Veja como cadastrar contatos, e como funcionam os campos de redes sociais.
   <% end %>  
 	<% guide('Status', 'contacts_status.html') do %>
-    Saiba o que são os status dos contatos.
+    Saiba o que significam os status dos contatos.
   <% end %>
-  <% guide('Campos personalizados', 'contacts_custom_fields.html') do %> 
-		O que são e para que servem.
-	<% end %>
 	<% guide('Exclusão de contatos', 'contacts_remove.html') do %>
 		Como excluir contatos.
 	<% end %>
 	<% guide('Gerenciamento de listas', 'lists_management.html') do %>
 		Trabalhando com listas de contatos.
+	<% end %>
+	<% guide('Campos personalizados', 'contacts_custom_fields.html') do %> 
+		O que são e para que servem.
 	<% end %>
 	<% guide('Segmentação', 'segmentation.html') do %>
 		As possíveis formas de segmentar sua lista de contatos e como fazê-lo.
@@ -49,13 +49,13 @@ h3. Importação
 
 <dl>
   <% guide('Importação simples', 'import_quick.html') do %>
-    Importação simples
+    Importação seus contatos de maneira rápida e simples.
   <% end %>
   <% guide('Importação de planilha', 'import_spreadsheet.html') do %>
-    Importação de planilha
+    Importação através de planilha de dados, com criação de campos dinâmicos.
   <% end %>
   <% guide('Importação do Gmail', 'import_gmail.html') do %>
-    Importação do Gmail
+    Importação os contatos das suas contas do  Gmail.
   <% end %>
 </dl>
 
@@ -65,7 +65,7 @@ h3. Mensagens
 
 <dl> 
 	<% guide('Como funcionam as campanhas', 'what_is_a_campaign.html') do %>
-		O que é uma campanha e para que serve.
+		O que é uma campanha e como ela pode ajudá-lo.
 	<% end %>
 	<% guide('Como enviar uma mensagem', 'message_new.html') do %>
 		Como criar e enviar uma mensagem. 
@@ -86,7 +86,7 @@ h3. Templates
     Aprenda como realizar _upload_ de templates no *Mailee.me*
   <% end %>
   <% guide('Boas práticas na criação de templates de email em HTML', 'templates_good_practices.html') do %>
-    Boas práticas na criação de templates de email em HTML
+    Boas práticas na criação de templates de email em HTML.
   <% end %>
 </dl>
 
@@ -121,13 +121,13 @@ h3. Configurações
     Como realizar a compra de créditos.
   <% end %>
   <% guide('Usuários', 'users.html') do %>
-    Como criar mais usuários e os níveis de permissões disponíveis.
+    Como criar usuários e os níveis de permissões disponíveis.
   <% end %>
   <% guide('Configuração de links', 'config_links.html') do %>
-    Configure os links das mensagens apontarem para o seu site.
+    Configure os links das mensagens para apontarem para o seu site.
   <% end %>
   <% guide('Alterando o logo', 'logo_change.html') do %>
-    Deixe o  Mailee.me com a sua cara.
+    Deixe o  *Mailee.me* com a sua cara.
   <% end %>
 </dl>
 
