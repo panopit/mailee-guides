@@ -73,6 +73,7 @@ h3. Mensagens
 	<% guide('Relatórios', 'reports.html') do %>
 		Visualizando relatórios gerados após o envio de mensagens. 
 	<% end %>
+</dl>
 
 <hr>
 
@@ -132,4 +133,3 @@ h3. Configurações
 </dl>
 
 <hr>
-
