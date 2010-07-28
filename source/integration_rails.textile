@@ -1,16 +1,83 @@
 h2. Integração com Ruby on Rails
 
-O Mailee pode ser integrado a qualquer aplicação online por meio de sua API "REST":http://en.wikipedia.org/wiki/Representational_State_Transfer. Com ela, você poderá manter seus contatos sincronizados com o Mailee de forma transparente.
+O Mailee possui uma Gem para integração com aplicações Ruby on Rails, já atualizada para *Rails 3*. O código dela você pode "encontrar no GitHub":http://github.com/softa/mailee-api e a Gem está disponível no "RubyGems.org":http://rubygems.org/gems/mailee. O código deste tutorial também está "disponível no GitHub":http://github.com/softa/mailee-example e um "versão online dele no Heroku":http://simple-winter-93.heroku.com/, para que você possa testar antes de pôr a mão na massa.
 
-Existem integrações já prontas para "Spree":integration_spree.html, "Ruby on Rails":integration_rails.html e "PHP":integration_php.html. Este tutorial será útil caso você queira fazer a sua própria integração.
+Esta Gem utiliza a API "REST":http://en.wikipedia.org/wiki/Representational_State_Transfer do Mailee. Além dela, existem integrações já prontas para "Spree":integration_spree.html e "PHP":integration_php.html. 
 
+
+* Como criar uma aplicação Rails 3 e instalar a Gem
 * Como pegar a chave de acesso
-* Quais métodos estão disponíveis
-* Como testar os métodos
+* Como configurar a integração
 
 endprologue.
 
-h3. A chave de acesso
+h3. Criando uma aplicação Rails 3
+
+Se você já fez o café de hoje, ótimo, podemos iniciar nosso tutorial. Primeiro você deve instalar o Rails 3. Para fazê-lo, basta executar:
+
+<shell>
+$ gem install rails --pre 
+</shell>
+
+Qualquer dúvida, acesse a "documentação oficial":http://guides.rails.info/3_0_release_notes.html.
+
+Agora vamos criar a aplicação. Abra seu console, e execute:
+
+<shell>
+$ rails new mailee-example
+  create  
+  create  README
+  create  Rakefile
+  create  config.ru
+  ...
+$ cd mailee-example
+</shell>
+
+h3. Instalando a Gem
+
+Pronto, a sua aplicação está criada. O Rails 3 utiliza um sistema chamado _Bundler_ para gerenciamento das Gems. Talvez seja interessante dar uma estudada neste excelente sistema antes de utilizá-lo, para entender bem o conceito. Mas é bem, simples: edite o arquivo Gemfile que está na raiz da aplicação "mailee-example" e adicione a gem "mailee", na versão "0.1.0":
+
+<shell>
+  source 'http://rubygems.org'
+  gem 'rails', '3.0.0.beta4'
+  gem 'sqlite3-ruby', :require => 'sqlite3'
+  gem 'mailee', '0.1.0'
+</shell>
+
+No exemplo acima, rails e sqlite3-ruby já estavam no meu arquivo. Se você usa outro banco, certamente haverá outra gem neste lugar. Agora, dentro da pasta do projeto, vamos executar o bundler, para que a Gem do Mailee seja instalada:
+
+<shell>
+$ bundle install
+  Fetching source index from http://rubygems.org/
+  Using rake (0.8.7) from system gems 
+  Using abstract (1.0.0) from system gems 
+  Using activesupport (3.0.0.beta4) from system gems
+  ...
+</shell>
+
+h3. Criando um cadastro de clientes
+
+Agora vamos criar um cadastro de clientes usando um <em>scaffold</em> simples:
+
+<shell>
+$ rails g scaffold Client name:string email:string news:boolean
+  invoke  active_record
+  create    db/migrate/20100728183215_create_clients.rb
+  create    app/models/client.rb
+  ...
+</shell>
+
+E executar a migração no banco:
+
+<shell>
+$ rake db:migrate
+</shell>
+
+O que nós precisamos é que estes clientes sejam sincronizados com Mailee. Ou seja, ao cadastrar um cliente, que tenha marcado "news", este contato deve ir para o Mailee automaticamente. Se o contato for excluido, ou desmarcar este campo, ele deve desaparecer do Mailee.
+
+Para fazer isto, precisamos fazer duas coisas. A primeira é configurar nossa chave de acesso à API e a segunda é modificar nosso modelo. Vamos lá.
+
+h4. A chave de acesso
 
 Para usar a API o Mailee gera uma chave secreta para cada cliente. Tome muito cuidade com esta chave, ela é tão ou mais importante que a sua senha. Com ela, alguém mal intencionado poderá ter acesso aos seus clientes. Para pegar esta chave, vá em configuração, depois em integração e por fim em rest.
 
@@ -18,28 +85,52 @@ Para usar a API o Mailee gera uma chave secreta para cada cliente. Tome muito cu
 
 !images/integration/spree/mailee_rest.png(REST)!
 
-h3. Ações
+Copie a chave, e adicione a seguinte configuração ao seu _config/application.rb_:
 
-|HTTP|Caminho|Ação|
-|GET|/lists|Retorna a coleção das suas listas|
-|GET|/lists/ID|Retorna uma lista de acordo com o ID|
-|POST|/lists|Cria uma nova lista com os parâmetros enviados.|
-|PUT|/lists/ID|Atualiza uma lista pelo ID com os parâmetros enviados.|
-|GET|/contacts|Retorna a coleção das seus contatos paginada de 30 em 30(parâmetro "page").|
-|GET|/contacts/ID|Retorna um contato de acordo com o ID|
-|POST|/contacts|Cria um novo contato com os parâmetros enviados.|
-|PUT|/contacts/ID|Atualiza um contato pelo ID com os parâmetros enviados.|
-|GET|/contacts/statuses|Retorna a coleção dos status possíveis para um contato|
-|PUT|/contacts/ID/subscribe|Inscreve um contato pelo ID em uma lista. O nome da lista deve ser passado como parâmetro. Se a lista não existir ela será criada automaticamente.|
-|PUT|/contacts/ID/unsubscribe|Desinscreve um contato pelo ID em uma lista. O nome da lista deve ser passado como parâmetro. Se a lista não existir ela será criada automaticamente.|
-|GET|/templates|Retorna a coleção dos seus templates|
-|GET|/templates/ID|Retorna um template de acordo com o ID|
-|POST|/templates|Cria um novo templates com os parâmetros enviados.|
-|PUT|/templates/ID|Atualiza um template pelo ID com os parâmetros enviados.|
+<shell>
+  Mailee::Config.site = 'http://api.01295d232df4b.gem.mailee.me'
+</shell>
 
-h3. Testando
+A chave que usei é de uma conta de teste. Se você não quiser criar uma conta nova no Mailee, pode usar ela para testes a vontade :D
 
-Uma dica é testar utilizando o "Hurl":http://www.hurl.it. Basta acessar o site e utilizar o caminho da sua chave acrescentado à ação. Veja um exemplo abaixo, listando os contatos de uma conta:
+h4. Modificando o modelo
 
-!images/integration/rest/hurl.png(REST)!
+Para que o nosso modelo Client saiba que ele deve sincronizar os dados com o Mailee, basta abrí-lo e adicionar o método "sync_with_mailee". Assim:
 
+<shell>
+  class Client < ActiveRecord::Base
+    sync_with_mailee
+  end
+</shell>
+
+Para finalizar, vou adicionar uma rota _root_ para o index do controle que criamos, remover o public/index.html e iniciar o server:
+
+<shell>
+  MaileeExample::Application.routes.draw do |map|
+    resources :clients
+    root :to => "clients#index"
+  end
+</shell>
+
+<shell>
+$ rm public/index.html
+$ rails s
+  => Booting WEBrick
+  => Rails 3.0.0.beta4 application starting in development on http://0.0.0.0:3000
+  => Call with -d to detach
+  => Ctrl-C to shutdown server
+  [2010-07-28 15:51:41] INFO  WEBrick 1.3.1
+  [2010-07-28 15:51:41] INFO  ruby 1.8.7 (2010-01-10) [i486-linux]
+  [2010-07-28 15:51:46] INFO  WEBrick::HTTPServer#start: pid=9666 port=3000
+  ...
+</shell>
+
+E vamos abrir nosso navegador em localhost:3000. Agora você pode cadastrar clientes e verificar se eles estão no Mailee.
+
+!images/integration/rails/local.png(Criando os clientes na sua aplicação local)!
+
+!images/integration/rails/remote.png(E vendo eles no Mailee)!
+
+h3. More stuff
+
+Há mais coisas que a Gem é capaz de fazer, como por exemplo, definir colunas diferentes para sincronização (caso você não use name, email ou news, por exemplo) ou enviar lotes de informações em comandos rake. Para saber mais, acesse a documentação do projeto no "GitHub":http://github.com/softa/mailee-api ou "contate o nosso pessoal":mailto:suporte@mailee.me.

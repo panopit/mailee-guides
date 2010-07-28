@@ -82,7 +82,7 @@ production:
 test:
   adapter: postgresql
   encoding: unicode
-  database: my_store_production
+  database: my_store_test
   username: my_store
 </shell>
 
