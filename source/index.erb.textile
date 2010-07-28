@@ -10,15 +10,17 @@ Permanecendo qualquer dúvida é só mandar um email para "suporte@mailee.me":ma
 
 <% content_for :index_section do %>
 
+<% end %>
+
 h3. Inicie aqui
 
 <dl>
-  <% guide('Iniciando com o Mailee', 'getting_started.html') do %>
+  <% guide('Iniciando com o Mailee.me', 'getting_started.html') do %>
    Tudo o que você precisa saber para iniciar com o *Mailee.me*.
   <% end %>
 </dl>
 
-<% end %>
+<hr>
 
 h3. Contatos
 
