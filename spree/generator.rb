@@ -44,7 +44,12 @@ module Spree
     def generate_sitemap(guides)
       puts "Generating sitemap.xml"
       builder = Builder::XmlMarkup.new
-      xml = builder.urlset({"xsi:schemaLocation" => "http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"}) do |urlset|
+
+
+
+
+
+      xml = builder.urlset({"xmlns:xsi" => "http://www.w3.org/2001/XMLSchema-instance", "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9", "xsi:schemaLocation" => "http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"}) do |urlset|
         urlset.url do |url|
           url.loc "http://help.mailee.me/index.html"
           url.lastmod Date.today
@@ -63,7 +68,7 @@ module Spree
         end
       end
       file = File.join(output, "sitemap.xml")
-      File.open(file, 'w'){|f| f.write xml.to_s }
+      File.open(file, 'w'){|f| f.write "<?xml version='1.0' encoding='UTF-8'?>#{xml.to_s}" }
     end
 
     def generate_guide(guide)
