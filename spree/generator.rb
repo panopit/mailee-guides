@@ -1,4 +1,5 @@
 require 'set'
+require 'builder'
 
 module Spree
   class Generator
@@ -33,9 +34,41 @@ module Spree
         generate_guide(guide)
       end
 
+      generate_sitemap(guides)
+
       # Copy images and css files to html directory
       FileUtils.cp_r File.join(guides_dir, 'images'), File.join(@output, 'images')
       FileUtils.cp_r File.join(guides_dir, 'files'), File.join(@output, 'files')
+    end
+
+    def generate_sitemap(guides)
+      puts "Generating sitemap.xml"
+      builder = Builder::XmlMarkup.new
+
+
+
+
+
+      xml = builder.urlset({"xmlns:xsi" => "http://www.w3.org/2001/XMLSchema-instance", "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9", "xsi:schemaLocation" => "http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"}) do |urlset|
+        urlset.url do |url|
+          url.loc "http://help.mailee.me/index.html"
+          url.lastmod Date.today
+          url.changefreq "weekly"
+          url.priority 1
+        end
+        for guide in guides
+          guide =~ /(.*?)(\.erb)?\.textile/
+          name = $1
+          urlset.url do |url|
+            url.loc "http://help.mailee.me/#{name}"
+            url.lastmod Date.today
+            url.changefreq "weekly"
+            url.priority 0.5
+          end
+        end
+      end
+      file = File.join(output, "sitemap.xml")
+      File.open(file, 'w'){|f| f.write "<?xml version='1.0' encoding='UTF-8'?>#{xml.to_s}" }
     end
 
     def generate_guide(guide)
