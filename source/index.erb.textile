@@ -56,9 +56,6 @@ h3. Importação
   <% guide('Importação de planilha', 'import_spreadsheet.html') do %>
     Importação através de planilha de dados, com criação de campos dinâmicos.
   <% end %>
-  <!-- <% guide('Importação do Gmail', 'import_gmail.html') do %>
-    Importação os contatos das suas contas do  Gmail.
-  <% end %> -->
 </dl>
 
 <hr>
@@ -88,9 +85,6 @@ h3. Templates
   <% guide('Como realizar _upload_ de template', 'templates_uploading.html') do %>
     Aprenda como realizar _upload_ de templates no *Mailee.me*
   <% end %>
-  <!-- <% guide('Boas práticas na criação de templates de email em HTML', 'templates_good_practices.html') do %>
-    Boas práticas na criação de templates de email em HTML.
-  <% end %> -->
 </dl>
 
 <hr>
