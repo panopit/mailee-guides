@@ -52,14 +52,14 @@ module Spree
         if guide =~ /\.erb\.textile/
           # Generate the erb pages with textile formatting - e.g. index/authors
           result = view.render(:layout => 'layout', :file => name)
-          f.write(textile(result) + analytics)
+          f.write(textile(result))
         else
           body = File.read(File.join(view_path, guide))
           body = set_header_section(body, @view)
           body = set_index(body, @view)  
 
           result = view.render(:layout => 'layout', :text => textile(body))    
-          f.write(result + analytics)
+          f.write(result)
           warn_about_broken_links(result)
         end
       end
@@ -79,20 +79,6 @@ module Spree
       new_body
     end  
     
-    def analytics 
-      <<-GOOGLE
-      <script type="text/javascript">
-      	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-      	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-      </script>
-      <script type="text/javascript">
-      	var pageTracker = _gat._getTracker("#{ENV['ANALYTICS_ID']}");
-      	pageTracker._initData();
-      	pageTracker._trackPageview();
-      </script>      
-      GOOGLE
-    end
-
     def set_index(body, view)
       index = <<-INDEX
       <div id="subCol">
