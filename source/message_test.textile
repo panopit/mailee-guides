@@ -1,0 +1,16 @@
+h2. Testando sua mensagem
+
+…
+
+Para saber sobre as outras etapas, acesse "1. Conteúdo":message_edit.html, "2. Conferir":message_verify.html, e "4. Enviar":message_send.html.
+
+endprologue.
+
+h3. Testar
+
+Você pode realizar um envio de teste, onde você receberá.
+
+
+
+
+NOTE. Emails de teste não consomem créditos.

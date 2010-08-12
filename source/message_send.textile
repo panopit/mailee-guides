@@ -1,0 +1,15 @@
+h2. Como enviar uma mensagem
+
+Este artigo irá mostrar os métodos de envio de mensagem do Mailee.me.
+
+Para saber sobre as outras etapas, acesse "1. Conteúdo":message_edit.html, "2. Conferir":message_verify.html, e "3. Testar":message_test.html.
+
+endprologue.
+
+h4. Enviar
+
+*Enviar agora* - Inicia imediatamente o envio da mensagem.
+
+*Enviar em* - Envio agendado. Escolha a data e horário do início do envio.
+
+INFO. A qualquer momento do processo de criação de uma nova mensagem é possível salvá-la como *Rascunho* e continuar depois.

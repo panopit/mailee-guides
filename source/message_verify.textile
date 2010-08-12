@@ -1,0 +1,27 @@
+h2. Verificando o conteúdo da mensagem
+
+…
+
+Para saber sobre as outras etapas, acesse "1. Conteúdo":message_edit.html, "3. Testar":message_test.html e "4. Enviar":message_send.html.
+
+endprologue.
+
+h3. Conferir (Preview)
+
+Mostra sua mensagem pronta e como seus contatos irão recebe-lá.
+
+*Número de contatos* - O Mailee.me lhe informa para quantos contatos a mensagem será enviada. Os números podem ser alterados, dependendo da lista e do segmento.
+
+*Título* - O título da mensagem.
+
+*Assunto* - O conteúdo do campo _assunto_ do email.
+
+*Nome do remetente* - O nome de quem envia a mensagem.
+
+*Email do remetente* - O email de quem realiza o envio.
+
+*Email de resposta* - Para onde as mensagens respondidas serão encaminhadas.
+
+*Lista* - Para qual lista será realizado o envio.
+
+*Segmento* - Para qual segmento será realizado o envio.

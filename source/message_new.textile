@@ -1,68 +1,110 @@
-h2. Como enviar uma mensagem
+h2. Criando uma mensagem
 
-Este artigo irá mostrar os passos para se criar e enviar uma nova mensagem.
+Esse artigo serve para pessoas que desejam saber como criar uma campanha usando um template criado para o Mailee.me. Ao final dele você deverá saber como:
+
+* Criar uma campanha
+* Configurar a primeira mensagem
+* Fazer um envio de uma campanha já existente
+
+Para saber sobre as etapas restantes, acesse "3. Testar":message_test.html e "4. Enviar":message_send.html.
 
 endprologue.
 
-h3. Criando uma nova mensagem.
+h3. Criando uma nova campanha
 
-Clique em *Mensagens* na barra de navegação. Clique na campanha que deseja utilizar para realizar o envio da mensagem. Caso você queira criar uma campanha nova, clique em _Nova campanha_.
+Para criar sua campanha no Mailee.me, primeiro acesse a seção *Mensagens* através da barra de navegação superior.
+
+!images/messages/new/messages_menu_select.jpg(Seção mensagens)!
+
+Após, clique no botão _Nova campanha_ localizado na barra lateral:
+
+!images/messages/new/new_newsletter_button.jpg(Nova campanha)!
 
 INFO. Para saber como funcionam as campanhas, "clique aqui":what_is_a_campaign.html.
 
+h3. Configurando a primeira mensagem de uma campanha
+
+h4. Nome da campanha
+
+A primeira informação que devemos configurar é o título da campanha, que servirá para referência nos futuros envios. O título da campanha não aparece no email enviado.
+
+h4. Informações da mensagem
+
+h5. Título da mensagem
+
+Ao configurar o nome da campanha, o *título da mensagem* será montado automaticamente pelo Mailee.me sendo adicionado, no final do nome, um número que indica a ordem de criação da mensagem dentro da camapanha. Assim como o título da campanha, o título da mensagem não irá aparecer no email enviado.
+
+h5. Assunto do email (subject)
+
+O *assunto do email* ou *subject* é a informação mais importante do conteúdo de sua mensagem. É por ele que os seus contatos *decidem abrir ou não* o seu email, portanto pense bem antes de escrevê-lo.
+
+*Dicas*
+* Procure ser sucinto e claro na redação do assunto.
+* Busque refletir da melhor forma possível o conteúdo de seu email.
+* Não utilize texto todo em MAIUSCULAS
+
+INFO. Você também pode modificar o assunto do email na etapa *2. Conferir*.
+
+h5. Nome e email do remetente
+
+*Nome e email do remetente* são informações que compõem a sua assinatura. Ela irá informar ao seu contato quem está enviando o email e assim como o assunto ele também é importante para a aceitação do email e consequente visualização. Você pode aconselhar seus contato a adicionar seu email à lista de contatos conhecidos, melhorando assim, a entrega de suas mensagens. Leia mais sobre a adição à lista de contatos em "Criação de Templates":templates_creating.html#adicionandolistadecontatoswhitelist
+
+h5. Email de resposta
+
+O *email de resposta* serve para o caso de você não querer receber mensagens de resposta de seus contatos no email fornecido como remetente. Ele irá aparecer automaticamente quando o contato clicar em responder (ou _reply_) do cliente de email.
+
+h5. Integração com Google Analytics
+
+A *integração com Google Analytics* tem seu artigo próprio artigo. "Clique aqui":integration_analytics.html para conferir.
+
+h4. Destinatários
+
+h5. Conta sem contatos
+
+Textarea, entrada manual
+
+h5. Conta com contatos e sem listas
+
+Opção nova lista
+
+h5. Conta com listas
+
+Escolher o nome da lista
+
+h4. Definição do tipo de conteúdo
+
+O Mailee.me possui dois modos para adição de conteúdo nas mensagens:
+
+* *template* - utilizando um modelo pré-definido de layout e adicionando blocos de repetição ou alterando campos editáveis
+* *inserção manual de conteúdo, ou edição HTML* - onde o conteúdo poderá ser editado na tela diretamente em HTML ou utilizando um processador de texto básico
+
+h5. Template
+
+INFO. Saiba o que é, como funcionam e como criar um template em "Criando templates":templates_creating.html
+
+h5. Colocar conteúdo manualmente (editor de HTML)
+
+!images/messages/new/fck_editor.jpg(Editor de texto básico)!
+
+<hr>
+
+h3. Salvando sua campanha
+
+Após o preenchimento dos dados de configuração de sua campanha você deve salvar.
+
+O Mailee.me automaticamente irá abrir a tela de edição para você editar sua primeira mensagem!
+
+Para saber sobre os próximos passos, acesse "1. Conteúdo":message_edit.html, "2. Conferir":message_verify.html, "3. Testar":message_test.html e "4. Enviar":message_send.html.
+
+
+h3. Enviando uma mensagem de uma campanha já existente
+
 Se você já possui a campanha que deseja e já clicou nela, clique no botão de nova mensagem.
 
-!images/messages/new/message_new_button.png(Nova mensagem)!
+Na barra lateral, verifique a lista de suas campanhas.
 
-h4. Edição de conteúdo
+NOTE. Caso sua campanha não apareça na lista, clique em *Mostrar todas campanhas*
 
-Nesta tela é possível alterar o conteúdo de campos editáveis do template.
+Procure a campanha para qual deseja realizar o envio e clique em *Enviar »*
 
-h5. Os ícones de edição
-
-!images/messages/new/wysiwyg_icons.png(Wysiwyg)!
-
-*Lápis* - permite você editar diretamente o conteúdo na mensagem.
-
-*HTML* - Abre a edição de HTML para editar a formatação da notícia ou inserir links, por exemplo.
-
-*Disquete* - Salva as alterações realizadas.
-
-*Não permitido* - Abandona a edição atual da notícia, cancelando alterações realizadas.
-
-*Remoção* - Remove uma notícia adicionada ao template.
-
-h4. Conferir
-
-*Número de contatos* - O Mailee.me lhe informa para quantos contatos a mensagem será enviada. Os números podem ser alterados, dependendo da lista e do segmento.
-
-*Título* - O título da mensagem.
-
-*Assunto* - O conteúdo do campo _assunto_ do email.
-
-*Nome do remetente* - O nome de quem envia a mensagem.
-
-*Email do remetente* - O email de quem realiza o envio.
-
-*Email de resposta* - Para onde as mensagens respondidas serão encaminhadas.
-
-*Lista* - Para qual lista será realizado o envio.
-
-*Segmento* - Para qual segmento será realizado o envio.
-
-h5. Preview
-
-Mostra sua mensagem pronta e como seus contatos irão recebe-lá.
-
-h4. Testar
-
-Você pode realizar testes de envio para contatos de suas listas.
-
-h4. Enviar
-
-*Enviar agora* - Inicia imediatamente o envio da mensagem.
-
-*Enviar em* - Envio agendado. Escolha a data e horário do início do envio.
-
-INFO. A qualquer momento do processo de criação de uma nova mensagem é possível salvá-la como *Rascunho* e continuar depois.
-
+Clique na campanha que deseja utilizar para realizar o envio da mensagem.

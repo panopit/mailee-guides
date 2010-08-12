@@ -1,0 +1,28 @@
+h2. Editando uma mensagem
+
+Esse artigo serve para pessoas que desejam saber como alterar o conteúdo de uma mensagem utilizando o editor integrado do Mailee.me. Ele cobre a primeira etapa do processo de envio, e ao final dele, você deverá saber como:
+
+* Editar o conteúdo da mensagem
+* Adicionar e remover blocos de repetição
+* Editar o conteúdo de blocos de repetição
+* Alterar o conteúdo de campos editáveis
+* Substituir ou remover imagens de sua mensagem
+
+Para saber sobre as outras etapas, acesse "2. Conferir":message_verify.html, "3. Testar":message_test.html e "4. Enviar":message_send.html.
+
+endprologue.
+
+h3. Editando o conteúdo da mensagem
+
+h4. Edição de conteúdo
+
+Nesta tela é possível alterar o conteúdo de campos editáveis da mensagem.
+
+h5. Os ícones de edição
+
+|_. Ícone |_. Ação |
+|_. !images/messages/new/edit.png(Editar texto)! *Editar&nbsp;texto* | Habilita a edição do conteúdo direto na mensagem. Também conhecido como "edição WYSIWYG":http://pt.wikipedia.org/wiki/WYSIWYG. |
+|_. !images/messages/new/code.png(Edição avançada HTML)! *Edição&nbsp;avançada (HTML)* | Abre a tela de edição avançada, permitindo alterar o código HTML. Cuidado: essa edição permite alterar a formatação do template. |
+|_. !images/messages/new/save.png(Salvar edição)! *Salvar&nbsp;edição* | Salva alterações realizadas no conteúdo. |
+|_. !images/messages/new/cancel.png(Cancelar edição)! *Cancelar&nbsp;edição* | Abandona a edição atual, cancelando quaiquer alterações realizadas. |
+|_. !images/messages/new/trash.png(Excluir bloco)! *Excluir&nbsp;bloco* | Remove uma o bloco repetível adicionado à mensagem. |
