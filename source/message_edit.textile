@@ -1,28 +1,170 @@
 h2. Editando uma mensagem
 
-Esse artigo serve para pessoas que desejam saber como alterar o conteúdo de uma mensagem utilizando o editor integrado do Mailee.me. Ele cobre a primeira etapa do processo de envio, e ao final dele, você deverá saber como:
+Esse artigo serve para pessoas que desejam saber como alterar o conteúdo de uma mensagem utilizando o Mailee.me. Ele cobre a primeira etapa do processo de envio, e ao final dele, você deverá saber como:
 
 * Editar o conteúdo da mensagem
 * Adicionar e remover blocos de repetição
 * Editar o conteúdo de blocos de repetição
 * Alterar o conteúdo de campos editáveis
 * Substituir ou remover imagens de sua mensagem
+* Editar uma mensagem utilizando o "editor WYSIWYG":http://pt.wikipedia.org/wiki/WYSIWYG
 
-Para saber sobre as outras etapas, acesse "2. Conferir":message_verify.html, "3. Testar":message_test.html e "4. Enviar":message_send.html.
+Para saber sobre as outras etapas do envio, acesse "2. Conferir":message_verify.html, "3. Testar":message_test.html e "4. Enviar":message_send.html.
 
 endprologue.
 
 h3. Editando o conteúdo da mensagem
 
-h4. Edição de conteúdo
+O Mailee.me possui dois modos de edição para o conteúdo de suas mensagens. São eles:
+* *template* - utiliza um modelo pré-definido de layout
+* *inserção manual de conteúdo, ou edição HTML* - onde o conteúdo poderá ser editado utilizando um "editor WYSIWYG":http://pt.wikipedia.org/wiki/WYSIWYG ou utilizando o processador de texto básico para alterar o código HTML
 
-Nesta tela é possível alterar o conteúdo de campos editáveis da mensagem.
+INFO. Saiba o que é, como funcionam e como criar um template em "Criando templates":templates_creating.html.
 
-h5. Os ícones de edição
+***
 
-|_. Ícone |_. Ação |
-|_. !images/messages/new/edit.png(Editar texto)! *Editar&nbsp;texto* | Habilita a edição do conteúdo direto na mensagem. Também conhecido como "edição WYSIWYG":http://pt.wikipedia.org/wiki/WYSIWYG. |
-|_. !images/messages/new/code.png(Edição avançada HTML)! *Edição&nbsp;avançada (HTML)* | Abre a tela de edição avançada, permitindo alterar o código HTML. Cuidado: essa edição permite alterar a formatação do template. |
-|_. !images/messages/new/save.png(Salvar edição)! *Salvar&nbsp;edição* | Salva alterações realizadas no conteúdo. |
-|_. !images/messages/new/cancel.png(Cancelar edição)! *Cancelar&nbsp;edição* | Abandona a edição atual, cancelando quaiquer alterações realizadas. |
-|_. !images/messages/new/trash.png(Excluir bloco)! *Excluir&nbsp;bloco* | Remove uma o bloco repetível adicionado à mensagem. |
+h3. Editando a mensagem a partir de um template
+
+A edição de mensagens a partir de um template ocorre na etapa *1. Conteúdo* que pode ser vista na tela abaixo:
+
+!images/messages/edit/message_edit_area.jpg(Área de edição de mensagens)!
+
+|_. Navegação | A área de navegação da mensagem serve para exibir o passo atual no processo de envio da mensagem |
+|_. Área de edição | A área de edição serve para exibir a prévia de sua mensagem |
+|_. Ações da mensagem | As ações da mensagem servem para *Salvar* ou *Excluir* uma mensagem |
+|_. Ações de layout | As ações de layout servem para adicionar blocos de repetição ou alterar o template da mensagem |
+
+h4. Ícones de edição
+
+Todas as informações editáveis em sua mensagem ficarão cobertas por ícones que representam ações de edição.
+
+A tabela abaixo explica melhora a função de cada um:
+
+|_. Ícone |_. Nome |_. Ação |
+|_. !images/messages/new/edit.png(Editar texto)! |_. *Editar&nbsp;conteúdo* | Habilita a edição do conteúdo direto na mensagem. Também conhecido como "edição WYSIWYG":http://pt.wikipedia.org/wiki/WYSIWYG. |
+|_. !images/messages/new/code.png(Edição avançada HTML)! |_. *Edição&nbsp;avançada (HTML)* | Abre a tela de edição avançada, permitindo alterar o código HTML. |
+|_. !images/messages/new/save.png(Salvar edição)! |_. *Salvar&nbsp;edição* | Salva alterações realizadas no conteúdo. |
+|_. !images/messages/new/cancel.png(Cancelar edição)! |_. *Cancelar&nbsp;edição* | Abandona a edição atual, cancelando quaiquer alterações realizadas. |
+|_. !images/messages/new/trash.png(Excluir bloco)! |_. *Excluir&nbsp;bloco* | Remove uma o bloco repetível adicionado à mensagem. |
+
+WARNING. *Cuidado:* <br> A edição avançada permite que você altere a formatação e conteúdo do template, o que pode fazer automatismos do Mailee.me deixem de funcionar.
+
+h4. Edição de áreas editáveis
+
+As áreas editáveis podem ser editadas de duas formas diferentes.
+
+h5. Editando o conteúdo diretamente no template
+
+A primeira, é direto na área de visualização do template, podendo ser acessada com um clique no botão de *Editar conteúdo*, conforme imagem abaixo:
+
+!images/messages/edit/text_edit_button.jpg(Botão para edição direto na área de visualização)!
+
+Após a edição da área é habilitade e você poderá alterar o conteúdo como se estivesse usando um editor de textos, conforme imagem abaixo:
+
+!images/messages/edit/text_editing.jpg(Editando área editável)!
+
+WARNING. Você *não deve* inserir texto com formatação (por exemplo, de uma cópia do Word ou até de uma página da Internet), pois isso irá alterar o código existente o que certamente fará que o layout do email quebre. Para inserir textos copiados do Word ou de uma página da Internet, faça primeiro uma cópia do texto em um editor de textos como o Bloco de Notas (Notepad) e depois copie novamente para remover qualquer formatação do texto.
+
+INFO. A tecla *Enter* não produz efeito durante a edição direto no template. Para inserir quebras de linha, você precisa utilizar uma combinação das teclas *Shift* + *Enter*.
+
+h5. Editando avançada de conteúdo (HTML)
+
+Com a *edição avançada* você pode realizar operações mais complexas na edição de suas mensagens, como por exemplo:
+
+* Colar direto do Word
+* Editar diretamente o código HTML
+* Ações básicas de edição de texto
+** Copiar, recortar e colar
+* Alterar a formatação do texto
+* Inserir links e imagens
+
+Para acessar a edição avançada, basta clicar no botão indicado abaixo:
+
+!images/messages/edit/html_edit_button.jpg(Botão para edição avançada)!
+
+A tela de edição avançada em templates irá abrir em uma janela modal, conforme imagem abaixo:
+
+!images/messages/edit/text_edit_advanced.jpg(Edição avançada de conteúdo)!
+
+INFO. Para saber mais sobre áreas editáveis, leia a seção "Áreas editáveis em templates do Mailee.me":templates_creating.html#reaseditveisemtemplatesdo-maileeme no artigo sobre *Criação de Templates*.
+
+h4. Blocos de repetição
+
+INFO. Para saber mais sobre blocos de repetição, leia a seção "Blocos de repetição":templates_creating.html#blocosderepetio no artigo sobre *Criação de Templates*.
+
+h5. Adicionando um bloco de repetição
+
+Para *adicionar um bloco de repetição*, clique no botão *Adicionar "nome do bloco"*, localizado na barra lateral à direita da área de edição, conforme imagem abaixo:
+
+!images/messages/edit/block_add.jpg(Adicionando um bloco repetível)!
+
+NOTE. Se seu template não possuir blocos de repetição você não terá nenhum botão *Adicionar "nome do bloco"*.
+
+Após adicionar o bloco de repetição ele irá aparecer de forma similar a figura abaixo:
+
+!images/messages/edit/block_added.jpg(Bloco de repetição adicionado)!
+
+Nesse bloco você podera:
+
+* "Editar o conteúdo diretamente na área de visualização do template, como em uma área editável":#editandoocontedodiretamentenotemplate
+* "Editar o conteúdo utilizando a edição avançada (HTML)":#editandoavanadadecontedo-html
+* Excluir o bloco de repetição
+
+NOTE. Você pode conferir como editar o conteúdo na área de visualização eassim como o uso do editor avançado (HTML).
+
+INFO. As informações que estão em blocos de repetição sempre serão editáveis.
+
+h5. Editando o conteúdo de um bloco de repetição
+
+Como em uma área editável você poderá editar as informações de blocos de repetição de duas maneiras:
+
+* Edição do conteúdo no layout
+
+* Edição utilizando um editor WYSIWYG
+
+h4. Editando o conteúdo de um bloco de repetição diretamente no template
+
+!images/messages/edit/block_edit_content.jpg(Editando o conteúdo de um bloco repetível)!
+
+!images/messages/edit/block_editing.jpg(Editando bloco de repetição)!
+
+WARNING. Você *não deve* inserir texto com formatação (por exemplo, de uma cópia do Word ou até de uma página da Internet), pois isso irá alterar o código existente o que certamente fará que o layout do email quebre. Para inserir textos copiados do Word ou de uma página da Internet, faça primeiro uma cópia do texto em um editor de textos como o Bloco de Notas (Notepad) e depois copie novamente para remover qualquer formatação do texto.
+
+INFO. A tecla *Enter* não produz efeito durante a edição direto no template. Para inserir quebras de linha, você precisa utilizar uma combinação das teclas *Shift* + *Enter*.
+
+!images/messages/edit/block_edit_html.jpg(Editando um bloco repetível com editor HTML modal)!
+
+h4. Editando o bloco de repetição utilizando a edição avançada (HTML)
+
+Com ele é possível adicionar links, alterar cores, adicionar imagens ou até mesmo editar o HTML de seu template.
+
+!images/messages/edit/fck_editor_modal.jpg(Editor de texto básico em modal)!
+
+WARNING. Com a edição HTML é possível modificar boa parte do código que o Mailee.me utiliza para edições e automatismos. Certifique-se que sabe exatamente o que está fazendo antes de alterar o código HTML.
+
+h5. Excluindo um bloco de repetição
+
+Para excluir um bloco de repetição, basta clicar na lixeira, conforme imagem abaixo:
+
+!images/messages/edit/block_remove.jpg(Excluindo um bloco repetível)!
+
+***
+
+h3. Edição de mensagem por inserção manual de conteúdo
+
+Ao escolher a inserção manual
+
+h4. Editor WYSIWYG
+
+!images/messages/edit/fck_editor.jpg(Editor de texto básico)!
+
+!images/messages/edit/fck_editor_modal.jpg(Editor de texto básico)!
+
+Algumas coisas que você pode fazer com o editor WYSIWYG:
+
+* Colar direto do Word
+* Editar diretamente o código HTML
+* Ações básicas de edição de texto
+** Copiar, recortar e colar
+* Alterar a formatação do texto
+* Inserir links e imagens

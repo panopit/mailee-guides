@@ -31,7 +31,7 @@ input.text, input.title,
 textarea, select { margin:0.5em 0; border:1px solid #bbb; }
 table { margin: 0 0 1.5em; border: 2px solid #CCC; background: #FFF; border-collapse: collapse; }
 table th, table td { padding: 0.25em 1em; border: 1px solid #CCC; border-collapse: collapse; }
-table th { border-bottom: 2px solid #CCC; background: #EEE; font-weight: bold; padding: 0.5em 1em; }
+table th { border-bottom: 2px solid #CCC; border-right:2px solid #CCC; background: #DDD; font-weight: bold; padding: 0.5em 1em; text-shadow:#fff 0 1px 0;}
 
 /* Structure and Layout --------------------------------------- */
 body { text-align: center; font-family: Helvetica, Arial, sans-serif; font-size: 87.5%; line-height: 1.5em; background-color: #D5E9F6; color: #222; }
@@ -52,6 +52,7 @@ azul do degradê do logo: c0d0df
 #container { background: #fff; color: #333; padding: 0.5em 0 1.5em 0; border-bottom: #D5E9F6 1px solid; }
 #mainCol { width: 630px; }
 #mainCol img{ border:1px solid #CCC; -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.3); box-shadow: 0 0 1em rgba(0, 0, 0, 0.3); }
+#mainCol table img { border: 0 none; -moz-box-shadow: 0 0 0 transparent; -webkit-box-shadow: 0 0 0 transparent; box-shadow: 0 0 0 transparent; vertical-align:middle; }
 #subCol { position: absolute; z-index: 0; top: 0; right: 0; background: #FFF; padding: 13px; width: 220px; font-size: 0.9285em; line-height: 1.3846em; border-radius: 1em; -webkit-border-radius: 1em; -moz-border-radius: 1em;}
 
 #extraCol {display: none;}
@@ -93,7 +94,7 @@ h1 { font-size: 2.5em; line-height: 1em; margin: 0.6em 0 .2em; font-weight: bold
 h2 { font-size: 2.1428em; line-height: 1em; margin: 0.7em 0 .2333em; font-weight: bold;  text-shadow: #fff 0 1px 0;}
 h3 { color: #444; font-size: 1.7142em; line-height: 1.286em; margin: 0.875em 0 0.2916em; font-weight: bold; }
 h4 { font-size: 1.2857em; line-height: 1.2em; margin: 1.6667em 0 .3887em; font-weight: bold; }
-h5 { font-size: 1em; line-height: 1.5em; margin: 1em 0 .5em; font-weight: bold; }
+h5 { font-size: 1em; line-height: 1.5em; margin: 1em 0 .5em; font-weight: bold; border-bottom:1px dotted silver;}
 h6 { font-size: 1em; line-height: 1.5em; margin: 1em 0 .5em; font-weight: normal; }
 .section { padding-bottom: 0.25em; border-bottom: 1px solid #999; }
 
@@ -121,7 +122,7 @@ h6 { font-size: 1em; line-height: 1.5em; margin: 1em 0 .5em; font-weight: normal
 #subCol .chapters ul {margin-left: 0; margin-top: 0.5em;}
 #subCol .chapters ul li { list-style: none; padding: 0 0 0 1em; background: url(../../images/bullet.gif) no-repeat left 0.45em; margin-left: 0; font-size: 1em; font-weight: normal; }
 tt { font-family: monaco, "Bitstream Vera Sans Mono", "Courier New", courier, monospace; }
-div.code_container { background: #EEE url(../../images/tab_grey.gif) no-repeat left top; padding: 0.25em 1em 0.5em 48px; }
+div.code_container { background: #EEE url(../../images/tab_grey.gif) no-repeat left top; border: 0 none;padding: 0.25em 1em 0.5em 48px; }
 code { font-family: monaco, "Bitstream Vera Sans Mono", "Courier New", courier, monospace; border: none; margin: 0.25em 0 1.5em 0; display: block; }
 .note { background: #fff9d8 url(../../images/tab_note.gif) no-repeat left top; border: none; padding: 1em 1em 0.25em 48px; margin: 0.25em 0 1.5em 0; }
 .info { background: #d5e9f6 url(../../images/tab_info.gif) no-repeat left top; border: none; padding: 1em 1em 0.25em 48px; margin: 0.25em 0 1.5em 0; }
