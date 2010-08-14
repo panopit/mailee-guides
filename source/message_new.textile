@@ -22,6 +22,8 @@ Após, clique no botão _Nova campanha_ localizado na barra lateral:
 
 INFO. Para saber como funcionam as campanhas, "clique aqui":what_is_a_campaign.html.
 
+***
+
 h3. Configurando a primeira mensagem de uma campanha
 
 h4. Nome da campanha
@@ -43,7 +45,7 @@ O *assunto do email* ou *subject* é a informação mais importante do conteúdo
 * Busque refletir da melhor forma possível o conteúdo de seu email.
 * Não utilize texto todo em MAIUSCULAS
 
-INFO. Você também pode modificar o assunto do email na etapa *2. Conferir*.
+INFO. Você também pode modificar o assunto do email na etapa "*2. Conferir*":message_verify.html.
 
 h5. Nome e email do remetente
 
@@ -57,36 +59,64 @@ h5. Integração com Google Analytics
 
 A *integração com Google Analytics* tem seu artigo próprio artigo. "Clique aqui":integration_analytics.html para conferir.
 
-h4. Destinatários
+h4. Definindo os destinatários
 
-h5. Conta sem contatos
+A definição dos destinatários da mensagem pode ocorrer de quatro maneiras diferentes.
 
-Textarea, entrada manual
+Com o Mailee.me você pode realizar envios para:
 
-h5. Conta com contatos e sem listas
+* Contatos inseridos via *cadastrado manual*
+* Uma *lista*
+* O *segmento* de uma lista
 
-Opção nova lista
+h5. Envio para contatos inseridos via *cadastrado manual*
 
-h5. Conta com listas
+NOTE. Essa possibilidade só será oferecida caso sua conta não possua nenhum contato ativo cadastrado. Para saber como cadastrar contatos em sua conta, leia o artigo "Cadastro de contatos":contacts_new.html.
 
-Escolher o nome da lista
+A *inserção manual* de contatos ocorre somente para contas que não possuirem contatos cadastrados, como, por exemplo, uma conta nova.
+
+Nessa opção, é oferecido ao usuário uma <samp>textarea</samp> para cadastro de contatos.
+
+!images/messages/new/contacts_textarea.jpg(Textarea para inserção manual)!
+
+Após o envio com os contatos inseridos nessa <samp>textarea</samp> eles serão automaticamente adicionados a sua conta do Mailee.me.
+
+h5. Envio para listas de contatos
+
+NOTE. Essa possibilidade só será oferecida caso sua conta possua uma lista de contatos cadastrada. Para saber como cadastrar e gerenciar listas, leia o artigo "Gerenciamento de listas":lists_management.html.
+
+Para enviar sua mensagem para uma *lista de contatos* já existente, selecione a opção desejada, conforme a imagem abaixo:
+
+!images/messages/new/list_selection.jpg(Selecionando uma lista de contatos)!
+
+O número que aparece ao lado do nome da lista representa o número de *contatos ativos* da lista.
+
+Você poderá conferir e alterar a lista de destinatários na etapa "2. Conferir":message_verify.html
+
+h5. Envio para segmentos de listas
+
+NOTE. Essa possibilidade só será oferecida caso sua conta possua segmentos cadastrados. Para saber como funcionam e como criar segmentos, leia o artigo "Segmentação":segmentation.html.
+
+Para enviar sua mensagem para o *segmento de uma lista de contatos*, primeiro *selecione a lista* desejada e depois o *selecione o segmento*, conforme exemplo abaixo:
+
+!images/messages/new/segment_select.jpg(Selecionando o segmento de uma lista de contatos)!
+
+Diferente da listas de contatos, o segmento é montado dinamicamente e por isso não apresenta o número de contatos para o qual seu envio será realizado. Você poderá conferir o número de contatos que receberão a mensagem na etapa "2. Conferir":message_verify.html.
+
+Você poderá conferir e alterar o segmento do envio na etapa "2. Conferir":message_verify.html
 
 h4. Definição do tipo de conteúdo
 
-O Mailee.me possui dois modos para adição de conteúdo nas mensagens:
+O Mailee.me possui dois modos de edição para o conteúdo de suas mensagens. Confira na imagem abaixo:
+
+!images/messages/new/content_select.jpg(Seleção do tipo de conteúdo)!
 
 * *template* - utilizando um modelo pré-definido de layout e adicionando blocos de repetição ou alterando campos editáveis
 * *inserção manual de conteúdo, ou edição HTML* - onde o conteúdo poderá ser editado na tela diretamente em HTML ou utilizando um processador de texto básico
 
-h5. Template
+INFO. Saiba o que é, como funcionam e como criar um template em "Criando templates":templates_creating.html. 
 
-INFO. Saiba o que é, como funcionam e como criar um template em "Criando templates":templates_creating.html
-
-h5. Colocar conteúdo manualmente (editor de HTML)
-
-!images/messages/new/fck_editor.jpg(Editor de texto básico)!
-
-<hr>
+***
 
 h3. Salvando sua campanha
 
@@ -96,15 +126,22 @@ O Mailee.me automaticamente irá abrir a tela de edição para você editar sua 
 
 Para saber sobre os próximos passos, acesse "1. Conteúdo":message_edit.html, "2. Conferir":message_verify.html, "3. Testar":message_test.html e "4. Enviar":message_send.html.
 
+***
 
 h3. Enviando uma mensagem de uma campanha já existente
 
-Se você já possui a campanha que deseja e já clicou nela, clique no botão de nova mensagem.
+Caso você já possua campanhas cadastradas, realizar um envio é bastante simples.
+
+Acesse o menu Mensagens, conforme imagem abaixo:
+
+!images/messages/new/messages_menu_select.jpg(Seção mensagens)!
 
 Na barra lateral, verifique a lista de suas campanhas.
 
-NOTE. Caso sua campanha não apareça na lista, clique em *Mostrar todas campanhas*
+!images/messages/new/newsletter_send.jpg(Lista de campanhas já existentes)!
 
-Procure a campanha para qual deseja realizar o envio e clique em *Enviar »*
+NOTE. Caso sua campanha não apareça na lista, clique em *Mostrar todas campanhas* para ver todas as campanhas listadas.
 
-Clique na campanha que deseja utilizar para realizar o envio da mensagem.
+Procure a campanha para qual deseja realizar o envio e clique no botão *Enviar »*
+
+Para saber sobre os próximos passos, acesse "1. Conteúdo":message_edit.html, "2. Conferir":message_verify.html, "3. Testar":message_test.html e "4. Enviar":message_send.html.

@@ -67,7 +67,7 @@ Após carregado no Mailee.me, você poderá editar o nome de seu template a qual
 
 ***
 
-h4. Áreas editáveis em templates do Mailee.me
+h3. Áreas editáveis em templates do Mailee.me
 
 h4. Tornando áreas de texto editáveis
 
@@ -129,7 +129,7 @@ Para mais informações sobre redimensionamento das imagens usando o ImageMagik,
 
 ***
 
-h3. Blocos de repetição <span class="small" style="color:#a2bf2f;">novidade</span>
+h3. Blocos de repetição
 
 Blocos de repetição servem para criação de templates onde é necessário repetir o layout, alterando conteúdos.
 
