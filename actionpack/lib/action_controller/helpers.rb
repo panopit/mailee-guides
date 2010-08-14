@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'active_support/dependencies'
 
 # FIXME: helper { ... } is broken on Ruby 1.9

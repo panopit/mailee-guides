@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionView
   module Helpers
     # CaptureHelper exposes methods to let you extract generated markup which

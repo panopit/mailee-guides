@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController #:nodoc:
   module Verification #:nodoc:
     def self.included(base) #:nodoc:

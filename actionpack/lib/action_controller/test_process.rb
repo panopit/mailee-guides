@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController #:nodoc:
   class TestRequest < Request #:nodoc:
     attr_accessor :cookies, :session_options

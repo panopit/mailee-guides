@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'cgi'
 require 'uri'
 require 'action_controller/routing/optimisations'

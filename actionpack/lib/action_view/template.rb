@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionView #:nodoc:
   class Template
     class Path

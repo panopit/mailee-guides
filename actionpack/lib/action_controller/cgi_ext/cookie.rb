@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'delegate'
 
 CGI.module_eval { remove_const "Cookie" }

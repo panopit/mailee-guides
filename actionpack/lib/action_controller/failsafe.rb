@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController
   class Failsafe
     cattr_accessor :error_file_path

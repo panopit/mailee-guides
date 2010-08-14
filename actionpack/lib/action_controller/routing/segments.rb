@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController
   module Routing
     class Segment #:nodoc:

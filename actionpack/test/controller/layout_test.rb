@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'abstract_unit'
 
 # The view_paths array must be set on Base and not LayoutTest so that LayoutTest's inherited

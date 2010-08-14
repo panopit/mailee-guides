@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController
   module StatusCodes #:nodoc:
     # Defines the standard HTTP status codes, by integer, with their

@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module Spree
   module Helpers
     def guide(name, url, options = {}, &block)

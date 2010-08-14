@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionView #:nodoc:
   module Helpers #:nodoc:
     autoload :ActiveRecordHelper, 'action_view/helpers/active_record_helper'

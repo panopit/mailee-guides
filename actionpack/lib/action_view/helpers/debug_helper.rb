@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionView
   module Helpers
     # Provides a set of methods for making it easier to debug Rails objects.

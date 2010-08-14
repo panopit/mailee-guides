@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController
   # Polymorphic URL helpers are methods for smart resolution to a named route call when
   # given an Active Record model instance. They are to be used in combination with

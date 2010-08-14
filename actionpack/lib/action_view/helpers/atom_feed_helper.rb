@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'set'
 
 # Adds easy defaults to writing Atom feeds with the Builder template engine (this does not work on ERb or any other

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'abstract_unit'
 
 # a controller class to facilitate the tests

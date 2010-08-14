@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'stringio'
 require 'uri'
 require 'active_support/test_case'

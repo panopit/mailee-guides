@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController #:nodoc:
   # The flash provides a way to pass temporary objects between actions. Anything you place in the flash will be exposed
   # to the very next action and then cleared out. This is a great way of doing notices and alerts, such as a create

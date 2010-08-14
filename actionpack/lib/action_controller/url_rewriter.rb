@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController
   # In <b>routes.rb</b> one defines URL-to-controller mappings, but the reverse
   # is also possible: an URL can be generated from one of your routing definitions.

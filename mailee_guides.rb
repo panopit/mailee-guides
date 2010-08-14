@@ -1,3 +1,5 @@
+# coding: utf-8
+
 ANALYTICS_ID=ENV['ANALYTICS_ID']
 
 pwd = File.dirname(__FILE__)

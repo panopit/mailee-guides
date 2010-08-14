@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # AUTHOR: blink <blinketje@gmail.com>; blink#ruby-lang@irc.freenode.net
 
 gem 'ruby-openid', '~> 2' if defined? Gem

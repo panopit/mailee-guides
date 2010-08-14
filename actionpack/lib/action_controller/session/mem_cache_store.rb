@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 begin
   require_library_or_gem 'memcache'
 

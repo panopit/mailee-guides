@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 $:.unshift(File.dirname(__FILE__) + '/../lib')
 $:.unshift(File.dirname(__FILE__) + '/../../activesupport/lib')
 $:.unshift(File.dirname(__FILE__) + '/fixtures/helpers')
