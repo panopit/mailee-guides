@@ -55,7 +55,7 @@ Ao mesmo tempo, caso você seja designer, você pode "criar seus templates":temp
 
 h4. Geolocalização
 
-Nossos relatórios incluem informações de localização dos contatos na hora em que eles acessaram suas mensagens. A partir destas informações, você pode até criar campanhas segmentadas por região no mapa.
+Nossos relatórios incluem informações de localização dos contatos na hora em que eles acessaram suas mensagens. A partir dessas informações, você pode até criar campanhas segmentadas por região no mapa.
 
 h4. Integração com redes sociais
 
@@ -63,7 +63,7 @@ Temos um foco em integração com redes sociais e no Mailee.me você pode até e
 
 h4. Atualizações frequentes
 
-Estamos sempre melhorando o Mailee.me. Para alguns clientes, é até perturbador a quantidade de mudanças. Se você não gosta de mudanças, talvez seja melhor escolher outro serviço. Mas se você gosta de aprender coisas novas, achamos que deve ficar conosco.
+Estamos sempre melhorando o Mailee.me. Para alguns clientes, é até perturbadora a quantidade de mudanças. Se você não gosta de mudanças, talvez seja melhor escolher outro serviço. Mas se você gosta de aprender coisas novas, achamos que deve ficar conosco.
 
 h4. Suporte técnico incansável
 
