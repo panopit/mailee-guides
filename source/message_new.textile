@@ -1,18 +1,18 @@
-h2. Criando uma mensagem
+h2. Criando uma campanha
 
-Esse artigo serve para pessoas que desejam saber como criar uma campanha usando um template criado para o Mailee.me. Ao final dele você deverá saber como:
+Este artigo serve para pessoas que desejam saber como criar uma campanha usando um template criado para o Mailee.me. Ao final dele, você deverá saber como:
 
 * Criar uma campanha
-* Configurar a primeira mensagem
+* Configurar sua primeira mensagem
 * Fazer um envio de uma campanha já existente
 
-Para saber sobre as etapas restantes, acesse "3. Testar":message_test.html e "4. Enviar":message_send.html.
+Para saber sobre cada etapa do processo de envio, acesse: "1. Conteúdo":message_test.html, "2. Conferir":message_verify.html, "3. Testar":message_test.html e "4. Enviar":message_send.html.
 
 endprologue.
 
 h3. Criando uma nova campanha
 
-Para criar sua campanha no Mailee.me, primeiro acesse a seção *Mensagens* através da barra de navegação superior.
+Para criar sua campanha no Mailee.me, primeiro acesse a seção *Mensagens* através da barra de navegação superior, conforme imagem abaixo:
 
 !images/messages/new/messages_menu_select.jpg(Seção mensagens)!
 
@@ -20,11 +20,22 @@ Após, clique no botão _Nova campanha_ localizado na barra lateral:
 
 !images/messages/new/new_newsletter_button.jpg(Nova campanha)!
 
-INFO. Para saber como funcionam as campanhas, "clique aqui":what_is_a_campaign.html.
+INFO. Para saber o que são e como funcionam as campanhas, "clique aqui":what_is_a_campaign.html.
 
 ***
 
 h3. Configurando a primeira mensagem de uma campanha
+
+A configuração de sua campanha será feita na criação da primeira mensagem, e nessa etapa você poderá:
+
+* Escolher o *nome* para a campanha
+* Escolher o *título* da mensagem
+* Definir o *assunto* da primeira mensagem
+* Definir *nome e email do remetente*
+* Definir um *email para resposta* (caso diferente do de remetente)
+* Definir se sua mensagem será integrada com *Google Analytics*
+* Definir os *destinatários* de sua campanha
+* Definir o *tipo de conteúdo* utilizado na mensagem
 
 h4. Nome da campanha
 
@@ -41,19 +52,24 @@ h5. Assunto do email (subject)
 O *assunto do email* ou *subject* é a informação mais importante do conteúdo de sua mensagem. É por ele que os seus contatos *decidem abrir ou não* o seu email, portanto pense bem antes de escrevê-lo.
 
 *Dicas*
-* Procure ser sucinto e claro na redação do assunto.
-* Busque refletir da melhor forma possível o conteúdo de seu email.
-* Não utilize texto todo em MAIUSCULAS
 
-INFO. Você também pode modificar o assunto do email na etapa "*2. Conferir*":message_verify.html.
+* Procure ser <span class="correct">*sucinto e claro*</span> na redação do assunto.
+* Busque <span class="correct">*refletir da melhor forma possível*</span> o conteúdo de seu email.
+* Não escreva usando somente <span class="wrong">*MAIUSCULAS*</span>
+
+NOTE. Você também pode modificar o assunto do email na etapa "*2. Conferir*":message_verify.html.
 
 h5. Nome e email do remetente
 
 *Nome e email do remetente* são informações que compõem a sua assinatura. Ela irá informar ao seu contato quem está enviando o email e assim como o assunto ele também é importante para a aceitação do email e consequente visualização. Você pode aconselhar seus contato a adicionar seu email à lista de contatos conhecidos, melhorando assim, a entrega de suas mensagens. Leia mais sobre a adição à lista de contatos em "Criação de Templates":templates_creating.html#adicionandolistadecontatoswhitelist
 
+NOTE. Você também pode modificar nome e email do remetente na etapa "*2. Conferir*":message_verify.html.
+
 h5. Email de resposta
 
 O *email de resposta* serve para o caso de você não querer receber mensagens de resposta de seus contatos no email fornecido como remetente. Ele irá aparecer automaticamente quando o contato clicar em responder (ou _reply_) do cliente de email.
+
+NOTE. Você também pode modificar email de resposta na etapa "*2. Conferir*":message_verify.html.
 
 h5. Integração com Google Analytics
 
@@ -68,6 +84,8 @@ Com o Mailee.me você pode realizar envios para:
 * Contatos inseridos via *cadastrado manual*
 * Uma *lista*
 * O *segmento* de uma lista
+
+NOTE. Você também pode modificar os destinatários da mensagem etapa "*2. Conferir*":message_verify.html.
 
 h5. Envio para contatos inseridos via *cadastrado manual*
 
@@ -111,36 +129,38 @@ O Mailee.me possui dois modos de edição para o conteúdo de suas mensagens. Co
 
 !images/messages/new/content_select.jpg(Seleção do tipo de conteúdo)!
 
-* *template* - utilizando um modelo pré-definido de layout e adicionando blocos de repetição ou alterando campos editáveis
-* *inserção manual de conteúdo, ou edição HTML* - onde o conteúdo poderá ser editado na tela diretamente em HTML ou utilizando um processador de texto básico
+Você poderá escolher entre os modos:
 
-INFO. Saiba o que é, como funcionam e como criar um template em "Criando templates":templates_creating.html. 
+|_. *Template*¹ | Esse modo utiliza um modelo pré-definido de layout (template) <br> Saiba *o que é*, *como funciona* e *como criar* um template em "Criando templates":templates_creating.html |
+|_. *Inserção manual de conteúdo (edição HTML)* | Nesse modo, o conteúdo poderá ser editado diretamente no email ou em código HTML |
+
+NOTE. ¹ Ao escolher esse modo é possível alterar o template utilizado na mensagem durante a "edição":message_edit.html.
 
 ***
 
 h3. Salvando sua campanha
 
-Após o preenchimento dos dados de configuração de sua campanha você deve salvar.
+Após preencher os dados de configuração de sua campanha, você deve salvar.
 
-O Mailee.me automaticamente irá abrir a tela de edição para você editar sua primeira mensagem!
+O Mailee.me irá automaticamente abrir a "próxima etapa":message_edit.html, e você poderá começar a editar sua primeira mensagem!
 
 Para saber sobre os próximos passos, acesse "1. Conteúdo":message_edit.html, "2. Conferir":message_verify.html, "3. Testar":message_test.html e "4. Enviar":message_send.html.
 
 ***
 
-h3. Enviando uma mensagem de uma campanha já existente
+h3. Enviando uma mensagem de uma campanha existente
 
-Caso você já possua campanhas cadastradas, realizar um envio é bastante simples.
+Caso você já possua uma campanha cadastrada, realizar um envio é bastante simples.
 
-Acesse o menu Mensagens, conforme imagem abaixo:
+Acesse o menu *Mensagens*, conforme imagem abaixo:
 
 !images/messages/new/messages_menu_select.jpg(Seção mensagens)!
 
-Na barra lateral, verifique a lista de suas campanhas.
+Na barra lateral, verifique a lista de suas campanhas, conforme imagem abaixo:
 
 !images/messages/new/newsletter_send.jpg(Lista de campanhas já existentes)!
 
-NOTE. Caso sua campanha não apareça na lista, clique em *Mostrar todas campanhas* para ver todas as campanhas listadas.
+NOTE. Caso sua campanha não apareça na lista, você pode clicar em *Mostrar todas campanhas* para ver uma lista com todas as suas campanhas.
 
 Procure a campanha para qual deseja realizar o envio e clique no botão *Enviar »*
 
