@@ -1,0 +1,110 @@
+h2. Glossário
+
+Este artigo serve para definição de termos utilizados nos guias do Mailee.me.
+
+Caso você ainda possua dúvida sobre algum termo encontrado aqui, "entre em contato":mailto:suporte@mailee.me.
+
+endprologue.
+
+h3. A
+
+h4. Assunto
+
+O *assunto do email* ou *subject* é a informação mais importante do conteúdo de sua mensagem. É por ele que os seus contatos *decidem abrir ou não* o seu email, portanto pense bem antes de escrevê-lo.
+
+h3. B
+
+h4. Blacklist
+
+Uma blacklist é uma lista contendo *domínios*, *endereços de IP* e *nomes de empresas* que receberam complaints por mandar mensagem não-autorizada (SPAM).
+
+h3. C
+
+h4. Campanha
+
+Campanha ou _Newsletter_
+
+h4. Cliente de email
+
+Cliente de email ou _Email Client_ são programas para a visualização e organização de mensagens de email. Os clientes de email podem ser:
+
+* Web, como o Gmail, o Hotmail, o Yahoo, etc
+* Desktop, como o Mozilla Thunderbird, Microsoft Outlook, Apple Mail, etc.
+
+h3. D
+
+h4. Descadastro
+
+O *descadastro*, *_unsubscribe_* ou *_opt-out_* é essencial em email marketing. Ele serve para que o contato que quiser deixar de receber suas mensagens, seja por desinteresse, ou qualquer outro motivo, possa ser *efetivamente descadastrado* de sua lista. Você pode ver como inserir um link para descadastro no Mailee.me em "Criação de templates":templates_creating.html
+
+h3. E
+
+h4. Editor WYSIWYG
+
+A *edição WYSIWYG* ocorre quando o editor permite alterar um documento utilizando na tela a mesma aparência que ele terá quando finalizado, seja da forma impressa ou digital. O editor WYSIWYG do Mailee.me permite que você altere o conteúdo de suas mensagens diretamente no layout de email.
+
+Leia o artigo completo na Wikipedia » "WYSIWYG":http://pt.wikipedia.org/wiki/WYSIWYG
+
+h3. F
+
+h3. G
+
+h3. H
+
+h3. I
+
+h3. J
+
+h3. K
+
+h3. L
+
+h3. M
+
+h4. Mensagem
+
+Mensagem ou _message_
+
+h4. Mensagem não-autorizada
+
+A mensagem não-autorizada ou _SPAM_ é uma mensagem com fins comerciais enviada para uma pessoa sem a autorização prévia.
+
+O Mailee.me é um sistema para fazer "*email marketing baseado em permissões*":http://en.wikipedia.org/wiki/Permission_marketing. Nós não gostamos de receber SPAM e nós não criamos o Mailee.me para ser uma ferramenta para SPAM. Nós não acreditamos que negócios possam dar certo, ainda mais na era da Internet, com práticas desrespeitosas e não queremos trabalhar com clientes que pensem assim.
+
+h4. Marketing de permissão
+
+h3. N
+
+h3. O
+
+h3. P
+
+h4. _Permission marketing_
+
+Ver "_Marketing de permissão_":#marketingdepermisso.
+
+h3. Q
+
+h3. R
+
+h3. S
+
+h4. SPAM
+
+Ver "_mensagem não-autorizada_":#mensagemno-autorizada
+
+h3. T
+
+h4. Template
+
+h3. U
+
+h3. V
+
+h3. W
+
+h3. X
+
+h3. Y
+
+h3. Z

@@ -1,12 +1,10 @@
-h2. Verificando o conteúdo da mensagem
+h2. Conferindo o conteúdo das mensagens
 
-Esse artigo serve para pessoas que desejam saber como conferir e testar sua mensagem após a edição do conteúdo no Mailee.me. Ao final dele você deverá saber:
+Esse artigo serve para pessoas que desejam saber como conferir sua mensagem após a edição do conteúdo no Mailee.me. Ele cobre a *segunda etapa do processo de envio*, e, ao final dele você deverá saber:
 
 * Como conferir informações de envio
 * Saber o número de contatos que irão receber a mensagem
 * Inserir um email válido para testes
-* Fazer o envio de testes
-* Conhecer detalhes sobre o envio de testes
 
 Para saber sobre as outras etapas, acesse "1. Conteúdo":message_edit.html, "3. Testar":message_test.html e "4. Enviar":message_send.html.
 
@@ -19,7 +17,7 @@ A segunda etapa do processo de envio serve para conferir as informações de env
 * Conferir as informações da mensagem
 * Ver um _preview_ da mensagem
 
-NOTE. A previsualização serve apenas para exibição da mensagem em seu navegador e não corresponde exatamente o que seus clientes irão ver. Para conferir sua mensagem o Mailee.me fortemente sugere a realização de "testes de envio":#testandosuamensagemopcional.
+NOTE. A previsualização serve apenas para exibição da mensagem em seu navegador e não corresponde exatamente o que seus clientes irão ver. Para conferir sua mensagem o Mailee.me fortemente sugere a "testar sua mensagem":message_test.html.
 
 h4. Informações da mensagem
 
@@ -52,41 +50,3 @@ Caso sua mensagem necessite alguma alteração, você pode *Voltar* à etapa ant
 !images/messages/verify/verify_back_to_edit.jpg(Voltar para edição de conteúdo)!
 
 NOTE. Tanto os links dinâmicos [descadastro ou _unsubscribe_, visualizar na web ou _weblink_, encaminhar para amigos ou _forward_, adicionar à lista de contatos ou _whitelist_ ] quanto as informações personalizadas de contato e de campos personalizados estão desabilitadas na área de *preview*.
-
-***
-
-h3. Testando sua mensagem (opcional)
-
-NOTE. É importante que o email para o qual será enviado o teste esteja cadastrado com status válido nos seus contatos do Mailee.me.
-
-Nessa etapa você poderá realizar um *envio de teste* para emails cadastrados em sua base de contatos. O envio teste servirá para você visualizar sua mensagem em clientes de email diferentes e conferir a qualidade do layout. Aqui você irá aprender como:
-
-* Inserir um email válido para testes
-* Enviar o teste
-* Saber detalhes sobre o envio de testes
-
-A tela é simples e apresenta um campo para entrada do email que será utilizado para realizar o teste, conforme imagem abaixo:
-
-!images/messages/verify/verify_test.jpg(Envio de teste)!
-
-h4. Inserindo um email válido para testes
-
-Não é necessário digitar todo email. Com apenas algumas letras o Mailee.me realizará uma busca em sua base de contatos para procurar emails que você possue cadastrado, conforme imagem abaixo:
-
-!images/messages/verify/verify_test_search_contact.jpg(Adicionando email para envio de teste)!
-
-h4. Enviando o teste
-
-Após cadastrar o(s) email(s) que deseja utilizar para o envio de teste, você só precisa apertar o botão *Enviar teste*, conforme imagem abaixo:
-
-!images/messages/verify/verify_test_send.jpg(Enviando a mensagem de teste)!
-
-h4. Detalhes sobre o envio de testes
-
-O envio de um email de testes é diferente, pois, nesse envio:
-
-* Não serão contatos os acessos e cliques de seus contatos.
-* Ações em links dinâmicos [descadastro ou _unsubscribe_, visualizar na web ou _weblink_, encaminhar para amigos ou _forward_, adicionar à lista de contatos ou _whitelist_ ] estão desabilitadas.
-* Os envios de teste não consomem créditos.
-
-NOTE. Recomendamos que você sempre faça testes de envio para diferentes _clientes de email_ (i.g. Outlook, Gmail, Windows Live, Yahoo, etc) de modo a se certificar que seus contatos irão visualizar sua mensagem corretamente.

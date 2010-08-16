@@ -1,6 +1,6 @@
 h2. Como criar templates
 
-Esse guia é voltado para pessoas que desejam saber como criar seus próprios templates para usar no Mailee.me. Ele cobre funcionalidades que vão do nível básico ao avançado, e ao final dele você deverá saber como:
+Este guia é voltado para pessoas que desejam saber como criar seus próprios templates para usar no Mailee.me. Ele cobre funcionalidades que vão do nível básico ao avançado, e, ao final dele, você deverá saber como:
 
 * Configurar corretamente sua mensagem
 * Tornar campos e imagens editáveis
@@ -12,7 +12,7 @@ endprologue.
 
 h5. Antes de começar:
 
-INFO. Esse guia é escrito de forma simples, para que você consiga montar um template partindo do zero.<br/> No entanto ele assume que você possui um conhecimento básico de *HTML* e *CSS*. Para saber mais sobre HTML e CSS acesse os links indicados no "final desse artigo":templates_creating.html#html_css_reference .
+INFO. *Como criar templates* é escrito de forma simples, para que você consiga montar um template partindo do zero.<br/> No entanto, ele assume que você possui conhecimento básico de *HTML* e *CSS*. Para saber mais sobre HTML e CSS acesse os links indicados no "final desse artigo":#guiadereferncia.
 
 h4. O que é um template de email
 
@@ -22,7 +22,7 @@ O uso de templates de email é aconselhado para campanhas de email que devem ter
 
 h3. Configurando seu template
 
-Templates criados para o Mailee.me precisam obedecer certas regras. São elas:
+Templates criados para o Mailee.me precisam obedecer a certas regras. São elas:
 
 * Todo conteúdo salvo em codificação UTF-8
 * Arquivo _zip_ com os arquivos
@@ -216,9 +216,9 @@ Você pode adicionar facilmente um *link para descadastramento (unsubscribe)*, a
 
 h4. Link para descadastramento (unsubscribe)
 
-O *link de descadastramento* ou *unsubscribe* é um item recomendado a todas mensagens de email marketing. Ele serve para que o usuário que quiser deixar de receber suas notícias por email, seja por desinteresse, ou qualquer outro motivo, possa ser efetivamente descadastrado de sua lista.
+O *link de descadastramento* ou *unsubscribe* é essencial em email marketing. Ele serve para que o contato que quiser deixar de receber suas mensagens, seja por desinteresse, ou qualquer outro motivo, possa ser *efetivamente descadastrado* de sua lista.
 
-O Mailee.me oferece uma solução simples, e para inserir esse link em seus templates basta colocar o seguinte código em seus templates:
+O Mailee.me oferece uma solução simples, e para inserir esse link em seus templates basta colocar neles o seguinte código:
 
 <html>
   <p>
@@ -340,7 +340,7 @@ Enquanto *Nome* e *E-mail* são *campos dos contatos* no Mailee.me, o campo *Gos
 
 !images/templates/importing_fields.gif(Campos personalizados importados)!
 
-Chamaremos esse campo personalizado de *estilo* e para inserir o campo em seu template, basta colocar no seu template o seguinte código:
+Chamaremos esse campo personalizado de *estilo* e para inserir o campo em seu template, basta inserir o seguinte código:
 
 <html>
   <p>
@@ -350,12 +350,12 @@ Chamaremos esse campo personalizado de *estilo* e para inserir o campo em seu te
 
 O Mailee.me irá trocar automaticamente a informação do elemento <samp>&lt;span class="contact estilo"&gt;&lt;/span&gt;</samp> da mensagem de cada contato para a informação contida no campo com a <samp>tag</samp> <samp>estilo</samp>.
 
-WARNING. Para os *campos personalizados* você deve usar a <samp>tag</samp> deste campo e não o *nome* dos mesmos.
+WARNING. Para os *campos personalizados* você deve usar a <samp>tag</samp> deste campo e não o seu *nome*.
 
 
 h4. Informações da lista
 
-Todas as mensagens enviadas pelo Mailee.me estão relacionadas a uma lista de contatos. Para colocar os *dados da lista* basta colocar o atributo <samp>class="list"</samp> seguida do campo que você desejar.
+Todas as mensagens enviadas pelo Mailee.me estão relacionadas a uma lista de contatos. Para personalizar seu template com *dados da lista*, basta inserir o atributo <samp>class="list +informação+"</samp> (substituindo +informação+ pelo nome do campo).
 
 Confira o seguinte exemplo:
 
@@ -365,7 +365,7 @@ Confira o seguinte exemplo:
   </p>
 </html>
 
-Para inserir a informação de *endereço* relacionada a lista, basta adicionar um <samp>&lt;span&gt;</samp> com o atributo <samp>class="list address"</samp>, ficando assim:
+Para inserir a informação de *endereço* relacionada à lista, basta adicionar um <samp>&lt;span&gt;</samp> com o atributo <samp>class="list address"</samp>, ficando assim:
 
 <html>
   <p>
@@ -380,7 +380,7 @@ WARNING. Utilize sempre um _fallback_ válido, para o caso de não possuir a inf
 Veja abaixo os campos possíveis com *informações da lista* no Mailee.me:
 
 |_. Campo |_. Descrição |
-|_. <samp>class="list id"</samp> | Identificador da lista no Mailee |
+|_. <samp>class="list id"</samp> | Identificador da lista no Mailee.me |
 |_. <samp>class="list name"</samp> | Nome da lista |
 |_. <samp>class="list description"</samp> | Descrição da lista. Aqui você pode colocar alguma informação útil para os contatos. |
 |_. <samp>class="list address"</samp> | Endereço (físico: rua, bairro...) da lista |
@@ -427,14 +427,9 @@ h3. Guia de referência
 
 Para saber mais sobre HTML e CSS, acesse os links abaixo:
 
-<div id="html_css_reference">
-
 * "HTML na w3 Schools":http://www.w3schools.com/html/default.asp - Guia de referência com tutorial e documentação para HTML (em inglês)
 * "CSS na w3 Schools":http://www.w3schools.com/css/default.asp - Guia de referência com tutorial e documentação para CSS (em inglês)
 * "HTML - Wikipedia [en]":http://en.wikipedia.org/wiki/HTML - Informações sobre HTML (em inglês)
 * "HTML - Wikipedia [pt-Br]":http://pt.wikipedia.org/wiki/HTML - Informações sobre HTML (em português)
 * "Artigo na Wikipedia sobre CSS":http://en.wikipedia.org/wiki/Cascading_Style_Sheets - Informações sobre CSS (em inglês)
 * "Artigo na Wikipedia sobre CSS":http://pt.wikipedia.org/wiki/Cascading_Style_Sheets - Informações sobre CSS (em português)
-
-</div>
-

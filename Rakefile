@@ -1,4 +1,4 @@
-# coding: utf-8
+# encoding: utf-8
 
 desc 'Generate guides (for authors), use ONLY=foo to process just "foo.textile"'
 

@@ -1,10 +1,21 @@
-h2. Alteração de logo
+h2. Configurações de sua conta
 
-p. Esse artigo irá mostrar como configurar o Mailee.me para apresentar o seu logo.
+Este artigo irá mostrar como configurar o Mailee.me, e ao final dele você deverá poder:
+
+* Alterar suas informações de cadastro
+* Inserir ou alterar seu logotipo
 
 endprologue.
 
-h3. Alteração de Logo
+h3. Alteração de dados cadastrais
+
+#TODO
+
+Irá aparecer na tela de descadastro.
+
+***
+
+h3. Inserindo ou alterando seu logotipo
 
 Selecione *Configurações* no menu superior.
 

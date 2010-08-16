@@ -123,18 +123,18 @@ Diferente da listas de contatos, o segmento é montado dinamicamente e por isso 
 
 Você poderá conferir e alterar o segmento do envio na etapa "2. Conferir":message_verify.html
 
-h4. Definição do tipo de conteúdo
+h4. Definição do modo de conteúdo
 
-O Mailee.me possui dois modos de edição para o conteúdo de suas mensagens. Confira na imagem abaixo:
+O Mailee.me possui dois modos de conteúdo para a edição de suas mensagens, conforme a imagem abaixo:
 
 !images/messages/new/content_select.jpg(Seleção do tipo de conteúdo)!
 
 Você poderá escolher entre os modos:
 
-|_. *Template*¹ | Esse modo utiliza um modelo pré-definido de layout (template) <br> Saiba *o que é*, *como funciona* e *como criar* um template em "Criando templates":templates_creating.html |
-|_. *Inserção manual de conteúdo (edição HTML)* | Nesse modo, o conteúdo poderá ser editado diretamente no email ou em código HTML |
+|_. Template | Esse modo utiliza um modelo pré-definido de layout (template) <br> Saiba *o que é*, *como funciona* e *como criar* um template em "Criando templates":templates_creating.html |
+|_. Inserção manual de conteúdo (edição HTML) | Nesse modo, o conteúdo poderá ser editado usando um editor HTML ou diretamente em código HTML |
 
-NOTE. ¹ Ao escolher esse modo é possível alterar o template utilizado na mensagem durante a "edição":message_edit.html.
+INFO. Saiba mais sobre a edição dos modos de conteúdo em "Editando o conteúdo de suas mensagens.":message_edit.html#modosdecontedodo-maileeme
 
 ***
 
