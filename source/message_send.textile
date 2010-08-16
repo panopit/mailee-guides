@@ -19,18 +19,23 @@ O Mailee.me tem dois modos para envio de mensagens. Nele você pode:
 
 !images/messages/send/send_screen.jpg(Tela de envio de mensagem)!
 
+***
 
-h4. Enviando imediatamente sua mensagem
+h3. Enviando imediatamente sua mensagem
 
 Para enviar sua mensagem imediatamente, basta selecionar a opção *Enviar agora* e depois clicar no botão *enviar agora »*, conforme imagem abaixo:
 
 !images/messages/send/send_now.jpg(Envio imediato de mensagem)!
 
-WARNING. *Importante*<br>É possível parar um envio no meio, mas é impossível cancelar envios que já tenham sido iniciados.
+WARNING. *Importante*<br>É possível parar um envio no meio, mas é impossível cancelar envios que já tenham sido entregues.
 
-h4. Agendando um envio para uma data futura
+***
+
+h3. Agendando um envio para uma data futura
 
 Você pode realizar um agendamento para enviar sua mensagem em uma data futura.
+
+IMPORTANT. Os envios do Mailee.me são agendados usando o horário oficial de Brasília ("UTC-3":http://pt.wikipedia.org/wiki/UTC-3) como padrão.
 
 Para realizar um agendamento, clique em *Enviar em*, conforme imagem abaixo:
 
@@ -38,6 +43,6 @@ Para realizar um agendamento, clique em *Enviar em*, conforme imagem abaixo:
 
 Em seguida bastante, para isso, preencher a data e o horário no campo correspondente, conforme imagem abaixo:
 
-NOTE. *Importante*<br>Você pode excluir um envio agendado a qualquer momento antes do envio.<br>É possível parar um envio no meio, mas é impossível cancelar envios que já tenham sido iniciados.
+!images/messages/send/send_after_select_date.jpg(Selecionando a data para envio futuro.)!
 
-IMPORTANT. Os envios do Mailee.me são agendados usando o horário oficial de Brasília ("UTC-3":http://pt.wikipedia.org/wiki/UTC-3) como padrão.
+NOTE. *Importante* <br> Você pode *excluir* um envio agendado a qualquer momento antes do envio. <br> Assim como um envio imediato, você poderá cancelar o envio agendado no meio, mas será impossível cancelar os envios que já tiverem sido entregues.

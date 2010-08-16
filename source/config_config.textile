@@ -1,0 +1,62 @@
+h2. Configurações de conta
+
+Este artigo irá mostrar como configurar os dados de sua conta no Mailee.me, e ao final dele você deverá poder:
+
+* Alterar suas informações de cadastro
+* Inserir ou alterar seu logotipo
+
+endprologue.
+
+h3. Alteração as configurações de sua conta
+
+Para alterar as configurações de sua conta no Mailee.me, você deve acessar primeiro o menu configurações, conforme imagem abaixo:
+
+!images/config/config/config_menu.png(Selecionando configurações no menu)!
+
+Após clique no submenu _Configurações da conta_, conforme imagem abaixo:
+
+!images/config/config/config_config_submenu.png(Selecionando o submenu Configurações de conta)!
+
+Você chegará na tela de configurações de conta, conforme imagem abaixo:
+
+!images/config/config/config_info.jpg(Configuração de conta)!
+
+Na tela de *configurações da conta* você poderá:
+
+* Alterar os dados de cadastro de sua conta no Mailee.me
+* Inserir ou alterar um logotipo
+
+NOTE. As informações da conta servem para personalização de suas informações e serão exibidas na "*tela de descadastro*":go_unsubscribe.html.
+
+***
+
+h4. Alterando dados cadastrais
+
+Os dados cadastrais de sua conta servem para sua identificação 
+
+h5. Saiba mais sobre os dados cadastrais:
+
+*Nome* é o seu nome ou de sua empresa.
+
+NOTE. O nome cadastrado nesse campo irá aparecer na "*tela de descadastro*":go_unsubscribe.html
+
+*Email* é o seu email.
+
+Por padrão o Mailee.me utiliza o email do usuário proprietário da conta. Esse email irá aparecer no cadastro de novas campanhas no campo *Remetente: (_From:_)* e na "*tela de descadastro*":go_unsubscribe.html.
+
+***
+
+h4. Inserindo um logotipo
+
+Para inserir ou alterar seu logotipo, basta clicar em *Alterar logo*.
+
+Se você não possui nenhum logo cadastrado, você deve conforme imagem abaixo:
+
+!images/config/config/logo_add.jpg(Adicionando um logo)!
+
+Se você já possui um logo cadastrado, a tela será assim:
+
+!images/config/config/logo_change_button.png(Alterar um logo já existente)!
+
+Após cadastrado, seu logotipo irá aparecer no *Dashboard* de sua conta e nas "*telas de descadastro*":go_unsubscribe.html de suas mensagens.
+

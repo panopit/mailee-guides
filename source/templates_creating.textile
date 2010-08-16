@@ -151,13 +151,13 @@ Para tornar essa <samp>&lt;div&gt;</samp> um bloco de repetição de notícias, 
 
 <html>
   <div id="news" class="repeat" title="notícias">
-    <h1> Seu título aqui </h1>
+    <h1 class="title"> Seu título aqui </h1>
     <img src='sua_imagem.jpg' />
     <p> Conteúdo de seus textos aqui… </p>
   </div>
 </html>
 
-Dessa forma, o Mailee.me interpretará tudo que estiver dentro dessa <samp>&lt;div id="news" class="repeat" title="notícias"&gt;</samp> como um bloco de repetição.
+Dessa forma, o Mailee.me interpretará tudo que estiver dentro dessa <samp>&lt;div id="news" class="repeat" title="notícias"&gt;</samp> como um bloco de repetição. O título para o bloco de repetição será indicado pelo atributo <samp>class="title"</samp> no seu elemento de título <samp>&lt;h#&gt;</samp>.
 
 INFO. Dentro dos blocos de repetição não será necessário definir <samp>class="edit"</samp> nos elementos, pois o bloco de repetição, por padrão, já é editável.
 
@@ -175,13 +175,13 @@ Para adicionar ao seu template uma *lista de índice*, será necessário copiar 
 
 <html>
   <div id="news" class="repeat" title="notícias">
-    <h1> Seu título aqui </h1>
+    <h1 class="title"> Seu título aqui </h1>
     <img src='sua_imagem.jpg' />
     <p> Conteúdo de seus textos aqui… </p>
   </div>
 </html>
 
-Nesse caso, a informação do atributo <samp>id</samp> é <samp>"news"</samp>.
+Nesse caso, a informação do atributo <samp>id</samp> é <samp>"news"</samp> e seu título é definido pelo elemento <samp>&lt;h1 class="title"&gt;</samp>.
 
 Para criar a *lista de índice* para esse bloco de repetição, basta adicionar a informação <samp>"news"</samp> na classe de um elemento <samp>&lt;ul class="index"&gt;</samp>, da seguinte forma:
 
@@ -191,14 +191,14 @@ Para criar a *lista de índice* para esse bloco de repetição, basta adicionar 
   </ul>
 </html>
 
-Dessa forma, o Mailee.me irá interpretar o elemento <samp>&lt;ul class="index news"&gt;</samp> como sendo a lista de índice para o bloco de repetição de notícias. No final, seu código deverá conter informações similares às apresentadas abaixo:
+Dessa forma, o Mailee.me irá interpretar o elemento <samp>&lt;ul class="index news"&gt;</samp> como sendo a lista de índice para o bloco de repetição de notícias e cada elemento <samp>&lt;h1 class="title"&gt;</samp> será automaticamente adicionado nessa lista. No final, seu código deverá conter informações similares às apresentadas abaixo:
 
 <html>
   <ul class="index news">
     <li> </li>
   </ul>
   <div id="news" class="repeat" title="notícias">
-    <h1> Seu título aqui </h1>
+    <h1 class="title"> Seu título aqui </h1>
     <img src='sua_imagem.jpg' />
     <p> Conteúdo de seus textos aqui… </p>
   </div>

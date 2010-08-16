@@ -148,4 +148,8 @@ h3. Artigos úteis
   <% guide('Glossário de termos', 'glossary.html') do %>
     Aprenda termos comuns em email marketing
   <% end %>
+  <% guide('Tela de descadastro', 'go_unsubscribe.html') do %>
+    Aprenda o que é e como configurar sua tela de descadastro
+  <% end %>
+
 </dl>

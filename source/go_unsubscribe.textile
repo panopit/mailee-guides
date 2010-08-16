@@ -1,0 +1,27 @@
+h2. Tela de descadastramento
+
+Este artigo serve para pessoas que querem saber mais sobre a *tela de descadastro* do Mailee.me, e ao final dele você deverá poder:
+
+* Saber quais são os dados exibidos na tela de descadastro
+* Alterar as informações exibidas nessa tela
+
+endprologue.
+
+h3. Tela de descadastro
+
+A tela de descadastro será acessada pelos contatos que não quiserem mais receber mensagens de sua conta, conforme imagem de exemplo abaixo:
+
+!images/go/unsubscribe/unsubscribe_screen.jpg(Tela de descadastro)!
+
+INFO. Para saber como inserir um link de descadastro em seu template, leia o artigo "Criação de templates":templates_creating.html#linkparadescadastramentounsubscribe.
+
+Para saber como configurar as informações exibidas na tela de descadastro, precisamos primeiro compreender o que são cada uma delas.
+
+h4. Informações da tela de descadastro
+
+!images/go/unsubscribe/unsubscribe_explained.jpg(Informações na tela de descadastro)!
+
+# *Nome:* Seu nome ou de sua empresa. Para saber como alterar essas informações, leia o artigo "Configurações de conta":config_config.html#alterandodadoscadastrais.
+# *Email:* Seu nome ou de sua empresa. Para saber como alterar essas informações, leia o artigo "Configurações de conta":config_config.html#alterandodadoscadastrais.
+# *Logo:* Seu logotipo. Para saber como alterar o logotipo, leia o artigo "Configurações de conta":config_config.html#inserindoumlogotipo.
+# *Informações da lista:* informações cadastradas em sua lista de contatos. Para saber como modificar as informações da lista, leia o artigo "Gerenciamento de listas":lists_management.html#editandoumalistadecontatos.
