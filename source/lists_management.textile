@@ -6,54 +6,79 @@ Esse artigo irá mostrar como é realizado o gerenciamento de listas.
 * Edição de listas
 * Exclusão de listas
 * Visualização dos contatos inseridos em listas
+* Exportar todos contatos de uma lista
 
 endprologue.
 
 h3. Criando, editando e excluindo uma lista
 
-Para iniciar o gerenciamento de listas, selecione *Contatos* na barra de navegação e clique no botão _Gerenciar listas_ no final da coluna lateral.
+Para iniciar o gerenciamento de listas, selecione *Contatos* na barra de navegação e em seguida clique no botão _Gerenciar listas_ no barra lateral.
 
-!images/lists_management/lists_manage_button.png(Gerenciar listas)!
+!images/lists_management/manage_lists_button.jpg(Gerenciar listas)!
 
 h4. Criando uma lista de contatos
 
-p. Ao iniciar uma nova conta, a tela estará vazia. Para criar uma lista, clique no botão *Adicionar lista*.
+Para criar uma lista, clique no botão *Adicionar lista*.
 
-p. Na tela de criação de lista você tem os seguintes campos:
+Na tela de criação de lista, você pode modificar os seguintes campos:
 
-* *Nome* - Nome da sua futura lista, obrigatório
+* *Nome* - Nome da sua futura lista (obrigatório)
+* *Empresa* - Nome da empresa
+* *Site* - Endereço URL para seu site
+* *Endereço* - Endereço físico de sua empresa
+* *Fone* - Número para contato
+* *Descrição* - Alguma observação que você queira salvar sobre a lista
 
-* *Empresa* - Nome da empresa, ou do produto
-
-* *Site* - Endereço na web
-
-* *Endereço* - Endereço físico
-
-* *Fone* - Número de contato
-
-* *Descrição* - Texto livre
+NOTE. As informações da lista servirão para completar sua "tela de descadastro":go_unsubscribe.html. Procure sempre preencher todas as informações.
 
 INFO. Você sabe porquê há tantos campos não obrigatórios na criação de uma lista? É porque você pode usá-los como campos dinâmicos em suas mensagens. Veja mais detalhes "aqui":templates_creating.html.
 
-h4. Editando uma lista de contatos
+***
 
-Dentro do gerenciador de lista, posicione o mouse sobre a lista desejada. Perceba que a lista é destacada ao passar o mouse, adquirindo um fundo azul claro e deixando visível o botão _excluir_. Agora é só clicar sobre a lista destacada e você será direcionado à tela de edição. A edição possui os mesmos campos que a criação de lista.
+h3. Ações da lista de contatos
+
+Com a tela de gerenciamento de listas você poderá executar as seguintes ações:
+
+* Editar uma lista de contatos
+* Exportar os contatos de uma lista
+* Excluir uma lista
+
+h4. Editando informações de uma lista de contatos
+
+Para editar as informações de uma lista de contatos, basta clicar no nome da lista desejada e você será direcionado à tela de edição.
 
 !images/lists_management/list_modal_hover.png(Modal de listas)!
 
+IMPORTANT. Não esqueça de salvar sua lista antes de fechar a janela modal.
+
+h4. Exportando os contatos de uma lista
+
+Você pode realizar uma exportação de contatos de uma determinada lista. Para isso, basta acessar o gerenciador de listas, conforme imagem abaixo:
+
+!images/lists_management/manage_lists_button.jpg(Gerenciar listas)!
+
+Após, o link para *exportar* a lista irá aparecer quando você passar por cima da lista desejada, conforme imagem abaixo.
+
+!images/lists_management/list_export.jpg(Exportando os contatos de uma lista)!
+
+INFO. O arquivo exportado tem formato *CSV* e você pode abri-lo em um processador de planilhas (Open Office, Google Docs, Microsoft Excel, etc).
+
 h4. Exclusão de lista de contatos
 
-Dentro do gerenciador de lista, posicione o mouse sobre a lista desejada. Perceba que a lista é destacada ao passar o mouse, adquirindo um fundo azul claro e deixando visível o botão _excluir_. Clique no botão _excluir_. Aguarde a mensagem do sistema confirmando a exclusão.
+Você pode excluir uma lista de contatos através do botão *excluir* que aparece quando se passa com o cursor por cima de uma lista, conforme imagem abaixo:
 
-INFO. Excluir uma lista de contatos não irá excluir os contatos inseridos na lista.
+!images/lists_management/list_delete.jpg(Deletando uma lista de contatos)!
 
-h3. Visualizando os contatos inseridos em listas.
+NOTE. Excluir uma lista de contatos não irá excluir os contatos inseridos na lista.
 
-Para visualizar os contatos inseridos dentro de listas e segmentos, clique no botão _listas & segmentos_ e clique na lista e ou segmento desejado. Observe que as cores da lista e do segmento ficarão sólidas ao serem clicadas, demonstrando que estão ativas.
+***
+
+h3. Visualizando os contatos de uma lista
+
+Para visualizar os contatos de uma determinada listas ou segmento, clique no botão _listas & segmentos_, conforme imagem abaixo:
+
+!images/lists_management/list_segment_select.jpg(Seleção de lista e segmentos)!
+
+Em seguida, clique na lista ou no segmento desejado. Observe que as cores da lista e do segmento ficarão sólidas ao serem clicadas, indicando a seleção.
 
 !images/lists_management/lists_select.png(Seleção de lista)!
-
-Com a lista selecionada, é possível voltar à tela de contatos e realizar diversas ações. Para que a lista de contatos mostre novamente todos os contatos, é necessário clicar novamente em _listas & segmentos_ e desmarcar as opções.
-
-!images/lists_management/lists_unslect.png(Não-seleção de lista)!
-
