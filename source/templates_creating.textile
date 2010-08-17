@@ -159,7 +159,7 @@ Para tornar essa <samp>&lt;div&gt;</samp> um bloco de repetição de notícias, 
 
 Dessa forma, o Mailee.me interpretará tudo que estiver dentro dessa <samp>&lt;div id="news" class="repeat" title="notícias"&gt;</samp> como um bloco de repetição. O título para o bloco de repetição será indicado pelo atributo <samp>class="title"</samp> no seu elemento de título <samp>&lt;h#&gt;</samp>.
 
-INFO. Dentro dos blocos de repetição não será necessário definir <samp>class="edit"</samp> nos elementos, pois o bloco de repetição, por padrão, já é editável.
+INFO. Dentro dos blocos de repetição não será necessário definir <samp>class="edit"</samp> nos elementos, pois no bloco de repetição todos elementos são editáveis por padrão.
 
 h6. Recapitulando:
 
@@ -203,6 +203,18 @@ Dessa forma, o Mailee.me irá interpretar o elemento <samp>&lt;ul class="index n
     <p> Conteúdo de seus textos aqui… </p>
   </div>
 </html>
+
+Você pode inserir estilos _inline_ em sua lista de índice e eles serão mantidos na repetição, conforme exemplo abaixo:
+
+<html>
+  <ul class="index news">
+    <li style="list-style:none; font-size:14px;">
+      <a href="#" style="color:green; text-decoration:underline;">Título do bloco repetível</a>
+    </li>
+  </ul>
+</html>
+
+Neste caso, o Mailee.me manterá os estilos dos elementos <samp>&lt;li&gt;</samp> e do <samp>&lt;a&gt;</samp>.
 
 ***
 

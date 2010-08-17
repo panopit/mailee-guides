@@ -16,5 +16,3 @@ Em seguida, escolha a opção "Gmail".
 
 !images/import/gmail/import_button.png(Importar)!
 
-Chegamos lá. A tela abaixo é a tela de importação via planilha:
-

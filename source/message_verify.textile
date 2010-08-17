@@ -1,6 +1,6 @@
 h2. Conferindo o conteúdo das mensagens
 
-Esse artigo serve para pessoas que desejam saber como conferir sua mensagem após a edição do conteúdo no Mailee.me. Ele cobre a *segunda etapa do processo de envio*, e, ao final dele você deverá saber:
+Esse artigo serve para pessoas que desejam saber *como conferir sua mensagem* após a edição do conteúdo no Mailee.me. Ele cobre a *segunda etapa do processo de envio*, e, ao final dele você deverá saber:
 
 * Como conferir informações de envio
 * Saber o número de contatos que irão receber a mensagem
@@ -14,10 +14,10 @@ h3. Conferindo sua mensagem
 
 A segunda etapa do processo de envio serve para conferir as informações de envio de sua mensagem, e nela você poderá:
 
-* Conferir as informações da mensagem
+* Conferir as informações de envio da mensagem (rementente, destinatários, etc)
 * Ver um _preview_ da mensagem
 
-NOTE. A previsualização serve apenas para exibição da mensagem em seu navegador e não corresponde exatamente o que seus clientes irão ver. Para conferir sua mensagem o Mailee.me fortemente sugere a "testar sua mensagem":message_test.html.
+NOTE. O _preview_ serve apenas para exibição da mensagem em seu navegador e não corresponde exatamente ao que seus clientes irão ver. Para conferir sua mensagem o Mailee.me fortemente sugere a "testar sua mensagem":message_test.html em diversos "clientes de email":glossary.html.
 
 h4. Informações da mensagem
 
@@ -27,7 +27,7 @@ Na área de exibição das *informações do envio*, você pode conferir os dado
 
 Nessa área você poderá corrigir as informações pré-cadastradas em suas campanhas, alterando informações que desejar para esse envio.
 
-É também nessa área que você verá o número de contatos que receberão sua mensagem. Caso você esteja realizando envio para um segmento, os números podem ser diferentes dependendo de alterações efetuadas em sua base de contatos. Saiba mais lendo o artigo sobre "Segmentação":segmentation.html
+É também nessa área que você verá o *número de contatos que irão receber* sua mensagem. Caso você esteja realizando envio para um segmento, os números podem ser diferentes, dependendo de alterações e atualizações em sua base de contatos. Saiba mais lendo o artigo sobre "Segmentação":segmentation.html
 
 |_. Título | O título da mensagem (não irá aparecer no email) |
 |_. Assunto | Conteúdo do campo *Assunto: (_Subject:_)* do email |

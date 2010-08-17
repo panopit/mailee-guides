@@ -1,6 +1,6 @@
 h2. Criando uma campanha
 
-Este artigo serve para pessoas que desejam saber como criar uma campanha usando um template criado para o Mailee.me. Ao final dele, você deverá saber como:
+Este artigo serve para pessoas que desejam saber como criar uma campanha usando o Mailee.me. Ao final dele, você deverá saber como:
 
 * Criar uma campanha
 * Configurar sua primeira mensagem
@@ -12,7 +12,7 @@ endprologue.
 
 h3. Criando uma nova campanha
 
-Para criar sua campanha no Mailee.me, primeiro acesse a seção *Mensagens* através da barra de navegação superior, conforme imagem abaixo:
+Para criar sua campanha no Mailee.me, primeiro acesse a seção *Mensagens*, através da barra de navegação superior, conforme imagem abaixo:
 
 !images/messages/new/messages_menu_select.jpg(Seção mensagens)!
 
@@ -26,10 +26,10 @@ INFO. Para saber o que são e como funcionam as campanhas, "clique aqui":what_is
 
 h3. Configurando a primeira mensagem de uma campanha
 
-A configuração de sua campanha será feita na criação da primeira mensagem, e nessa etapa você poderá:
+A configuração de sua campanha ocorre também durante a configuração da primeira mensagem, e nessa etapa você poderá:
 
-* Escolher o *nome* para a campanha
-* Escolher o *título* da mensagem
+* Definir o *nome* para a campanha
+* Definir o *título* da mensagem
 * Definir o *assunto* da primeira mensagem
 * Definir *nome e email do remetente*
 * Definir um *email para resposta* (caso diferente do de remetente)
@@ -37,15 +37,19 @@ A configuração de sua campanha será feita na criação da primeira mensagem, 
 * Definir os *destinatários* de sua campanha
 * Definir o *tipo de conteúdo* utilizado na mensagem
 
-h4. Nome da campanha
+h4. Definindo o nome da campanha
 
-A primeira informação que devemos configurar é o título da campanha, que servirá para referência nos futuros envios. O título da campanha não aparece no email enviado.
+A primeira informação que devemos configurar é o nome da campanha. Ele servirá para referência nos futuros envios.
+
+INFO. O nome da campanha não aparece no email enviado.
 
 h4. Informações da mensagem
 
 h5. Título da mensagem
 
-Ao configurar o nome da campanha, o *título da mensagem* será montado automaticamente pelo Mailee.me sendo adicionado, no final do nome, um número que indica a ordem de criação da mensagem dentro da camapanha. Assim como o título da campanha, o título da mensagem não irá aparecer no email enviado.
+Ao definir o nome da campanha, o *título da mensagem* será montado automaticamente pelo Mailee.me, sendo adicionado, no final do nome, um número que indica a ordem de criação da mensagem dentro da camapanha.
+
+NOTE. Assim como o título da campanha, o título da mensagem não irá aparecer no email enviado.
 
 h5. Assunto do email (subject)
 
@@ -57,33 +61,33 @@ O *assunto do email* ou *subject* é a informação mais importante do conteúdo
 * Busque <span class="correct">*refletir da melhor forma possível*</span> o conteúdo de seu email.
 * Não escreva usando somente <span class="wrong">*MAIUSCULAS*</span>
 
-NOTE. Você também pode modificar o assunto do email na etapa "*2. Conferir*":message_verify.html.
+INFO. Você também pode modificar o assunto do email na etapa "*2. Conferir*":message_verify.html.
 
 h5. Nome e email do remetente
 
-*Nome e email do remetente* são informações que compõem a sua assinatura. Ela irá informar ao seu contato quem está enviando o email e assim como o assunto ele também é importante para a aceitação do email e consequente visualização. Você pode aconselhar seus contato a adicionar seu email à lista de contatos conhecidos, melhorando assim, a entrega de suas mensagens. Leia mais sobre a adição à lista de contatos em "Criação de Templates":templates_creating.html#adicionandolistadecontatoswhitelist
+*Nome e email do remetente* são informações que compõem a sua assinatura. Ela irá informar ao seu contato quem está enviando o email e, assim como o assunto, ele também é importante para a aceitação e consequente visualização da sua mensagem.
 
-NOTE. Você também pode modificar nome e email do remetente na etapa "*2. Conferir*":message_verify.html.
+NOTE. Você pode aconselhar a adicionar à lista de contatos conhecidos, melhorando assim, a entrega de suas mensagens. Leia mais sobre a adição à lista de contatos em "Criação de Templates":templates_creating.html#adicionandolistadecontatoswhitelist
+
+INFO. Você também pode modificar nome e email do remetente na etapa "*2. Conferir*":message_verify.html.
 
 h5. Email de resposta
 
-O *email de resposta* serve para o caso de você não querer receber mensagens de resposta de seus contatos no email fornecido como remetente. Ele irá aparecer automaticamente quando o contato clicar em responder (ou _reply_) do cliente de email.
+O *email de resposta* serve para o caso de você não querer receber mensagens de resposta de seus contatos no email fornecido como remetente. Ele irá aparecer automaticamente quando o contato clicar em responder (ou _reply_) do "*cliente de email*":glossary.html#clientedeemail.
 
 NOTE. Você também pode modificar email de resposta na etapa "*2. Conferir*":message_verify.html.
 
 h5. Integração com Google Analytics
 
-A *integração com Google Analytics* tem seu artigo próprio artigo. "Clique aqui":integration_analytics.html para conferir.
+Leia o artigo "*integrando com Google Analytics*":integration_analytics.html.
 
 h4. Definindo os destinatários
 
-A definição dos destinatários da mensagem pode ocorrer de quatro maneiras diferentes.
-
-Com o Mailee.me você pode realizar envios para:
+A definição dos *destinatários da mensagem* pode ocorrer de maneiras diferentes. Com o Mailee.me, você pode realizar envios para:
 
 * Contatos inseridos via *cadastrado manual*
-* Uma *lista*
-* O *segmento* de uma lista
+* Uma *lista* de contatos
+* Um *segmento* de contatos de uma lista
 
 NOTE. Você também pode modificar os destinatários da mensagem etapa "*2. Conferir*":message_verify.html.
 
@@ -109,7 +113,7 @@ Para enviar sua mensagem para uma *lista de contatos* já existente, selecione a
 
 O número que aparece ao lado do nome da lista representa o número de *contatos ativos* da lista.
 
-Você poderá conferir e alterar a lista de destinatários na etapa "2. Conferir":message_verify.html
+INFO. Você poderá conferir e alterar a lista de destinatários na etapa "2. Conferir":message_verify.html
 
 h5. Envio para segmentos de listas
 
@@ -121,7 +125,7 @@ Para enviar sua mensagem para o *segmento de uma lista de contatos*, primeiro *s
 
 Diferente da listas de contatos, o segmento é montado dinamicamente e por isso não apresenta o número de contatos para o qual seu envio será realizado. Você poderá conferir o número de contatos que receberão a mensagem na etapa "2. Conferir":message_verify.html.
 
-Você poderá conferir e alterar o segmento do envio na etapa "2. Conferir":message_verify.html
+INFO. Você poderá conferir e alterar o segmento do envio na etapa "2. Conferir":message_verify.html
 
 h4. Definição do modo de conteúdo
 
@@ -131,8 +135,8 @@ O Mailee.me possui dois modos de conteúdo para a edição de suas mensagens, co
 
 Você poderá escolher entre os modos:
 
-|_. Template | Esse modo utiliza um modelo pré-definido de layout (template) <br> Saiba *o que é*, *como funciona* e *como criar* um template em "Criando templates":templates_creating.html |
-|_. Inserção manual de conteúdo (edição HTML) | Nesse modo, o conteúdo poderá ser editado usando um editor HTML ou diretamente em código HTML |
+|_. Template | Esse modo utiliza o modelo pré-definido de layout ou _template_ <br> Saiba *o que é*, *como funciona* e *como criar* um template em "Criando templates":templates_creating.html |
+|_. Inserção manual de conteúdo (edição HTML) | Nesse modo, o conteúdo poderá ser inserido e editado utilizando "processador de texto":message_edit.html#editor-wysiwyg |
 
 INFO. Saiba mais sobre a edição dos modos de conteúdo em "Editando o conteúdo de suas mensagens.":message_edit.html#modosdecontedodo-maileeme
 
@@ -144,7 +148,7 @@ Após preencher os dados de configuração de sua campanha, você deve salvar.
 
 O Mailee.me irá automaticamente abrir a "próxima etapa":message_edit.html, e você poderá começar a editar sua primeira mensagem!
 
-Para saber sobre os próximos passos, acesse "1. Conteúdo":message_edit.html, "2. Conferir":message_verify.html, "3. Testar":message_test.html e "4. Enviar":message_send.html.
+INFO. Para saber sobre os próximos passos, acesse: <br> "1. Conteúdo":message_edit.html - Inserção e edição de conteúdo <br> "2. Conferir":message_verify.html - Conferência e alteração de dados do envio <br> "3. Testar":message_test.html - Realização de um teste de envio <br> "4. Enviar":message_send.html - Envio imediato ou agendado da mensagem
 
 ***
 
@@ -164,4 +168,4 @@ NOTE. Caso sua campanha não apareça na lista, você pode clicar em *Mostrar to
 
 Procure a campanha para qual deseja realizar o envio e clique no botão *Enviar »*
 
-Para saber sobre os próximos passos, acesse "1. Conteúdo":message_edit.html, "2. Conferir":message_verify.html, "3. Testar":message_test.html e "4. Enviar":message_send.html.
+INFO. Para saber sobre os próximos passos, acesse: <br> "1. Conteúdo":message_edit.html - Inserção e edição de conteúdo <br> "2. Conferir":message_verify.html - Conferência e alteração de dados do envio <br> "3. Testar":message_test.html - Realização de um teste de envio <br> "4. Enviar":message_send.html - Envio imediato ou agendado da mensagem

@@ -136,7 +136,7 @@ h3. Configurações
     Configure os links das mensagens para apontarem para o seu site.
   <% end %>
   <% guide('Configuração de conta', 'config_settings.html') do %>
-    Aprenda a alterar os dados cadastras e sabia como inserir seu logo no Mailee.me.
+    Aprenda a alterar os dados cadastrais e sabia como inserir seu logo no Mailee.me.
   <% end %>
 </dl>
 
