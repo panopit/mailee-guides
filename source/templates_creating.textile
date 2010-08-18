@@ -27,6 +27,14 @@ Templates criados para o Mailee.me precisam obedecer a certas regras. São elas:
 * Todo conteúdo salvo em codificação UTF-8
 * Arquivo _zip_ com os arquivos
 
+h4. Configurando o conteúdo como UTF-8
+
+Todos templates criados para o Mailee.me precisam conter o elemento <samp>&lt;meta&gt;</samp> com os seguintes atributos:
+
+<html>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</html>
+
 h4. Codificação
 
 Todos os arquivos colocados no Mailee.me devem ser salvos como *UTF-8*. Confira como configurar seus arquivos HTML:
