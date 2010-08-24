@@ -2,10 +2,10 @@
 
 h2. Mailee.me Help
 
-Bem-vindo ao *Help do Mailee.me*. Aqui você irá encontrar artigos escritos pelos próprios desenvolvedores. Neles estão descritas todas as funcionalidades do aplicativo. Tudo isso para que você possa extrair o máximo do *Email Marketing 2.0*.
+Bem-vindo ao *Help do Mailee.me*. Aqui você irá encontrar artigos escritos pelos próprios desenvolvedores. Neles estão descritas todas as funcionalidades do aplicativo. Tudo isso para que você possa extrair o máximo do *Email marketing 2.0*.
 
 Permanecendo qualquer dúvida é só mandar um email para "suporte@mailee.me":mailto:suporte@mailee.me e prontamente iremos ajudar. E nada de vergonha! Mande também suas críticas, elogios e sugestões.
- 
+
 <% end %>
 
 <% content_for :index_section do %>
@@ -37,7 +37,7 @@ h3. Contatos
   <% guide('Gerenciamento de listas', 'lists_management.html') do %>
     Trabalhando com listas de contatos.
   <% end %>
-  <% guide('Campos personalizados', 'contacts_custom_fields.html') do %> 
+  <% guide('Campos personalizados', 'contacts_custom_fields.html') do %>
     O que são e para que servem.
   <% end %>
   <% guide('Segmentação', 'segmentation.html') do %>
@@ -62,7 +62,7 @@ h3. Importação
 
 h3. Mensagens
 
-<dl> 
+<dl>
   <% guide('Como funcionam as campanhas', 'what_is_a_campaign.html') do %>
     O que é uma campanha e como ela pode ajudá-lo.
   <% end %>
@@ -153,3 +153,4 @@ h3. Artigos úteis
   <% end %>
 
 </dl>
+
