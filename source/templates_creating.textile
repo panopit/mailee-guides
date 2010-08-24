@@ -127,7 +127,6 @@ O formato deve seguir *largura* x *altura*, sendo que os valores colocados são 
 
 Você também poderá usar valores com os seguintes operadores:
 
-|_. *#* | Mantém a proporção da imagem durante o redimensionamento |
 |_. *!* | Ignora a proporção da imagem durante o redimensionamento |
 |_. *%* | Interpreta os valores como percentual |
 |_. *&gt;* | Redimensiona a imagem para o tamanho estabelecido somente se a imagem for *menor* |
