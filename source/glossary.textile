@@ -37,6 +37,14 @@ h4. Descadastro
 
 O *descadastro*, *_unsubscribe_* ou *_opt-out_* é essencial em email marketing. Ele serve para que o contato que quiser deixar de receber suas mensagens, seja por desinteresse, ou qualquer outro motivo, possa ser *efetivamente descadastrado* de sua lista. Você pode ver como inserir um link para descadastro no Mailee.me em "Criação de templates":templates_creating.html
 
+h4. DNS
+
+*DNS* ou *Domain Name System* é o sistema que faz com que você não precise ficar memorizando os endereços de IP de cada site. É ele quem transforma <samp>www.mailee.me</samp> no endereço de IP do servidor do Mailee.me e assim você pode chegar aqui.
+
+h4. Domínio
+
+O *domínio* é o seu endereço na internet, por exemplo: o domínio do google é <samp>google.com</samp> e o domínio do terra é <samp>terra.com.br</samp>.
+
 h3. E
 
 h4. Editor WYSIWYG
@@ -92,6 +100,10 @@ h3. S
 h4. SPAM
 
 Ver "_mensagem não-autorizada_":#mensagemno-autorizada
+
+h4. SPF
+
+*SPF* ou *Sender Policy Framework* é um sistema de validação para garantir que o remetente do email realmente é quem ele diz ser. Ver "Configurando o SPF":config_spf.html
 
 h3. T
 
