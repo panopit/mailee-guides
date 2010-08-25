@@ -126,6 +126,9 @@ h3. Integração
 h3. Configurações
 
 <dl>
+  <% guide('Configurando o SPF', 'config_spf.html') do %>
+    Veja como melhorar suas entregas adicionando um SPF ao seu domínio.
+  <% end %>
   <% guide('Pagamentos', 'payment.html') do %>
     Como realizar a compra de créditos.
   <% end %>
