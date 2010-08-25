@@ -10,7 +10,7 @@ endprologue.
 
 h5. Antes de começar:
 
-INFO. Para configurar o *SPF* você precisa ter acesso aos registros <samp>DNS</samp> do domínio. Normalmente isso é feito pelo painel de controle ou através de um ticket de suporte no seu provedor de hospedagem web.
+INFO. Para configurar o *SPF* você precisa ter acesso aos registros "<samp>DNS</samp>":glossary.html#dns do domínio. Normalmente isso é feito pelo painel de controle ou através de um ticket de suporte no seu provedor de hospedagem web.
 
 h4. O que é um domínio
 

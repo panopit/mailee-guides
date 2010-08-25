@@ -39,11 +39,11 @@ O *descadastro*, *_unsubscribe_* ou *_opt-out_* é essencial em email marketing.
 
 h4. DNS
 
-*DNS* ou *Domain Name System* é o sistema que faz com que você não precise ficar memorizando os endereços de IP de cada site. É ele quem transforma <samp>www.mailee.me</samp> no endereço de IP do servidor do Mailee.me e assim você pode chegar aqui.
+*DNS* ou *Domain Name System* é o sistema que faz com que você não precise ficar memorizando os endereços de IP de cada site. É ele quem transforma <samp>mailee.me</samp> no endereço de IP do servidor do Mailee.me e assim você pode chegar aqui.
 
 h4. Domínio
 
-O *domínio* é o seu endereço na internet, por exemplo: o domínio do google é <samp>google.com</samp> e o domínio do terra é <samp>terra.com.br</samp>.
+O *domínio* é o seu endereço na internet. O domínio do Google e do Terra, por exemplo, são, respectivamente: <samp>google.com</samp> e <samp>terra.com.br</samp>.
 
 h3. E
 
