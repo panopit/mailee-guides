@@ -2,19 +2,19 @@ h2. Configurando o SPF
 
 *SPF* ou *Sender Policy Framework* é um sistema de validação em que cada domínio diz quais servidores podem enviar emails por ele.
 
-Isso é muito importante para garantir que as mensagens vão ser entregues corretamente, sem cair na caixa de spam. 
+Isso é *muito importante* para garantir que as mensagens enviadas pelo Mailee.me serão entregues corretamente.
 
-Na hora de analisar a mensagem, os provedores verificam se o servidor que fez o envio tem autorização para enviar por aquele endereço de email. E caso contrário rejeitam a mensagem ou entregam na caixa de spam.
+Na hora de analisar as mensagens recebidas, os provedores verificam se o servidor que fez o envio tem _autorização_ para enviar por aquele endereço de email, e, caso contrário, rejeitam a mensagem o que pode levar sua mensagem para a caixa de SPAM.
 
 endprologue.
 
 h5. Antes de começar:
 
-INFO. Para configurar o *SPF* você precisa ter acesso aos registros DNS do domínio. Normalmente isso é feito pelo painel de controle da hospedagem dele ou abrindo um ticket no suporte de lá.
+INFO. Para configurar o *SPF* você precisa ter acesso aos registros "<samp>DNS</samp>":glossary.html#dns do domínio. Normalmente isso é feito pelo painel de controle ou através de um ticket de suporte no seu provedor de hospedagem web.
 
 h4. O que é um domínio
 
-O domínio é o endereço do seu site na internet. O domínio do site do google, por exemplo é <samp>google.com</samp>.
+O *domínio* é o *endereço do seu site* na internet. O domínio do site do Google, por exemplo, é <samp>google.com</samp>.
 
 h3. Montando o SPF
 
@@ -26,7 +26,7 @@ Primeiro precisamos escolher quem vai poder enviar. A base do *SPF* é a seguint
   v=spf1 a ptr -all
 </plain>
 
-Esse é um modelo bem simples, ele permite que todos os servidores que respondem pelo domínio (tecnicamente todos que tem um registro do tipo A) possam enviar por ele. E indica que ao receber um email de um servidor que não bate com esse modelo, ele deve ser descartado.
+Esse é um modelo bem simples que permite que todos os servidores que respondem pelo domínio (tecnicamente todos que tem um registro do tipo A) possam enviar por ele. E indica que ao receber um email de um servidor que não bate com esse modelo, ele deve ser descartado.
 
 Para deixarmos o Mailee.me, que não faz parte do domínio, enviar também, fica assim:
 
@@ -36,25 +36,27 @@ Para deixarmos o Mailee.me, que não faz parte do domínio, enviar também, fica
 
 h4. Adicionando o Mailee.me a um SPF existente
 
-Muitos provedores de hospedagem usam vários servidores de email, devido a sua grande estrutura. Por isso eles já vem configurados com um *SPF* que permite tudo isso. Não queremos mexer nisso, só adicionar a permissão ao Mailee.me.
+Muitos provedores de hospedagem usam vários servidores de email, devido a sua grande estrutura. Por isso eles já vem configurados com um *SPF* que permite tudo isso. Não queremos mexer nisso, só adicionar a permissão para o Mailee.me.
 
-Por exemplo, esse era o registro *SPF* existente:
+Considere o seguinte registro *SPF*:
 
 <plain>
   v=spf1 ip4:000.00.0.0/24 ip4:11.11.1.1/24 mx ~all
 </plain>
 
-Podemos adicionar o <samp>include:mailee.me</samp> em qualquer ponto do registro (depois do v=spf1 e antes do all).
+Nesse caso, podemos adicionar o <samp>include:mailee.me</samp> em qualquer ponto do registro (depois do <samp>v=spf1</samp> e antes do <samp>all</samp>), ficando assim:
 
 <plain>
   v=spf1 include:mailee.me ip4:000.00.0.0/24 ip4:11.11.1.1/24 mx ~all
 </plain>
 
+IMPORTANT. Se você não estiver seguro com o procedimento de adição do endereço do Mailee.me no seu domínio, sugerimos que entre em contato com o responsável pela hospedagem através de um ticket de suporte.
+
 h3. Adicionando ao domínio
 
 h4. Manualmente
 
-Agora que já montamos o *SPF*, só é preciso criar um registro *DNS* do tipo *TXT* que tem como valor o nosso *SPF*.
+Agora que já montamos o *SPF*, só é preciso criar um registro *DNS* do tipo <samp>*TXT*</samp> que tem como valor o nosso *SPF*.
 
 h4. Como fazer
 
@@ -68,36 +70,29 @@ Montamos uma lista tutoriais em alguns provedores de hospedagem ensinando como m
 * "Slicehost":http://articles.slicehost.com/2007/10/24/creating-dns-records (passo a passo)
 * "UOL Host":http://ajuda.uolhost.com.br/index.php?ind=&p=resposta&res=306 (entre em contato com a hospedagem)
 
-Se a sua hospedagem não está listada aqui, você pode entrar em contato com eles e abrir um ticket de suporte pedindo instruções de como fazer. Lembre-se também que a equipe do Mailee.me está sempre disposta à ajudar, é só "escrever pra gente":mailto:suporte@mailee.me.
+Se sua hospedagem não estiver listada aqui, entre em contato diretamente com eles e peça suporte com instruções sobre como proceder para a alteração. Lembre-se também que a equipe do Mailee.me está sempre disposta à ajudar, e, caso precise de ajuda, é só "escrever para a gente":mailto:suporte@mailee.me.
 
 h3. Entendendo o SPF
 
-Essa é a parte mais avançada, para quem se interessa por entender melhor como isso funciona. 
+Essa é a parte mais avançada, para quem está interessado em entender melhor como funciona o *SPF*.
 
 Esses são os componentes do *SPF*. A única exigência é informar a versão utilizada com o <samp>v=spf1</samp>. Qualquer um dos mecanismos pode ser combinado com algum dos qualificadores.
 
-
-Se você ainda assim quiser ir mais fundo no assunto, consulte a "documentação na Wikipedia":http://en.wikipedia.org/wiki/Sender_Policy_Framework (em inglês).
+INFO. Se você ainda assim quiser ir mais fundo no assunto, consulte a "documentação na Wikipedia":http://en.wikipedia.org/wiki/Sender_Policy_Framework (em inglês).
 
 h4. Mecanismos
 
-|_. *A* | Todos que tenham algum registro do tipo A podem enviar |
-|_. *ALL* | Permite sempre |
-|_. *IP4* | Permite que aquele IP envie |
-|_. *IP6* | Permite que aquele IPv6 envie |
-|_. *MX* | Todos que tenham algum registro do tipo MX podem enviar |
-|_. *PTR* | Pode enviar se o domínio resolvido fizer parte do domínio principal, e o IP resolva para aquele domínio |
-|_. *INCLUDE* | Inclui todas as políticas SPF desse outro domínio |
+|_. <samp>*A*</samp> | Todos que tenham algum registro do tipo A podem enviar |
+|_. <samp>*ALL*</samp> | Permite sempre |
+|_. <samp>*IP4*</samp> | Permite que aquele IP envie |
+|_. <samp>*IP6*</samp> | Permite que aquele IPv6 envie |
+|_. <samp>*MX*</samp> | Todos que tenham algum registro do tipo MX podem enviar |
+|_. <samp>*PTR*</samp> | Pode enviar se o domínio resolvido fizer parte do domínio principal, e o IP resolva para aquele domínio |
+|_. <samp>*INCLUDE*</samp> | Inclui todas as políticas SPF desse outro domínio |
 
 h4. Qualificadores
 
-|_. *&#43;* | Permite sempre, pode ser omitido. +ALL é igual a ALL |
-|_. *?* | Neutro |
-|_. *~* | Softfail |
-|_. *-* | Fail, a mensagem deve ser rejeitada |
-
-
-
-
-
-
+|_. <samp>*&#43;*</samp> | Permite sempre, pode ser omitido. +ALL é igual a ALL |
+|_. <samp>*?*</samp> | Neutro |
+|_. <samp>*~*</samp> | Softfail |
+|_. <samp>*-*</samp> | Fail, a mensagem deve ser rejeitada |
