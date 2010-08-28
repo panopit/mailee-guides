@@ -70,7 +70,7 @@ Montamos uma lista tutoriais em alguns provedores de hospedagem ensinando como m
 * "Slicehost":http://articles.slicehost.com/2007/10/24/creating-dns-records (passo a passo)
 * "UOL Host":http://ajuda.uolhost.com.br/index.php?ind=&p=resposta&res=306 (entre em contato com a hospedagem)
 
-Se sua hospedagem não estiver listada aqui, entre em contato diretamente com eles e peça suporte com instruções sobre como proceder para a alteração. Lembre-se também que a equipe do Mailee.me está sempre disposta à ajudar, e, caso precise de ajuda, é só "escrever para a gente":mailto:suporte@mailee.me.
+Se sua hospedagem não estiver listada aqui, entre em contato diretamente com eles e peça suporte com instruções sobre como proceder para a alteração. Lembre-se também que a equipe do Mailee.me está sempre disposta a ajudar, e, caso precise de ajuda, é só "escrever para a gente":mailto:suporte@mailee.me.
 
 h3. Entendendo o SPF
 
