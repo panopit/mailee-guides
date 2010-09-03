@@ -1,11 +1,11 @@
 <% content_for :header_section do %>
 
-h2. Manual do Mailee.me
+h2. Mailee.me Help
 
-Bem-vindo ao manual do Mailee.me. Aqui você irá encontrar artigos escritos pelos próprios desenvolvedores. Neles são descritas todas as funcionalidades do aplicativo. Tudo isso para que você possa extrair o máximo do Email Marketing 2.0.  
+Bem-vindo ao *Help do Mailee.me*. Aqui você irá encontrar artigos escritos pelos próprios desenvolvedores. Neles estão descritas todas as funcionalidades do aplicativo. Tudo isso para que você possa extrair o máximo do *Email marketing 2.0*.
 
 Permanecendo qualquer dúvida é só mandar um email para "suporte@mailee.me":mailto:suporte@mailee.me e prontamente iremos ajudar. E nada de vergonha! Mande também suas críticas, elogios e sugestões.
- 
+
 <% end %>
 
 <% content_for :index_section do %>
@@ -20,32 +20,32 @@ h3. Inicie aqui
   <% end %>
 </dl>
 
-<hr>
+***
 
 h3. Contatos
 
 <dl>
-	<% guide('Cadastro', 'contacts_new.html') do %>
+  <% guide('Cadastro', 'contacts_new.html') do %>
     Veja como cadastrar contatos, e como funcionam os campos de redes sociais.
-  <% end %>  
-	<% guide('Status', 'contacts_status.html') do %>
+  <% end %>
+  <% guide('Status', 'contacts_status.html') do %>
     Saiba o que significam os status dos contatos.
   <% end %>
-	<% guide('Exclusão de contatos', 'contacts_remove.html') do %>
-		Como excluir contatos.
-	<% end %>
-	<% guide('Gerenciamento de listas', 'lists_management.html') do %>
-		Trabalhando com listas de contatos.
-	<% end %>
-	<% guide('Campos personalizados', 'contacts_custom_fields.html') do %> 
-		O que são e para que servem.
-	<% end %>
-	<% guide('Segmentação', 'segmentation.html') do %>
-		As possíveis formas de segmentar sua lista de contatos e como fazê-lo.
-	<% end %>
+  <% guide('Exclusão de contatos', 'contacts_remove.html') do %>
+    Como excluir contatos.
+  <% end %>
+  <% guide('Gerenciamento de listas', 'lists_management.html') do %>
+    Trabalhando com listas de contatos.
+  <% end %>
+  <% guide('Campos personalizados', 'contacts_custom_fields.html') do %>
+    O que são e para que servem.
+  <% end %>
+  <% guide('Segmentação', 'segmentation.html') do %>
+    As possíveis formas de segmentar sua lista de contatos e como fazê-lo.
+  <% end %>
 </dl>
 
-<hr>
+***
 
 h3. Importação
 
@@ -58,23 +58,35 @@ h3. Importação
   <% end %>
 </dl>
 
-<hr>
+***
 
 h3. Mensagens
 
-<dl> 
+<dl>
   <% guide('Como funcionam as campanhas', 'what_is_a_campaign.html') do %>
     O que é uma campanha e como ela pode ajudá-lo.
   <% end %>
-  <% guide('Como enviar uma mensagem', 'message_new.html') do %>
-    Como criar e enviar uma mensagem.
+  <% guide('Como criar uma campanha', 'message_new.html') do %>
+    Aprenda como configurar uma campanha
   <% end %>
-  <% guide('Relatórios', 'reports.html') do %>
-    Visualizando relatórios gerados após o envio de mensagens.
+  <% guide('Editando o conteúdo de uma mensagem', 'message_edit.html') do %>
+    Veja como editar o conteúdo de suas mensagens no Mailee.me
+  <% end %>
+  <% guide('Verificando o conteúdo de uma mensagem', 'message_verify.html') do %>
+    Saiba como verificar e corrigir dados de envio de uma mensagem
+  <% end %>
+  <% guide('Como fazer um teste de envio da mensagem', 'message_test.html') do %>
+    Faça um envio de teste da mensagem
+  <% end %>
+  <% guide('Realizando o envio de uma mensagem', 'message_send.html') do %>
+    Veja como realizar o envio de suas mensagens pelo Mailee.me
+  <% end %>
+  <% guide('Relatórios de envio da mensagem', 'reports.html') do %>
+    Entenda o que pode ser visualizado nos relatórios gerados após o envio de mensagens.
   <% end %>
 </dl>
 
-<hr>
+***
 
 h3. Templates
 
@@ -87,7 +99,7 @@ h3. Templates
   <% end %>
 </dl>
 
-<hr>
+***
 
 h3. Integração
 
@@ -109,11 +121,14 @@ h3. Integração
   <% end %>
 </dl>
 
-<hr>
+***
 
 h3. Configurações
 
 <dl>
+  <% guide('Configurando o SPF', 'config_spf.html') do %>
+    Veja como melhorar suas entregas adicionando um SPF ao seu domínio.
+  <% end %>
   <% guide('Pagamentos', 'payment.html') do %>
     Como realizar a compra de créditos.
   <% end %>
@@ -123,7 +138,22 @@ h3. Configurações
   <% guide('Configuração de links', 'config_links.html') do %>
     Configure os links das mensagens para apontarem para o seu site.
   <% end %>
-  <% guide('Alterando o logo', 'logo_change.html') do %>
-    Deixe o  *Mailee.me* com a sua cara.
+  <% guide('Configuração de conta', 'config_settings.html') do %>
+    Aprenda a alterar os dados cadastrais e sabia como inserir seu logo no Mailee.me.
   <% end %>
 </dl>
+
+***
+
+h3. Artigos úteis
+
+<dl>
+  <% guide('Glossário de termos', 'glossary.html') do %>
+    Aprenda termos comuns em email marketing
+  <% end %>
+  <% guide('Tela de descadastro', 'go_unsubscribe.html') do %>
+    Aprenda o que é e como configurar sua tela de descadastro
+  <% end %>
+
+</dl>
+

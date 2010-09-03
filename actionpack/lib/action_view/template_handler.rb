@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Legacy TemplateHandler stub
 module ActionView
   module TemplateHandlers #:nodoc:

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController #:nodoc:
   module MimeResponds #:nodoc:
     def self.included(base)

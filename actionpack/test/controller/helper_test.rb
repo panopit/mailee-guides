@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'abstract_unit'
 
 ActionController::Base.helpers_dir = File.dirname(__FILE__) + '/../fixtures/helpers'

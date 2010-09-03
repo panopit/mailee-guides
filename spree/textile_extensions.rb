@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module Spree
   module TextileExtensions
     def notestuff(body)

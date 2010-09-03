@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController
   module Routing
     # BEFORE:   0.191446860631307 ms/url

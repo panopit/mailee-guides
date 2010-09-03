@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module Spree
   class Indexer
     attr_reader :body, :result, :level_hash

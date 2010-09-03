@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController
   module UploadedFile
     def self.included(base)

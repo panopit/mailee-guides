@@ -1,0 +1,48 @@
+h2. Como enviar uma mensagem
+
+Este artigo mostra como *realizar o envio de suas mensagem* pelo Mailee.me. Ele cobre a *quarta e última etapa do processo de envio*, e, ao fim dele, você deverá saber:
+
+* Enviar sua mensagem imediatamente
+* Agendar o envio para uma data futura
+* Cancelar o envio de suas mensagens
+
+Para saber sobre as outras etapas, acesse "1. Conteúdo":message_edit.html, "2. Conferir":message_verify.html, e "3. Testar":message_test.html.
+
+endprologue.
+
+h3. Enviando suas mensagens pelo Mailee.me
+
+Com o Mailee.me você pode enviar suas mensagens de duas maneiras diferentes. São elas:
+
+* Enviar sua mensagem imediatamente
+* Agendar a data e o horário de início do envio
+
+!images/messages/send/send_screen.jpg(Tela de envio de mensagem)!
+
+***
+
+h3. Enviando imediatamente sua mensagem
+
+Para *enviar sua mensagem imediatamente*, basta selecionar a opção *Enviar agora* e depois clicar no botão *enviar agora »*, conforme imagem abaixo:
+
+!images/messages/send/send_now.jpg(Envio imediato de mensagem)!
+
+WARNING. *Importante* <br> Você pode parar um envio no meio, mas é impossível cancelar envios que já tenham sido entregues.
+
+***
+
+h3. Agendando um envio para uma data futura
+
+Você pode *realizar um agendamento* para enviar sua mensagem em uma data futura.
+
+IMPORTANT. Os envios do Mailee.me são agendados usando o horário oficial de Brasília ("UTC-3":http://pt.wikipedia.org/wiki/UTC-3) como padrão.
+
+Para realizar um agendamento, clique em *Enviar em*, conforme imagem abaixo:
+
+!images/messages/send/send_after.jpg(Envio futuro de mensagem)!
+
+Em seguida bastante, para isso, preencher a data e o horário no campo correspondente, conforme imagem abaixo:
+
+!images/messages/send/send_after_select_date.jpg(Selecionando a data para envio futuro.)!
+
+NOTE. *Importante* <br> Você pode *excluir* um envio agendado a qualquer momento antes do envio. <br> Assim como um envio imediato, você poderá cancelar o envio agendado no meio, mas será impossível cancelar os envios que já tiverem sido entregues.

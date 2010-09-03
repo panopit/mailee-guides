@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController
   module Session
     # This cookie-based session store is the Rails default. Sessions typically

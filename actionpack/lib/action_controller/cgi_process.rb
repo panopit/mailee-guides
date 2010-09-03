@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'action_controller/cgi_ext'
 
 module ActionController #:nodoc:

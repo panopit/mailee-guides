@@ -29,9 +29,9 @@ fieldset { padding:1.4em; margin: 0 0 1.5em 0; border: 1px solid #ccc; }
 legend { font-weight: bold; font-size:1.2em; }
 input.text, input.title,
 textarea, select { margin:0.5em 0; border:1px solid #bbb; }
-table { margin: 0 0 1.5em; border: 2px solid #CCC; background: #FFF; border-collapse: collapse; }
-table th, table td { padding: 0.25em 1em; border: 1px solid #CCC; border-collapse: collapse; }
-table th { border-bottom: 2px solid #CCC; background: #EEE; font-weight: bold; padding: 0.5em 1em; }
+table { margin: 0 0 1.5em; border: 1px solid #AAA; background: #FFF; border-collapse: collapse; }
+table th, table td { padding: 0.25em 1em; border: 1px solid #AAA; border-collapse: collapse; }
+table th { border-bottom: 1px solid #AAA; border-right:1px solid #AAA; background: #CCC; font-weight: bold; padding: 0.5em 1em; text-shadow:#fff 0 1px 0;}
 
 /* Structure and Layout --------------------------------------- */
 body { text-align: center; font-family: Helvetica, Arial, sans-serif; font-size: 87.5%; line-height: 1.5em; background-color: #D5E9F6; color: #222; }
@@ -52,6 +52,7 @@ azul do degradê do logo: c0d0df
 #container { background: #fff; color: #333; padding: 0.5em 0 1.5em 0; border-bottom: #D5E9F6 1px solid; }
 #mainCol { width: 630px; }
 #mainCol img{ border:1px solid #CCC; -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.3); box-shadow: 0 0 1em rgba(0, 0, 0, 0.3); }
+#mainCol table img { border: 0 none; -moz-box-shadow: 0 0 0 transparent; -webkit-box-shadow: 0 0 0 transparent; box-shadow: 0 0 0 transparent; vertical-align:middle; }
 #subCol { position: absolute; z-index: 0; top: 0; right: 0; background: #FFF; padding: 13px; width: 220px; font-size: 0.9285em; line-height: 1.3846em; border-radius: 1em; -webkit-border-radius: 1em; -moz-border-radius: 1em;}
 
 #extraCol {display: none;}
@@ -93,7 +94,7 @@ h1 { font-size: 2.5em; line-height: 1em; margin: 0.6em 0 .2em; font-weight: bold
 h2 { font-size: 2.1428em; line-height: 1em; margin: 0.7em 0 .2333em; font-weight: bold;  text-shadow: #fff 0 1px 0;}
 h3 { color: #444; font-size: 1.7142em; line-height: 1.286em; margin: 0.875em 0 0.2916em; font-weight: bold; }
 h4 { font-size: 1.2857em; line-height: 1.2em; margin: 1.6667em 0 .3887em; font-weight: bold; }
-h5 { font-size: 1em; line-height: 1.5em; margin: 1em 0 .5em; font-weight: bold; }
+h5 { font-size: 1em; line-height: 1.5em; margin: 1em 0 .5em; font-weight: bold; border-bottom:1px dotted silver;}
 h6 { font-size: 1em; line-height: 1.5em; margin: 1em 0 .5em; font-weight: normal; }
 .section { padding-bottom: 0.25em; border-bottom: 1px solid #999; }
 
@@ -108,8 +109,6 @@ h6 { font-size: 1em; line-height: 1.5em; margin: 1em 0 .5em; font-weight: normal
 #feature ul li { list-style: none; background: url(../../images/right_16.png) no-repeat left 0.5em; padding: 0.5em 1.75em 0.5em 1.75em; font-size: 1.1428em; font-weight: bold; }
 #mainCol dd, #subCol dd { padding: 0.25em 0 1em; border-bottom: 0 none; margin-bottom: 1em; margin-left: 0; padding-left: 0; }
 #mainCol dt, #subCol dt { font-size: 1.2857em; padding: 0.125em 0 0.25em 0; margin-bottom: 0; }
-#mainCol dd.ticket, #subCol dd.ticket { background: #fff9d8 url(../../images/tab_yellow.gif) no-repeat left top; border: none; padding: 1.25em 1em 1.25em 48px; margin-left: 0; margin-top: 0.25em; }
-#mainCol div.warning, #subCol dd.warning { background: #f9d9d8 url(../../images/tab_red.gif) no-repeat left top; border: none; padding: 1.25em 1.25em 1.25em 48px; margin-left: 0; margin-top: 0.25em; }
 
 #subCol .chapters {color: #001526;}
 #subCol .chapters a {font-weight: bold;}
@@ -121,11 +120,17 @@ h6 { font-size: 1em; line-height: 1.5em; margin: 1em 0 .5em; font-weight: normal
 #subCol .chapters ul {margin-left: 0; margin-top: 0.5em;}
 #subCol .chapters ul li { list-style: none; padding: 0 0 0 1em; background: url(../../images/bullet.gif) no-repeat left 0.45em; margin-left: 0; font-size: 1em; font-weight: normal; }
 tt { font-family: monaco, "Bitstream Vera Sans Mono", "Courier New", courier, monospace; }
-div.code_container { background: #EEE url(../../images/tab_grey.gif) no-repeat left top; padding: 0.25em 1em 0.5em 48px; }
+
+div.code_container {  min-height: 48px; background: #EEE url(../../images/tab_grey.gif) no-repeat left top; border: 0 none;padding: 0.25em 1em 0.5em 48px; }
 code { font-family: monaco, "Bitstream Vera Sans Mono", "Courier New", courier, monospace; border: none; margin: 0.25em 0 1.5em 0; display: block; }
-.note { background: #fff9d8 url(../../images/tab_note.gif) no-repeat left top; border: none; padding: 1em 1em 0.25em 48px; margin: 0.25em 0 1.5em 0; }
-.info { background: #d5e9f6 url(../../images/tab_info.gif) no-repeat left top; border: none; padding: 1em 1em 0.25em 48px; margin: 0.25em 0 1.5em 0; }
+.note { min-height: 48px; background: #fff9d8 url(../../images/tab_note.gif) no-repeat left top; border: none; padding: 1em 1em 0.25em 48px; margin: 0.25em 0 1.5em 0; }
+.info { min-height: 48px; background: #d5e9f6 url(../../images/tab_info.gif) no-repeat left top; border: none; padding: 1em 1em 0.25em 48px; margin: 0.25em 0 1.5em 0; }
 .note tt, .info tt {border:none; background: none; padding: 0;}
+
+.ticket, dd.ticket { background: #fff9d8 url(../../images/tab_yellow.gif) no-repeat left top; border: none; padding: 1.25em 1em 1.25em 48px; margin-left: 0; margin-top: 0.25em; }
+.warning, dd.warning { min-height: 48px; background: #f9d9d8 url(../../images/tab_red.gif) no-repeat left top; border: none; padding: 1.25em 1.25em 1.25em 48px; margin-left: 0; margin-top: 0.25em; }
+
+
 #mainCol ul li { list-style:none; background: url(../../images/grey_bullet.gif) no-repeat left 0.5em; padding-left: 1em; margin-left: 0; }
 .note p samp, .warning p samp, .info p samp { background: #333; color: #fff; font-size: 13px; margin: 0.25em; padding: 0.25em 0.5em; border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; white-space:nowrap;}
 #subCol .content { font-size: 0.7857em; line-height: 1.5em; }
@@ -142,3 +147,7 @@ code { font-family: monaco, "Bitstream Vera Sans Mono", "Courier New", courier, 
 intermediate whitespace looks uniform. */
 div.code_container, div.important, div.caution, div.warning, div.note, div.info { margin-bottom: 1.5em; }
 div.important p, div.caution p, div.warning p, div.note p, div.info p { margin-bottom: 1em; }
+
+
+span.wrong { color:#CC3333; }
+span.correct { color:#8CC63F; }

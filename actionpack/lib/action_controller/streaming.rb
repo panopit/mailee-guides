@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController #:nodoc:
   # Methods for sending arbitrary data and for streaming files to the browser,
   # instead of rendering.

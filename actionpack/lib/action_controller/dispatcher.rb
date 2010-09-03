@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController
   # Dispatches requests to the appropriate controller and takes care of
   # reloading the app after each request when Dependencies.load? is true.

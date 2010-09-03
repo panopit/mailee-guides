@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionView
   module Helpers
     # This helper to exposes a method for caching of view fragments.

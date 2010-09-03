@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController
   class ParamsParser
     ActionController::Base.param_parsers[Mime::XML] = :xml_simple

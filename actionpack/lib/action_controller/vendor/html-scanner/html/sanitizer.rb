@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module HTML
   class Sanitizer
     def sanitize(text, options = {})

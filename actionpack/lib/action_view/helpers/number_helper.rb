@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionView
   module Helpers #:nodoc:
     # Provides methods for converting numbers into formatted strings.

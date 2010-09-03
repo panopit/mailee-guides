@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require "date"
 require 'action_view/helpers/tag_helper'
 

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController
   module Assertions
     # Pair of assertions to testing elements in the HTML output of the response.

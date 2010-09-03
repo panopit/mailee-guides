@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController #:nodoc:
   # Cookies are read and written through ActionController#cookies.
   #

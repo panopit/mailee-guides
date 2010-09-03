@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'action_view/helpers/tag_helper'
 require 'action_view/helpers/prototype_helper'
 

@@ -14,10 +14,10 @@
   <body class="guide">
     <div id="topNav">
       <div class="wrapper">
-        <strong>Mais em <a href="http://www.mailee.me/">mailee.me:</a> </strong>
-        <a href="http://www.mailee.me/recursos.html">Recursos</a> |
-        <a href="http://www.mailee.me/precos.html">Preços</a> |
-        <a href="http://www.mailee.me/cadastro.html">Cadastro</a>
+        <strong>Mais em <a href="http://mailee.me/">Mailee.me:</a> </strong>
+        <a href="http://mailee.me/recursos.html">Recursos</a> |
+        <a href="http://mailee.me/precos.html">Preços</a> |
+        <a href="http://mailee.me/cadastro.html">Cadastro</a>
       </div>
     </div>
     <div id="header">
@@ -45,9 +45,10 @@
                   <dd><a href="lists_management.html">Gerenciamento de listas</a></dd>
                   <dd><a href="segmentation.html">O que é segmentação e como usar</a></dd>
                   <dt>Configuração</dt>
+                  <dd><a href="config_spf.html">Configurando o SPF</a></dd>
                   <dd><a href="payment.html">Realização de pagamentos</a></dd>
                   <dd><a href="config_links.html">Links personalizados nas mensanges</a></dd>
-                  <dd><a href="logo_change.html">Use seu logo no Mailee.me</a></dd>
+                  <dd><a href="config_config.html">Configurações de conta</a></dd>
                   <dd><a href="users.html">Adicione usuários</a></dd>
                 </dl>
                 <dl class="R">
@@ -57,7 +58,11 @@
                   <dd><a href="import_spreadsheet.html">Importando de planilhas</a></dd>
                   <dt>Campanhas e mensagens</dt>
                   <dd><a href="what_is_a_campaign.html">O que é uma campanha</a></dd>
-                  <dd><a href="message_new.html">Criando uma mensagem</a></dd>
+                  <dd><a href="message_new.html">Criando uma campanha</a></dd>
+                  <dd><a href="message_edit.html">Editando as suas mensagens</a></dd>
+                  <dd><a href="message_verify.html">Conferindo o conteúdo das mensagens</a></dd>
+                  <dd><a href="message_test.html">Testando suas mensagens</a></dd>
+                  <dd><a href="message_send.html">Como enviar suas mensagens</a></dd>
                   <dd><a href="reports.html">Acesse os relatórios</a></dd>
                   <dt>Integração</dt>
                   <dd><a href="integration_form.html">Formulários na sua página</a></dd>
@@ -66,6 +71,9 @@
                   <dd><a href="integration_php.html">Integrando com PHP</a></dd>
                   <dd><a href="integration_spree.html">Integrando com Spree</a></dd>
                   <dd><a href="analytics.html">Integrando com o Google Analytics</a></dd>
+                  <dt>Artigos úteis</dt>
+                  <dd><a href="glossary.html">Glossário de termos de email marketing</a></dd>
+                  <dd><a href="go_unsubscribe.html">Tela de descadastro</a></dd>
                 </dl>
               </div>
             </li>
@@ -90,6 +98,16 @@
         <p>Este trabalho é licenciado como <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0</a></p>
       </div>
     </div>
-  <!-- #TODO-JM GOOGLE ANALYTICS (with multiple subdomains) -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-17717880-1']);
+      _gaq.push(['_setDomainName', '.mailee.me']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
   </body>
 </html>

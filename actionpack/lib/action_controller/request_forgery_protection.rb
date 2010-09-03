@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController #:nodoc:
   class InvalidAuthenticityToken < ActionControllerError #:nodoc:
   end

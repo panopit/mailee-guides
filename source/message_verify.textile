@@ -1,0 +1,52 @@
+h2. Conferindo o conteúdo das mensagens
+
+Esse artigo serve para pessoas que desejam saber *como conferir sua mensagem* após a edição do conteúdo no Mailee.me. Ele cobre a *segunda etapa do processo de envio*, e, ao final dele você deverá saber:
+
+* Como conferir informações de envio
+* Saber o número de contatos que irão receber a mensagem
+* Inserir um email válido para testes
+
+Para saber sobre as outras etapas, acesse "1. Conteúdo":message_edit.html, "3. Testar":message_test.html e "4. Enviar":message_send.html.
+
+endprologue.
+
+h3. Conferindo sua mensagem
+
+A segunda etapa do processo de envio serve para conferir as informações de envio de sua mensagem, e nela você poderá:
+
+* Conferir as informações de envio da mensagem (rementente, destinatários, etc)
+* Ver um _preview_ da mensagem
+
+NOTE. O _preview_ serve apenas para exibição da mensagem em seu navegador e não corresponde exatamente ao que seus clientes irão ver. Para conferir sua mensagem o Mailee.me fortemente sugere a "testar sua mensagem":message_test.html em diversos "clientes de email":glossary.html.
+
+h4. Informações da mensagem
+
+Na área de exibição das *informações do envio*, você pode conferir os dados conforme imagem abaixo:
+
+!images/messages/verify/verify_message_board.jpg(Área de conferencia das informações de envio)!
+
+Nessa área você poderá corrigir as informações pré-cadastradas em suas campanhas, alterando informações que desejar para esse envio.
+
+É também nessa área que você verá o *número de contatos que irão receber* sua mensagem. Caso você esteja realizando envio para um segmento, os números podem ser diferentes, dependendo de alterações e atualizações em sua base de contatos. Saiba mais lendo o artigo sobre "Segmentação":segmentation.html
+
+|_. Título | O título da mensagem (não irá aparecer no email) |
+|_. Assunto | Conteúdo do campo *Assunto: (_Subject:_)* do email |
+|_. Nome do remetente | Nome que aparecerá no campo *"De:" (_From:_)*, ou nome de quem envia a mensagem |
+|_. Email do remetente | Email que aparecerá no campo *"De:" (_From:_)*, ou quem realiza o envio |
+|_. Email de resposta | Email que aparecerá no campo *Para: (_To:_)*, caso o contato responda suas mensagens |
+|_. Lista | Para qual *lista* será realizado o envio |
+|_. Segmento | Para qual *segmento da lista* será realizado o envio |
+
+INFO. Todas as informações podem ser editadas _inline_, o que significa que, ao clicar nas informações sublinhadas com uma linha tracejada, um campo de texto abrirá e você poderá realizar a alteração que desejar. Para salvar, basta apertar *Enter*.
+
+h4. _Preview_ da mensagem
+
+A área de *preview da mensagem* mostra sua mensagem pronta, para que você faça uma revisão de texto e layout.
+
+!images/messages/verify/verify_message_preview.jpg(Preview da mensagem)!
+
+Caso sua mensagem necessite alguma alteração, você pode *Voltar* à etapa anteriror, através do link indicado na imagem abaixo:
+
+!images/messages/verify/verify_back_to_edit.jpg(Voltar para edição de conteúdo)!
+
+NOTE. Tanto os links dinâmicos [descadastro ou _unsubscribe_, visualizar na web ou _weblink_, encaminhar para amigos ou _forward_, adicionar à lista de contatos ou _whitelist_ ] quanto as informações personalizadas de contato e de campos personalizados estão desabilitadas na área de *preview*.

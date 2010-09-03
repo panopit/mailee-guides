@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController
   class RewindableInput
     class RewindableIO < ActiveSupport::BasicObject

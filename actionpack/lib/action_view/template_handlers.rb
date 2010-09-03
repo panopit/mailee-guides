@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionView #:nodoc:
   module TemplateHandlers #:nodoc:
     autoload :ERB, 'action_view/template_handlers/erb'

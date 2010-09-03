@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController #:nodoc:
   # Actions that fail to perform as expected throw exceptions. These
   # exceptions can either be rescued for the public view (with a nice

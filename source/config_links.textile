@@ -15,7 +15,7 @@ INFO. É muito importante que exista o ponto no final, é ele que indica que voc
 
 Exemplo no painel da locaweb:
 
-!images/config_links/dns_config.png(Configuração do DNS na Locaweb)!
+!images/config/links/dns_config.png(Configuração do DNS na Locaweb)!
 
 No exemplo acima, estou apontando +email.seu_dominio.com+, que é o subdomínio que escolhí no *meu domínio* para +softa.mailee.me+ que é o *meu subdomínio no Mailee.me*.
 
@@ -23,9 +23,9 @@ h3. Configurar o Mailee.me
 
 Vá em configurações e depois em links. Defina o caminho completo escolhido, com subdomínio e domínio (não coloque o "http"):
 
-!images/config_links/config_url.png(Definindo o link)!
+!images/config/links/config_url.png(Definindo o link)!
 
 No exemplo acima foi definido +mkt.softa.com.br+. Isto quer dizer que o meu domínio é +softa.com.br+ e o subdomínio que configurei é o +mkt+. Clique em _Salvar_. Pronto. Agora, se quiser, envie uma mensagem de para o seu e-mail (envie uma mensagem real, não um teste) para ver se está funcionando. Como você pode ver no rodapé do e-mail abaixo, o link está apontando corretamente para +mkt.softa.com.br+.
 
-!images/config_links/modified_link.png(Link modificado corretamente)!
+!images/config/links/modified_link.png(Link modificado corretamente)!
 

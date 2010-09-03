@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActionController
   module HttpAuthentication
     # Makes it dead easy to do HTTP Basic authentication.

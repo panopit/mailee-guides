@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 use "Rack::Lock", :if => lambda {
   !ActionController::Base.allow_concurrency
 }
