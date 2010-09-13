@@ -6,4 +6,3 @@ module Hercules
     end
   end
 end
-
