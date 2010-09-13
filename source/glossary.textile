@@ -16,7 +16,9 @@ h3. B
 
 h4. Blacklist
 
-Uma blacklist é uma lista contendo *domínios*, *endereços de IP* e *nomes de empresas* que receberam complaints por mandar mensagem não-autorizada (SPAM).
+Uma *blacklist* é uma lista contendo *domínios*, *endereços de IP* e *nomes de empresas* que receberam _complaints_ por mandar mensagem não-autorizada ("SPAM":#mensagemno-autorizada). O Mailee.me *não envia* mensagens de empresas que estejam em *blacklists*.
+
+Para verificar se a sua empresa está em uma blacklist, acesse » "MXToolbox":http://www.mxtoolbox.com/
 
 h3. C
 
@@ -53,6 +55,12 @@ A *edição WYSIWYG* ocorre quando o editor permite alterar um documento utiliza
 
 Leia o artigo completo na Wikipedia » "WYSIWYG":http://pt.wikipedia.org/wiki/WYSIWYG
 
+h4. Entregabilidade
+
+*Entregabilidade* é a capacidade de entregar mensagens na caixa de entrada dos seus contatos. Muitos fatores influem na entregabilidade, como o conteúdo de texto das suas mensagens e a quantidade de imagens. Outro ponto fundamental é sua reputação. Sempre que alguém marca suas mensagens como "spam":#mensagemno-autorizada, a sua reputação fica comprometida.
+
+O Mailee.me implementa uma série de medidas para melhorar a entregabilidade dos clientes, como a obrigatoriedade do uso de remetentes empresarias (não permite, por exemplo, mensagens vindas de fulano@hotmail.com), a verificação de todos os clientes em "blacklists":#blacklist, a verificação do "SPF":#spf e o link "whitelist":#whitelist nas mensagens.
+
 h3. F
 
 h3. G
@@ -69,10 +77,6 @@ h3. L
 
 h3. M
 
-h4. Mensagem
-
-Mensagem ou _message_
-
 h4. Mensagem não-autorizada
 
 A mensagem não-autorizada ou _SPAM_ é uma mensagem com fins comerciais enviada para uma pessoa sem a autorização prévia.
@@ -80,6 +84,8 @@ A mensagem não-autorizada ou _SPAM_ é uma mensagem com fins comerciais enviada
 O Mailee.me é um sistema para fazer "*email marketing baseado em permissões*":http://en.wikipedia.org/wiki/Permission_marketing. Nós não gostamos de receber SPAM e nós não criamos o Mailee.me para ser uma ferramenta para SPAM. Nós não acreditamos que negócios possam dar certo, ainda mais na era da Internet, com práticas desrespeitosas e não queremos trabalhar com clientes que pensem assim.
 
 h4. Marketing de permissão
+
+Leia o artigo completo na Wikipedia » "Permission Marketing":http://en.wikipedia.org/wiki/Permission_marketing.
 
 h3. N
 
@@ -109,11 +115,21 @@ h3. T
 
 h4. Template
 
+*Template* é um documento HTML, com um _layout_ padrão, utilizado como base para enviar suas mensagens. No Mailee.me, um *template* pode conter áreas editáveis e repetições, além de informações dos seus contatos, facilitando o reuso.
+
+» "Como criar templates":templates_creating.html
+
 h3. U
 
 h3. V
 
 h3. W
+
+h4. Whitelist
+
+O termo *whitelist* pode significar duas coisas: Uma lista de domínios liberados em um servidor de emails; O cadastro do seu email na lista de remetentes liberados pelos seus contatos; Em ambos os casos, se o seu domínio ou email estiver em uma whitelist, você tem "passe livre" para a caixa de entrada.
+
+O Mailee.me possui o link de "whitelist":templates_creating.html#adicionandolistadecontatoswhitelist para facilitar o trabalho dos seus contatos ao adicionar o seu email na lista ou mesmo de configurar esta liberação no servidor de emails.
 
 h3. X
 

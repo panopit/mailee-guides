@@ -46,6 +46,7 @@ module Spree
     def generate_sitemap(guides)
       puts "Generating sitemap.xml"
       builder = Builder::XmlMarkup.new
+
       xml = builder.urlset({"xmlns:xsi" => "http://www.w3.org/2001/XMLSchema-instance", "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9", "xsi:schemaLocation" => "http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"}) do |urlset|
         urlset.url do |url|
           url.loc "http://help.mailee.me/index.html"
