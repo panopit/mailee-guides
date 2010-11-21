@@ -2,7 +2,7 @@ h2. Integração com Ruby on Rails
 
 O Mailee possui uma Gem para integração com aplicações Ruby on Rails, já atualizada para *Rails 3*. O código dela você pode "encontrar no GitHub":http://github.com/softa/mailee-api e a Gem está disponível no "RubyGems.org":http://rubygems.org/gems/mailee. O código deste tutorial também está "disponível no GitHub":http://github.com/softa/mailee-example e um "versão online dele no Heroku":http://simple-winter-93.heroku.com/, para que você possa testar antes de pôr a mão na massa.
 
-Esta Gem utiliza a API "REST":http://en.wikipedia.org/wiki/Representational_State_Transfer do Mailee. Além dela, existem integrações já prontas para "Spree":integration_spree.html e "PHP":integration_php.html. 
+Esta Gem utiliza a API "REST":http://en.wikipedia.org/wiki/Representational_State_Transfer do Mailee. Além dela, existem integrações para "Spree":integration_spree.html e "PHP":integration_php.html. 
 
 
 * Como criar uma aplicação Rails 3 e instalar a Gem
@@ -41,7 +41,7 @@ Pronto, a sua aplicação está criada. O Rails 3 utiliza um sistema chamado _Bu
   source 'http://rubygems.org'
   gem 'rails', '3.0.0.beta4'
   gem 'sqlite3-ruby', :require => 'sqlite3'
-  gem 'mailee', '0.1.0'
+  gem 'mailee'
 </shell>
 
 No exemplo acima, rails e sqlite3-ruby já estavam no meu arquivo. Se você usa outro banco, certamente haverá outra gem neste lugar. Agora, dentro da pasta do projeto, vamos executar o bundler, para que a Gem do Mailee seja instalada:
@@ -85,7 +85,13 @@ Para usar a API o Mailee gera uma chave secreta para cada cliente. Tome muito cu
 
 !images/integration/spree/mailee_rest.png(REST)!
 
-Copie a chave, e adicione a seguinte configuração ao seu _config/application.rb_:
+Copie a chave, e execute o seguinte comando na sua app:
+
+<shell>
+  rails g mailee_rails:setup
+</shell>
+
+Cole a chave e voilà, ele vai criar um initializer (config/initializers/mailee.rb) com este conteúdo:
 
 <shell>
   Mailee::Config.site = 'http://api.01295d232df4b.gem.mailee.me'
