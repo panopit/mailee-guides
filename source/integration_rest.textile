@@ -790,7 +790,7 @@ Exemplo:
 
 <shell>
   curl -d "when=after&after[date]=21/12/2012&after[hour]=21" -X PUT SUA_CHAVE_DE_API/messages/ID/ready.xml
-<shell>
+</shell>
 
 h4. Relatórios
 
