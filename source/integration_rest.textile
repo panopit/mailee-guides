@@ -14,7 +14,7 @@ h3. A chave de acesso
 
 Para usar a API, o Mailee.me gera uma chave secreta para cada cliente. Para pegar esta chave, vá em _Configuração_, depois em _Integrar_ e por fim em _REST_.
 
-WARNING. Tome muito cuidado com esta chave, ela é tão ou mais importante que a sua senha. Com ela, alguém mal intencionado poderá ter acesso aos seus contatos.
+WARNING. Tome muito cuidado com esta chave, ela é tão ou mais importante que a sua senha. Com ela, alguém mal intencionado poderá ter acesso aos seus dados.
 
 !images/integration/spree/mailee_integrar.png(Integrar)!
 
@@ -54,8 +54,8 @@ h3. Ações
 |_PUT_|/messages/ID/ready.xml|Envia a mensagem agora, ou numa data futura, de acordo com os parâmetros.|
 |\3. *Relatórios*|
 |_GET_|/reports/ID.xml|Retorna o relatório de uma mensagem de acordo com o ID.|
-|_GET_|/reports/ID/unsubscribes.xml|Retorna a lista de descadastros de uma mensagem|
-|_GET_|/reports/ID/accesses.xml|Retorna os acessos mais recentes de uma mensagem|
+|_GET_|/reports/ID/unsubscribes.xml|Retorna a lista de descadastros de uma mensagem.|
+|_GET_|/reports/ID/accesses.xml|Retorna os acessos mais recentes de uma mensagem.|
 
 
 h3. Parâmetros de envio
