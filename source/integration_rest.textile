@@ -134,7 +134,7 @@ h5. Acessos (accesses)
 
 h3. Testando
 
-Esta seção mostra como utilizar a API utilizando o comando "curl". Se você utiliza Linux ou MacOS, este comando já deve estar disponível. O download do curl para outros diversos sistemas operacionais pode ser feito no site: http://curl.haxx.se/download.html:"http://curl.haxx.se/download.html"
+Esta seção mostra como utilizar a API utilizando o comando "curl". Se você utiliza Linux ou MacOS, este comando já deve estar disponível. O download do curl para outros diversos sistemas operacionais pode ser feito no site: "http://curl.haxx.se/download.html":http://curl.haxx.se/download.html
 
 NOTE. Uma dica é testar utilizando o "Hurl":http://www.hurl.it. Basta acessar o site e utilizar o caminho da sua chave acrescentado à ação. Veja um exemplo abaixo, listando os contatos de uma conta: <br><br> !images/integration/rest/hurl.png(REST)!
 
