@@ -6,7 +6,7 @@ Existem integrações já prontas para "Spree":integration_spree.html, "Ruby on 
 
 * Como pegar a chave de acesso
 * Quais métodos estão disponíveis
-* Como testar os métodos
+* Como testar os métodos usando curl
 
 endprologue.
 
@@ -20,28 +20,878 @@ WARNING. Tome muito cuidado com esta chave, ela é tão ou mais importante que a
 
 !images/integration/spree/mailee_rest.png(REST)!
 
+h3. Formatos
+
+Todas as ações da API REST retornam XML. É necessário utilizar a extensão ".xml" nas chamadas (como na tabela abaixo) ou definir o cabeçalho "Accept: text/xml".
+
+Algumas ações já suportam o formato JSON (bastando trocar o ".xml" para ".json" ou utilizando o cabeçalho "Accept: text/json"), mas este ainda não é oficial. Fique atento ao blog para novidades.
+
 h3. Ações
 
-|HTTP|Caminho|Ação|
-|GET|/lists|Retorna a coleção das suas listas.|
-|GET|/lists/ID|Retorna uma lista de acordo com o ID.|
-|POST|/lists|Cria uma nova lista com os parâmetros enviados.|
-|PUT|/lists/ID|Atualiza uma lista pelo ID com os parâmetros enviados.|
-|GET|/contacts|Retorna a coleção das seus contatos paginada de 30 em 30 (parâmetro _page_).|
-|GET|/contacts/ID|Retorna um contato de acordo com o ID.|
-|POST|/contacts|Cria um novo contato com os parâmetros enviados.|
-|PUT|/contacts/ID|Atualiza um contato pelo ID com os parâmetros enviados.|
-|GET|/contacts/statuses|Retorna a coleção dos status possíveis para um contato.|
-|PUT|/contacts/ID/subscribe|Inscreve um contato pelo ID em uma lista. O nome da lista deve ser passado como parâmetro. Se a lista não existir ela será criada automaticamente.|
-|PUT|/contacts/ID/unsubscribe|Desinscreve um contato pelo ID de uma lista. O nome da lista deve ser passado como parâmetro. Se a lista não existir ela será criada automaticamente.|
-|GET|/templates|Retorna a coleção dos seus templates.|
-|GET|/templates/ID|Retorna um template de acordo com o ID.|
-|POST|/templates|Cria um novo template com os parâmetros enviados.|
-|PUT|/templates/ID|Atualiza um template pelo ID com os parâmetros enviados.|
+|{background:#ddd}. *HTTP*|{background:#ddd}. *Caminho*|{background:#ddd}. *Ação*|
+|\3. *Contatos*|
+|_GET_|/contacts.xml|Retorna a coleção das seus contatos paginada de 30 em 30 (parâmetro _page_).|
+|_GET_|/contacts/ID.xml|Retorna um contato de acordo com o ID.|
+|_POST_|/contacts.xml|Cria um novo contato com os parâmetros enviados.|
+|_PUT_|/contacts/ID.xml|Atualiza um contato pelo ID com os parâmetros enviados.|
+|_PUT_|/contacts/ID/subscribe.xml|Inscreve um contato pelo ID em uma lista. O nome da lista deve ser passado como parâmetro. Se a lista não existir ela será criada automaticamente.|
+|_PUT_|/contacts/ID/unsubscribe.xml|Desinscreve um contato pelo ID de uma lista. O nome da lista deve ser passado como parâmetro. Se a lista não existir ela será criada automaticamente.|
+|\3. *Listas*|
+|_GET_|/lists.xml|Retorna a coleção das suas listas.|
+|_GET_|/lists/ID.xml|Retorna uma lista de acordo com o ID.|
+|_POST_|/lists.xml|Cria uma nova lista com os parâmetros enviados.|
+|_PUT_|/lists/ID.xml|Atualiza uma lista pelo ID com os parâmetros enviados.|
+|\3. *Templates*|
+|_GET_|/templates.xml|Retorna a coleção dos seus templates.|
+|_GET_|/templates/ID.xml|Retorna um template de acordo com o ID.|
+|_POST_|/templates.xml|Cria um novo template com os parâmetros enviados.|
+|_PUT_|/templates/ID.xml|Atualiza um template pelo ID com os parâmetros enviados.|
+|\3. *Mensagens*|
+|_GET_|/messages.xml|Retorna a coleção dos suas mensagens.|
+|_GET_|/messages/ID.xml|Retorna uma mensagem de acordo com o ID.|
+|_POST_|/messages.xml|Cria uma nova mensagem (rascunho) com os parâmetros enviados.|
+|_PUT_|/messages/ID/test.xml|Envia testes para uma mensagem para os contatos passados por parâmetro.|
+|_PUT_|/messages/ID/ready.xml|Envia a mensagem agora, ou numa data futura, de acordo com os parâmetros.|
+|\3. *Relatórios*|
+|_GET_|/reports/ID.xml|Retorna o relatório de uma mensagem de acordo com o ID.|
+|_GET_|/reports/ID/unsubscribes.xml|Retorna a lista de descadastros de uma mensagem|
+|_GET_|/reports/ID/accesses.xml|Retorna os acessos mais recentes de uma mensagem|
+
+
+h3. Parâmetros de envio
+
+h4. Contatos
+
+|{background:#ddd}. Parâmetro|{background:#ddd}. Obrigatório?|{background:#ddd}. Descrição|
+|contact[email]|Sim|Email do contato|
+|contact[name]|Não|Nome do contato|
+|contact[internal_id]|Não|Id do contato no seu sistema|
+|contact[company]|Não|Empresa do contato|
+|contact[position]|Não|Cargo do contato|
+|contact[sex]|Não|Sexo do contato|
+|contact[birthday]|Não|Data de aniversário do contato|
+|contact[age]|Não|Idade do contato|
+|contact[phone]|Não|Número de telefone do contato|
+|contact[mobile]|Não|Número de celular do contato|
+|contact[address]|Não|Endereço do contato|
+|contact[notes]|Não|Campo aberto para notas sobre o contato|
+|contact[dynamic_attributes][*]|Não|Permite enviar informações dos campos dinâmicos para o contato. e.g. contact[dynamic_attributes][points]=1000|
+
+h4. Listas
+
+|{background:#ddd}. Parâmetro|{background:#ddd}. Obrigatório?|{background:#ddd}. Descrição|
+|list[name]|Sim|Nome da lista|
+|list[company]|Não|Empresa da lista|
+|list[description]|Não|Descrição da lista|
+|list[address]|Não|Endereço da lista|
+|list[phone]|Não|Número de telefone da lista|
+|list[site]|Não|Endereço do site da lista|
+
+h4. Templates
+
+|{background:#ddd}. Parâmetro|{background:#ddd}. Obrigatório?|{background:#ddd}. Descrição|
+|template[title]|Sim|Título do template|
+|template[html]|Não|Conteúdo HTML do template|
+
+h4. Mensagens
+
+h5. Criação
+
+|{background:#ddd}. Parâmetro|{background:#ddd}. Obrigatório?|{background:#ddd}. Descrição|
+|message[title]|Sim|Título da mensagem (e da campanha)|
+|message[subject]|Sim|Assunto da mensagem que aparecerá no envio|
+|message[from_name]|Sim|Nome do rementente da mensagem|
+|message[from_email]|Sim|Email do rementente da mensagem|
+|message[reply_email]|Não|Email de retorno da mensagem. Se não for passado usará o from_email.|
+|message[html]|Não|Conteúdo HTML da mensagem. É obrigatório se template_id não for passado|
+|message[template_id]|Não|Id do template da mensagem. É obrigatório se html não for passado|
+|message[edit][*]|Não|Conteúdo a ser colocado em uma região editável da mensage. O * representa o id da região. Só pode ser usado em mensagens com template_id.|
+|message[repeats][*][]|Não|Conteúdo a ser adicionado em um bloco de repetição da mensage. O * representa o id do bloco. Só pode ser usado em mensagens com template_id.|
+|message[analytics]|Não|Define se a mensagem irá passar informações nos links para o Google Analytics|
+|message[emails]|Não|Lista de emails para a mensagem. Os emails podem ser separados por qualquer coisa (vírgula, tab, quebra de linha...). É obrigatório se list_id não for passado|
+|message[list_id]|Não|Id da lista da mensagem. É obrigatório se emails não for passado|
+|message[segment_id]|Não|Id do segmento da mensagem. Só pode ser usado em mensagens com list_id|
+
+
+h5. Teste (test)
+
+|{background:#ddd}. Parâmetro|{background:#ddd}. Obrigatório?|{background:#ddd}. Descrição|
+|contacts[]|Sim|Id de cada contato de destino do teste da mensagem|
+
+h5. Envio (ready)
+
+|{background:#ddd}. Parâmetro|{background:#ddd}. Obrigatório?|{background:#ddd}. Descrição|
+|when|Sim|Quando a mensagem será enviada. Pode ter os valores "now" (envio imediato) e "after" (envio programado)|
+|after[date]|Não|Data para envio da mensagem. Obrigatório se o valor de "when" for "after". e.g. 21/12/2012|
+|after[hour]|Não|Hora (sem minutos) para envio da mensagem. Obrigatório se o valor de "when" for "after". e.g. 16|
+
+h4. Relatórios
+
+h5. Acessos (accesses)
+
+|{background:#ddd}. Parâmetro|{background:#ddd}. Obrigatório?|{background:#ddd}. Descrição|
+|last_id|Sim|Buscará os acessos posteriores ao acesso passado|
 
 h3. Testando
 
-Uma dica é testar utilizando o "Hurl":http://www.hurl.it. Basta acessar o site e utilizar o caminho da sua chave acrescentado à ação. Veja um exemplo abaixo, listando os contatos de uma conta:
+Esta seção mostra como utilizar a API utilizando o comando "curl". Se você utiliza Linux ou MacOS, este comando já deve estar disponível. O download do curl para outros diversos sistemas operacionais pode ser feito no site: http://curl.haxx.se/download.html:"http://curl.haxx.se/download.html"
 
-!images/integration/rest/hurl.png(REST)!
+NOTE. Uma dica é testar utilizando o "Hurl":http://www.hurl.it. Basta acessar o site e utilizar o caminho da sua chave acrescentado à ação. Veja um exemplo abaixo, listando os contatos de uma conta: <br><br> !images/integration/rest/hurl.png(REST)!
 
+h4. Contatos
+
+h5. Buscando todos
+
+Exemplo:
+
+<shell>
+  curl SUA_CHAVE_DE_API/contacts.xml
+</shell>
+
+Resultado:
+
+<shell>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <contacts type="array">
+    <contact>
+      <address></address>
+      <age nil="true"></age>
+      <birthday type="date" nil="true"></birthday>
+      <client-id type="integer">1</client-id>
+      <company nil="true"></company>
+      <contact-status-id type="integer">4</contact-status-id>
+      <created-at type="datetime">2010-03-24T16:51:53-03:00</created-at>
+      <deleted-at type="datetime" nil="true"></deleted-at>
+      <dynamic-values type="hstore">titleYo!</dynamic-values>
+      <email>wittgenstein@mailee.me</email>
+      <facebook-followers type="integer" nil="true"></facebook-followers>
+      <forwarded-by type="integer" nil="true"></forwarded-by>
+      <goodreads-connections type="integer" nil="true"></goodreads-connections>
+      <id type="integer">1923512</id>
+      <import-id type="integer">6020</import-id>
+      <internal-id>534</internal-id>
+      <kscore type="float" nil="true">65</kscore>
+      <latitude type="decimal">-30.0333003997803</latitude>
+      <linkedin-followers type="integer" nil="true"></linkedin-followers>
+      <linkedin-recomendations type="integer" nil="true"></linkedin-recomendations>
+      <longitude type="decimal">-51.2000007629395</longitude>
+      <mobile></mobile>
+      <name>Ludwig Wittgenstein</name>
+      <notes></notes>
+      <origin-id type="integer">2</origin-id>
+      <orkut-followers type="integer" nil="true"></orkut-followers>
+      <phone></phone>
+      <photo-content-type nil="true"></photo-content-type>
+      <photo-file-name nil="true"></photo-file-name>
+      <photo-file-size type="integer" nil="true"></photo-file-size>
+      <photo-updated-at type="datetime" nil="true"></photo-updated-at>
+      <plaxo-connections type="integer" nil="true"></plaxo-connections>
+      <position nil="true"></position>
+      <sex nil="true"></sex>
+      <skoob-connections type="integer" nil="true"></skoob-connections>
+      <twitter-followers type="integer" nil="true"></twitter-followers>
+      <updated-at type="datetime">2010-11-04T12:08:13-02:00</updated-at>
+    </contact>
+  </contacts>
+</shell>
+
+h5. Buscando um
+
+Exemplo:
+
+<shell>
+  curl SUA_CHAVE_DE_API/contacts/ID.xml
+</shell>
+
+Resultado:
+
+<shell>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <contact>
+    <address></address>
+    <age nil="true"></age>
+    <birthday type="date" nil="true">1889-26-04</birthday>
+    <client-id type="integer">1</client-id>
+    <company nil="true"></company>
+    <contact-status-id type="integer">4</contact-status-id>
+    <created-at type="datetime">1889-26-04T16:51:53-03:00</created-at>
+    <deleted-at type="datetime" nil="true"></deleted-at>
+    <dynamic-values type="hstore">influenced_byFrege</dynamic-values>
+    <email>wittgenstein@mailee.me</email>
+    <facebook-followers type="integer" nil="true">2</facebook-followers>
+    <forwarded-by type="integer" nil="true">234</forwarded-by>
+    <goodreads-connections type="integer" nil="true">234</goodreads-connections>
+    <id type="integer">123456</id>
+    <import-id type="integer">6020</import-id>
+    <internal-id>235235</internal-id>
+    <kscore type="float" nil="true"></kscore>
+    <latitude type="decimal">-30.0333003997803</latitude>
+    <linkedin-followers type="integer" nil="true">234</linkedin-followers>
+    <linkedin-recomendations type="integer" nil="true">123</linkedin-recomendations>
+    <longitude type="decimal">-51.2000007629395</longitude>
+    <mobile>51 99887766</mobile>
+    <name>Ludwig Wittgenstein</name>
+    <notes>Ludwig Joseph Johann Wittgenstein (Viena, 26 de Abril de 1889 — Cambridge, 29 de Abril de 1951), filósofo austríaco, naturalizado britânico, foi um dos principais atores da "virada linguística" na filosofia do século XX</notes>
+    <origin-id type="integer">2</origin-id>
+    <orkut-followers type="integer" nil="true">353</orkut-followers>
+    <phone>51 30625545</phone>
+    <photo-content-type nil="true">image/jpg</photo-content-type>
+    <photo-file-name nil="true">witt.jpg</photo-file-name>
+    <photo-file-size type="integer" nil="true">123456</photo-file-size>
+    <photo-updated-at type="datetime" nil="true">2010-11-04T12:08:13-02:00</photo-updated-at>
+    <plaxo-connections type="integer" nil="true">123</plaxo-connections>
+    <position nil="true">Researcher</position>
+    <sex nil="true">M</sex>
+    <skoob-connections type="integer" nil="true">987</skoob-connections>
+    <twitter-followers type="integer" nil="true">654</twitter-followers>
+    <updated-at type="datetime">2010-11-04T12:08:13-02:00</updated-at>
+  </contact>
+</shell>
+
+h5. Criando
+
+Exemplo:
+
+<shell>
+  curl -X POST -d "contact[email]=foo@bar.com&contact[name]=Foo" SUA_CHAVE_DE_API/contacts.xml
+</shell>
+
+Resultado:
+
+<shell>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <contact>
+    <address></address>
+    <age nil="true"></age>
+    <birthday type="date" nil="true"></birthday>
+    <client-id type="integer">1</client-id>
+    <company nil="true"></company>
+    <contact-status-id type="integer">4</contact-status-id>
+    <created-at type="datetime">1889-26-04T16:51:53-03:00</created-at>
+    <deleted-at type="datetime" nil="true"></deleted-at>
+    <dynamic-values type="hstore"></dynamic-values>
+    <email>foo@bar.com</email>
+    <facebook-followers type="integer" nil="true"></facebook-followers>
+    <forwarded-by type="integer" nil="true"></forwarded-by>
+    <goodreads-connections type="integer" nil="true"></goodreads-connections>
+    <id type="integer">123457</id>
+    <import-id type="integer"></import-id>
+    <internal-id></internal-id>
+    <kscore type="float" nil="true"></kscore>
+    <latitude type="decimal"></latitude>
+    <linkedin-followers type="integer" nil="true"></linkedin-followers>
+    <linkedin-recomendations type="integer" nil="true"></linkedin-recomendations>
+    <longitude type="decimal"></longitude>
+    <mobile></mobile>
+    <name>Foo</name>
+    <notes></notes>
+    <origin-id type="integer">2</origin-id>
+    <orkut-followers type="integer" nil="true"></orkut-followers>
+    <phone></phone>
+    <photo-content-type nil="true"></photo-content-type>
+    <photo-file-name nil="true"></photo-file-name>
+    <photo-file-size type="integer" nil="true"></photo-file-size>
+    <photo-updated-at type="datetime" nil="true"></photo-updated-at>
+    <plaxo-connections type="integer" nil="true"></plaxo-connections>
+    <position nil="true"></position>
+    <sex nil="true"></sex>
+    <skoob-connections type="integer" nil="true"></skoob-connections>
+    <twitter-followers type="integer" nil="true"></twitter-followers>
+    <updated-at type="datetime">2010-11-04T12:08:13-02:00</updated-at>
+  </contact>
+</shell>
+
+Exemplo de erro:
+
+<shell>
+  curl -X POST -d "contact[email]=foo@" SUA_CHAVE_DE_API/contacts.xml
+</shell>
+
+Resultado do erro:
+
+<shell>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <errors>
+    <error>Email não é válido</error>
+  </errors>
+</shell>
+
+h5. Atualizando
+
+Exemplo:
+
+<shell>
+  curl -X PUT -d "contact[name]=Bar" SUA_CHAVE_DE_API/contacts/ID.xml
+</shell>
+
+Neste caso o servidor não retornará nenhum XML.
+
+Exemplo de erro:
+
+<shell>
+  curl -X PUT -d "contact[email]=foo@" SUA_CHAVE_DE_API/contacts/ID.xml
+</shell>
+
+Resultado do erro:
+
+<shell>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <errors>
+    <error>Email não é válido</error>
+  </errors>
+</shell>
+
+h4. Listas
+
+h5. Buscando todas
+
+Exemplo:
+
+<shell>
+  curl SUA_CHAVE_DE_API/lists.xml
+</shell>
+
+Resultado:
+
+<shell>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <lists type="array">
+    <list>
+      <active type="boolean">true</active>
+      <address></address>
+      <client-id type="integer">1</client-id>
+      <company></company>
+      <created-at type="datetime">2010-03-23T13:56:30-03:00</created-at>
+      <deleted-at type="datetime" nil="true"></deleted-at>
+      <description></description>
+      <id type="integer">45345</id>
+      <lists-contacts-count type="integer">18</lists-contacts-count>
+      <name>Philosophers</name>
+      <phone></phone>
+      <site></site>
+    </list>
+  </lists>
+</shell>
+
+h5. Buscando uma
+
+Exemplo:
+
+<shell>
+  curl SUA_CHAVE_DE_API/lists/ID.xml
+</shell>
+
+Resultado:
+
+<shell>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <list>
+    <active type="boolean">true</active>
+    <address></address>
+    <client-id type="integer">1</client-id>
+    <company></company>
+    <created-at type="datetime">2010-03-23T13:56:30-03:00</created-at>
+    <deleted-at type="datetime" nil="true"></deleted-at>
+    <description></description>
+    <id type="integer">45345</id>
+    <lists-contacts-count type="integer">18</lists-contacts-count>
+    <name>Philosophers</name>
+    <phone></phone>
+    <site></site>
+  </list>
+</shell>
+
+h5. Criando
+
+Exemplo:
+
+<shell>
+  curl -X POST -d "list[name]=Foo" SUA_CHAVE_DE_API/lists.xml
+</shell>
+
+Resultado:
+
+<shell>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <list>
+    <active type="boolean">true</active>
+    <address nil="true"></address>
+    <client-id type="integer">1</client-id>
+    <company nil="true"></company>
+    <created-at type="datetime">2010-12-03T16:04:23-02:00</created-at>
+    <deleted-at type="datetime" nil="true"></deleted-at>
+    <description nil="true"></description>
+    <id type="integer">23965</id>
+    <lists-contacts-count type="integer">0</lists-contacts-count>
+    <name>Foo</name>
+    <phone nil="true"></phone>
+    <site nil="true"></site>
+  </list>
+</shell>
+
+Exemplo de erro:
+
+<shell>
+  curl -X POST -d "list[name]=" http://api.bdb28c0a0a4a3.softa.maileebeta.me/lists.xml
+</shell>
+
+Resultado do erro:
+
+<shell>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <errors>
+    <error>Nome não pode ser vazio</error>
+  </errors>
+</shell>
+
+h5. Atualizando
+
+Exemplo
+
+<shell>
+  curl -X PUT -d "list[name]=Bar" SUA_CHAVE_DE_API/lists/ID.xml
+</shell>
+
+Neste caso o servidor não retornará nenhum XML.
+
+Exemplo de erro:
+
+<shell>
+  curl -X PUT -d "list[name]=" http://api.bdb28c0a0a4a3.softa.maileebeta.me/lists/ID.xml
+</shell>
+
+Resultado do erro:
+
+<shell>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <errors>
+    <error>Nome não pode ser vazio</error>
+  </errors>
+</shell>
+
+
+h4. Templates
+
+h5. Buscando todos
+
+Exemplo:
+
+<shell>
+  curl SUA_CHAVE_DE_API/templates.xml
+</shell>
+
+Resultado:
+
+<shell>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <templates type="array">
+    <template>
+      <client-id type="integer">1</client-id>
+      <created-at type="datetime">2010-12-02T18:22:33-02:00</created-at>
+      <deleted-at type="datetime" nil="true"></deleted-at>
+      <html>&lt;h1&gt;Hello World!&lt;/h1&gt;</html>
+      <id type="integer">4044</id>
+      <simulations type="yaml" nil="true"></simulations>
+      <thumb-content-type>image/png</thumb-content-type>
+      <thumb-file-name>4044.png</thumb-file-name>
+      <thumb-file-size type="integer">36294</thumb-file-size>
+      <thumb-updated-at type="datetime">2010-12-02T18:23:05-02:00</thumb-updated-at>
+      <title>Hello World</title>
+      <updated-at type="datetime">2010-12-02T18:23:05-02:00</updated-at>
+    </template>
+  </templates>
+</shell>
+
+h5. Buscando um
+
+Exemplo:
+
+<shell>
+  curl SUA_CHAVE_DE_API/templates/ID.xml
+</shell>
+
+Resultado:
+
+<shell>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <template>
+    <client-id type="integer">1</client-id>
+    <created-at type="datetime">2010-12-02T18:22:33-02:00</created-at>
+    <deleted-at type="datetime" nil="true"></deleted-at>
+    <html>&lt;h1&gt;Hello World!&lt;/h1&gt;</html>
+    <id type="integer">4044</id>
+    <simulations type="yaml" nil="true"></simulations>
+    <thumb-content-type>image/png</thumb-content-type>
+    <thumb-file-name>4044.png</thumb-file-name>
+    <thumb-file-size type="integer">36294</thumb-file-size>
+    <thumb-updated-at type="datetime">2010-12-02T18:23:05-02:00</thumb-updated-at>
+    <title>Hello World</title>
+    <updated-at type="datetime">2010-12-02T18:23:05-02:00</updated-at>
+  </template>
+</shell>
+
+h5. Criando
+
+Exemplo:
+
+<shell>
+  curl -X POST -d "template[name]=Foo&template[html]=<h1>hello world</h1>" SUA_CHAVE_DE_API/templates.xml
+</shell>
+
+Resultado:
+
+<shell>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <templates type="array">
+    <template>
+      <client-id type="integer">1</client-id>
+      <created-at type="datetime">2010-12-02T18:22:33-02:00</created-at>
+      <deleted-at type="datetime" nil="true"></deleted-at>
+      <html>&lt;h1&gt;hello world&lt;/h1&gt;</html>
+      <id type="integer">9876</id>
+      <simulations type="yaml" nil="true"></simulations>
+      <thumb-content-type>image/png</thumb-content-type>
+      <thumb-file-name>9876.png</thumb-file-name>
+      <thumb-file-size type="integer">36294</thumb-file-size>
+      <thumb-updated-at type="datetime">2010-12-02T18:23:05-02:00</thumb-updated-at>
+      <title>Foo</title>
+      <updated-at type="datetime">2010-12-02T18:23:05-02:00</updated-at>
+    </template>
+  </templates>
+</shell>
+
+h5. Atualizando
+
+Exemplo:
+
+<shell>
+  curl -X PUT -d "template[name]=Bar" SUA_CHAVE_DE_API/templates/ID.xml
+</shell>
+
+Neste caso o servidor não retornará nenhum XML.
+
+Exemplo de erro:
+
+<shell>
+  curl -X PUT -d "template[title]=" SUA_CHAVE_DE_API/contacts/ID.xml
+</shell>
+
+Resultado do erro:
+
+<shell>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <errors>
+    <error>Title não pode ser vazio</error>
+  </errors>
+</shell>
+
+h4. Mensagens
+
+h5. Buscando todas
+
+Exemplo:
+
+<shell>
+  curl SUA_CHAVE_DE_API/messages.xml
+</shell>
+
+Resultado:
+
+<shell>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <messages type="array">
+    <message>
+      <analytics type="boolean">true</analytics>
+      <created-at type="datetime">2010-11-04T11:57:57-02:00</created-at>
+      <deleted-at type="datetime" nil="true"></deleted-at>
+      <from-email>wittgenstein@mailee.me</from-email>
+      <from-name>Wittgenstein</from-name>
+      <id type="integer">12893</id>
+      <list-id type="integer">23422</list-id>
+      <newsletter-id type="integer">1746</newsletter-id>
+      <reply-email>wittgenstein@mailee.me</reply-email>
+      <segment-id type="integer" nil="true"></segment-id>
+      <send-after type="datetime">2010-11-04T11:58:54-02:00</send-after>
+      <send-when>now</send-when>
+      <status type="integer">3</status>
+      <subject>Hello</subject>
+      <template-id type="integer">2354</template-id>
+      <title>Hello</title>
+      <total type="integer">2353</total>
+    </message>
+  </messages>
+</shell>
+
+
+h5. Buscando uma
+
+Exemplo:
+
+<shell>
+  curl SUA_CHAVE_DE_API/messages/ID.xml
+</shell>
+
+Resultado:
+
+<shell>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <message>
+    <analytics type="boolean">true</analytics>
+    <created-at type="datetime">2010-11-04T11:57:57-02:00</created-at>
+    <deleted-at type="datetime" nil="true"></deleted-at>
+    <from-email>wittgenstein@mailee.me</from-email>
+    <from-name>Wittgenstein</from-name>
+    <id type="integer">12893</id>
+    <list-id type="integer">23422</list-id>
+    <newsletter-id type="integer">1746</newsletter-id>
+    <reply-email>wittgenstein@mailee.me</reply-email>
+    <segment-id type="integer" nil="true"></segment-id>
+    <send-after type="datetime">2010-11-04T11:58:54-02:00</send-after>
+    <send-when>now</send-when>
+    <status type="integer">3</status>
+    <subject>Hello</subject>
+    <template-id type="integer">2354</template-id>
+    <title>Hello</title>
+    <total type="integer">2353</total>
+  </message>
+</shell>
+
+h5. Criando com HTML e emails
+
+Exemplo:
+
+<shell>
+  curl -X POST -d "message[title]=CurlTest&message[subject]=CurlTest&message[emails]=curl@curl.com&message[from_name]=Name&message[from_email]=maiz@softa.com.br&message[html]=<h1>hello world</h1>" SUA_CHAVE_DE_API/messages.xml
+</shell>
+
+Resultado:
+
+<shell>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <message>
+    <analytics type="boolean">true</analytics>
+    <created-at type="datetime">2010-11-04T11:57:57-02:00</created-at>
+    <deleted-at type="datetime" nil="true"></deleted-at>
+    <from-email>maiz@softa.com.br</from-email>
+    <from-name>Name</from-name>
+    <html>&lt;h1&gt;hello world&lt;/h1&gt;</html>
+    <id type="integer">12893</id>
+    <list-id type="integer">23422</list-id>
+    <newsletter-id type="integer">1746</newsletter-id>
+    <reply-email>maiz@softa.com.br</reply-email>
+    <segment-id type="integer" nil="true"></segment-id>
+    <send-after type="datetime">2010-11-04T11:58:54-02:00</send-after>
+    <send-when></send-when>
+    <status type="integer">1</status>
+    <subject>CurlTest</subject>
+    <template-id type="integer"></template-id>
+    <title>CurlTest</title>
+    <total type="integer"></total>
+  </message>
+</shell>
+
+Um exemplo de erro:
+
+<shell>
+  curl -X POST -d "message[title]=" SUA_CHAVE_DE_API/messages.xml
+</shell>
+
+Retorno do erro:
+
+<shell>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <errors>
+    <error>
+      Você não preencheu o título da campanha. Os dados enviados foram: [["action", "create"], ["controller", "client/messages"], ["format", "xml"], ["message", {"title"=>"", "reply_email"=>nil}]]
+    </error>
+  </errors>
+</shell>
+
+Outro exemplo de erro:
+
+<shell>
+  curl -X POST -d "message[title]=A" SUA_CHAVE_DE_API/messages.xml
+</shell>
+
+Retorno do erro:
+
+<shell>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <errors>
+    <error>Assunto não pode ser vazio</error>
+    <error>Nome do remetente não pode ser vazio</error>
+    <error>Email do remetente não pode ser vazio</error>
+    <error>Email do remetente não é válido</error>
+    <error>Email de resposta não pode ser vazio</error>
+    <error>Email de resposta não é válido</error>
+    <error>Lista não pode ser vazio</error>
+    <error>Os dados enviados foram: [["action", "create"], ["controller", "client/messages"], ["format", "xml"], ["message", {"title"=>"A", "reply_email"=>nil}]]</error>
+  </errors>
+</shell>
+
+h5. Criando com lista, template, edits e repeats
+
+Exemplo:
+
+<shell>
+  curl -X POST -d "message[title]=EaaS&message[subject]=EaaS&message[list_id]=23768&message[from_name]=Mailee&message[from_email]=eaas@mailee.me&message[template_id]=3878&message[edit][first]=This is a message from the API&message[repeat][ofertas][]=<h1>Oferta cadastrada pela API</h1>" SUA_CHAVE_DE_API/messages.xml
+</shell>
+
+Resultado:
+
+<shell>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <message>
+    <analytics type="boolean">true</analytics>
+    <created-at type="datetime">2010-11-04T11:57:57-02:00</created-at>
+    <deleted-at type="datetime" nil="true"></deleted-at>
+    <from-email>eaas@mailee.me</from-email>
+    <from-name>Mailee</from-name>
+    <html>
+    &lt;span class=&quot;edit&quot; id=&quot;first&quot;&gt;This is a message from the API&lt;/span&gt;
+    &lt;div id=&quot;ofertas&quot; class=&quot;repeat&quot;&gt;
+    &lt;h1&gt;Oferta cadastrada pela API&lt;/h1&gt;
+    &lt;/div&gt;
+    </html>
+    <id type="integer">12894</id>
+    <list-id type="integer">23768</list-id>
+    <newsletter-id type="integer">1746</newsletter-id>
+    <reply-email>eaas@mailee.me</reply-email>
+    <segment-id type="integer" nil="true"></segment-id>
+    <send-after type="datetime">2010-11-04T11:58:54-02:00</send-after>
+    <send-when></send-when>
+    <status type="integer">1</status>
+    <subject>EaaS</subject>
+    <template-id type="integer">3878</template-id>
+    <title>EaaS</title>
+    <total type="integer"></total>
+  </message>
+</shell>
+
+h5. Enviando um teste
+
+Exemplo:
+
+<shell>
+  curl -d "contacts[]=ID" -X PUT SUA_CHAVE_DE_API/messages/ID/test.xml
+</shell>
+
+h5. Enviando agora
+
+Exemplo:
+
+<shell>
+  curl -d "when=now" -X PUT SUA_CHAVE_DE_API/messages/ID/ready.xml
+</shell>
+
+h5. Enviando em 2012 (nós esperamos)
+
+Exemplo:
+
+<shell>
+  curl -d "when=after&after[date]=21/12/2012&after[hour]=21" -X PUT SUA_CHAVE_DE_API/messages/ID/ready.xml
+<shell>
+
+h4. Relatórios
+
+h5. Dados gerais
+
+Exemplo:
+
+<shell>
+  curl SUA_CHAVE_DE_API/reports/ID.xml
+</shell>
+
+Resultado:
+
+<shell>
+<report>
+  <message>
+    <analytics type="boolean">true</analytics>
+    <created-at type="datetime">2010-11-04T11:57:57-02:00</created-at>
+    <deleted-at type="datetime" nil="true"></deleted-at>
+    <from-email>wittgenstein@mailee.me</from-email>
+    <from-name>Wittgenstein</from-name>
+    <id type="integer">12893</id>
+    <list-id type="integer">23422</list-id>
+    <newsletter-id type="integer">1746</newsletter-id>
+    <reply-email>wittgenstein@mailee.me</reply-email>
+    <segment-id type="integer" nil="true"></segment-id>
+    <send-after type="datetime">2010-11-04T11:58:54-02:00</send-after>
+    <send-when>now</send-when>
+    <status type="integer">3</status>
+    <subject>Hello</subject>
+    <template-id type="integer">2354</template-id>
+    <title>Hello</title>
+    <total type="integer">2353</total>
+  </message>
+  <results>
+    <total>65456</total>
+    <opens>12653</opens>
+    <returns>659</returns>
+    <not_opened>52144</not_opened>
+  </results>
+</report>
+</shell>
+
+h5. Últimos acessos
+
+Exemplo:
+
+<shell>
+  curl SUA_CHAVE_DE_API/reports/ID/accesses.xml?last_id=1234567890
+</shell>
+
+Resultado:
+
+<shell>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <views type="array">
+    <view>
+      <browser>Lynx</browser>
+      <city>Porto Alegre</city>
+      <contact-id type="integer">2921</contact-id>
+      <country-code>BR</country-code>
+      <country-code3>BRA</country-code3>
+      <country-name>Brazil</country-name>
+      <created-at type="datetime">2010-11-13T18:36:36-02:00</created-at>
+      <id type="integer">3505221</id>
+      <ip>189.27.251.80</ip>
+      <latitude>-30.0333003997803</latitude>
+      <longitude>-51.2000007629395</longitude>
+      <message-id type="integer">13176</message-id>
+      <os nil="true">BeOS</os>
+      <os-version nil="true">3.0</os-version>
+      <region>23</region>
+      <url-id type="integer" nil="true"></url-id>
+      <user-agent-name nil="true"></user-agent-name>
+      <user-agent-string nil="true"></user-agent-string>
+      <user-agent-version nil="true"></user-agent-version>
+    </view>
+  </views>
+</shell>
+
+
+h5. Descadastros
+
+Exemplo:
+
+<shell>
+  curl SUA_CHAVE_DE_API/reports/ID/unsubscribes.xml
+</shell>
+
+Resultado:
+
+<shell>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <unsubscribes type="array">
+    <unsubscribe>
+      <contact-id type="integer">342356</contact-id>
+      <created-at type="datetime">2010-11-23T16:36:44-02:00</created-at>
+      <id type="integer">20759709</id>
+      <message-id type="integer">123456</message-id>
+      <reason nil="true">Just testing the API</reason>
+      <spam type="boolean">false</spam>
+    </unsubscribe>
+  </unsubscribes>
+</shell>
