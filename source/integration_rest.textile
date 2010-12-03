@@ -432,7 +432,7 @@ Resultado:
 Exemplo de erro:
 
 <shell>
-  curl -X POST -d "list[name]=" http://api.bdb28c0a0a4a3.softa.maileebeta.me/lists.xml
+  curl -X POST -d "list[name]=" SUA_CHAVE_DE_API/lists.xml
 </shell>
 
 Resultado do erro:
@@ -457,7 +457,7 @@ Neste caso o servidor não retornará nenhum XML.
 Exemplo de erro:
 
 <shell>
-  curl -X PUT -d "list[name]=" http://api.bdb28c0a0a4a3.softa.maileebeta.me/lists/ID.xml
+  curl -X PUT -d "list[name]=" SUA_CHAVE_DE_API/lists/ID.xml
 </shell>
 
 Resultado do erro:
