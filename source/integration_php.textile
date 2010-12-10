@@ -1,6 +1,6 @@
 h2. Integração com PHP
 
-Para facilitar a vida de quem trabalha com PHP, criamos um pequeno "projeto no GitHub"http://github.com/softa/mailee-api-php: com código para acessar o Mailee. 
+Para facilitar a vida de quem trabalha com PHP, criamos um pequeno "projeto no GitHub:"http://github.com/softa/mailee-api-php: com código para acessar o Mailee. 
 
 Este projeto utiliza a "API REST":integration_rest.html. Além dele, existem integrações já prontas para "Rails":integration_rails.html e "Spree":integration_spree.html. 
 
