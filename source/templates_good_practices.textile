@@ -1,6 +1,6 @@
 h2. Boas práticas na criação de templates de email em HTML
 
-Este irá mostrar como dar maior visibilidade as suas mensagens, corrigindo visualização em clientes de email diferentes (hotmail, gmail, outlook, yahoo). E valiosas dicas de design e boas práticas na construção de templates.
+Este artigo irá mostrar como dar maior visibilidade as suas mensagens, corrigindo visualização em clientes de email diferentes (hotmail, gmail, outlook, yahoo). E valiosas dicas de design e boas práticas na construção de templates.
 
 * HTML para Web VS HTML para email marketing
 * Design
@@ -19,7 +19,7 @@ Todos clientes de email possuem sistemas de renderização diferentes entre si e
 
 h4. Usando tabelas
 
-Sim, o HTML de email marketing usa tabelas. O layout por CSS simplismente não irá funcionar, por isso, vamos deixar os <samp>&lt;div&gt;…&lt;/div&gt;</samp> para outras funções que não layout.
+Sim, o HTML de email marketing usa tabelas. O layout por CSS simplismente não irá funcionar, por isso, vamos deixar os <samp>&lt;div&gt;…&lt;/div&gt;</samp> para outras funções que não a de layout.
 
 Exemplo de tabela com uma coluna para começo de estrutura:
 
@@ -35,7 +35,7 @@ Exemplo de tabela com uma coluna para começo de estrutura:
   </table>
 </shell>
 
-INFO. Você pode criar templates através do *Mailee.me* usando nossos modelos gratuitos. Aproveite o nosso *editor HTML* para alterar os templates da maneira que quiser.
+INFO. Você pode criar templates através do *Mailee.me* usando nossos modelos gratuitos. Aproveite o nosso *criador editor HTML* para alterar os templates da maneira que quiser.
 
 h4. Estilo em linha (CSS declarations in line)
 
@@ -85,6 +85,12 @@ Exemplo de imagem de fundo da tabela
       </td>
     </tr>
   </table>
+  
+  # Ou diretamente no corpo da tabela 
+  
+  <table background="http://...background.gif" background-color:="#FFFFFF">
+  </table>
+  
 </shell>
 
 INFO. Como os métodos atuais de animação não são aceitos pela maioria dos clientes de email, use .gif animados como imagem de fundo sempre que precisar deste recurso.
@@ -106,7 +112,7 @@ O Hotmail pode apresentar dificuldades na largura da mensagem e o Yahoo! com cor
 </head>
 </shell>
    
-O Gmail possuí uma dificuldade com imagens, criando uma linha branca entre imagens que dependendo do contraste com a cor de fundo podem arruinar o desig.
+O Gmail possuí uma dificuldade com imagens, criando uma linha branca entre imagens que dependendo do contraste com a cor de fundo podem arruinar o design.
 
 !images/templates/display_block_problem.png(Imagem com quebra)!
 
@@ -129,6 +135,13 @@ Observe uma típica caixa de emails:
 
 <samp>Remetente</samp> Seja claro e mostre quem você é, de maneira bem objetiva. Se você se apresentar com seu nome pessoal, não esqueça de adicionar ao assunto quem você está representando. <br><br>
 <samp>Assunto</samp> Defina sobre o que está você está falando, adeque seu assunto ao segmento que está querendo atingir.
+
+*EVITE*
+
+* Frases como: "clique aqui", "Sigilo Absoluto", "Dúvidas Conjugais", "Grampo?", "Tenha seu site na Internet", "Ganhe dinheiro enviando emails", "Trabalhe em casa"."
+
+* Exclamações em excesso!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 
 h4. Mensagens com apenas uma imagem
 
