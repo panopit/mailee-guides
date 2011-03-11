@@ -1,67 +1,205 @@
 h2. Boas práticas na criação de templates de email em HTML
 
-Esse guia é voltado para pessoas que querem aprender mais sobre a criação de templates em HTML. Ele cobre funcionalidades que vão do nível básico ao avançado, e ao final dele você deverá aprender como:
+Este artigo irá mostrar como dar maior visibilidade as suas mensagens, corrigindo visualização em clientes de email diferentes (hotmail, gmail, outlook, yahoo). E valiosas dicas de design e boas práticas na construção de templates.
 
-* Configurar a codificação da mensagem
-* Aprender boas práticas na criação de email em HTML
-* Aplicar boas práticas na criação de email em HTML
-* Fazer download de modelos prontos
-* Dicas
+* HTML para Web VS HTML para email marketing
+* Design
+* Boas práticas
 
 endprologue.
 
-h3. Dicas
+h5. Antes de começar
 
-INFO. Recomendamos que você insira no cabeçalho de seus HTMLs (e dentro da tag <samp>&lt;head&gt;…&lt;/head&gt;</samp>) o seguinte código:
+INFO. Assim como o artigo de "como criar o seu template":template_creating.html! aqui também se assume que você possui conhecimento básico de *HTML* e *CSS*. Para saber mais sobre HTML e CSS acesse os links indicados no "final desse artigo":#guiadereferncia. Para realizar o upload do seu template, "clique aqui":template_uploading.html!.
 
-<html>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-</html>
+h3. HTML para Web VS HTML para Email Marketing
 
-INFO. Modelo para email em HTML com conteúdo em 600px de largura e centralizado.
+Todos clientes de email possuem sistemas de renderização diferentes entre si e nenhum é como o seu navegador. Por isso vamos ver as grandes diferenças entre codificar para websites e templates de email.
 
-<html>
-  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-  <html>
-    <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-      <title></title>
-    </head>
-    <body style="margin:0; padding:0; border:0 none; text-align:center;">
-      <center>
-        <table width="100%" frame="void" cellspacing="0" cellpadding="0" border="0" style="margin:0; padding:0; border:0 none; border-spacing:0px 0px; border-collapse:collapse;">
-          <tbody style="margin:0; padding:0; border:0;">
-            <tr>
-              <td valign="top" align="center" style="margin:0; padding:0; border:0 none;">
-                <table width="600" frame="void" cellspacing="0" cellpadding="0" border="0" style="margin:0; padding:0; border:0 none; border-spacing:0px 0px; border-collapse:collapse;">
-                  <tbody style="margin:0; padding:0; border:0;">
-                    <tr>
-                      <td valign="top" align="left" style="margin:0; padding:0; border:0 none;">
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </center>
-    </body>
-  </html>
-</html>
 
-Sugerimos a você o uso de ferramenta de validação da W3C
-!images/templates/w3_validator.gif(Ferramenta de validação de HTML da W3C)!
-* "W3C Validator":http://validator.w3.org/check
+h4. Usando tabelas
 
-INFO. Recomendamos que você insira no cabeçalho de seus HTMLs (e dentro da tag <samp>&lt;head&gt;…&lt;/head&gt;</samp>) o seguinte código:
+Sim, o HTML de email marketing usa tabelas. O layout por CSS simplismente não irá funcionar, por isso, vamos deixar os <samp>&lt;div&gt;…&lt;/div&gt;</samp> para outras funções que não a de layout.
 
-h3. Dicas
+Exemplo de tabela com uma coluna para começo de estrutura:
 
-Durante o desenvolvimento dos templates, para apresentar os campos editáveis coloque o seguinte código no <samp>&lt;head&gt;</samp> de seu HTML:
+<shell>
+  <table width="100%" frame="void" cellspacing="0" cellpadding="0" border="0" 
+  style="margin:0; padding:0; border:0 none; border-spacing:0px 0px; border- collapse:collapse;">
+    <tbody style="margin:0; padding:0; border:0;">
+      <tr>
+        <td valign="top" align="left" style="margin:0; padding:0; border:0 none;">
+        </td> 
+      </tr>
+    </tbody> 
+  </table>
+</shell>
+
+INFO. Você pode criar templates através do *Mailee.me* usando nossos modelos gratuitos. Aproveite o nosso *criador editor HTML* para alterar os templates da maneira que quiser.
+
+h4. Estilo em linha (CSS declarations in line)
+
+Os clientes de email não permitem que o código html acesse arquivos externos por motivos de segurança. Por isso, CSS externos, arquivos de javascript, objetos como Flash e ActiveX serão ignorados e não serão exibidos. 
+
+A única maneira de usar objetos externos é configurar links dinâmicos para visualização da mensagem no navegador. O que não é recomendado, uma vez que isto irá forçar o usuário para longe do ambiente de email.
+
+*Mantendo o Design do template*<br>
+Para manter o design do seu template de email, você deve manter todos estilos em linha. Ou seja, não declarados no <samp>&lt;head&gt;…&lt;/head&gt;</samp> ou em arquivo externo.
+
+Por isso, evite códigos css como.
+
+<shell>
+  p{ 
+    line-height: 1.5em;
+    color:black;
+    margin: 2px 2px 2px 2px;
+  }
+
+  <style type="text/css">...</style> 
+  <link rel="stylesheet" src="style.css".../>
+</shell>
+
+
+E utilize códigos com estilos _in line_.
+
+<shell>
+  <p style="line-height:1.5em;margin:2px 2px 2px 2px;">Seu texto</p>
+  
+  <p> 
+    <span style="color:red">I'm red</span>
+    <span style="font-weight:bold">I'm bold</span>
+    <span style="font-size:14px">I've a 14px font-size</span>
+  </p>
+</shell>
+
+h4. Mantendo a apresentação das imagens no fundo
+
+Live/Hotmail, Gmail e Outlook 2007 não apresentam imagens de fundo. A não ser que você utilize a imagem de fundo como fundo das tabelas.
+
+Exemplo de imagem de fundo da tabela
+
+<shell>
+  <table cellspacing="0" border="0" cellpadding="0">
+    <tr>
+      <td background="http://...background.gif" background-color:="#FFFFFF">
+      </td>
+    </tr>
+  </table>
+  
+  # Ou diretamente no corpo da tabela 
+  
+  <table background="http://...background.gif" background-color:="#FFFFFF">
+  </table>
+  
+</shell>
+
+INFO. Como os métodos atuais de animação não são aceitos pela maioria dos clientes de email, use .gif animados como imagem de fundo sempre que precisar deste recurso.
+
+h4. Peculiaridades na renderização do Live/Hotmail, Gmail e Yahoo.
+
+O Hotmail pode apresentar dificuldades na largura da mensagem e o Yahoo! com cores dos links. Para corrigir use o seguinte código no topo do email:
+
+<shell>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     <title>Título do template</title>
+      <style type="text/css">
+        .yshortcuts { color:#00AAFF; }
+        .yshortcuts a span { color:#00AAFF; }
+        .ReadMsgBody { width:100%; }
+        .ExternalClass { width:100%; }
+      </style>
+</head>
+</shell>
+   
+O Gmail possuí uma dificuldade com imagens, criando uma linha branca entre imagens que dependendo do contraste com a cor de fundo podem arruinar o design.
+
+!images/templates/display_block_problem.png(Imagem com quebra)!
+
+Para corrigir, use o código <samp>style:"display: block;"</samp>.
+
+<shell>
+ <img src="http://www.mailee.me...header.png"
+ style="display: block;">
+</shell>
+
+h3. Design
+
+h4. Assunto
+
+Email marketing é marketing direto, ou seja, não invasivo e personalizado. Para que os seus contatos vejam suas notícias, eles primeiro tem que optar por receber o seu email. No final, com sua mensagem na caixa de entrada, é necessário que eles também optem por abrir a sua mensagem.<br>O que pode influenciar e bastante a abertura da sua mensagem é deixar bem claro quem é o remetente e qual é o assunto da mensagem.  
+
+Observe uma típica caixa de emails:
+
+!images/templates/inbox_subject.png(Caixa de entrada)!
+
+<samp>Remetente</samp> Seja claro e mostre quem você é, de maneira bem objetiva. Se você se apresentar com seu nome pessoal, não esqueça de adicionar ao assunto quem você está representando. <br><br>
+<samp>Assunto</samp> Defina sobre o que está você está falando, adeque seu assunto ao segmento que está querendo atingir.
+
+*EVITE*
+
+* Frases como: "clique aqui", "Sigilo Absoluto", "Dúvidas Conjugais", "Grampo?", "Tenha seu site na Internet", "Ganhe dinheiro enviando emails", "Trabalhe em casa"."
+
+* Exclamações em excesso!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+h4. Mensagens com apenas uma imagem
+
+Todos os grandes clientes de email possuem algum tipo de proteção contra mensagens que contenham apenas imagens. E se a sua mensagem chegar até a caixa de entrada, seu email pode ser confundida com uma mensagem vazia. 
+
+Veja um exemplo:
+
+!images/templates/template_img_only.png(Mensagem com apenas uma imagem)!
+
+Para que a sua mensagem seja reconhecida rapidamente, sempre preencha o texto alternativo da imagem, para que ele seja visualizado quando a imagem não é exibida.
+
+Veja o exemplo com os alternativos a imagem configurado e texto puro:
+
+!images/templates/email_alt_configured.png(Mensagem com texto alternativo as imagens)!
+
+Use links dinâmicos como o de "visualização na WEB":template_creating.html! no topo das mensagens para que o receptor possa ver sua mensagem inteiramente renderizada no navegador, já que a mensagem pode ser alterada dependendo do cliente de email.
+
+h3. Boas práticas
+
+*Tipos de arquivos de imagens*<br>
+<samp>GIF</samp>
+Para textos personalizados, logos, transparencias.<br><br>
+<samp>JPG</samp>
+Para imagens em tom contínuo (fotos, gráficos com gradientes).<br><br>
+<samp>PNG</samp>
+Evitar o uso do formato PNG.
+
+*Links*
+
+Não há suporte aos pseudo-seletores como <samp>:hover, :active e :visited</samp> Utilize sempre que possível o texto azul e sublinhado.
+
+<shell>
+<a href="http://www.google.com" style="color:blue; text-decoration:underline;">www.google.com</a>
+</shell>
+
+O que irá gerar:
+
+<a href="http://www.google.com" style="color:blue; text-decoration:underline;">www.google.com</a>
+
+*Melhorando a visibilidade dos campos editáveis*<br>
+
+Para apresentar os campos editáveis durante a edição no Mailee.me coloque o seguinte código no <samp>&lt;head&gt;</samp> de seu HTML:
 
 <html>
   <style type='text/css'>
     .edit { outline: 1px dotted #7711EE; }
   </style>
 </html>
+
+INFO. Após realizar o upload do seu template, utilize a ferramenta de validação da W3C através da interface do *Maiee.me*
+
+h3. Guia de referência
+
+Para saber mais sobre HTML e CSS, acesse os links abaixo:
+
+* "HTML na w3 Schools":http://www.w3schools.com/html/default.asp - Guia de referência com tutorial e documentação para HTML (em inglês)
+* "CSS na w3 Schools":http://www.w3schools.com/css/default.asp - Guia de referência com tutorial e documentação para CSS (em inglês)
+* "HTML - Wikipedia [en]":http://en.wikipedia.org/wiki/HTML - Informações sobre HTML (em inglês)
+* "HTML - Wikipedia [pt-Br]":http://pt.wikipedia.org/wiki/HTML - Informações sobre HTML (em português)
+* "Artigo na Wikipedia sobre CSS":http://en.wikipedia.org/wiki/Cascading_Style_Sheets - Informações sobre CSS (em inglês)
+* "Artigo na Wikipedia sobre CSS":http://pt.wikipedia.org/wiki/Cascading_Style_Sheets - Informações sobre CSS (em português)
