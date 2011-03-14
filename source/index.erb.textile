@@ -148,6 +148,9 @@ h3. Configurações
 h3. Artigos úteis
 
 <dl>
+  <% guide('Melhores práticas para construção de mensagens', 'templates_good_practices.html') do %>
+    Aprenda as melhores práticas para construção de mensagens
+  <% end %>
   <% guide('Glossário de termos', 'glossary.html') do %>
     Aprenda termos comuns em email marketing
   <% end %>
