@@ -43,7 +43,7 @@ Imagine que na sua empresa você possui um sistema de pontuação dos clientes, 
 
 Neste caso, se o contato não tiver os dados nesta coluna, o valor "0" será o padrão.
 
-Para saber mais sobre como criar templates para o Mailee.me, "clique aqui":creating_templates.html.
+Para saber mais sobre como criar templates para o Mailee.me, "clique aqui":templates_creating.html.
 
 h3. Segmentando por campos personalizados
 
