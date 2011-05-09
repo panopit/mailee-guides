@@ -5,6 +5,7 @@ require 'builder'
 
 module Spree
   class Generator
+    DOCTYPE = %(<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">)
     attr_reader :output, :view_path, :view, :guides_dir
 
     def initialize(output = nil)
@@ -83,14 +84,14 @@ module Spree
         if guide =~ /\.erb\.textile/
           # Generate the erb pages with textile formatting - e.g. index/authors
           result = view.render(:layout => 'layout', :file => name)
-          f.write(textile(result))
+          f.write(DOCTYPE + textile(result))
         else
           body = File.read(File.join(view_path, guide))
           body = set_header_section(body, @view)
           body = set_index(body, @view)  
 
           result = view.render(:layout => 'layout', :text => textile(body))    
-          f.write(result)
+          f.write(DOCTYPE + result)
           warn_about_broken_links(result)
         end
       end
