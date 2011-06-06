@@ -248,7 +248,7 @@ O Mailee.me oferece uma solução simples, e para inserir esse link em seus temp
 
 O Mailee.me irá trocar automaticamente o destino no atributo <samp>href="#"</samp> pela URL que realiza o descadastro do contato.
 
-INFO. Recomendamos como boa prática *sempre* incluir ao menos um link para descadastro em suas mensagens.
+INFO. Caso seu template *não possua* um link de descadastro ele será *automaticamente adicionado* pelo Mailee.me.
 
 INFO. Você também poderá utilizar um atributo <samp>id="unsubscribe"</samp>, porém, lembre-se que ao usar o atributo <samp>id="unsubscribe"</samp> ele só poderá ser utilizado *uma* vez por template, e, portanto, não é indicado caso você precise colocar mais de um link *unsubscribe* em seu template.
 
