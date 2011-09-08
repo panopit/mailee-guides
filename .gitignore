@@ -4,3 +4,5 @@ output/*
 .rvmrc
 source/.DS_Store
 .bundle
+*.swp
+

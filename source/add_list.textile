@@ -1,0 +1,36 @@
+h2. Adicionando múltiplas listas de contatos por envio.
+
+
+Este artigo irá mostrar como adicionar mais de uma lista de contatos por envio.
+
+endprologue.
+
+h3. Contatos e Listas
+
+A partir do momento que você possuir um contato ou mais cadastrado(s) no menu _Contatos_ , como em "Cadastro de contatos":contacts_new.html. Você poderá agrupar estes contatos em "Listas":lists_management.html.
+
+
+h4. Criando uma mensagem para sua campanha
+
+Assim que você criar uma ou mais listas de contatos você já poderá adicioná-las para envio nas suas mensagens.
+
+** Vá em _Mensagens_ e no menu à direita clique em _Nova Campanha_ , como é demonstrado em "Criando uma campanha":message_new.html e "Como funcionam as campanhas":what_is_a_campaign.html.
+
+h4. Adicionando múltiplas listas de contatos
+
+Se você já adicionou contatos a sua conta do Mailee.me, já criou uma ou mais listas de contatos e está em meio a criação de uma nova campanha então navegue até o campo _Destinatários_ . 
+Lá você poderá escolher a quantidade de listas a adicionar na mensagem.
+
+* *Destinatários*
+** Na opção _Listas_ haverá um menu onde todas as listas criadas por você até o momento serão exibidas.
+
+!images/messages/new/mlists01.jpg!
+
+** Clicando no botão !images/add_icon.png(Adicionar Listas)! você escolhe quais listas incluir.
+
+!images/messages/new/mlist02.jpg(Listas adicionadas)!
+
+** Após ter adicionado as listas desejadas clique em _Alterar_ e pronto, as listas foram adicionadas com sucesso!
+
+!images/messages/new/mlists03.jpg(Confirmando listas)!
+
