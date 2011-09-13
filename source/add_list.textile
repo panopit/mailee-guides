@@ -2,21 +2,21 @@ h2. Adicionando múltiplas listas de contatos por envio.
 
 
 Este artigo irá mostrar como adicionar mais de uma lista de contatos por envio.
-
 endprologue.
+
 
 h3. Contatos e Listas
 
-A partir do momento que você possuir um contato ou mais cadastrado(s) no menu _Contatos_ , como em "Cadastro de contatos":contacts_new.html. Você poderá agrupar estes contatos em "Listas":lists_management.html.
+A partir do momento que você possuir um contato ou mais cadastrado(s) no menu _Contatos_ , como em ""Cadastro de contatos":contacts_new.html". Você poderá agrupar estes contatos em "listas":lists_management.html.
 
 
 h4. Criando uma mensagem para sua campanha
 
 Assim que você criar uma ou mais listas de contatos você já poderá adicioná-las para envio nas suas mensagens.
 
-** Vá em _Mensagens_ e no menu à direita clique em _Nova Campanha_ , como é demonstrado em "Criando uma campanha":message_new.html e "Como funcionam as campanhas":what_is_a_campaign.html.
+** Vá em _Mensagens_ e no menu à direita clique em _Nova Campanha_ , como é demonstrado em ""Criando uma campanha":message_new.html" e ""Como funcionam as campanhas":what_is_a_campaign.html".
 
-h4. Adicionando múltiplas listas de contatos
+h3. Adicionando múltiplas listas de contatos
 
 Se você já adicionou contatos a sua conta do Mailee.me, já criou uma ou mais listas de contatos e está em meio a criação de uma nova campanha então navegue até o campo _Destinatários_ . 
 Lá você poderá escolher a quantidade de listas a adicionar na mensagem.
@@ -34,3 +34,30 @@ Lá você poderá escolher a quantidade de listas a adicionar na mensagem.
 
 !images/messages/new/mlists03.jpg(Confirmando listas)!
 
+h3. Incluindo múltiplas listas no reenvio de mensagens
+
+Caso você tenha a necessidade de reenviar uma mensagem antiga para outras listas de contatos você também pode utilizar essa funcionalidade.
+
+** Basta entrar em _Mensagens_ e mover o cursor do mouse até a mensagem desejada. 
+
+** Ao aparecer a opção _Reenviar_ é só clicar nela que você será redirecionado para a página de envio da mensagem. 
+
+!images/messages/resend/resend.jpg(Reenviar)!
+
+** Passe para a etapa _Conferir_ .
+
+!images/messages/resend/listseditverify.jpg(Confirmar)!
+
+** Ali você poderá alterar os contatos para o envio na opção _Lista_ .
+
+!images/messages/resend/listsedit.jpg(Listas)!
+
+** Um menu para escolha das listas irá aparecer. A cada lista escolhida você deve clicar no botão !images/add_icon.png(Adicionar Listas)! para adicioná-la.
+
+!images/messages/resend/listsedit2.jpg!
+
+** Assim que todas as listas desejadas tenham sido adicionadas basta clicar em _Alterar_ para que as mudanças sejam efetuadas.
+
+!images/messages/resend/listsedit3.jpg(Alterar)!
+
+Depois disso é só confirmar o reenvio e pronto, você terá reenviado sua campanha para múltiplas listas também!
