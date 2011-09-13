@@ -30,7 +30,9 @@ Lá você poderá escolher a quantidade de listas a adicionar na mensagem.
 
 !images/messages/new/mlist02.jpg(Listas adicionadas)!
 
-** Após ter adicionado as listas desejadas clique em _Alterar_ e pronto, as listas foram adicionadas com sucesso!
+** Após ter adicionado as listas desejadas clique em _Salvar_ e você será redirecionado a página de edição da mensagem.
+
+** Na etapa _Conferir_ você terá acesso as informações da mensagem. Clicando em _Lista_ você conseguirá visualizar as listas que foram adicionadas na criação da campanha, adicionar e/ou excluir listas para o envio. Para confirmar qualquer mudança basta clicar _Alterar_ e confirmar o número de contatos listados no topo da página.
 
 !images/messages/new/mlists03.jpg(Confirmando listas)!
 
@@ -46,7 +48,7 @@ Caso você tenha a necessidade de reenviar uma mensagem antiga para outras lista
 
 ** Passe para a etapa _Conferir_ .
 
-!images/messages/resend/listseditverify.jpg(Confirmar)!
+!images/messages/resend/listseditverify.jpg(Conferir)!
 
 ** Ali você poderá alterar os contatos para o envio na opção _Lista_ .
 
@@ -60,4 +62,4 @@ Caso você tenha a necessidade de reenviar uma mensagem antiga para outras lista
 
 !images/messages/resend/listsedit3.jpg(Alterar)!
 
-Depois disso é só confirmar o reenvio e pronto, você terá reenviado sua campanha para múltiplas listas também!
+Depois disso é só confirmar o reenvio e pronto, você terá reenviado sua mensagem para múltiplas listas também!
