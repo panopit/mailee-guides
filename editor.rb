@@ -9,7 +9,6 @@ end
 
 set :public, File.dirname(__FILE__) + '/output'
 
-
 #get '/' do
 #  Dir.chdir('source'){ @files = Dir.glob('*.textile') }
 #  haml :index
