@@ -34,8 +34,11 @@ h3. Ações
 |_GET_|/contacts/ID.xml|Retorna um contato de acordo com o ID.|
 |_POST_|/contacts.xml|Cria um novo contato com os parâmetros enviados.|
 |_PUT_|/contacts/ID.xml|Atualiza um contato pelo ID com os parâmetros enviados.|
-|_PUT_|/contacts/ID/subscribe.xml|Inscreve um contato pelo ID em uma lista. O nome da lista deve ser passado como parâmetro. Se a lista não existir ela será criada automaticamente.|
-|_PUT_|/contacts/ID/unsubscribe.xml|Desinscreve um contato pelo ID de uma lista. O nome da lista deve ser passado como parâmetro. Se a lista não existir ela será criada automaticamente.|
+|_PUT_|/contacts/ID/list_subscribe.xml|Inscreve um contato pelo ID em uma lista. O nome da lista deve ser passado como parâmetro. Se a lista não existir ela será criada automaticamente. Para inscrever o contato em uma lista já existe é possível também passar list_id como parâmetro.|
+|_PUT_|/contacts/ID/list_unsubscribe.xml|Desinscreve um contato pelo ID em uma lista. O nome da lista deve ser passado através do parâmetro list ou o id da lista pode ser passado através do parâmetro list_id.|
+|_PUT_|/contacts/ID/subscribe.xml|Igual ao list_subscribe. Não deve mais ser usado pois será removido no futuro.|
+|_PUT_|/contacts/ID/unsubscribe.xml|Descadastra o contato pelo ID. |
+
 |\3. *Listas*|
 |_GET_|/lists.xml|Retorna a coleção das suas listas.|
 |_GET_|/lists/ID.xml|Retorna uma lista de acordo com o ID.|
