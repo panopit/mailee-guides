@@ -69,6 +69,9 @@ h3. Mensagens
   <% guide('Como criar uma campanha', 'message_new.html') do %>
     Aprenda como configurar uma campanha
   <% end %>
+  <% guide('Adicionando múltiplas listas de contatos', 'add_list.html') do %>
+    Descubra como enviar suas mensagens para mais de uma lista de contatos
+  <% end %>
   <% guide('Editando o conteúdo de uma mensagem', 'message_edit.html') do %>
     Veja como editar o conteúdo de suas mensagens no Mailee.me
   <% end %>
