@@ -30,7 +30,7 @@ Aparecerá a tela abaixo:
 
 !images/integration/rest/validate_key.png(Validando)!
 
-Agora, ambas as chaves estão ativos. Você pode atualizar o seu código com a chave nova. Quanto terminar, basta clicar em "Validar esta chave", que esta chave se tornará a atual e a chave antiga será desativada.
+Agora, ambas as chaves estão ativas. Você pode atualizar o seu código com a chave nova. Quando terminar, basta clicar em "Validar esta chave", que esta chave se tornará a atual e a chave antiga será desativada.
 
 h3. Formatos
 
