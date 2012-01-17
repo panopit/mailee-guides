@@ -20,6 +20,18 @@ WARNING. Tome muito cuidado com esta chave, ela é tão ou mais importante que a
 
 !images/integration/spree/mailee_rest.png(REST)!
 
+h4. Atualizando a chave de acesso
+
+Por motivos de segurança, é recomendado atualizar a sua chave a cada 6 meses. Se você já possui código em produção utilizando uma chave, não se preocupe: nós pensamos em você. Quando você cria uma nova chave no Mailee.me, tanto a chave atual, como esta nova, ficarão ativas. Sendo assim, você pode atualizar seu código, testar e aí então "finalizar" a chave antiga.
+
+Para atualizar sua chave de acesso entre na configuração da integração REST do Mailee.me (como visto acime) e clique no botão "Criar nova chave".
+
+Aparecerá a tela abaixo:
+
+!images/integration/rest/validate_key.png(Validando)!
+
+Agora, ambas as chaves estão ativos. Você pode atualizar o seu código com a chave nova. Quanto terminar, basta clicar em "Validar esta chave", que esta chave se tornará a atual e a chave antiga será desativada.
+
 h3. Formatos
 
 Todas as ações da API REST retornam XML. É necessário utilizar a extensão ".xml" nas chamadas (como na tabela abaixo) ou definir o cabeçalho "Accept: text/xml".
@@ -138,8 +150,6 @@ h5. Acessos (accesses)
 h3. Testando
 
 Esta seção mostra como utilizar a API utilizando o comando "curl". Se você utiliza Linux ou MacOS, este comando já deve estar disponível. O download do curl para outros diversos sistemas operacionais pode ser feito no site: "http://curl.haxx.se/download.html":http://curl.haxx.se/download.html
-
-NOTE. Uma dica é testar utilizando o "Hurl":http://www.hurl.it. Basta acessar o site e utilizar o caminho da sua chave acrescentado à ação. Veja um exemplo abaixo, listando os contatos de uma conta: <br><br> !images/integration/rest/hurl.png(REST)!
 
 h4. Contatos
 
